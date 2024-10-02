@@ -7,7 +7,7 @@ import { expect, fixture } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrRangeLegendMinMaxSliderType = {
-  theme: 'Light',
+  theme: 'Light_value',
   rangeInputId: 'range-legend-cmpt',
   startValue: '200$',
   endValue: '400$',
@@ -38,7 +38,7 @@ describe('blr-range-legend-min-max-slider', () => {
     const rangeNumbersElement = querySelectorDeep('.range__numbers', inputWrapper?.getRootNode() as HTMLElement);
     const allRangePoints = querySelectorAllDeep(
       '.range__point',
-      rangeNumbersElement?.getRootNode() as HTMLParagraphElement
+      rangeNumbersElement?.getRootNode() as HTMLParagraphElement,
     );
 
     allRangePoints.forEach((point, i) => {

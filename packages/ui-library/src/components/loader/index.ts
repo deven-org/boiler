@@ -13,7 +13,7 @@ export class BlrLoader extends LitElementCustom {
 
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
   @property() accessor variant: FeedbackVariantType | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     if (this.sizeVariant) {

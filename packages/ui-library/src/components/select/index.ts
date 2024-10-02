@@ -67,7 +67,7 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property() accessor hasHint: boolean | undefined;
   @property() accessor icon: SizelessIconType | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
   @property() accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
 

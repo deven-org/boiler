@@ -36,7 +36,7 @@ export class BlrRangeLegendSlider extends LitElementCustom {
   @property() accessor showLegend: boolean | undefined = true;
   @property() accessor disabled: boolean | undefined = false;
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 

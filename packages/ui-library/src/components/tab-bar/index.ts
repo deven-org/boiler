@@ -44,7 +44,7 @@ export class BlrTabBar extends LitElementCustom {
   @property() accessor alignment: TabAlignmentVariantType = 'left';
   @property() accessor size: FormSizesType | undefined = 'md';
   @property() accessor showDivider = true;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor _selectedTab: BlrTabBarItem | undefined;
   protected _tabBarElements: BlrTabBarItem[] = [];

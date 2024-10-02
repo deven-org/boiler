@@ -16,7 +16,7 @@ const sampleParams: BlrRadioType = {
   readonly: false,
   hasHint: true,
   hasError: false,
-  theme: 'Light',
+  theme: 'Light_value',
   errorMessageIcon: undefined,
 };
 
@@ -38,7 +38,7 @@ describe('blr-radio', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      })
+      }),
     );
 
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
@@ -78,7 +78,7 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasError: true,
-      })
+      }),
     );
 
     const radio = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
@@ -92,7 +92,7 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasError: false,
-      })
+      }),
     );
 
     const radio = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
@@ -108,7 +108,7 @@ describe('blr-radio', () => {
         hasHint: false,
         hasError: true,
         errorMessageIcon: undefined,
-      })
+      }),
     );
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
     const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);

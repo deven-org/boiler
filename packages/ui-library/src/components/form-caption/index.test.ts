@@ -7,7 +7,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrFormCaptionType = {
-  theme: 'Light',
+  theme: 'Light_value',
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
@@ -26,12 +26,12 @@ describe('blr-form-caption', () => {
       BlrFormCaptionRenderFunction({
         ...sampleParams,
         message: 'New hint message added',
-      })
+      }),
     );
 
     const blrCaptionLabel = querySelectorDeep(
       'div.blr-form-caption .blr-caption-text',
-      element.getRootNode() as HTMLElement
+      element.getRootNode() as HTMLElement,
     );
 
     const blrText = blrCaptionLabel?.textContent;
@@ -43,12 +43,12 @@ describe('blr-form-caption', () => {
       BlrFormCaptionRenderFunction({
         ...sampleParams,
         message: '',
-      })
+      }),
     );
 
     const blrCaptionLabel = querySelectorDeep(
       'div.blr-form-caption .blr-caption-text',
-      element.getRootNode() as HTMLElement
+      element.getRootNode() as HTMLElement,
     );
 
     const blrText = blrCaptionLabel?.textContent;

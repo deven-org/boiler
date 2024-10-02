@@ -16,7 +16,9 @@ const sharedStyles = html`
       align-items: center;
     }
     .label {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1.2rem;
@@ -112,7 +114,7 @@ type IconType = {
   fillParent: boolean;
 };
 const defaultParams: IconType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   icon: 'blr360',
   fillParent: false,

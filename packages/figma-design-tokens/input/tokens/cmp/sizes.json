@@ -4,24 +4,24 @@
       "container": {
         "itemspacing": {
           "xs": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           },
           "sm": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           },
           "md": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           },
           "lg": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           },
           "xl": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           }
         }
       }
@@ -30,135 +30,135 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}"
           },
           "md": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}"
           },
           "lg": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}"
           }
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           },
           "md": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           },
           "lg": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "md": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           }
         },
         "padding": {
           "sm": {
-            "value": "{cmp.formcaption.container.padding_v.sm} {cmp.formcaption.container.padding_h.sm}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.container.padding_v.sm} {cmp.formcaption.container.padding_h.sm}"
           },
           "md": {
-            "value": "{cmp.formcaption.container.padding_v.md} {cmp.formcaption.container.padding_h.md}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.container.padding_v.md} {cmp.formcaption.container.padding_h.md}"
           },
           "lg": {
-            "value": "{cmp.formcaption.container.padding_v.lg} {cmp.formcaption.container.padding_h.lg}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.container.padding_v.lg} {cmp.formcaption.container.padding_h.lg}"
           }
         }
       },
       "iconwrapper": {
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionrem.1}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.1}"
           },
           "md": {
-            "value": "{core.dimensionrem.0,5}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0,5}"
           },
           "lg": {
-            "value": "{core.dimensionrem.5}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.5}"
           }
         }
       },
       "icon": {
         "iconsize": {
           "sm": {
-            "value": "{core.dimensionrem.14}",
-            "type": "sizing",
-            "description": "defines the physical size of the icon inside the formcaption"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.14}",
+            "$description": "defines the physical size of the icon inside the formcaption"
           },
           "md": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}"
           },
           "lg": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}"
           }
         }
       },
       "textwrapper": {
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           },
           "md": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           },
           "lg": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "md": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           }
         },
         "padding": {
           "sm": {
-            "value": "{cmp.formcaption.textwrapper.padding_v.sm} {cmp.formcaption.textwrapper.padding_h.sm}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.textwrapper.padding_v.sm} {cmp.formcaption.textwrapper.padding_h.sm}"
           },
           "md": {
-            "value": "{cmp.formcaption.textwrapper.padding_v.md} {cmp.formcaption.textwrapper.padding_h.md}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.textwrapper.padding_v.md} {cmp.formcaption.textwrapper.padding_h.md}"
           },
           "lg": {
-            "value": "{cmp.formcaption.textwrapper.padding_v.lg} {cmp.formcaption.textwrapper.padding_h.lg}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.formcaption.textwrapper.padding_v.lg} {cmp.formcaption.textwrapper.padding_h.lg}"
           }
         }
       }
@@ -167,19 +167,19 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "defines the gap between hint and error message"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "defines the gap between hint and error message"
           },
           "md": {
-            "value": "{core.dimensionrem.5}",
-            "type": "spacing",
-            "description": "defines the gap between hint and error message"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.5}",
+            "$description": "defines the gap between hint and error message"
           },
           "lg": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing",
-            "description": "defines the gap between hint and error message"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}",
+            "$description": "defines the gap between hint and error message"
           }
         }
       }
@@ -188,74 +188,74 @@
       "contentcol": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "md": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "lg": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between inlinelabel and the caption."
           }
         },
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to verticaly align the content of the textcontainer against the control"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "md": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to verticaly align the content of the textcontainer against the control"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to verticaly align the content of the textcontainer against the control"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to verticaly align the content of the textcontainer against the control"
           }
         }
       },
       "contentrow": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "controls the horizontal spacing between the control and the label"
           },
           "md": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "controls the horizontal spacing between the control and the label"
           },
           "lg": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "controls the horizontal spacing between the control and the label"
           }
         }
       },
       "controlwrapper": {
         "paddingtop": {
           "sm": {
-            "value": "0",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "0",
+            "$description": "can be used to align the checkbox control against the text"
           },
           "md": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "can be used to align the checkbox control against the text"
           },
           "lg": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}",
+            "$description": "can be used to align the checkbox control against the text"
           }
         }
       },
@@ -265,258 +265,258 @@
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.1}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.1}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               }
             },
             "md": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.1}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.1}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               }
             },
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.1}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.1}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth",
-                  "description": "figma only! do not apply on codes comps"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
+                  "$description": "figma only! do not apply on codes comps"
                 }
               }
             }
           },
           "borderradius": {
             "sm": {
-              "value": "{sys.borderradius.sm}",
-              "type": "borderRadius"
+              "$type": "borderRadius",
+              "$value": "{sys.borderradius.sm}"
             },
             "md": {
-              "value": "{cmp.checkbox.control.container.borderradius.sm}",
-              "type": "borderRadius"
+              "$type": "borderRadius",
+              "$value": "{cmp.checkbox.control.container.borderradius.sm}"
             },
             "lg": {
-              "value": "{cmp.checkbox.control.container.borderradius.sm}",
-              "type": "borderRadius"
+              "$type": "borderRadius",
+              "$value": "{cmp.checkbox.control.container.borderradius.sm}"
             }
           },
           "size": {
             "sm": {
-              "value": "{core.dimensionpx.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.16}"
             },
             "md": {
-              "value": "{core.dimensionpx.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.16}"
             },
             "lg": {
-              "value": "{core.dimensionpx.20}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.20}"
             }
           }
         },
@@ -524,92 +524,92 @@
           "iconsize": {
             "sm": {
               "rest": {
-                "value": "{core.dimensionpx.16}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{core.dimensionpx.16}"
               },
               "hover": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
               "pressed": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
               "focus": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
               "disabled": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
               "readonly": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
               "error": {
-                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               }
             },
             "md": {
               "rest": {
-                "value": "{core.dimensionpx.16}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{core.dimensionpx.16}"
               },
               "hover": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
               "pressed": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
               "focus": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
               "disabled": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
               "readonly": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
               "error": {
-                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               }
             },
             "lg": {
               "rest": {
-                "value": "{core.dimensionpx.20}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{core.dimensionpx.20}"
               },
               "hover": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "pressed": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "focus": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "disabled": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "readonly": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "error": {
-                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
-                "type": "sizing"
+                "$type": "sizing",
+                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               }
             }
           }
@@ -620,98 +620,98 @@
       "container": {
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "md": {
-            "value": "{cmp.counter.container.padding_v.sm}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_v.sm}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "lg": {
-            "value": "{cmp.counter.container.padding_v.sm}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_v.sm}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "md": {
-            "value": "{cmp.counter.container.padding_h.sm}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_h.sm}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "lg": {
-            "value": "{cmp.counter.container.padding_h.sm}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_h.sm}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         },
         "padding": {
           "sm": {
-            "value": "{cmp.counter.container.padding_v.sm} {cmp.counter.container.padding_h.sm}",
-            "type": "spacing",
-            "description": "coded comps only!"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_v.sm} {cmp.counter.container.padding_h.sm}",
+            "$description": "coded comps only!"
           },
           "md": {
-            "value": "{cmp.counter.container.padding_v.md} {cmp.counter.container.padding_h.md}",
-            "type": "spacing",
-            "description": "coded comps only!"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_v.md} {cmp.counter.container.padding_h.md}",
+            "$description": "coded comps only!"
           },
           "lg": {
-            "value": "{cmp.counter.container.padding_v.lg} {cmp.counter.container.padding_h.lg}",
-            "type": "spacing",
-            "description": "coded comps only!"
+            "$type": "spacing",
+            "$value": "{cmp.counter.container.padding_v.lg} {cmp.counter.container.padding_h.lg}",
+            "$description": "coded comps only!"
           }
         },
         "borderradius": {
           "sm": {
-            "value": "{sys.borderradius.md}",
-            "type": "borderRadius",
-            "description": "border radius of counter container\n>>> new"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.md}",
+            "$description": "border radius of counter container\n>>> new"
           },
           "md": {
-            "value": "{sys.borderradius.md}",
-            "type": "borderRadius",
-            "description": "border radius of counter container\n>>> feedback.counter.borderradius"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.md}",
+            "$description": "border radius of counter container\n>>> feedback.counter.borderradius"
           },
           "lg": {
-            "value": "{sys.borderradius.md}",
-            "type": "borderRadius",
-            "description": "border radius of counter container\n>>> new"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.md}",
+            "$description": "border radius of counter container\n>>> new"
           }
         },
         "borderwidth": {
           "sm": {
-            "value": "{sys.borderwidth.medium}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{sys.borderwidth.medium}"
           },
           "md": {
-            "value": "{sys.borderwidth.medium}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{sys.borderwidth.medium}"
           },
           "lg": {
-            "value": "{sys.borderwidth.medium}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{sys.borderwidth.medium}"
           }
         },
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "md": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "lg": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           }
         }
       }
@@ -720,103 +720,103 @@
       "container": {
         "maxwidth": {
           "xs": {
-            "value": "400px",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "400px"
           },
           "sm": {
-            "value": "600px",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "600px"
           },
           "md": {
-            "value": "900px",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "900px"
           },
           "lg": {
-            "value": "1200px",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "1200px"
           },
           "xl": {
-            "value": "1556px",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "1556px"
           }
         },
         "padding": {
           "xs": {
-            "value": "{core.dimensionpx.64}",
-            "type": "spacing",
-            "description": "Defines the margin of Dialog Combined"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.64}",
+            "$description": "Defines the margin of Dialog Combined"
           },
           "sm": {
-            "value": "{core.dimensionpx.64}",
-            "type": "spacing",
-            "description": "Defines the margin of Dialog Combined"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.64}",
+            "$description": "Defines the margin of Dialog Combined"
           },
           "md": {
-            "value": "{core.dimensionpx.64}",
-            "type": "spacing",
-            "description": "Defines the margin of Dialog Combined"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.64}",
+            "$description": "Defines the margin of Dialog Combined"
           },
           "lg": {
-            "value": "{core.dimensionpx.64}",
-            "type": "spacing",
-            "description": "Defines the margin of Dialog Combined"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.64}",
+            "$description": "Defines the margin of Dialog Combined"
           },
           "xl": {
-            "value": "{core.dimensionpx.64}",
-            "type": "spacing",
-            "description": "Defines the margin of Dialog Combined"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.64}",
+            "$description": "Defines the margin of Dialog Combined"
           }
         },
         "borderradius": {
-          "value": "{sys.borderradius.lg}",
-          "type": "borderRadius"
+          "$type": "borderRadius",
+          "$value": "{sys.borderradius.lg}"
         }
       },
       "contentsection": {
         "container": {
           "padding": {
-            "value": "{cmp.dialog.contentsection.container.padding_v} {cmp.dialog.contentsection.container.padding_h}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.dialog.contentsection.container.padding_v} {cmp.dialog.contentsection.container.padding_h}"
           },
           "padding_h": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}"
           },
           "padding_v": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           }
         }
       },
       "headersection": {
         "container": {
           "padding": {
-            "value": "{cmp.dialog.headersection.container.padding_v} {cmp.dialog.headersection.container.padding_h}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.dialog.headersection.container.padding_v} {cmp.dialog.headersection.container.padding_h}"
           },
           "padding_h": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}"
           },
           "padding_v": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}"
           }
         }
       },
       "footersection": {
         "container": {
           "padding": {
-            "value": "{cmp.dialog.footersection.container.padding_v} {cmp.dialog.footersection.container.padding_h}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.dialog.footersection.container.padding_v} {cmp.dialog.footersection.container.padding_h}"
           },
           "padding_h": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           },
           "padding_v": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}"
           }
         }
       }
@@ -825,16 +825,16 @@
       "container": {
         "horizontal": {
           "height": {
-            "value": "{core.dimensionpx.1}",
-            "type": "sizing",
-            "description": "the thickness of the divider\n>>> new"
+            "$type": "sizing",
+            "$value": "{core.dimensionpx.1}",
+            "$description": "the thickness of the divider\n>>> new"
           }
         },
         "vertical": {
           "width": {
-            "value": "{cmp.divider.container.horizontal.height}",
-            "type": "sizing",
-            "description": "the thickness of the divider\n>>> new"
+            "$type": "sizing",
+            "$value": "{cmp.divider.container.horizontal.height}",
+            "$description": "the thickness of the divider\n>>> new"
           }
         }
       }
@@ -843,30 +843,30 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           },
           "md": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           },
           "lg": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           }
         },
         "padding": {
           "sm": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "md": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "lg": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           }
         }
       }
@@ -875,34 +875,34 @@
       "container": {
         "size": {
           "xxs": {
-            "value": "{core.dimensionrem.8}",
-            "type": "sizing",
-            "description": "size of xxs icon\n>>>: ui.icon.xxs"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "size of xxs icon\n>>>: ui.icon.xxs"
           },
           "xs": {
-            "value": "{core.dimensionrem.12}",
-            "type": "sizing",
-            "description": "size of xs icon\n>>> ui.icon.xs"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.12}",
+            "$description": "size of xs icon\n>>> ui.icon.xs"
           },
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing",
-            "description": "size of sm icon\n>>> ui.icon.sm\n"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "size of sm icon\n>>> ui.icon.sm\n"
           },
           "md": {
-            "value": "{core.dimensionrem.24}",
-            "type": "sizing",
-            "description": "size of md icon\n>>> ui.icon.md"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.24}",
+            "$description": "size of md icon\n>>> ui.icon.md"
           },
           "lg": {
-            "value": "{core.dimensionrem.32}",
-            "type": "sizing",
-            "description": "size of lg icon\n>>> ui.icon.lg"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.32}",
+            "$description": "size of lg icon\n>>> ui.icon.lg"
           },
           "xl": {
-            "value": "{core.dimensionrem.48}",
-            "type": "sizing",
-            "description": "size of xl icon\n>>> ui.icon.xl"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.48}",
+            "$description": "size of xl icon\n>>> ui.icon.xl"
           }
         }
       }
@@ -911,68 +911,68 @@
       "container": {
         "padding": {
           "xs": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}"
           },
           "sm": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           },
           "xl": {
-            "value": "{core.dimensionrem.12}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.12}"
           }
         },
         "itemspacing": {
           "xs": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "sm": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "md": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "lg": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "xl": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           }
         },
         "borderradius": {
           "xs": {
-            "value": "{sem.buttons.container.borderradius.xs}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xs}"
           },
           "sm": {
-            "value": "{sem.buttons.container.borderradius.sm}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.sm}"
           },
           "md": {
-            "value": "{sem.buttons.container.borderradius.md}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.md}"
           },
           "lg": {
-            "value": "{sem.buttons.container.borderradius.lg}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.lg}"
           },
           "xl": {
-            "value": "{sem.buttons.container.borderradius.xl}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xl}"
           }
         }
       }
@@ -981,181 +981,181 @@
       "container": {
         "paddingtop": {
           "xs": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingright": {
           "xs": {
-            "value": "{core.dimensionrem.1}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.1}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.1}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.1}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.1}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.1}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingbottom": {
           "xs": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.6}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.6}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingleft": {
           "xs": {
-            "value": "{core.dimensionrem.3}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.3}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.3}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.3}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.3}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.3}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "padding": {
           "xs": {
-            "value": "{cmp.icondropdown.container.paddingtop.xs} {cmp.icondropdown.container.paddingright.xs} {cmp.icondropdown.container.paddingbottom.xs} {cmp.icondropdown.container.paddingleft.xs}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.icondropdown.container.paddingtop.xs} {cmp.icondropdown.container.paddingright.xs} {cmp.icondropdown.container.paddingbottom.xs} {cmp.icondropdown.container.paddingleft.xs}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "sm": {
-            "value": "{cmp.icondropdown.container.paddingtop.sm} {cmp.icondropdown.container.paddingright.sm} {cmp.icondropdown.container.paddingbottom.sm} {cmp.icondropdown.container.paddingleft.sm}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.icondropdown.container.paddingtop.sm} {cmp.icondropdown.container.paddingright.sm} {cmp.icondropdown.container.paddingbottom.sm} {cmp.icondropdown.container.paddingleft.sm}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "md": {
-            "value": "{cmp.icondropdown.container.paddingtop.md} {cmp.icondropdown.container.paddingright.md} {cmp.icondropdown.container.paddingbottom.md} {cmp.icondropdown.container.paddingleft.md}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.icondropdown.container.paddingtop.md} {cmp.icondropdown.container.paddingright.md} {cmp.icondropdown.container.paddingbottom.md} {cmp.icondropdown.container.paddingleft.md}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "lg": {
-            "value": "{cmp.icondropdown.container.paddingtop.lg} {cmp.icondropdown.container.paddingright.lg} {cmp.icondropdown.container.paddingbottom.lg} {cmp.icondropdown.container.paddingleft.lg}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.icondropdown.container.paddingtop.lg} {cmp.icondropdown.container.paddingright.lg} {cmp.icondropdown.container.paddingbottom.lg} {cmp.icondropdown.container.paddingleft.lg}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "xl": {
-            "value": "{cmp.icondropdown.container.paddingtop.xl} {cmp.icondropdown.container.paddingright.xl} {cmp.icondropdown.container.paddingbottom.xl} {cmp.icondropdown.container.paddingleft.xl}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.icondropdown.container.paddingtop.xl} {cmp.icondropdown.container.paddingright.xl} {cmp.icondropdown.container.paddingbottom.xl} {cmp.icondropdown.container.paddingleft.xl}",
+            "$description": "do not apply in figma, use aliases instead."
           }
         },
         "itemspacing": {
           "xs": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "sm": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "md": {
-            "value": "0",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "0"
           },
           "lg": {
-            "value": "-{core.dimensionrem.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "-{core.dimensionrem.2}"
           },
           "xl": {
-            "value": "-{core.dimensionrem.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "-{core.dimensionrem.4}"
           }
         },
         "borderradius": {
           "xs": {
-            "value": "{sem.buttons.container.borderradius.xs}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xs}"
           },
           "sm": {
-            "value": "{sem.buttons.container.borderradius.sm}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.sm}"
           },
           "md": {
-            "value": "{sem.buttons.container.borderradius.md}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.md}"
           },
           "lg": {
-            "value": "{sem.buttons.container.borderradius.lg}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.lg}"
           },
           "xl": {
-            "value": "{sem.buttons.container.borderradius.xl}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xl}"
           }
         }
       }
@@ -1164,62 +1164,62 @@
       "container": {
         "size": {
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}"
           },
           "md": {
-            "value": "{core.dimensionrem.24}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.24}"
           },
           "lg": {
-            "value": "{core.dimensionrem.32}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.32}"
           }
         },
         "padding": {
           "sm": {
-            "value": "{core.dimensionrem.1}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.1}"
           },
           "md": {
-            "value": "{core.dimensionrem.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.2}"
           },
           "lg": {
-            "value": "{core.dimensionrem.3}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.3}"
           }
         }
       },
       "background": {
         "borderwidth": {
           "sm": {
-            "value": "{core.dimensionpx.2}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.2}"
           },
           "md": {
-            "value": "{core.dimensionpx.2}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.2}"
           },
           "lg": {
-            "value": "{core.dimensionpx.3}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.3}"
           }
         }
       },
       "foreground": {
         "borderwidth": {
           "sm": {
-            "value": "{core.dimensionpx.2}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.2}"
           },
           "md": {
-            "value": "{core.dimensionpx.2}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.2}"
           },
           "lg": {
-            "value": "{core.dimensionpx.3}",
-            "type": "borderWidth"
+            "$type": "borderWidth",
+            "$value": "{core.dimensionpx.3}"
           }
         }
       }
@@ -1227,93 +1227,93 @@
     "menu": {
       "container": {
         "borderradius": {
-          "value": "{sys.borderradius.lg}",
-          "type": "borderRadius",
-          "description": "defines the border radius of the whole menu component"
+          "$type": "borderRadius",
+          "$value": "{sys.borderradius.lg}",
+          "$description": "defines the border radius of the whole menu component"
         }
       },
       "menuitem": {
         "itemcontainer": {
           "padding": {
-            "value": "{cmp.menu.menuitem.itemcontainer.padding_v} {cmp.menu.menuitem.itemcontainer.padding_h}",
-            "type": "spacing",
-            "description": "adds padding to the menu item"
+            "$type": "spacing",
+            "$value": "{cmp.menu.menuitem.itemcontainer.padding_v} {cmp.menu.menuitem.itemcontainer.padding_h}",
+            "$description": "adds padding to the menu item"
           },
           "borderradius": {
-            "value": "{sys.borderradius.lg}",
-            "type": "borderRadius",
-            "description": "defines the border radius of a single menu item."
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.lg}",
+            "$description": "defines the border radius of a single menu item."
           },
           "padding_h": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}"
           },
           "padding_v": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           }
         },
         "contentrow": {
           "itemspacing": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing",
-            "description": "adds space between icons and contentstack (label & description)"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}",
+            "$description": "adds space between icons and contentstack (label & description)"
           }
         },
         "contentstack": {
           "itemspacing": {
-            "value": "0",
-            "type": "spacing",
-            "description": "adds space between label & description"
+            "$type": "spacing",
+            "$value": "0",
+            "$description": "adds space between label & description"
           }
         },
         "itemicon": {
           "iconsize": {
-            "value": "{cmp.icon.container.size.sm}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{cmp.icon.container.size.sm}"
           }
         }
       },
       "menusection": {
         "sectiontitlewrapper": {
           "padding": {
-            "value": "{cmp.menu.menusection.sectiontitlewrapper.paddingtop} {cmp.menu.menusection.sectiontitlewrapper.padding_h} {cmp.menu.menusection.sectiontitlewrapper.paddingbottom} {cmp.menu.menusection.sectiontitlewrapper.padding_h}",
-            "type": "spacing",
-            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
+            "$type": "spacing",
+            "$value": "{cmp.menu.menusection.sectiontitlewrapper.paddingtop} {cmp.menu.menusection.sectiontitlewrapper.padding_h} {cmp.menu.menusection.sectiontitlewrapper.paddingbottom} {cmp.menu.menusection.sectiontitlewrapper.padding_h}",
+            "$description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
           "padding_h": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing",
-            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}",
+            "$description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
           "paddingtop": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing",
-            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}",
+            "$description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
           "paddingbottom": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           }
         },
         "itemstack": {
           "itemspacing": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}"
           }
         }
       },
       "menusectionstack": {
         "itemspacing": {
-          "value": "{core.dimensionpx.12}",
-          "type": "spacing",
-          "description": "defines the space between each menu section"
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.12}",
+          "$description": "defines the space between each menu section"
         },
         "padding": {
-          "value": "{core.dimensionpx.12}",
-          "type": "spacing",
-          "description": "defines the padding around all stacked menu sections."
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.12}",
+          "$description": "defines the padding around all stacked menu sections."
         }
       }
     },
@@ -1322,19 +1322,19 @@
         "textwrapper": {
           "itemspacing": {
             "sm": {
-              "value": "{core.dimensionpx.4}",
-              "type": "spacing",
-              "description": "defines spacing between prefix, userinputtext and suffix"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.4}",
+              "$description": "defines spacing between prefix, userinputtext and suffix"
             },
             "md": {
-              "value": "{core.dimensionpx.4}",
-              "type": "spacing",
-              "description": "defines spacing between prefix, userinputtext and suffix"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.4}",
+              "$description": "defines spacing between prefix, userinputtext and suffix"
             },
             "lg": {
-              "value": "{core.dimensionpx.4}",
-              "type": "spacing",
-              "description": "defines spacing between prefix, userinputtext and suffix"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.4}",
+              "$description": "defines spacing between prefix, userinputtext and suffix"
             }
           }
         }
@@ -1345,206 +1345,206 @@
         "container": {
           "size": {
             "sm": {
-              "value": "{core.dimensionpx.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.16}"
             },
             "md": {
-              "value": "{core.dimensionpx.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.16}"
             },
             "lg": {
-              "value": "{core.dimensionpx.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.16}"
             }
           },
           "borderradius": {
-            "value": "{sys.borderradius.round}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.round}"
           },
           "borderwidth": {
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               }
             },
             "md": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               }
             },
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.0}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{core.dimensionpx.0}"
                 }
               }
             }
@@ -1555,186 +1555,186 @@
             "sm": {
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.12}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.12}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 }
               },
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.8}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.8}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 }
               }
             },
             "md": {
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.12}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.12}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 }
               },
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.8}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.8}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 }
               }
             },
             "lg": {
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.12}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.12}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.14}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.14}"
                 }
               },
               "active": {
                 "rest": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "hover": {
-                  "value": "{core.dimensionpx.8}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.8}"
                 },
                 "pressed": {
-                  "value": "{core.dimensionpx.10}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.10}"
                 },
                 "focus": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "readonly": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 },
                 "error": {
-                  "value": "{core.dimensionpx.6}",
-                  "type": "sizing"
+                  "$type": "sizing",
+                  "$value": "{core.dimensionpx.6}"
                 }
               }
             }
@@ -1744,108 +1744,108 @@
       "contentcol": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
           "md": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
           },
           "lg": {
-            "value": "{core.dimensionpx.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.0}",
+            "$description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
           }
         },
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to verticaly align the content of the textcontainer against the control"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "md": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to verticaly align the content of the textcontainer against the control"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to verticaly align the content of the textcontainer against the control"
           }
         }
       },
       "contentrow": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           },
           "md": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           },
           "lg": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           }
         },
         "padding": {
           "sm": {
-            "value": "{cmp.radio.contentrow.padding_v.sm} 0",
-            "type": "spacing",
-            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
+            "$type": "spacing",
+            "$value": "{cmp.radio.contentrow.padding_v.sm} 0",
+            "$description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
           "md": {
-            "value": "{cmp.radio.contentrow.padding_v.md} 0",
-            "type": "spacing",
-            "description": "coded comps only!"
+            "$type": "spacing",
+            "$value": "{cmp.radio.contentrow.padding_v.md} 0",
+            "$description": "coded comps only!"
           },
           "lg": {
-            "value": "{cmp.radio.contentrow.padding_v.lg} 0",
-            "type": "spacing",
-            "description": "coded comps only!"
+            "$type": "spacing",
+            "$value": "{cmp.radio.contentrow.padding_v.lg} 0",
+            "$description": "coded comps only!"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not apply on codes comps. use <padding> instead"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         }
       },
       "controlwrapper": {
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}",
+            "$description": "can be used to align the checkbox control against the text"
           },
           "md": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "can be used to align the checkbox control against the text"
           },
           "lg": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "can be used to align the checkbox control against the text"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "can be used to align the checkbox control against the text"
           }
         }
       }
@@ -1854,73 +1854,73 @@
       "captionslot": {
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}"
           },
           "md": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}"
           },
           "lg": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}"
           }
         }
       },
       "legendwrapper": {
         "paddingbottom": {
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           },
           "md": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           },
           "lg": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           }
         }
       },
       "radiostackhorizontal": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           },
           "md": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           },
           "lg": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           }
         }
       },
       "radiostackvertical": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "defines the gap between each radio option inside <radiostack>"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "defines the gap between each radio option inside <radiostack>"
           }
         }
       }
@@ -1930,61 +1930,61 @@
         "shape": {
           "borderwidth": {
             "rest": {
-              "value": "{core.dimensionpx.2}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.2}"
             },
             "hover": {
-              "value": "{core.dimensionpx.4}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.4}"
             },
             "pressed": {
-              "value": "{core.dimensionpx.4}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.4}"
             },
             "focus": {
-              "value": "{core.dimensionpx.2}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.2}"
             },
             "disabled": {
-              "value": "{core.dimensionpx.2}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.2}"
             },
             "readonly": {
-              "value": "{core.dimensionpx.2}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.2}"
             }
           },
           "size": {
             "rest": {
-              "value": "{core.dimensionpx.14}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.14}"
             },
             "hover": {
-              "value": "{core.dimensionpx.20}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.20}"
             },
             "pressed": {
-              "value": "{core.dimensionpx.20}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.20}"
             },
             "focus": {
-              "value": "{core.dimensionpx.14}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.14}"
             },
             "disabled": {
-              "value": "{core.dimensionpx.14}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.14}"
             },
             "readonly": {
-              "value": "{core.dimensionpx.14}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.14}"
             }
           }
         },
         "container": {
           "size": {
-            "value": "{core.dimensionpx.24}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionpx.24}"
           }
         }
       },
@@ -1992,28 +1992,28 @@
         "borderwidth": {
           "default": {
             "active": {
-              "value": "{core.dimensionpx.1}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.1}"
             },
             "inactive": {
-              "value": "{core.dimensionpx.1}1",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.1}1"
             }
           },
           "mute": {
             "active": {
-              "value": "{core.dimensionpx.1}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.1}"
             },
             "inactive": {
-              "value": "{core.dimensionpx.1}",
-              "type": "borderWidth"
+              "$type": "borderWidth",
+              "$value": "{core.dimensionpx.1}"
             }
           }
         },
         "size": {
-          "value": "{core.dimensionpx.6}",
-          "type": "sizing"
+          "$type": "sizing",
+          "$value": "{core.dimensionpx.6}"
         }
       }
     },
@@ -2021,50 +2021,50 @@
       "container": {
         "width": {
           "sm": {
-            "value": "{core.dimensionrem.32}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.32}"
           },
           "md": {
-            "value": "{core.dimensionrem.40}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.40}"
           },
           "lg": {
-            "value": "{core.dimensionrem.48}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.48}"
           }
         },
         "borderradius": {
           "sm": {
-            "value": "{sys.borderradius.none}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.none}"
           },
           "md": {
-            "value": "{sys.borderradius.none}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.none}"
           },
           "lg": {
-            "value": "{sys.borderradius.none}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sys.borderradius.none}"
           }
         },
         "borderwidth": {
-          "value": "{sem.buttons.container.borderwidth}",
-          "type": "borderWidth"
+          "$type": "borderWidth",
+          "$value": "{sem.buttons.container.borderwidth}"
         }
       },
       "icon": {
         "iconsize": {
           "sm": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}"
           },
           "md": {
-            "value": "{core.dimensionrem.16}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.16}"
           },
           "lg": {
-            "value": "{core.dimensionrem.24}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.24}"
           }
         }
       }
@@ -2074,30 +2074,30 @@
         "width": {
           "vertical": {
             "sm": {
-              "value": "{core.dimensionrem.32}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.32}"
             },
             "md": {
-              "value": "{core.dimensionrem.40}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.40}"
             },
             "lg": {
-              "value": "{core.dimensionrem.48}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.48}"
             }
           },
           "horizontal": {
             "sm": {
-              "value": "{core.dimensionrem.64}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.64}"
             },
             "md": {
-              "value": "{core.dimensionrem.80}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.80}"
             },
             "lg": {
-              "value": "{core.dimensionrem.96}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.96}"
             }
           }
         }
@@ -2105,65 +2105,65 @@
       "dividerwrapper": {
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant horizontal"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant horizontal"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant horizontal"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant horizontal"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant horizontal"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant horizontal"
           }
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant vertical"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant vertical"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant vertical"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant vertical"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "apply only on layoutvariant vertical"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "apply only on layoutvariant vertical"
           }
         },
         "padding": {
           "verticallayout": {
             "sm": {
-              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.sm}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "0 {cmp.steppercombo.dividerwrapper.padding_h.sm}"
             },
             "md": {
-              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.md}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "0 {cmp.steppercombo.dividerwrapper.padding_h.md}"
             },
             "lg": {
-              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.lg}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "0 {cmp.steppercombo.dividerwrapper.padding_h.lg}"
             }
           },
           "horizontallayout": {
             "sm": {
-              "value": "{cmp.steppercombo.dividerwrapper.padding_v.sm} 0",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{cmp.steppercombo.dividerwrapper.padding_v.sm} 0"
             },
             "md": {
-              "value": "{cmp.steppercombo.dividerwrapper.padding_v.md} 0",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{cmp.steppercombo.dividerwrapper.padding_v.md} 0"
             },
             "lg": {
-              "value": "{cmp.steppercombo.dividerwrapper.padding_v.lg} 0",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{cmp.steppercombo.dividerwrapper.padding_v.lg} 0"
             }
           }
         }
@@ -2173,54 +2173,54 @@
       "buttonwrapper": {
         "innerpadding": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.12}",
+            "$description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           }
         },
         "padding": {
           "leading": {
             "sm": {
-              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
-              "type": "spacing",
-              "description": "coded comps only!"
+              "$type": "spacing",
+              "$value": "0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
+              "$description": "coded comps only!"
             },
             "md": {
-              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.md} 0 0",
-              "type": "spacing",
-              "description": "coded comps only!."
+              "$type": "spacing",
+              "$value": "0 {cmp.tabbar.buttonwrapper.innerpadding.md} 0 0",
+              "$description": "coded comps only!."
             },
             "lg": {
-              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.lg} 0 0",
-              "type": "spacing",
-              "description": "coded comps only!."
+              "$type": "spacing",
+              "$value": "0 {cmp.tabbar.buttonwrapper.innerpadding.lg} 0 0",
+              "$description": "coded comps only!."
             }
           },
           "trailing": {
             "sm": {
-              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
-              "type": "spacing",
-              "description": "coded comps only!"
+              "$type": "spacing",
+              "$value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
+              "$description": "coded comps only!"
             },
             "md": {
-              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.md}",
-              "type": "spacing",
-              "description": "coded comps only!."
+              "$type": "spacing",
+              "$value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.md}",
+              "$description": "coded comps only!."
             },
             "lg": {
-              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.lg}",
-              "type": "spacing",
-              "description": "coded comps only!."
+              "$type": "spacing",
+              "$value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.lg}",
+              "$description": "coded comps only!."
             }
           }
         }
@@ -2229,110 +2229,110 @@
         "highlightline": {
           "height": {
             "sm": {
-              "value": "{core.dimensionpx.2}",
-              "type": "sizing",
-              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.2}",
+              "$description": "defines the thickness of the highlight line.\napply on <highlightline>"
             },
             "md": {
-              "value": "{core.dimensionpx.2}",
-              "type": "sizing",
-              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.2}",
+              "$description": "defines the thickness of the highlight line.\napply on <highlightline>"
             },
             "lg": {
-              "value": "{core.dimensionpx.2}",
-              "type": "sizing",
-              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
+              "$type": "sizing",
+              "$value": "{core.dimensionpx.2}",
+              "$description": "defines the thickness of the highlight line.\napply on <highlightline>"
             }
           }
         },
         "contentcol": {
           "paddingtop": {
             "sm": {
-              "value": "{core.dimensionrem.4}",
-              "type": "spacing",
-              "description": "defines the toppadding of a tab; apply on <contentcol>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.4}",
+              "$description": "defines the toppadding of a tab; apply on <contentcol>"
             },
             "md": {
-              "value": "{core.dimensionrem.8}",
-              "type": "spacing",
-              "description": "defines the toppadding of a tab; apply on <contentcol>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.8}",
+              "$description": "defines the toppadding of a tab; apply on <contentcol>"
             },
             "lg": {
-              "value": "{core.dimensionrem.8}",
-              "type": "spacing",
-              "description": "defines the toppadding of a tab; apply on <contentcol>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.8}",
+              "$description": "defines the toppadding of a tab; apply on <contentcol>"
             }
           },
           "itemspacing": {
             "sm": {
-              "value": "{core.dimensionrem.8}",
-              "type": "spacing",
-              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.8}",
+              "$description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             },
             "md": {
-              "value": "{core.dimensionrem.8}",
-              "type": "spacing",
-              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.8}",
+              "$description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             },
             "lg": {
-              "value": "{core.dimensionrem.8}",
-              "type": "spacing",
-              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.8}",
+              "$description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             }
           }
         },
         "contentrow": {
           "padding_h": {
             "sm": {
-              "value": "{core.dimensionpx.12}",
-              "type": "spacing",
-              "description": "defines the padding left and right of <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.12}",
+              "$description": "defines the padding left and right of <contentrow>"
             },
             "md": {
-              "value": "{core.dimensionpx.16}",
-              "type": "spacing",
-              "description": "defines the padding left and right of <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.16}",
+              "$description": "defines the padding left and right of <contentrow>"
             },
             "lg": {
-              "value": "{core.dimensionpx.16}",
-              "type": "spacing",
-              "description": "defines the padding left and right of <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.16}",
+              "$description": "defines the padding left and right of <contentrow>"
             }
           },
           "itemspacing": {
             "sm": {
-              "value": "{core.dimensionpx.2}",
-              "type": "spacing",
-              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.2}",
+              "$description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             },
             "md": {
-              "value": "{core.dimensionpx.2}",
-              "type": "spacing",
-              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.2}",
+              "$description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             },
             "lg": {
-              "value": "{core.dimensionpx.4}",
-              "type": "spacing",
-              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.4}",
+              "$description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             }
           }
         },
         "icon": {
           "iconsize": {
             "sm": {
-              "value": "{core.dimensionrem.12}",
-              "type": "sizing",
-              "description": "defines height and width of the icon of a tab"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.12}",
+              "$description": "defines height and width of the icon of a tab"
             },
             "md": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing",
-              "description": "defines height and width of the icon of a tab"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}",
+              "$description": "defines height and width of the icon of a tab"
             },
             "lg": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing",
-              "description": "defines height and width of the icon of a tab"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}",
+              "$description": "defines height and width of the icon of a tab"
             }
           }
         }
@@ -2342,16 +2342,16 @@
       "inputfield": {
         "minheight": {
           "sm": {
-            "value": "{core.dimensionrem.64}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.64}"
           },
           "md": {
-            "value": "{core.dimensionrem.80}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.80}"
           },
           "lg": {
-            "value": "{core.dimensionrem.112}",
-            "type": "sizing"
+            "$type": "sizing",
+            "$value": "{core.dimensionrem.112}"
           }
         }
       }
@@ -2360,127 +2360,127 @@
       "container": {
         "padding_v": {
           "xs": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "padding_h": {
           "xs": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionpx.24}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.24}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionpx.40}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.40}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "padding": {
           "xs": {
-            "value": "{cmp.buttontext.container.padding_v.xs} {cmp.buttontext.container.padding_h.xs}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.padding_v.xs} {cmp.buttontext.container.padding_h.xs}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "sm": {
-            "value": "{cmp.buttontext.container.padding_v.sm} {cmp.buttontext.container.padding_h.sm}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.padding_v.sm} {cmp.buttontext.container.padding_h.sm}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "md": {
-            "value": "{cmp.buttontext.container.padding_v.md} {cmp.buttontext.container.padding_h.md}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.padding_v.md} {cmp.buttontext.container.padding_h.md}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "lg": {
-            "value": "{cmp.buttontext.container.padding_v.lg} {cmp.buttontext.container.padding_h.lg}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.padding_v.lg} {cmp.buttontext.container.padding_h.lg}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "xl": {
-            "value": "{cmp.buttontext.container.padding_v.xl} {cmp.buttontext.container.padding_h.xl}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.padding_v.xl} {cmp.buttontext.container.padding_h.xl}",
+            "$description": "do not apply in figma, use aliases instead."
           }
         },
         "itemspacing": {
           "xs": {
-            "value": "{core.dimensionpx.4}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.4}"
           },
           "sm": {
-            "value": "{cmp.buttontext.container.itemspacing.xs}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.itemspacing.xs}"
           },
           "md": {
-            "value": "{cmp.buttontext.container.itemspacing.xs}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.itemspacing.xs}"
           },
           "lg": {
-            "value": "{cmp.buttontext.container.itemspacing.xs}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.itemspacing.xs}"
           },
           "xl": {
-            "value": "{cmp.buttontext.container.itemspacing.xs}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{cmp.buttontext.container.itemspacing.xs}"
           }
         },
         "borderradius": {
           "xs": {
-            "value": "{sem.buttons.container.borderradius.xs}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xs}"
           },
           "sm": {
-            "value": "{sem.buttons.container.borderradius.sm}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.sm}"
           },
           "md": {
-            "value": "{sem.buttons.container.borderradius.md}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.md}"
           },
           "lg": {
-            "value": "{sem.buttons.container.borderradius.lg}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.lg}"
           },
           "xl": {
-            "value": "{sem.buttons.container.borderradius.xl}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xl}"
           }
         }
       }
@@ -2489,181 +2489,181 @@
       "container": {
         "paddingtop": {
           "xs": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingright": {
           "xs": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionpx.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionpx.16}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.16}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionpx.32}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.32}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingbottom": {
           "xs": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionrem.4}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.4}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionrem.16}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.16}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "paddingleft": {
           "xs": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "sm": {
-            "value": "{core.dimensionpx.12}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.12}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "md": {
-            "value": "{core.dimensionpx.20}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.20}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "lg": {
-            "value": "{core.dimensionpx.24}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.24}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
           "xl": {
-            "value": "{core.dimensionpx.40}",
-            "type": "spacing",
-            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.40}",
+            "$description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
         "padding": {
           "xs": {
-            "value": "{cmp.textdropdown.container.paddingtop.xs} {cmp.textdropdown.container.paddingright.xs} {cmp.textdropdown.container.paddingbottom.xs} {cmp.textdropdown.container.paddingleft.xs}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.textdropdown.container.paddingtop.xs} {cmp.textdropdown.container.paddingright.xs} {cmp.textdropdown.container.paddingbottom.xs} {cmp.textdropdown.container.paddingleft.xs}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "sm": {
-            "value": "{cmp.textdropdown.container.paddingtop.sm} {cmp.textdropdown.container.paddingright.sm} {cmp.textdropdown.container.paddingbottom.sm} {cmp.textdropdown.container.paddingleft.sm}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.textdropdown.container.paddingtop.sm} {cmp.textdropdown.container.paddingright.sm} {cmp.textdropdown.container.paddingbottom.sm} {cmp.textdropdown.container.paddingleft.sm}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "md": {
-            "value": "{cmp.textdropdown.container.paddingtop.md} {cmp.textdropdown.container.paddingright.md} {cmp.textdropdown.container.paddingbottom.md} {cmp.textdropdown.container.paddingleft.md}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.textdropdown.container.paddingtop.md} {cmp.textdropdown.container.paddingright.md} {cmp.textdropdown.container.paddingbottom.md} {cmp.textdropdown.container.paddingleft.md}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "lg": {
-            "value": "{cmp.textdropdown.container.paddingtop.lg} {cmp.textdropdown.container.paddingright.lg} {cmp.textdropdown.container.paddingbottom.lg} {cmp.textdropdown.container.paddingleft.lg}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.textdropdown.container.paddingtop.lg} {cmp.textdropdown.container.paddingright.lg} {cmp.textdropdown.container.paddingbottom.lg} {cmp.textdropdown.container.paddingleft.lg}",
+            "$description": "do not apply in figma, use aliases instead."
           },
           "xl": {
-            "value": "{cmp.textdropdown.container.paddingtop.xl} {cmp.textdropdown.container.paddingright.xl} {cmp.textdropdown.container.paddingbottom.xl} {cmp.textdropdown.container.paddingleft.xl}",
-            "type": "spacing",
-            "description": "do not apply in figma, use aliases instead."
+            "$type": "spacing",
+            "$value": "{cmp.textdropdown.container.paddingtop.xl} {cmp.textdropdown.container.paddingright.xl} {cmp.textdropdown.container.paddingbottom.xl} {cmp.textdropdown.container.paddingleft.xl}",
+            "$description": "do not apply in figma, use aliases instead."
           }
         },
         "itemspacing": {
           "xs": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "sm": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "md": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "lg": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           },
           "xl": {
-            "value": "{core.dimensionpx.2}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionpx.2}"
           }
         },
         "borderradius": {
           "xs": {
-            "value": "{sem.buttons.container.borderradius.xs}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xs}"
           },
           "sm": {
-            "value": "{sem.buttons.container.borderradius.sm}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.sm}"
           },
           "md": {
-            "value": "{sem.buttons.container.borderradius.md}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.md}"
           },
           "lg": {
-            "value": "{sem.buttons.container.borderradius.lg}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.lg}"
           },
           "xl": {
-            "value": "{sem.buttons.container.borderradius.xl}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{sem.buttons.container.borderradius.xl}"
           }
         }
       }
@@ -2672,455 +2672,455 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           },
           "md": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           },
           "lg": {
-            "value": "{core.dimensionrem.8}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.8}"
           }
         }
       },
       "contentcol": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "md": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           },
           "lg": {
-            "value": "{core.dimensionrem.0}",
-            "type": "spacing"
+            "$type": "spacing",
+            "$value": "{core.dimensionrem.0}"
           }
         }
       },
       "control": {
         "container": {
           "borderradius": {
-            "value": "{core.dimensionrem.40}",
-            "type": "borderRadius"
+            "$type": "borderRadius",
+            "$value": "{core.dimensionrem.40}"
           },
           "borderwidth": {
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 }
               }
             },
             "md": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 }
               }
             },
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.none}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.none}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 }
               }
             }
           },
           "width": {
             "sm": {
-              "value": "2.25rem",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "2.25rem"
             },
             "md": {
-              "value": "2.75rem",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "2.75rem"
             },
             "lg": {
-              "value": "3.25rem",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "3.25rem"
             }
           },
           "height": {
             "sm": {
-              "value": "{core.dimensionrem.20}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.20}"
             },
             "md": {
-              "value": "{core.dimensionrem.24}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.24}"
             },
             "lg": {
-              "value": "{core.dimensionrem.28}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.28}"
             }
           },
           "padding": {
             "sm": {
-              "value": "{core.dimensionpx.2}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.2}"
             },
             "md": {
-              "value": "{core.dimensionpx.2}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.2}"
             },
             "lg": {
-              "value": "{core.dimensionpx.2}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.2}"
             }
           }
         },
         "ay11icon": {
           "iconsize": {
             "sm": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}"
             },
             "md": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}"
             },
             "lg": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}"
             }
           }
         },
         "ay11iconcontainer": {
           "padding_h": {
             "sm": {
-              "value": "{core.dimensionrem.0}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.0}"
             },
             "md": {
-              "value": "{core.dimensionrem.2}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionrem.2}"
             },
             "lg": {
-              "value": "0.21875rem",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "0.21875rem"
             }
           }
         },
         "knob": {
           "size": {
             "sm": {
-              "value": "{core.dimensionrem.16}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.16}"
             },
             "md": {
-              "value": "{core.dimensionrem.20}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.20}"
             },
             "lg": {
-              "value": "{core.dimensionrem.24}",
-              "type": "sizing"
+              "$type": "sizing",
+              "$value": "{core.dimensionrem.24}"
             }
           },
           "borderwidth": {
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 }
               }
             },
             "md": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 }
               }
             },
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 }
               },
               "inactive": {
                 "rest": {
-                  "value": "{sys.borderwidth.medium}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{sys.borderwidth.medium}"
                 },
                 "hover": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 },
                 "pressed": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 },
                 "focus": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 },
                 "disabled": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 },
                 "readonly": {
-                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
-                  "type": "borderWidth"
+                  "$type": "borderWidth",
+                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 }
               }
             }
@@ -3131,16 +3131,16 @@
         "container": {
           "itemspacing": {
             "sm": {
-              "value": "{core.dimensionpx.8}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.8}"
             },
             "md": {
-              "value": "{core.dimensionpx.8}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.8}"
             },
             "lg": {
-              "value": "{core.dimensionpx.8}",
-              "type": "spacing"
+              "$type": "spacing",
+              "$value": "{core.dimensionpx.8}"
             }
           }
         }
@@ -3149,42 +3149,42 @@
     "tooltip": {
       "textwrapper": {
         "padding": {
-          "value": "{cmp.tooltip.textwrapper.padding_v} {cmp.tooltip.textwrapper.padding_h}",
-          "type": "spacing"
+          "$type": "spacing",
+          "$value": "{cmp.tooltip.textwrapper.padding_v} {cmp.tooltip.textwrapper.padding_h}"
         },
         "borderradius": {
-          "value": "{sys.borderradius.md}",
-          "type": "borderRadius"
+          "$type": "borderRadius",
+          "$value": "{sys.borderradius.md}"
         },
         "minwidth": {
-          "value": "{core.dimensionrem.40}",
-          "type": "sizing",
-          "description": "defines the minimum width of the tooltip."
+          "$type": "sizing",
+          "$value": "{core.dimensionrem.40}",
+          "$description": "defines the minimum width of the tooltip."
         },
         "maxwidth": {
-          "value": "{core.dimensionrem.80}",
-          "type": "sizing",
-          "description": "defines the maximum width of the tooltip."
+          "$type": "sizing",
+          "$value": "{core.dimensionrem.80}",
+          "$description": "defines the maximum width of the tooltip."
         },
         "padding_v": {
-          "value": "{core.dimensionpx.6}",
-          "type": "spacing"
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.6}"
         },
         "padding_h": {
-          "value": "{core.dimensionpx.8}",
-          "type": "spacing"
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.8}"
         }
       },
       "nosewrapper": {
         "padding_v": {
-          "value": "{core.dimensionpx.5}",
-          "type": "spacing",
-          "description": "apply on tooltips where the nose is either left or right. the pading defines the inset of the nose."
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.5}",
+          "$description": "apply on tooltips where the nose is either left or right. the pading defines the inset of the nose."
         },
         "padding_h": {
-          "value": "{core.dimensionpx.8}",
-          "type": "spacing",
-          "description": "apply on tooltips where the nose is either top or bottom. the pading defines the inset of the nose."
+          "$type": "spacing",
+          "$value": "{core.dimensionpx.8}",
+          "$description": "apply on tooltips where the nose is either top or bottom. the pading defines the inset of the nose."
         }
       }
     }
