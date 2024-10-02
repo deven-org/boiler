@@ -1,6 +1,6 @@
 import fs from 'fs';
 import chalk from 'chalk';
-import themes from './themes.cjs';
+import themes from './themes_generated.cjs';
 
 const files = fs.readdirSync(`../ui-library/src/foundation/_tokens-generated`);
 
@@ -11,6 +11,8 @@ const convertToCamelCase = (item) => {
     .replace('.js', '')
     .replace('__', '')
     .replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+
+  console.log(convertedString);
   return convertedString;
 };
 
@@ -31,16 +33,16 @@ themes.array.map((theme) => {
   const filteredJsFiles = files.filter((item) => item.endsWith(theme + '.generated.mjs') && item.startsWith('__'));
 
   const importsPart = filteredJsFiles.map(
-    (item) => `import {${convertToCamelCase(item.split('.')[0])}} from './${item}'`
+    (item) => `import {${convertToCamelCase(item.split('.')[0])}} from './${item}'`,
   );
   const constsPart = filteredJsFiles.map(
     (item) =>
       `const ${convertToCamelCase(item.split('.')[0])}Wrapped = wrapValuesWithCss(${convertToCamelCase(
-        item.split('.')[0]
-      )})`
+        item.split('.')[0],
+      )})`,
   );
   const exportsPart = filteredJsFiles.map(
-    (item) => `export {${convertToCamelCase(item.split('.')[0])}Wrapped as ${convertToCamelCase(item.split('.')[0])}}`
+    (item) => `export {${convertToCamelCase(item.split('.')[0])}Wrapped as ${convertToCamelCase(item.split('.')[0])}}`,
   );
 
   const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css.js';
@@ -55,6 +57,6 @@ themes.array.map((theme) => {
 });
 
 const themeFile = `export const Themes = [ "${themes.array.join(
-  '", "'
+  '", "',
 )}" ] as const; export type ThemeType = (typeof Themes)[number];`;
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.themes.ts`, themeFile, 'utf-8');

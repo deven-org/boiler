@@ -4,7 +4,7 @@ import { query } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { InputSizesType } from '../../globals/types.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
-import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css.js';
+import { staticStyles as staticRadioStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
@@ -50,7 +50,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor value: string | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {

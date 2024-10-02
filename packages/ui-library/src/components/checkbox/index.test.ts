@@ -19,7 +19,7 @@ const sampleParams: BlrCheckboxType = {
   hasHint: false,
   hintMessage: 'This is a sample hint',
   hintMessageIcon: undefined,
-  theme: 'Light',
+  theme: 'Light_value',
   hasLabel: true,
 };
 

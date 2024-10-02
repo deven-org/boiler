@@ -8,7 +8,7 @@ import { html } from 'lit-html';
 import { BlrTabBarType } from './index.js';
 
 const sampleParams: BlrTabBarType = {
-  theme: 'Light',
+  theme: 'Light_value',
   overflowVariantStandard: 'wrap',
   overflowVariantFullWidth: 'wrap',
   showDivider: true,

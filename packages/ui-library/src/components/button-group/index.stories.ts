@@ -15,14 +15,18 @@ const sharedStyles = html`
     }
 
     h4 {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1rem;
       text-align: center;
     }
     .label {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1.5rem;
@@ -75,12 +79,12 @@ export default {
 export const ButtonGroup = (
   params: BlrButtonGroupType,
   primaryLabel: string = 'Button Text',
-  secondaryLabel: string = 'Button Text'
+  secondaryLabel: string = 'Button Text',
 ) => {
   const contentButtons = html`
     ${BlrButtonTextRenderFunction({
       label: typeof primaryLabel === 'string' ? primaryLabel : 'Button Text',
-      theme: 'Light',
+      theme: 'Light_value',
       loading: false,
       variant: 'primary',
       disabled: false,
@@ -88,14 +92,14 @@ export const ButtonGroup = (
     })}
     ${BlrButtonTextRenderFunction({
       label: secondaryLabel,
-      theme: 'Light',
+      theme: 'Light_value',
       loading: false,
       variant: 'secondary',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
     ${BlrButtonIconRenderFunction({
-      theme: 'Light',
+      theme: 'Light_value',
       loading: false,
       variant: 'silent',
       disabled: false,
@@ -111,7 +115,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   alignment: 'left',
 };

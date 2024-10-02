@@ -124,7 +124,7 @@ export const BlrFormLabel = (params: BlrFormLabelType) => WrappedBlrFormLabelRen
 BlrFormLabel.storyName = 'Form Label';
 
 const defaultParams: BlrFormLabelType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   label: 'Label-text',
   labelAppendix: '(Appendix)',

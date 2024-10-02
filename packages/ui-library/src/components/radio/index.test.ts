@@ -15,7 +15,7 @@ const sampleParams: BlrRadioType = {
   required: false,
   hasHint: true,
   hasError: false,
-  theme: 'Light',
+  theme: 'Light_value',
   errorMessageIcon: undefined,
 };
 

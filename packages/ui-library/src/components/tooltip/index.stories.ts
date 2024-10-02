@@ -33,7 +33,9 @@ const sharedStyles = html`
       background-color: lightblue;
     }
     .label {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1rem;
@@ -119,12 +121,11 @@ export default {
   },
 };
 
-export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
-  ${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}
-</div>`;
+export const Tooltip = (params: BlrTooltipType) =>
+  html` <div class="container">${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}</div>`;
 
 const defaultParams: BlrTooltipType = {
-  theme: 'Light',
+  theme: 'Light_value',
   placement: 'top',
   elevation: true,
   hasArrow: true,

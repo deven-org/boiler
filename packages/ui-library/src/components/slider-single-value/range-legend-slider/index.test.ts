@@ -7,7 +7,7 @@ import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-d
 import { BlrRangeLegendSliderType } from './index.js';
 
 const sampleParams: BlrRangeLegendSliderType = {
-  theme: 'Light',
+  theme: 'Light_value',
   rangeInputId: 'range-cmpt',
   initialValue: '300 $',
   list: ['100 $', '200 $', '300 $', '400 $', '500 $', '600 $'],
@@ -39,7 +39,7 @@ describe('blr-range-slider', () => {
       BlrRangeLegendSliderRenderFunction({
         ...sampleParams,
         showLegend: false,
-      })
+      }),
     );
 
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -56,7 +56,7 @@ describe('blr-range-slider', () => {
       BlrRangeLegendSliderRenderFunction({
         ...sampleParams,
         initialValue: '300 $',
-      })
+      }),
     );
 
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);

@@ -8,7 +8,7 @@ import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-d
 import { getRandomString } from '../../utils/get-random.string.js';
 
 const sampleParams: BlrInputFieldTextType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   type: 'text',
   placeholder: 'Placeholder-text',
@@ -49,7 +49,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         placeholder: randomString,
-      })
+      }),
     );
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
@@ -88,7 +88,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
-      })
+      }),
     );
 
     const inputContainer = querySelectorDeep('.blr-input', element.getRootNode() as HTMLElement);
@@ -105,7 +105,7 @@ describe('blr-input-field-text', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      })
+      }),
     );
 
     const formCaptions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
@@ -128,7 +128,7 @@ describe('blr-input-field-text', () => {
         hasError: true,
         errorMessage: 'error',
         errorMessageIcon: undefined,
-      })
+      }),
     );
 
     const formCaption = querySelectorDeep('.blr-form-caption', element?.getRootNode() as HTMLElement);
@@ -159,7 +159,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: true,
-      })
+      }),
     );
 
     const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);
@@ -172,7 +172,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
-      })
+      }),
     );
 
     const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);

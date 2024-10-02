@@ -15,7 +15,7 @@ export class BlrFormLabel extends LitElementCustom {
   @property() accessor labelAppendix: string | undefined;
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
   @property() accessor forValue: string | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
   @property() accessor hasError: boolean = false;
 
   private _error: Error | null = null;
@@ -26,7 +26,7 @@ export class BlrFormLabel extends LitElementCustom {
       // BlrFormLabel is not supposed to be rendered outside of another
       // component's shadow-dom, as it is unencapsulated!
       this._error = new Error(
-        "BlrFormLabel is not supposed to be rendered outside of another component's shadow-dom, as it is unencapsulated!"
+        "BlrFormLabel is not supposed to be rendered outside of another component's shadow-dom, as it is unencapsulated!",
       );
     }
 
