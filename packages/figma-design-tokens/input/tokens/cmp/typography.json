@@ -5,15 +5,15 @@
         "typography": {
           "sm": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_100}"
+            "$value": "{sys.typography.caption.cap_100}"
           },
           "md": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_200}"
+            "$value": "{sys.typography.caption.cap_200}"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_300}"
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       }
@@ -23,15 +23,15 @@
         "typography": {
           "sm": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_100}"
+            "$value": "{sys.typography.caption.cap_100}"
           },
           "md": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_200}"
+            "$value": "{sys.typography.caption.cap_200}"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_300}"
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       }
@@ -41,7 +41,7 @@
         "text": {
           "typography": {
             "$type": "typography",
-            "$value": "{sem.ui.paragraph.s_200.regular}"
+            "$value": "{sys.typography.paragraph.p_200.regular}"
           }
         }
       },
@@ -49,7 +49,7 @@
         "headline": {
           "typography": {
             "$type": "typography",
-            "$value": "{sem.ui.headline.h5}"
+            "$value": "{sys.typography.headline.h5}"
           }
         }
       }
@@ -115,7 +115,7 @@
         "itemdescription": {
           "typography": {
             "$type": "typography",
-            "$value": "{sem.ui.caption.s_200}"
+            "$value": "{sys.typography.caption.cap_200}"
           }
         }
       },
@@ -182,7 +182,7 @@
       "text": {
         "typography": {
           "$type": "typography",
-          "$value": "{sem.ui.caption.s_100}"
+          "$value": "{sys.typography.caption.cap_100}"
         }
       }
     }

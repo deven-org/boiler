@@ -6,6 +6,7 @@
     "sys/light",
     "sys/dark",
     "sys/sizes",
+    "sys/typography",
     "sem/colors",
     "sem/sizes",
     "sem/borders",

@@ -5,23 +5,28 @@
         "typography": {
           "xs": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.50fixheight}"
+            "$value": "{sys.typography.label.lbl_50}",
+            "$description": "label.50"
           },
           "sm": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.75fixheight}"
+            "$value": "{sys.typography.label.lbl_100}",
+            "$description": "label.100"
           },
           "md": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.87fixheight}"
+            "$value": "{sys.typography.label.lbl_200}",
+            "$description": "label.200"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.100fixheight}"
+            "$value": "{sys.typography.label.lbl_300}",
+            "$description": "label.300"
           },
           "xl": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.125fixheight}"
+            "$value": "{sys.typography.label.lbl_400}",
+            "$description": "label.400"
           }
         }
       }
@@ -32,17 +37,17 @@
           "typography": {
             "sm": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.semibold.75fixheight}",
+              "$value": "{sys.typography.label.lbl_100}",
               "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             },
             "md": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.semibold.87fixheight}",
+              "$value": "{sys.typography.label.lbl_200}",
               "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             },
             "lg": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.semibold.100fixheight}",
+              "$value": "{sys.typography.label.lbl_300}",
               "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             }
           }
@@ -53,15 +58,15 @@
           "typography": {
             "sm": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.125fixheight}"
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
         },
@@ -69,15 +74,15 @@
           "typography": {
             "sm": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.125fixheight}"
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
         },
@@ -85,102 +90,17 @@
           "typography": {
             "sm": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
               "$type": "typography",
-              "$value": "{core.typography.sourcesanspro.regular.125fixheight}"
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
-        }
-      }
-    },
-    "ui": {
-      "headline": {
-        "h1": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.400}"
-        },
-        "h2": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.300}"
-        },
-        "h3": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.300}"
-        },
-        "h4": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.150}"
-        },
-        "h5": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.125}"
-        },
-        "h6": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.bold.100}"
-        }
-      },
-      "paragraph": {
-        "s_50": {
-          "regular": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.75}"
-          },
-          "strong": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.75}"
-          }
-        },
-        "s_100": {
-          "regular": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.87}"
-          },
-          "strong": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.87}"
-          }
-        },
-        "s_200": {
-          "regular": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.100}"
-          },
-          "strong": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.100}"
-          }
-        },
-        "s_300": {
-          "regular": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.125}"
-          },
-          "strong": {
-            "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.125}"
-          }
-        }
-      },
-      "caption": {
-        "s_100": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.regular.75fixheight}",
-          "$description": "Apply on captions"
-        },
-        "s_200": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
-        },
-        "s_300": {
-          "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
         }
       }
     }
