@@ -61,7 +61,7 @@ export class BlrCheckbox extends LitElementCustom {
 
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
   @property({ type: Boolean }) accessor required: boolean | undefined;
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.checked;

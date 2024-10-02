@@ -75,7 +75,7 @@ export const Icon = (params: BlrIconType) => {
 };
 
 const defaultParams: BlrIconType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'lg',
   arialabel: 'Icons',
 };

@@ -15,7 +15,7 @@ const sampleParams: BlrSelectType = {
   hintMessageIcon: 'blrInfo',
   selectId: 'Peter',
   errorMessageIcon: 'blrErrorFilled',
-  theme: 'Light',
+  theme: 'Light_value',
   options: [
     { label: 'option 1', value: 'option1' },
     { label: 'option 2', value: 'option2' },

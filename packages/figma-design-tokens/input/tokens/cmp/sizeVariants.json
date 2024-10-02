@@ -4,29 +4,29 @@
       "icon": {
         "sizevariant": {
           "xs": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "value": "lg",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "lg",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -35,29 +35,29 @@
       "icon": {
         "sizevariant": {
           "xs": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -67,19 +67,19 @@
         "icon": {
           "sizevariant": {
             "sm": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             },
             "md": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             },
             "lg": {
-              "value": "md",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "md",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             }
           }
         }
@@ -89,19 +89,19 @@
       "icon": {
         "sizevariant": {
           "sm": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -110,58 +110,58 @@
       "icon": {
         "sizevariant": {
           "xs": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "value": "lg",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "lg",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       },
       "chevron": {
         "sizevariant": {
           "xs": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -170,9 +170,9 @@
       "menuitem": {
         "icon": {
           "sizevariant": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -181,19 +181,19 @@
       "icon": {
         "sizevariant": {
           "sm": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -203,19 +203,19 @@
         "icon": {
           "sizevariant": {
             "sm": {
-              "value": "xs",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "xs",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             },
             "md": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             },
             "lg": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
             }
           }
         }
@@ -225,29 +225,29 @@
       "chevron": {
         "sizevariant": {
           "xs": {
-            "value": "xxs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xxs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "value": "xs",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "xs",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "value": "sm",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "sm",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "value": "md",
-            "type": "componentConfig",
-            "description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
+            "$type": "componentConfig",
+            "$value": "md",
+            "$description": "defines which size-variant of the icon component should be used. (the default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -257,19 +257,19 @@
         "ay11icon": {
           "sizevariant": {
             "sm": {
-              "value": "xs",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "xs",
+              "$description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
             },
             "md": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
             },
             "lg": {
-              "value": "sm",
-              "type": "componentConfig",
-              "description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
+              "$type": "componentConfig",
+              "$value": "sm",
+              "$description": "defines which size-variant of the ay11icon. (the default dimensions might be overrridden with a sizing token.)"
             }
           }
         }

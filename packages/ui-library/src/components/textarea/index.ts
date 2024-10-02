@@ -74,7 +74,7 @@ export class BlrTextarea extends LitElementCustom {
   @property({ type: Number }) accessor cols: number | undefined;
   @property() accessor name: string | undefined;
   @property() accessor textAreaDisplay: DisplayType | undefined = 'block';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor count = 0;
   @query('textarea') protected accessor textareaElement: HTMLTextAreaElement | null = null;

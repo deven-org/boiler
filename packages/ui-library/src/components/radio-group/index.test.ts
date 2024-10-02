@@ -8,7 +8,7 @@ import { BlrRadioGroupType } from './index.js';
 import { html } from 'lit-html';
 
 const sampleParams: BlrRadioGroupType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   disabled: false,
   name: 'Default Name',

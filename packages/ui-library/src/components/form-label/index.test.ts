@@ -8,7 +8,7 @@ import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-compon
 import { LitElementCustom } from '../../utils/lit/element.js';
 
 const sampleParams: BlrFormLabelType = {
-  theme: 'Light',
+  theme: 'Light_value',
   label: 'Label text',
   labelAppendix: 'Appendix txt',
   forValue: 'for_txt',
@@ -51,7 +51,7 @@ describe('blr-form-label', () => {
         ...sampleParams,
         label: 'New label',
         labelAppendix: '',
-      })
+      }),
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
 
@@ -81,7 +81,7 @@ describe('blr-form-label', () => {
         ...sampleParams,
         label: 'New label',
         labelAppendix: '',
-      })
+      }),
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const eleAppendix = querySelectorDeep('span.blr-form-label-appendix', blrLabel?.getRootNode() as HTMLElement);
@@ -103,7 +103,7 @@ describe('blr-form-label', () => {
       WrappedBlrFormLabelRenderFunction({
         ...sampleParams,
         hasError: true,
-      })
+      }),
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const errorLabel = blrLabel?.getAttribute('class');

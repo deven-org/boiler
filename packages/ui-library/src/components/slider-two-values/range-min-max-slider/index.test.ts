@@ -7,7 +7,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrRangeMinMaxSliderType = {
-  theme: 'Light',
+  theme: 'Light_value',
   rangeInputId: 'range-cmpt',
   startValue: 80,
   endValue: 85,
@@ -44,7 +44,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      })
+      }),
     );
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
     const rangeWrapper = querySelectorAllDeep('.range-wrapper', inputWrapper?.getRootNode() as HTMLElement);
@@ -73,7 +73,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      })
+      }),
     );
     const inputWrapper = querySelectorAllDeep('.input-wrapper', element.getRootNode() as HTMLElement);
     const expectedLabels = ['inc_btn_min', 'dec_btn_min', 'inc_btn_max', 'dec_btn_max'];

@@ -7,7 +7,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrCounterType = {
-  theme: 'Light',
+  theme: 'Light_value',
   variant: 'neutral',
   value: 3,
   maxValue: 100,

@@ -1635,7 +1635,9 @@
       "core/typography": "source",
       "sem/typography": "enabled",
       "cmp/typography": "enabled",
-      "sys/sizes": "enabled"
+      "sys/sizes": "enabled",
+      "cmp/sizeVariants": "enabled",
+      "sem/sizeVariants": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:11503:810",
     "$figmaModeId": "11503:2",

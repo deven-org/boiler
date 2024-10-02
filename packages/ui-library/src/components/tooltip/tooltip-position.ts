@@ -7,7 +7,7 @@ import {
   arrow,
   Placement as PlacementType,
 } from '@floating-ui/dom';
-import { componentTokens } from '../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs';
+import { componentTokens } from '../../foundation/_tokens-generated/__component-tokens.Light_value.generated.mjs';
 
 const toolTip = componentTokens.cmp.tooltip;
 
@@ -30,7 +30,7 @@ export const tooltipPosition = (
   reference: Element | VirtualElementType,
   tooltip: HTMLElement,
   placement: PlacementType = 'top',
-  offsetValue = 0
+  offsetValue = 0,
 ) => {
   autoUpdate(reference, tooltip, () => {
     const side = placement.split('-')[0];
@@ -39,7 +39,7 @@ export const tooltipPosition = (
       tooltip,
       parseFloat(toolTip.nosewrapper.padding_v),
       parseFloat(toolTip.nosewrapper.padding_h),
-      side
+      side,
     );
 
     computePosition(reference, tooltip, {
