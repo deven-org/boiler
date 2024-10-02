@@ -8,13 +8,13 @@
       "sys/light": "enabled",
       "core/color": "source",
       "sem/colors": "enabled",
-      "sem/shadows": "enabled",
       "cmp/shadows": "enabled",
       "core/sizes": "source",
       "sem/sizes": "source",
       "sem/borders": "enabled",
       "cmp/sizes": "source",
-      "cmp/borders": "enabled"
+      "cmp/borders": "enabled",
+      "sys/shadows": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:11503:9",
     "$figmaModeId": "11503:0",
@@ -773,9 +773,9 @@
     "name": "Dark",
     "$figmaStyleReferences": {
       "cmp.Tooltip.Container.Elevation.Elevated": "S:18836d5a0b6b6f3bed6fe012a935cfb0851f19b9,",
-      "sem.elevation.lvl_1": "S:043648795b09d44aa36061922cfaeb3eeb0724b3,",
-      "sem.elevation.lvl_0": "S:12c8c8cd37f15978b8a50846b13a90e16082ec97,",
-      "cmp.tooltip.container.elevation.elevated": "S:e75a3f89b125abbe26e5fc998d90ff19f948bf1d,"
+      "cmp.tooltip.container.elevation.elevated": "S:e75a3f89b125abbe26e5fc998d90ff19f948bf1d,",
+      "sys.elevation.lvl_1": "S:043648795b09d44aa36061922cfaeb3eeb0724b3,",
+      "sys.elevation.lvl_0": "S:12c8c8cd37f15978b8a50846b13a90e16082ec97,"
     },
     "selectedTokenSets": {
       "cmp/color": "enabled",
@@ -784,11 +784,11 @@
       "sem/colors": "enabled",
       "sem/sizes": "source",
       "sem/borders": "enabled",
-      "sem/shadows": "enabled",
       "core/sizes": "source",
       "cmp/sizes": "source",
       "cmp/borders": "enabled",
-      "cmp/shadows": "enabled"
+      "cmp/shadows": "enabled",
+      "sys/shadows": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:11503:9",
     "$figmaModeId": "11503:1",
@@ -1646,7 +1646,8 @@
       "sys/sizes": "enabled",
       "cmp/sizeVariants": "enabled",
       "sem/sizeVariants": "enabled",
-      "sys/typography": "enabled"
+      "sys/typography": "enabled",
+      "sys/shadows": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:11503:810",
     "$figmaModeId": "11503:2",
