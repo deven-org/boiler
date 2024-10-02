@@ -72,7 +72,7 @@ export const Divider = (params: BlrDividerType) => {
     <div class="divider-container">${BlrDividerRenderFunction(params)}</div>`;
 };
 const defaultParams: BlrDividerType = {
-  theme: 'Light',
+  theme: 'Light_value',
   direction: 'horizontal',
 };
 

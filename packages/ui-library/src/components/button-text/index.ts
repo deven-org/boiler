@@ -54,7 +54,7 @@ export class BlrButtonText extends LitElementCustom {
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
   @property() accessor buttonDisplay: DisplayType | undefined = 'inline-block';
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor focused = false;
 

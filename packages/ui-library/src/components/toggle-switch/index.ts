@@ -63,7 +63,7 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
   @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.active;
 

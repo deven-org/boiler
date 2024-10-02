@@ -41,7 +41,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
   @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
   @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 
@@ -78,7 +78,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       this.endValueToSlider,
       this.disabled,
       'twoKnob',
-      isMinLesserThanMax
+      isMinLesserThanMax,
     );
 
     const dynamicStyles = [rangeStyle];

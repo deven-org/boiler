@@ -13,7 +13,7 @@ export class BlrFormCaptionGroup extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor sizeVariant: FormSizesType = 'md';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     const classes = classMap({
