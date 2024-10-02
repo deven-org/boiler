@@ -1626,7 +1626,15 @@
       "sys.typography.paragraph.p_200.regular": "S:bb751ba114388a068ce2c3a8824ec15d3efd1f0a,",
       "sys.typography.paragraph.p_200.strong": "S:3be2790c2573da4ac9b4cb22144841f0252868e1,",
       "sys.typography.paragraph.p_300.regular": "S:19514cd3ebe429eaa1c2cb7aa938cb8edbe0d328,",
-      "sys.typography.paragraph.p_300.strong": "S:2fc2c23569359b224243ac3e3bcea0ed4ae68080,"
+      "sys.typography.paragraph.p_300.strong": "S:2fc2c23569359b224243ac3e3bcea0ed4ae68080,",
+      "sys.typography.label.lbl_50": "S:1d6fb2d8d61e7b80c8658bd90265c3bf89385cb3,",
+      "sys.typography.label.lbl_100": "S:19c8bcb076b3579d9ada03d7244ab7e587e0a16d,",
+      "sys.typography.label.lbl_200": "S:ed9c82fe46f840c642447de2f14935893cee4b2b,",
+      "sys.typography.label.lbl_300": "S:11e1522e96aeba23ea6ae5a52f9fb0ca802df75e,",
+      "sys.typography.label.lbl_400": "S:673e2cddd0fe348a1f8af721a5b321610667be9d,",
+      "sys.typography.input.inp_100": "S:039d4377c508440faf411c0a6f48e6e7e338e561,",
+      "sys.typography.input.inp_200": "S:3868993739c68f1a2116e5f1f9d7cb549c17d575,",
+      "sys.typography.input.inp_300": "S:fd06adf9caaf29accbbc4858a1adfc27ac571916,"
     },
     "selectedTokenSets": {
       "cmp/sizes": "enabled",

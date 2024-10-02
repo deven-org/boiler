@@ -59,15 +59,15 @@
         "typography": {
           "sm": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.87fixheight}"
+            "$value": "{sys.typography.label.lbl_200}"
           },
           "md": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.100fixheight}"
+            "$value": "{sys.typography.label.lbl_300}"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.125fixheight}"
+            "$value": "{sys.typography.label.lbl_400}"
           }
         }
       },
@@ -75,15 +75,15 @@
         "typography": {
           "sm": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.75fixheight}"
+            "$value": "{sys.typography.caption.cap_100}"
           },
           "md": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
+            "$value": "{sys.typography.caption.cap_200}"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       },
@@ -91,15 +91,15 @@
         "typography": {
           "sm": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.87fixheight}"
+            "$value": "{sys.typography.input.inp_100}"
           },
           "md": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.100fixheight}"
+            "$value": "{sys.typography.input.inp_200}"
           },
           "lg": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.regular.125fixheight}"
+            "$value": "{sys.typography.input.inp_300}"
           }
         }
       }
@@ -109,7 +109,7 @@
         "itemlabel": {
           "typography": {
             "$type": "typography",
-            "$value": "{sem.buttons.label.typography.md}"
+            "$value": "{sys.typography.label.lbl_200}"
           }
         },
         "itemdescription": {
@@ -123,7 +123,7 @@
         "sectiontitle": {
           "typography": {
             "$type": "typography",
-            "$value": "{core.typography.sourcesanspro.semibold.75}"
+            "$value": "{sys.typography.paragraph.p_50.strong}"
           }
         }
       }
@@ -132,17 +132,17 @@
       "legend": {
         "sm": {
           "$type": "typography",
-          "$value": "{sem.buttons.label.typography.sm}",
+          "$value": "{sem.forms.fieldset.legend.typography.sm}",
           "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
         "md": {
           "$type": "typography",
-          "$value": "{sem.buttons.label.typography.md}",
+          "$value": "{sem.forms.fieldset.legend.typography.md}",
           "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
         "lg": {
           "$type": "typography",
-          "$value": "{sem.buttons.label.typography.lg}",
+          "$value": "{sem.forms.fieldset.legend.typography.lg}",
           "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         }
       }
@@ -151,7 +151,7 @@
       "legend": {
         "typography": {
           "$type": "typography",
-          "$value": "{core.typography.sourcesanspro.regular.75}"
+          "$value": "{sys.typography.caption.cap_100}"
         }
       }
     },
@@ -161,17 +161,17 @@
           "typography": {
             "sm": {
               "$type": "typography",
-              "$value": "{sem.buttons.label.typography.sm}",
+              "$value": "{sys.typography.label.lbl_100}",
               "$description": "typography of the label of a tab-button"
             },
             "md": {
               "$type": "typography",
-              "$value": "{sem.buttons.label.typography.md}",
+              "$value": "{sys.typography.label.lbl_200} label",
               "$description": "typography of the label of a tab-button"
             },
             "lg": {
               "$type": "typography",
-              "$value": "{sem.buttons.label.typography.lg}",
+              "$value": "{sys.typography.label.lbl_300}",
               "$description": "typography of the label of a tab-button"
             }
           }
