@@ -1646,8 +1646,7 @@
       "sys/sizes": "enabled",
       "cmp/sizeVariants": "enabled",
       "sem/sizeVariants": "enabled",
-      "sys/typography": "enabled",
-      "sys/shadows": "disabled"
+      "sys/typography": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:11503:810",
     "$figmaModeId": "11503:2",
