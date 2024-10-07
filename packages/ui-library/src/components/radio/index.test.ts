@@ -13,7 +13,6 @@ const sampleParams: BlrRadioType = {
   radioId: 'testId',
   label: 'harald',
   required: false,
-  readonly: false,
   hasHint: true,
   hasError: false,
   theme: 'Light_value',
