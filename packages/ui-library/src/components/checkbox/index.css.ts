@@ -145,15 +145,6 @@ export const staticStyles = css`
                   color: ${formlabel.inlinelabel.textcolor.pressed};
                 }
               }
-
-              &.readonly {
-                color: ${formlabel.inlinelabel.textcolor.readonly};
-
-                .blr-form-label-inline {
-                  cursor: not-allowed !important;
-                  pointer-events: none;
-                }
-              }
             }
           }
 
@@ -182,10 +173,6 @@ export const staticStyles = css`
             cursor: not-allowed;
           }
 
-          &.readonly {
-            pointer-events: none;
-          }
-
           &:not(.error) {
             &.checked,
             &.indeterminate {
@@ -197,7 +184,7 @@ export const staticStyles = css`
               }
 
               &.hover {
-                &:not(.disabled, .readonly) {
+                &:not(.disabled) {
                   background-color: ${checkbox.control.container.bgcolor.active.hover};
                   outline-color: ${checkbox.control.container.bordercolor.active.hover};
 
@@ -217,7 +204,7 @@ export const staticStyles = css`
               }
 
               &.active {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled) {
                   background-color: ${checkbox.control.container.bgcolor.active.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.active.pressed};
 
@@ -235,15 +222,6 @@ export const staticStyles = css`
                   color: ${checkbox.control.icon.iconcolor.active.disabled};
                 }
               }
-
-              &.readonly {
-                background-color: ${checkbox.control.container.bgcolor.active.readonly};
-                outline-color: ${checkbox.control.container.bordercolor.active.readonly};
-
-                & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.active.readonly};
-                }
-              }
             }
 
             &:not(.checked, .indeterminate) {
@@ -255,7 +233,7 @@ export const staticStyles = css`
               }
 
               &.hover {
-                &:not(.disabled, .readonly) {
+                &:not(.disabled) {
                   background-color: ${checkbox.control.container.bgcolor.inactive.hover};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.hover};
 
@@ -275,7 +253,7 @@ export const staticStyles = css`
               }
 
               &.active {
-                &:not(.disabled, .readonly) {
+                &:not(.disabled) {
                   background-color: ${checkbox.control.container.bgcolor.inactive.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.pressed};
 
@@ -291,15 +269,6 @@ export const staticStyles = css`
 
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.inactive.disabled};
-                }
-              }
-
-              &.readonly {
-                background-color: ${checkbox.control.container.bgcolor.inactive.readonly};
-                outline-color: ${checkbox.control.container.bordercolor.inactive.readonly};
-
-                & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.inactive.readonly};
                 }
               }
             }
@@ -338,7 +307,7 @@ export const staticStyles = css`
               outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.rest} * -1);
 
               &.hover {
-                &:not(.disabled, .readonly) {
+                &:not(.disabled) {
                   & .checker-icon {
                     width: ${checkbox.control.icon.iconsize.sm.hover};
                     height: ${checkbox.control.icon.iconsize.sm.hover};
@@ -360,7 +329,7 @@ export const staticStyles = css`
               }
 
               &.active {
-                &:not(.disabled, .readonly) {
+                &:not(.disabled) {
                   & .checker-icon {
                     width: ${checkbox.control.icon.iconsize.sm.pressed};
                     height: ${checkbox.control.icon.iconsize.sm.pressed};
@@ -381,22 +350,12 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.disabled} * -1);
               }
 
-              &.readonly {
-                & .checker-icon {
-                  width: ${checkbox.control.icon.iconsize.sm.readonly};
-                  height: ${checkbox.control.icon.iconsize.sm.readonly};
-                }
-
-                outline-width: ${checkbox.control.container.borderwidth.sm.inactive.readonly};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.readonly} * -1);
-              }
-
               &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.sm.active.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.sm.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.hover} * -1);
                   }
@@ -408,7 +367,7 @@ export const staticStyles = css`
                 }
 
                 &.active {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.sm.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.pressed} * -1);
                   }
@@ -417,11 +376,6 @@ export const staticStyles = css`
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.disabled} * -1);
-                }
-
-                &.readonly {
-                  outline-width: ${checkbox.control.container.borderwidth.sm.active.readonly};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.readonly} * -1);
                 }
               }
             }
@@ -455,7 +409,7 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.rest} * -1);
 
                 &.hover {
-                  &.not(.disabled):not(.readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.md.inactive.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.hover} * -1);
                   }
@@ -467,7 +421,7 @@ export const staticStyles = css`
                 }
 
                 &.active {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.md.inactive.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.pressed} * -1);
                   }
@@ -477,11 +431,6 @@ export const staticStyles = css`
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.disabled} * -1);
                 }
-
-                &.readonly {
-                  outline-width: ${checkbox.control.container.borderwidth.md.inactive.readonly};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.readonly} * -1);
-                }
               }
 
               &.checked {
@@ -489,7 +438,7 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.md.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.active.hover} * -1);
                   }
@@ -501,7 +450,7 @@ export const staticStyles = css`
                 }
 
                 &.active {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.md.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.active.pressed} * -1);
                   }
@@ -510,11 +459,6 @@ export const staticStyles = css`
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.disabled} * -1);
-                }
-
-                &.readonly {
-                  outline-width: ${checkbox.control.container.borderwidth.md.active.readonly};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.active.readonly} * -1);
                 }
               }
             }
@@ -543,7 +487,7 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.inactive.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.hover} * -1);
                   }
@@ -555,7 +499,7 @@ export const staticStyles = css`
                 }
 
                 &.active {
-                  &:not(:disabled, .readonly) {
+                  &:not(:disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.inactive.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.pressed} * -1);
                   }
@@ -565,11 +509,6 @@ export const staticStyles = css`
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.disabled} * -1);
                 }
-
-                &.readonly {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.inactive.readonly};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.readonly} * -1);
-                }
               }
 
               &.checked {
@@ -577,7 +516,7 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.hover} * -1);
                   }
@@ -589,7 +528,7 @@ export const staticStyles = css`
                 }
 
                 &.active {
-                  &:not(.disabled, .readonly) {
+                  &:not(.disabled) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.pressed} * -1);
                   }
@@ -598,11 +537,6 @@ export const staticStyles = css`
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.disabled} * -1);
-                }
-
-                &.readonly {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.active.readonly};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.readonly} * -1);
                 }
               }
             }

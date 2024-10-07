@@ -13,7 +13,6 @@ const sampleParams: BlrRadioGroupType = {
   disabled: false,
   name: 'Default Name',
   required: false,
-  readonly: false,
   hasHint: true,
   groupHintMessage: 'This is a sample hint message',
   groupHintMessageIcon: 'blrInfo',
