@@ -2,21 +2,6 @@ import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
-/* ToDos:
-
-  - [ ] seperate radio/radio group css and move them to their component folders
-  - [ ] Fix margin of caption-group
-  - [ ] Prevent click in readOnly
-  - [ ] Would be nice to have an *optional* max-width for .blr-radio
-  - [ ] Implement different sizing tokens (MD & LG) for .input-control and the icon (:before)
-  - [ ] Check whats going on with vertical stacking, this layout variant is not available in SB (already implemented appropriate gap tokens)
-  - [ ] Allow active opion in error state
-  - [ ] It should be possible to predefine a selected option - setting to disabled or readonly allways resets
-  - [ ] In disabled state, the legend should consume "Forms.Legend.Disabled"
-  - [ ] In readOnly state, the legend should consume "Forms.Legend.ReadOnly"
-
-  */
-
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
     const { radio, formlabel, formcaption } = cmp;
@@ -156,7 +141,7 @@ export const staticStyles = css`
             height: ${radio.control.icon.iconsize.sm.inactive.rest};
           }
 
-          &:not(.disabled, .readonly) {
+          &:not(.disabled) {
             &:hover {
               background-color: ${radio.control.container.bgcolor.inactive.hover};
 
@@ -222,7 +207,7 @@ export const staticStyles = css`
               height: ${radio.control.icon.iconsize.sm.active.rest};
             }
 
-            &:not(.disabled, .readonly) {
+            &:not(.disabled) {
               &:hover {
                 background-color: ${radio.control.container.bgcolor.active.hover};
 
@@ -265,17 +250,6 @@ export const staticStyles = css`
                 background-color: ${radio.control.icon.iconcolor.active.disabled};
                 width: ${radio.control.icon.iconsize.sm.active.disabled};
                 height: ${radio.control.icon.iconsize.sm.active.disabled};
-              }
-            }
-
-            &[readonly] {
-              background-color: ${radio.control.container.bgcolor.active.readonly};
-
-              &::before {
-                content: "";
-                background-color: ${radio.control.icon.iconcolor.active.readonly};
-                width: ${radio.control.icon.iconsize.sm.active.readonly};
-                height: ${radio.control.icon.iconsize.sm.active.readonly};
               }
             }
           }
@@ -352,27 +326,6 @@ export const staticStyles = css`
             & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${formlabel.inlinelabel.textcolor.disabled};
-              }
-            }
-          }
-        }
-
-        &.readonly {
-          .input-control {
-            background-color: ${radio.control.container.bgcolor.inactive.readonly};
-            width: ${radio.control.icon.iconsize.sm.inactive.readonly};
-            height: ${radio.control.icon.iconsize.sm.inactive.readonly};
-
-            &::before {
-              content: "";
-              background-color: ${radio.control.icon.iconcolor.inactive.readonly};
-              width: ${radio.control.icon.iconsize.sm.inactive.readonly};
-              height: ${radio.control.icon.iconsize.sm.inactive.readonly};
-            }
-
-            & + .label-wrapper {
-              .blr-form-label-inline {
-                color: ${formlabel.inlinelabel.textcolor.readonly};
               }
             }
           }
