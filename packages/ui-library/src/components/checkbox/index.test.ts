@@ -12,7 +12,6 @@ const sampleParams: BlrCheckboxType = {
   disabled: false,
   checked: false,
   indeterminate: false,
-  readonly: false,
   hasError: false,
   sizeVariant: 'md',
   errorMessage: 'This is a sample error message',

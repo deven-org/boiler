@@ -289,11 +289,6 @@
                   "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "$description": "figma only! do not apply on codes comps"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
@@ -322,11 +317,6 @@
                   "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "$description": "figma only! do not apply on codes comps"
@@ -365,11 +355,6 @@
                   "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "$description": "figma only! do not apply on codes comps"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
@@ -398,11 +383,6 @@
                   "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "$description": "figma only! do not apply on codes comps"
@@ -441,11 +421,6 @@
                   "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "$description": "figma only! do not apply on codes comps"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
@@ -474,11 +449,6 @@
                   "$description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
-                  "$description": "figma only! do not apply on codes comps"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "$description": "figma only! do not apply on codes comps"
@@ -543,10 +513,6 @@
                 "$type": "sizing",
                 "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
               },
-              "readonly": {
-                "$type": "sizing",
-                "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
-              },
               "error": {
                 "$type": "sizing",
                 "$value": "{cmp.checkbox.control.icon.iconsize.sm.rest}"
@@ -573,10 +539,6 @@
                 "$type": "sizing",
                 "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
               },
-              "readonly": {
-                "$type": "sizing",
-                "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
-              },
               "error": {
                 "$type": "sizing",
                 "$value": "{cmp.checkbox.control.icon.iconsize.md.rest}"
@@ -600,10 +562,6 @@
                 "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
               "disabled": {
-                "$type": "sizing",
-                "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
-              },
-              "readonly": {
                 "$type": "sizing",
                 "$value": "{cmp.checkbox.control.icon.iconsize.lg.rest}"
               },
@@ -1384,10 +1342,6 @@
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
@@ -1411,10 +1365,6 @@
                   "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
@@ -1446,10 +1396,6 @@
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
@@ -1473,10 +1419,6 @@
                   "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
@@ -1508,10 +1450,6 @@
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
                 "error": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
@@ -1535,10 +1473,6 @@
                   "$value": "{core.dimensionpx.0}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{core.dimensionpx.0}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{core.dimensionpx.0}"
                 },
@@ -1574,10 +1508,6 @@
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
                 },
-                "readonly": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.14}"
-                },
                 "error": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
@@ -1601,10 +1531,6 @@
                   "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.6}"
-                },
-                "readonly": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.6}"
                 },
@@ -1636,10 +1562,6 @@
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
                 },
-                "readonly": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.14}"
-                },
                 "error": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
@@ -1663,10 +1585,6 @@
                   "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.6}"
-                },
-                "readonly": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.6}"
                 },
@@ -1698,10 +1616,6 @@
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
                 },
-                "readonly": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.14}"
-                },
                 "error": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.14}"
@@ -1725,10 +1639,6 @@
                   "$value": "{core.dimensionpx.6}"
                 },
                 "disabled": {
-                  "$type": "sizing",
-                  "$value": "{core.dimensionpx.6}"
-                },
-                "readonly": {
                   "$type": "sizing",
                   "$value": "{core.dimensionpx.6}"
                 },
@@ -2729,10 +2639,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}"
                 }
               },
               "inactive": {
@@ -2753,10 +2659,6 @@
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}"
                 }
@@ -2783,10 +2685,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}"
                 }
               },
               "inactive": {
@@ -2807,10 +2705,6 @@
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}"
                 }
@@ -2837,10 +2731,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 }
               },
               "inactive": {
@@ -2861,10 +2751,6 @@
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}"
                 }
@@ -2983,10 +2869,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}"
                 }
               },
               "inactive": {
@@ -3007,10 +2889,6 @@
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}"
                 }
@@ -3037,10 +2915,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}"
                 }
               },
               "inactive": {
@@ -3061,10 +2935,6 @@
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}"
                 }
@@ -3091,10 +2961,6 @@
                 "disabled": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
-                },
-                "readonly": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}"
                 }
               },
               "inactive": {
@@ -3115,10 +2981,6 @@
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 },
                 "disabled": {
-                  "$type": "borderWidth",
-                  "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
-                },
-                "readonly": {
                   "$type": "borderWidth",
                   "$value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}"
                 }
