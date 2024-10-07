@@ -9,6 +9,14 @@
           }
         }
       }
+    },
+    "menu": {
+      "container": {
+        "elevation": {
+          "$type": "boxShadow",
+          "$value": "{sys.elevation.lvl_1}"
+        }
+      }
     }
   }
 }

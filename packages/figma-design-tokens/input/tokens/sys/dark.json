@@ -147,7 +147,7 @@
       "inverse": {
         "disabled": {
           "$type": "color",
-          "$value": "{core.color.coolgray.200.solid}"
+          "$value": "{core.color.coolgray.100.solid}"
         },
         "rest": {
           "$type": "color",
@@ -384,25 +384,39 @@
           "$value": "{core.color.coolgray.300.solid}",
           "$description": "use for disabled states"
         },
-        "rest": {
-          "$type": "color",
-          "$value": "{core.color.azure.500.solid}",
-          "$description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.600.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.700.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "$type": "color",
-          "$value": "{core.color.azure.600.solid}",
-          "$description": "hover"
-        },
-        "pressed": {
-          "$type": "color",
-          "$value": "{core.color.azure.700.solid}",
-          "$description": "pressed"
-        },
-        "transparent": {
-          "$type": "color",
-          "$value": "{core.color.neutral.transparent}",
-          "$description": "Forms"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.700.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.800.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.900.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
@@ -744,20 +758,39 @@
           "$value": "{core.color.coolgray.300.solid}",
           "$description": "bg for disabled, readonly"
         },
-        "rest": {
-          "$type": "color",
-          "$value": "{core.color.azure.500.solid}",
-          "$description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.600.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.700.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "$type": "color",
-          "$value": "{core.color.azure.600.solid}",
-          "$description": "hover"
-        },
-        "pressed": {
-          "$type": "color",
-          "$value": "{core.color.azure.700.solid}",
-          "$description": "pressed"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.700.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.800.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.900.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
