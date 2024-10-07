@@ -128,20 +128,6 @@
             "$type": "color",
             "$value": "{core.color.limegreen.100.solid}"
           }
-        },
-        "informative": {
-          "rest": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.400.solid}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.300.solid}"
-          },
-          "pressed": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.200.solid}"
-          }
         }
       },
       "inverse": {
@@ -279,18 +265,6 @@
           "subtle": {
             "$type": "color",
             "$value": "{core.color.limegreen.200.opa80}"
-          }
-        },
-        "informative": {
-          "regular": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.300.solid}",
-            "$description": "Use on: Counter"
-          },
-          "subtle": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.300.opa80}",
-            "$description": "Use on: Counter"
           }
         }
       },
@@ -691,20 +665,6 @@
           }
         },
         "safe": {
-          "rest": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          },
-          "pressed": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          }
-        },
-        "informative": {
           "rest": {
             "$type": "color",
             "$value": "{core.color.neutral.transparent}"
