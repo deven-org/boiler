@@ -266,6 +266,18 @@
             "$type": "color",
             "$value": "{core.color.limegreen.200.opa80}"
           }
+        },
+        "informative": {
+          "regular": {
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.solid}",
+            "$description": "Use on: Counter"
+          },
+          "subtle": {
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.opa80}",
+            "$description": "Use on: Counter"
+          }
         }
       },
       "bold": {
