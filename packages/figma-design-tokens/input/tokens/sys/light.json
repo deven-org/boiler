@@ -128,20 +128,6 @@
             "$type": "color",
             "$value": "{core.color.limegreen.100.solid}"
           }
-        },
-        "informative": {
-          "rest": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.400.solid}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.300.solid}"
-          },
-          "pressed": {
-            "$type": "color",
-            "$value": "{core.color.coolgray.200.solid}"
-          }
         }
       },
       "inverse": {
@@ -384,25 +370,39 @@
           "$value": "{core.color.coolgray.700.solid}",
           "$description": "use for disabled states"
         },
-        "rest": {
-          "$type": "color",
-          "$value": "{core.color.azure.500.solid}",
-          "$description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.400.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.300.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "$type": "color",
-          "$value": "{core.color.azure.400.solid}",
-          "$description": "hover"
-        },
-        "pressed": {
-          "$type": "color",
-          "$value": "{core.color.azure.300.solid}",
-          "$description": "pressed"
-        },
-        "transparent": {
-          "$type": "color",
-          "$value": "{core.color.neutral.transparent}",
-          "$description": "Forms"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.400.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.300.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
@@ -567,42 +567,6 @@
         }
       }
     },
-    "static": {
-      "regular": {
-        "disabled": {
-          "$type": "color",
-          "$value": "{core.color.coolgray.700.solid}",
-          "$description": "use for disabled states"
-        },
-        "primary_dimmed": {
-          "$type": "color",
-          "$value": "{core.color.azure.400.solid}",
-          "$description": "Use for components which can be used anywhere e.g: Loader"
-        },
-        "white": {
-          "$type": "color",
-          "$value": "{core.color.white.solid}",
-          "$description": "Use for components which can be used anywhere e.g: Loader"
-        }
-      },
-      "subtle": {
-        "disabled": {
-          "$type": "color",
-          "$value": "{core.color.coolgray.700.opa70}",
-          "$description": "use for disabled states"
-        },
-        "primary_dimmed": {
-          "$type": "color",
-          "$value": "{core.color.azure.600.opa20}",
-          "$description": "Use for components which can be used anywhere e.g: Loader"
-        },
-        "white": {
-          "$type": "color",
-          "$value": "{core.color.white.opa20}",
-          "$description": "Use for components which can be used anywhere e.g: Loader"
-        }
-      }
-    },
     "bordercolor": {
       "transparent": {
         "$type": "color",
@@ -725,42 +689,47 @@
             "$type": "color",
             "$value": "{core.color.neutral.transparent}"
           }
-        },
-        "informative": {
-          "rest": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          },
-          "pressed": {
-            "$type": "color",
-            "$value": "{core.color.neutral.transparent}"
-          }
         }
       },
       "inverse": {
         "disabled": {
           "$type": "color",
-          "$value": "{core.color.coolgray.900.solid}",
+          "$value": "{core.color.coolgray.700.solid}",
           "$description": "bg for disabled, readonly"
         },
-        "rest": {
-          "$type": "color",
-          "$value": "{core.color.azure.500.solid}",
-          "$description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.400.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.300.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "$type": "color",
-          "$value": "{core.color.azure.400.solid}",
-          "$description": "hover"
-        },
-        "pressed": {
-          "$type": "color",
-          "$value": "{core.color.azure.300.solid}",
-          "$description": "pressed"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.400.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.300.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
@@ -814,6 +783,42 @@
         "$type": "color",
         "$value": "{core.color.coolgray.100.opa30}",
         "$description": "Apply on elevation Box shadow"
+      }
+    },
+    "static": {
+      "regular": {
+        "disabled": {
+          "$type": "color",
+          "$value": "{core.color.coolgray.700.solid}",
+          "$description": "use for disabled states"
+        },
+        "primary_dimmed": {
+          "$type": "color",
+          "$value": "{core.color.azure.400.solid}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{core.color.white.solid}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        }
+      },
+      "subtle": {
+        "disabled": {
+          "$type": "color",
+          "$value": "{core.color.coolgray.700.opa70}",
+          "$description": "use for disabled states"
+        },
+        "primary_dimmed": {
+          "$type": "color",
+          "$value": "{core.color.azure.600.opa20}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{core.color.white.opa20}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        }
       }
     }
   },

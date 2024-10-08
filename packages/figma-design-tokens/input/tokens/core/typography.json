@@ -174,7 +174,8 @@
               "paragraphIndent": "null",
               "textDecoration": "null",
               "textCase": "null"
-            }
+            },
+            "$description": "core.typography.sourcesanspro.regular.75"
           },
           "87": {
             "$type": "typography",
