@@ -5,8 +5,16 @@
         "elevation": {
           "elevated": {
             "$type": "boxShadow",
-            "$value": "{sem.elevation.lvl_1}"
+            "$value": "{sys.elevation.lvl_1}"
           }
+        }
+      }
+    },
+    "menu": {
+      "container": {
+        "elevation": {
+          "$type": "boxShadow",
+          "$value": "{sys.elevation.lvl_1}"
         }
       }
     }
