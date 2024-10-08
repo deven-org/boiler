@@ -37,11 +37,6 @@
                 "$value": "{sys.bgcolor.bold.disabled}",
                 "$description": "also applies to indeterminate"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "also applies to indeterminate"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.bold.danger.rest}",
@@ -70,11 +65,6 @@
                 "$description": "also applies to indeterminate"
               },
               "disabled": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.inverse.disabled}",
-                "$description": "also applies to indeterminate"
-              },
-              "readonly": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.inverse.disabled}",
                 "$description": "also applies to indeterminate"
@@ -113,11 +103,6 @@
                 "$value": "{sys.bordercolor.bold.disabled}",
                 "$description": "also applies to indeterminate"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.bold.disabled}",
-                "$description": "also applies to indeterminate"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.bold.danger.rest}",
@@ -146,11 +131,6 @@
                 "$description": "also applies to indeterminate"
               },
               "disabled": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.inverse.disabled}",
-                "$description": "also applies to indeterminate"
-              },
-              "readonly": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.disabled}",
                 "$description": "also applies to indeterminate"
@@ -191,11 +171,6 @@
                 "$value": "{sys.content.bold.disabled.regular}",
                 "$description": "also applies to indeterminate"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.content.bold.disabled.regular}",
-                "$description": "also applies to indeterminate"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.content.bold.danger.regular}",
@@ -224,11 +199,6 @@
                 "$description": "also applies to indeterminate"
               },
               "disabled": {
-                "$type": "color",
-                "$value": "{sys.content.transparent}",
-                "$description": "also applies to indeterminate"
-              },
-              "readonly": {
                 "$type": "color",
                 "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
@@ -734,10 +704,6 @@
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.disabled}"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.inverse.disabled}"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.error.rest}"
@@ -763,10 +729,6 @@
               "disabled": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.disabled}"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}"
               },
               "error": {
                 "$type": "color",
@@ -801,11 +763,6 @@
                 "$value": "{sys.bgcolor.bold.disabled}",
                 "$description": "forms.radio.control.background.selected.fill.disabled"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.radio.control.background.selected.fill.readonly"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.error.rest}",
@@ -837,11 +794,6 @@
                 "$type": "color",
                 "$value": "{sys.bordercolor.inverse.disabled}",
                 "$description": "forms.radio.control.background.unselected.fill.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.inverse.disabled}",
-                "$description": "forms.radio.control.background.unselected.fill.readonly"
               },
               "error": {
                 "$type": "color",
@@ -879,11 +831,6 @@
                 "$value": "{sys.bgcolor.inverse.disabled}",
                 "$description": "forms.radio.control.foreground.unselected.fill.disabled"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.inverse.disabled}",
-                "$description": "forms.radio.control.foreground.unselected.fill.readonly"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.inverse.rest}",
@@ -916,11 +863,6 @@
                 "$value": "{sys.bgcolor.inverse.disabled}",
                 "$description": "forms.radio.control.foreground.unselected.fill.disabled"
               },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.inverse.disabled}",
-                "$description": "forms.radio.control.foreground.unselected.fill.readonly"
-              },
               "error": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.inverse.rest}",
@@ -941,10 +883,6 @@
           "disabled": {
             "$type": "color",
             "$value": "{sem.forms.fieldset.legend.textcolor.disabled}"
-          },
-          "readonly": {
-            "$type": "color",
-            "$value": "{sem.forms.fieldset.legend.textcolor.readonly}"
           },
           "error": {
             "$type": "color",
@@ -1427,11 +1365,6 @@
                 "$type": "color",
                 "$value": "{sys.bgcolor.bold.disabled}",
                 "$description": "forms.toggleswitch.control.background.unselected.fill.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.toggleswitch.control.background.unselected.fill.readonly"
               }
             },
             "active": {
@@ -1459,11 +1392,6 @@
                 "$type": "color",
                 "$value": "{sys.bgcolor.bold.disabled}",
                 "$description": "forms.toggleswitch.control.background.selected.fill.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.toggleswitch.control.background.selected.fill.readonly"
               }
             }
           },
@@ -1493,11 +1421,6 @@
                 "$type": "color",
                 "$value": "{sys.bordercolor.transparent}",
                 "$description": "forms.toggleswitch.control.background.unselected.stroke.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.transparent}",
-                "$description": "forms.toggleswitch.control.background.unselected.stroke.readonly"
               }
             },
             "active": {
@@ -1525,11 +1448,6 @@
                 "$type": "color",
                 "$value": "{sys.bordercolor.transparent}",
                 "$description": "forms.toggleswitch.control.background.unselected.stroke.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.transparent}",
-                "$description": "forms.toggleswitch.control.background.unselected.stroke.readonly"
               }
             }
           }
@@ -1561,11 +1479,6 @@
                 "$type": "color",
                 "$value": "{sys.content.bold.disabled.subtle}",
                 "$description": "forms.toggleswitch.control.foreground.selected.fill.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.content.bold.disabled.subtle}",
-                "$description": "forms.toggleswitch.control.foreground.selected.fill.readonly"
               }
             },
             "active": {
@@ -1593,11 +1506,6 @@
                 "$type": "color",
                 "$value": "{sys.content.bold.disabled.subtle}",
                 "$description": "forms.toggleswitch.control.foreground.selected.fill.disabled"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.content.bold.disabled.subtle}",
-                "$description": "forms.toggleswitch.control.foreground.selected.fill.readonly"
               }
             }
           }
@@ -1624,10 +1532,6 @@
               "disabled": {
                 "$type": "color",
                 "$value": "{sys.static.subtle.disabled}"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{sys.static.subtle.disabled}"
               }
             },
             "active": {
@@ -1648,10 +1552,6 @@
                 "$value": "{sys.static.regular.white}"
               },
               "disabled": {
-                "$type": "color",
-                "$value": "{sys.static.subtle.disabled}"
-              },
-              "readonly": {
                 "$type": "color",
                 "$value": "{sys.static.subtle.disabled}"
               }
@@ -1678,10 +1578,6 @@
               "disabled": {
                 "$type": "color",
                 "$value": "{cmp.toggleswitch.control.knob.bordercolor.inactive.rest}"
-              },
-              "readonly": {
-                "$type": "color",
-                "$value": "{cmp.toggleswitch.control.knob.bordercolor.inactive.rest}"
               }
             },
             "active": {
@@ -1702,10 +1598,6 @@
                 "$value": "{cmp.toggleswitch.control.knob.bordercolor.active.rest}"
               },
               "disabled": {
-                "$type": "color",
-                "$value": "{cmp.toggleswitch.control.knob.bordercolor.active.rest}"
-              },
-              "readonly": {
                 "$type": "color",
                 "$value": "{cmp.toggleswitch.control.knob.bordercolor.active.rest}"
               }

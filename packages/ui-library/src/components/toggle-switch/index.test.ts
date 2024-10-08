@@ -10,7 +10,6 @@ const sampleParams: BlrToggleSwitchType = {
   toogleSwitchId: 'switch',
   label: 'Toggle Switch Option',
   disabled: false,
-  readonly: false,
   active: false,
   onLabel: 'On',
   offLabel: 'Off',

@@ -130,13 +130,6 @@ export default {
         category: 'States',
       },
     },
-    readonly: {
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      defaultValue: false,
-      table: {
-        category: 'States',
-      },
-    },
 
     //Validation
     required: {
@@ -238,8 +231,7 @@ export default {
  - [**Checked / Unchecked **](#checked--unchecked) 
  - [**Indeterminate**](#indeterminate)  
 - [**States**](#states)
- - [**Disabled**](#disabled) 
- - [**Readonly**](#readonly)
+ - [**Disabled**](#disabled)
 - [**Validation**](#validation)
  - [**Required**](#required) 
  - [**Has Error**](#has-error)  
@@ -266,7 +258,6 @@ const defaultParams: BlrCheckboxType = {
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
   disabled: false,
-  readonly: false,
   required: false,
   hasError: false,
   errorMessage: ' ',
@@ -294,7 +285,6 @@ const argTypesToDisable = [
   'hintMessage',
   'hintMessageIcon',
   'disabled',
-  'readonly',
   'required',
   'hasError',
   'errorMessage',
@@ -405,7 +395,7 @@ Indeterminate.story = {
 
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Checkbox component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * Apart from states like rest, hover, pressed and focus, the Checkbox component can also be disabled. The error state is documented under [validation](#validation).
  *
  * ### Disabled
  * The Checkbox component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
@@ -429,27 +419,6 @@ Disabled.story = {
   name: ' ',
 };
 
-/**
- * ### Readonly
- * The Checkbox component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-checkbox">
-        ${BlrCheckboxRenderFunction({
-          ...defaultParams,
-          label: 'Readonly',
-          readonly: true,
-        })}
-      </div>
-    </div>
-  `;
-};
-Readonly.story = {
-  name: ' ',
-};
 /**
  * ## Validation
  * ### Required

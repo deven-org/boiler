@@ -36,7 +36,6 @@ export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
   @property() accessor disabled: boolean | undefined;
-  @property() accessor readonly: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType = 'md';
   @property() accessor hasLegend: boolean | undefined;
@@ -96,7 +95,6 @@ export class BlrRadioGroup extends LitElementCustom {
 
       item.hasError = this.hasError;
       item.disabled = this.disabled;
-      item.readonly = this.readonly;
       item.theme = this.theme;
       item.sizeVariant = this.sizeVariant;
 
@@ -127,7 +125,6 @@ export class BlrRadioGroup extends LitElementCustom {
       [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
-      readonly: this.readonly || false,
       error: this.hasError || false,
       [this.direction]: this.direction,
     });
