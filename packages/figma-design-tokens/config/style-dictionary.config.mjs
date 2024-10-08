@@ -137,6 +137,13 @@ async function run() {
           ],
         },
       },
+      log: {
+        warnings: 'warn', // 'warn' | 'error' | 'disabled'
+        verbosity: 'verbose', // 'default' | 'silent' | 'verbose'
+        errors: {
+          brokenReferences: 'throw', // 'throw' | 'console'
+        },
+      },
     };
   });
 

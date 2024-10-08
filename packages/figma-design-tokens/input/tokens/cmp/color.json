@@ -112,22 +112,22 @@
             "inactive": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.bordercolor.inverse.rest}",
+                "$value": "{sys.bordercolor.inverse.primary.rest}",
                 "$description": "also applies to indeterminate"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.bordercolor.inverse.hover}",
+                "$value": "{sys.bordercolor.inverse.primary.hover}",
                 "$description": "also applies to indeterminate"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.bordercolor.inverse.pressed}",
+                "$value": "{sys.bordercolor.inverse.primary.pressed}",
                 "$description": "also applies to indeterminate"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.bordercolor.inverse.rest}",
+                "$value": "{sys.bordercolor.inverse.primary.rest}",
                 "$description": "also applies to indeterminate"
               },
               "disabled": {
@@ -137,7 +137,7 @@
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.danger.rest}",
+                "$value": "{sys.bordercolor.inverse.error.rest}",
                 "$description": "also applies to indeterminate"
               }
             }
@@ -180,32 +180,32 @@
             "inactive": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               },
               "disabled": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.content.inverse.transparent}",
+                "$value": "{sys.content.transparent}",
                 "$description": "also applies to indeterminate"
               }
             }
@@ -686,101 +686,57 @@
             "inactive": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.rest"
+                "$value": "{sys.bordercolor.inverse.primary.rest}"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.hover}",
-                "$description": "forms.radio.control.background.unselected.fill.hover"
+                "$value": "{sys.bordercolor.inverse.primary.hover}"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.pressed}",
-                "$description": "forms.radio.control.background.unselected.fill.pressed"
+                "$value": "{sys.bordercolor.inverse.primary.pressed}"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.focus"
+                "$value": "{sys.bordercolor.inverse.primary.rest}"
               },
               "disabled": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.radio.control.background.unselected.fill.disabled"
+                "$value": "{sys.bordercolor.inverse.disabled}"
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.danger.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.error"
+                "$value": "{sys.bordercolor.inverse.error.rest}"
               }
             },
             "active": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.selected.fill.rest"
+                "$value": "{sys.bgcolor.bold.primary.rest}"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.hover}",
-                "$description": "forms.radio.control.background.selected.fill.hover"
+                "$value": "{sys.bgcolor.bold.primary.hover}"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.pressed}",
-                "$description": "forms.radio.control.background.selected.fill.pressed"
+                "$value": "{sys.bgcolor.bold.primary.pressed}"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.selected.fill.focus"
+                "$value": "{sys.bordercolor.inverse.primary.rest}"
               },
               "disabled": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.radio.control.background.selected.fill.disabled"
+                "$value": "{sys.bordercolor.inverse.disabled}"
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.bgcolor.bold.danger.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.error"
+                "$value": "{sys.bordercolor.inverse.error.rest}"
               }
             }
           },
           "bordercolor": {
-            "inactive": {
-              "rest": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.rest"
-              },
-              "hover": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.hover}",
-                "$description": "forms.radio.control.background.unselected.fill.hover"
-              },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.pressed}",
-                "$description": "forms.radio.control.background.unselected.fill.pressed"
-              },
-              "focus": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.primary.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.focus"
-              },
-              "disabled": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.disabled}",
-                "$description": "forms.radio.control.background.unselected.fill.disabled"
-              },
-              "error": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.bold.danger.rest}",
-                "$description": "forms.radio.control.background.unselected.fill.error"
-              }
-            },
             "active": {
               "rest": {
                 "$type": "color",
@@ -806,6 +762,38 @@
                 "$type": "color",
                 "$value": "{sys.bgcolor.bold.disabled}",
                 "$description": "forms.radio.control.background.selected.fill.disabled"
+              },
+              "error": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.error.rest}",
+                "$description": "forms.radio.control.background.unselected.fill.error"
+              }
+            },
+            "inactive": {
+              "rest": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.primary.rest}",
+                "$description": "forms.radio.control.background.unselected.fill.rest"
+              },
+              "hover": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.primary.hover}",
+                "$description": "forms.radio.control.background.unselected.fill.hover"
+              },
+              "pressed": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.primary.pressed}",
+                "$description": "forms.radio.control.background.unselected.fill.pressed"
+              },
+              "focus": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.primary.rest}",
+                "$description": "forms.radio.control.background.unselected.fill.focus"
+              },
+              "disabled": {
+                "$type": "color",
+                "$value": "{sys.bordercolor.inverse.disabled}",
+                "$description": "forms.radio.control.background.unselected.fill.disabled"
               },
               "error": {
                 "$type": "color",
@@ -820,64 +808,64 @@
             "inactive": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.rest}",
                 "$description": "forms.radio.control.foreground.unselected.fill.rest"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.hover}",
                 "$description": "forms.radio.control.foreground.unselected.fill.hover"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.pressed}",
                 "$description": "forms.radio.control.foreground.unselected.fill.pressed"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.rest}",
                 "$description": "forms.radio.control.foreground.unselected.fill.focus"
               },
               "disabled": {
                 "$type": "color",
-                "$value": "{sys.content.bold.disabled.regular}",
+                "$value": "{sys.bgcolor.inverse.disabled}",
                 "$description": "forms.radio.control.foreground.unselected.fill.disabled"
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.rest}",
                 "$description": "forms.radio.control.foreground.unselected.fill.error"
               }
             },
             "active": {
               "rest": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
-                "$description": "forms.radio.control.foreground.selected.fill.rest"
+                "$value": "{sys.bgcolor.inverse.rest}",
+                "$description": "forms.radio.control.foreground.unselected.fill.rest"
               },
               "hover": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
-                "$description": "forms.radio.control.foreground.selected.fill.hover"
+                "$value": "{sys.bgcolor.inverse.hover}",
+                "$description": "forms.radio.control.foreground.unselected.fill.hover"
               },
               "pressed": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
-                "$description": "forms.radio.control.foreground.selected.fill.pressed"
+                "$value": "{sys.bgcolor.inverse.pressed}",
+                "$description": "forms.radio.control.foreground.unselected.fill.pressed"
               },
               "focus": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
-                "$description": "forms.radio.control.foreground.selected.fill.focus"
+                "$value": "{sys.bgcolor.inverse.rest}",
+                "$description": "forms.radio.control.foreground.unselected.fill.focus"
               },
               "disabled": {
                 "$type": "color",
-                "$value": "{sys.content.bold.disabled.regular}",
-                "$description": "forms.radio.control.foreground.selected.fill.disabled"
+                "$value": "{sys.bgcolor.inverse.disabled}",
+                "$description": "forms.radio.control.foreground.unselected.fill.disabled"
               },
               "error": {
                 "$type": "color",
-                "$value": "{sys.content.bold.primary.regular}",
+                "$value": "{sys.bgcolor.inverse.rest}",
                 "$description": "forms.radio.control.foreground.unselected.fill.error"
               }
             }
