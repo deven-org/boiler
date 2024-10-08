@@ -1,7 +1,7 @@
 [
   {
     "id": "49d195975481d829ddd056e678feb517bb090480",
-    "name": "Light",
+    "name": "Licht",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "cmp/color": "enabled",
@@ -735,7 +735,7 @@
   },
   {
     "id": "5daf3658206ffd38633521a535e3fd4b01e96e8e",
-    "name": "Dark",
+    "name": "Dunkel",
     "$figmaStyleReferences": {
       "cmp.Tooltip.Container.Elevation.Elevated": "S:18836d5a0b6b6f3bed6fe012a935cfb0851f19b9,",
       "cmp.tooltip.container.elevation.elevated": "S:e75a3f89b125abbe26e5fc998d90ff19f948bf1d,",
