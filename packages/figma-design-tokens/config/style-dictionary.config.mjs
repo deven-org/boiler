@@ -2,7 +2,7 @@
 // import * as hardCodedThemes from './themes.cjs';
 // console.log(hardCodedThemes.array);
 
-import { register, permutateThemes, expandTypesMap, excludeParentKeys } from '@tokens-studio/sd-transforms';
+import { register, permutateThemes, expandTypesMap } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
 import * as fs from 'fs';
