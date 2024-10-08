@@ -5,7 +5,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { styleCustom } from './index.css.js';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -39,7 +39,7 @@ export type BlrInputFieldTextEventHandlers = {
 const propertySanitizer = makeSanitizer((unsanitized: BlrInputFieldTextType) => ({
   type: unsanitized.type ?? 'text',
   sizeVariant: unsanitized.sizeVariant ?? 'md',
-  theme: unsanitized.theme ?? 'Light_value',
+  theme: unsanitized.theme ?? Themes[0],
 }));
 
 /**
@@ -94,6 +94,8 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
   @property() accessor name!: string;
+
+  // check with ash where or if to put the default value
   @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor currentType: InputTypes | undefined;

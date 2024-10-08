@@ -1,48 +1,40 @@
-// get an themes array not needed anymore if we derive themes from $themes.json
-// import * as hardCodedThemes from './themes.cjs';
-// console.log(hardCodedThemes.array);
-
-import { register, permutateThemes, expandTypesMap, excludeParentKeys } from '@tokens-studio/sd-transforms';
+import { register, permutateThemes, expandTypesMap } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
 import * as fs from 'fs';
 import { Buffer } from 'node:buffer';
+import prettier from 'prettier';
+import { buildpaths } from './buildpaths.mjs';
+import JsonToTS from 'json-to-ts';
 
 register(StyleDictionary, {
   /* options here if needed */
 });
 
-//-- registered formats
+// mjs format
 StyleDictionary.registerFormat({
-  name: 'custom/format/semanticTokens',
+  name: 'custom/format/mjs',
   format: async ({ dictionary, file }) => {
     const tokenObj = dictionary.tokens;
-    return (
-      (await fileHeader({ file })) + `export const semanticTokens = ` + JSON.stringify(minifyDictionary(tokenObj, true))
-    );
+    const body = `export const tokens = ${JSON.stringify(minifyDictionary(tokenObj, true))}`;
+    const prettierConfig = await prettier.resolveConfig(process.cwd());
+    const prettyBody = await prettier.format(body, {
+      // ...prettierConfig,
+      parser: 'babel',
+    });
+    return (await fileHeader({ file })) + prettyBody;
   },
 });
 
+// typings format
 StyleDictionary.registerFormat({
-  name: 'custom/format/componentTokens',
-  format: async ({ dictionary, file }) => {
+  name: 'typescript/accurate-module-declarations',
+  format: function ({ dictionary }) {
     const tokenObj = dictionary.tokens;
     return (
-      (await fileHeader({ file })) +
-      `export const componentTokens = ` +
-      JSON.stringify(minifyDictionary(tokenObj, true))
-    );
-  },
-});
-
-StyleDictionary.registerFormat({
-  name: 'custom/format/componentConfig',
-  format: async ({ dictionary, file }) => {
-    const tokenObj = dictionary.tokens;
-    return (
-      (await fileHeader({ file })) +
-      `export const componentConfig = ` +
-      JSON.stringify(minifyDictionary(tokenObj, true))
+      'declare const root: RootObject\n' +
+      'export default root\n' +
+      JsonToTS(minifyDictionary(tokenObj, true)).join('\n')
     );
   },
 });
@@ -59,7 +51,7 @@ StyleDictionary.registerTransform({
 // directory where our tokens live
 const tokenDir = './input/tokens/';
 
-// generate themes file
+// generate themes_generated.cjs file
 function writeThemesFile(themesObj) {
   console.log('themes:');
   console.log(themesObj);
@@ -83,16 +75,7 @@ async function run() {
 
   const themes = permutateThemes($themes, { separator: '_' });
   writeThemesFile(themes);
-
-  // This is an interim solution. We should switch to using permutatedThemes everywhere
-  // const translateThemesToHardCoded = {
-  //   Light_value: 'Light',
-  //   Dark_value: 'Dark',
-  // };
-
   const config = Object.entries(themes).map(([name, tokensets]) => {
-    // const src = tokensets.map((tokenset) => `${tokenset}.json`);
-    // console.log(src);
     return {
       source: tokensets.map((tokenset) => `${tokenDir}${tokenset}.json`),
       preprocessors: ['tokens-studio'], // <-- since 0.16.0 this must be explicit
@@ -100,7 +83,7 @@ async function run() {
         typesMap: expandTypesMap,
       },
       platforms: {
-        js: {
+        mjs_modules: {
           transforms: [
             'attribute/cti',
             'name/pascal',
@@ -109,27 +92,59 @@ async function run() {
             'ts/typography/fontWeight',
             'custom/strReplace',
           ],
-          buildPath: '../ui-library/src/foundation/_tokens-generated/',
+          buildPath: buildpaths.mjs_modules,
           files: [
             {
-              format: 'custom/format/semanticTokens',
+              format: 'custom/format/mjs',
               destination: `__semantic-tokens.${name}.generated.mjs`,
-              // destination: `__semantic-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'sem';
               },
             },
             {
-              format: 'custom/format/componentTokens',
+              format: 'custom/format/mjs',
               destination: `__component-tokens.${name}.generated.mjs`,
-              // destination: `__component-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
               },
             },
             {
-              format: 'custom/format/componentConfig',
+              format: 'custom/format/mjs',
               destination: 'config-tokens/__component-config.generated.mjs',
+              filter: (token) => {
+                return token.$type === 'componentConfig';
+              },
+            },
+          ],
+        },
+        ts_module_declaration: {
+          transforms: [
+            'attribute/cti',
+            'name/pascal',
+            'ts/resolveMath',
+            'ts/size/px',
+            'ts/typography/fontWeight',
+            'custom/strReplace',
+          ],
+          buildPath: buildpaths.modul_declarations,
+          files: [
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: `__semantic-tokens.${name}.generated.ts`,
+              filter: (token) => {
+                return token.attributes.category === 'sem';
+              },
+            },
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: `__component-tokens.${name}.generated.ts`,
+              filter: (token) => {
+                return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
+              },
+            },
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: 'config-tokens/__component-config.generated.ts',
               filter: (token) => {
                 return token.$type === 'componentConfig';
               },
@@ -151,7 +166,9 @@ async function run() {
     // console.log(cfg);
     const sd = new StyleDictionary(cfg);
     await sd.cleanAllPlatforms(); // optionally, cleanup files first..
-    await sd.buildAllPlatforms();
+    // await sd.buildAllPlatforms();
+    await sd.buildPlatform('mjs_modules');
+    await sd.buildPlatform('ts_module_declaration');
   }
 
   await Promise.all(config.map(cleanAndBuild));

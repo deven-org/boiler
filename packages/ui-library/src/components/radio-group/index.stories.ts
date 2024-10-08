@@ -228,7 +228,7 @@ const defaultParams: BlrRadioGroupType & {
   ariaLabel: string;
   radioGroupId: string;
 } = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   direction: 'vertical',
   hasLegend: true,

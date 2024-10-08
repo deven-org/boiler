@@ -3,6 +3,7 @@ import { BlrSelectRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrSelectType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrSelectType = {
   name: 'Input Field Text',
@@ -15,7 +16,7 @@ const sampleParams: BlrSelectType = {
   hintMessageIcon: 'blrInfo',
   selectId: 'Peter',
   errorMessageIcon: 'blrErrorFilled',
-  theme: 'Light_value',
+  theme: Themes[0],
   options: [
     { label: 'option 1', value: 'option1' },
     { label: 'option 2', value: 'option2' },

@@ -5,9 +5,10 @@ import { BlrFormCaptionType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrFormCaptionType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
