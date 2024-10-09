@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
+    "style-dictionary": "node ./config/style-dictionary.config.mjs",
     "generate-index-files": "node ./config/generate-index-files.mjs",
     "generate-json-structure": "node ./config/generate-json-structure.mjs",
     "generate-typescript-semantic-structure": "make_types -i ../ui-library/src/foundation/_tokens-generated/semanticTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/semantic.generated.json semanticTokens",

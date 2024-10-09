@@ -7,12 +7,16 @@ import StyleDictionary from 'style-dictionary';
 import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
 import * as fs from 'fs';
 import { Buffer } from 'node:buffer';
+import prettier from 'prettier';
+
+// const JsonToTS = require('json-to-ts');
+import JsonToTS from 'json-to-ts';
 
 register(StyleDictionary, {
   /* options here if needed */
 });
 
-//-- registered formats
+//-- registered formats oldschool
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',
   format: async ({ dictionary, file }) => {
@@ -47,6 +51,41 @@ StyleDictionary.registerFormat({
   },
 });
 
+// mjs
+StyleDictionary.registerFormat({
+  name: 'custom/format/mjs',
+  format: async ({ dictionary, file }) => {
+    const tokenObj = dictionary.tokens;
+    const body = `export const tokens = ${JSON.stringify(minifyDictionary(tokenObj, true))}`;
+    const prettierConfig = await prettier.resolveConfig(process.cwd());
+    const prettyBody = await prettier.format(body, {
+      // ...prettierConfig,
+      parser: 'babel',
+    });
+    return (await fileHeader({ file })) + prettyBody;
+  },
+});
+
+StyleDictionary.registerFormat({
+  name: 'custom/format/minifiedJSON',
+  format: function ({ dictionary }) {
+    return JSON.stringify(minifyDictionary(dictionary.tokens, true));
+  },
+});
+
+// typings
+StyleDictionary.registerFormat({
+  name: 'typescript/accurate-module-declarations',
+  format: function ({ dictionary }) {
+    const tokenObj = dictionary.tokens;
+    return (
+      'declare const root: RootObject\n' +
+      'export default root\n' +
+      JsonToTS(minifyDictionary(tokenObj, true)).join('\n')
+    );
+  },
+});
+
 //registered custom transforms
 StyleDictionary.registerTransform({
   type: `value`,
@@ -59,7 +98,7 @@ StyleDictionary.registerTransform({
 // directory where our tokens live
 const tokenDir = './input/tokens/';
 
-// generate themes file
+// generate themes_generated.cjs file
 function writeThemesFile(themesObj) {
   console.log('themes:');
   console.log(themesObj);
@@ -83,16 +122,7 @@ async function run() {
 
   const themes = permutateThemes($themes, { separator: '_' });
   writeThemesFile(themes);
-
-  // This is an interim solution. We should switch to using permutatedThemes everywhere
-  // const translateThemesToHardCoded = {
-  //   Light_value: 'Light',
-  //   Dark_value: 'Dark',
-  // };
-
   const config = Object.entries(themes).map(([name, tokensets]) => {
-    // const src = tokensets.map((tokenset) => `${tokenset}.json`);
-    // console.log(src);
     return {
       source: tokensets.map((tokenset) => `${tokenDir}${tokenset}.json`),
       preprocessors: ['tokens-studio'], // <-- since 0.16.0 this must be explicit
@@ -114,7 +144,6 @@ async function run() {
             {
               format: 'custom/format/semanticTokens',
               destination: `__semantic-tokens.${name}.generated.mjs`,
-              // destination: `__semantic-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'sem';
               },
@@ -122,7 +151,6 @@ async function run() {
             {
               format: 'custom/format/componentTokens',
               destination: `__component-tokens.${name}.generated.mjs`,
-              // destination: `__component-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
               },
@@ -130,6 +158,145 @@ async function run() {
             {
               format: 'custom/format/componentConfig',
               destination: 'config-tokens/__component-config.generated.mjs',
+              filter: (token) => {
+                return token.$type === 'componentConfig';
+              },
+            },
+          ],
+        },
+        json: {
+          transforms: [
+            'attribute/cti',
+            'name/pascal',
+            'ts/resolveMath',
+            'ts/size/px',
+            'ts/typography/fontWeight',
+            'custom/strReplace',
+          ],
+          buildPath: '../ui-library/src/foundation/__tokens-generated_new/json/',
+          files: [
+            {
+              format: 'custom/format/minifiedJSON',
+              destination: `__semantic-tokens.${name}.generated.json`,
+              filter: (token) => {
+                return token.attributes.category === 'sem';
+              },
+            },
+            {
+              format: 'custom/format/minifiedJSON',
+              destination: `__component-tokens.${name}.generated.json`,
+              filter: (token) => {
+                return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
+              },
+            },
+            {
+              format: 'custom/format/minifiedJSON',
+              destination: 'config-tokens/__component-config.generated.json',
+              filter: (token) => {
+                return token.$type === 'componentConfig';
+              },
+            },
+          ],
+        },
+        cjs_modules: {
+          // transforms: [
+          //   'attribute/cti',
+          //   'name/pascal',
+          //   'ts/resolveMath',
+          //   'ts/size/px',
+          //   'ts/typography/fontWeight',
+          //   'custom/strReplace',
+          // ],
+          transformGroup: 'tokens-studio',
+          buildPath: '../ui-library/src/foundation/__tokens-generated_new/cjs_modules/',
+          files: [
+            {
+              format: 'javascript/module',
+              destination: `__semantic-tokens.${name}.generated.cjs`,
+              filter: (token) => {
+                return token.attributes.category === 'sem';
+              },
+            },
+            {
+              format: 'javascript/module',
+              destination: `__component-tokens.${name}.generated.cjs`,
+              filter: (token) => {
+                return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
+              },
+            },
+            {
+              format: 'javascript/module',
+              destination: 'config-tokens/__component-config.generated.cjs',
+              filter: (token) => {
+                return token.$type === 'componentConfig';
+              },
+            },
+          ],
+        },
+        mjs_modules: {
+          transforms: [
+            'attribute/cti',
+            'name/pascal',
+            'ts/resolveMath',
+            'ts/size/px',
+            'ts/typography/fontWeight',
+            'custom/strReplace',
+          ],
+          // transformGroup: 'tokens-studio',
+          buildPath: '../ui-library/src/foundation/__tokens-generated_new/mjs_modules/',
+          files: [
+            {
+              format: 'custom/format/mjs',
+              destination: `__semantic-tokens.${name}.generated.mjs`,
+              filter: (token) => {
+                return token.attributes.category === 'sem';
+              },
+            },
+            {
+              format: 'custom/format/mjs',
+              destination: `__component-tokens.${name}.generated.mjs`,
+              filter: (token) => {
+                return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
+              },
+            },
+            {
+              format: 'custom/format/mjs',
+              destination: 'config-tokens/__component-config.generated.mjs',
+              filter: (token) => {
+                return token.$type === 'componentConfig';
+              },
+            },
+          ],
+        },
+        ts_module_declaration: {
+          // transforms: [
+          //   'attribute/cti',
+          //   'name/pascal',
+          //   'ts/resolveMath',
+          //   'ts/size/px',
+          //   'ts/typography/fontWeight',
+          //   'custom/strReplace',
+          // ],
+          transformGroup: 'js',
+          buildPath: '../ui-library/src/foundation/__tokens-generated_new/module_declarations/',
+          files: [
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: `__semantic-tokens.${name}.generated.ts`,
+              filter: (token) => {
+                return token.attributes.category === 'sem';
+              },
+            },
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: `__component-tokens.${name}.generated.ts`,
+              filter: (token) => {
+                return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
+              },
+            },
+            {
+              format: 'typescript/accurate-module-declarations',
+              destination: 'config-tokens/__component-config.generated.ts',
               filter: (token) => {
                 return token.$type === 'componentConfig';
               },

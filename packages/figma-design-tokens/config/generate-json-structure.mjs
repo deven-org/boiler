@@ -1,5 +1,4 @@
 import fs from 'fs';
-
 import { array as themes } from './themes_generated.cjs';
 
 const { componentTokens } = await import(

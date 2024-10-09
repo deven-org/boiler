@@ -1,0 +1,1841 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+export const tokens = {
+  cmp: {
+    buttongroup: {
+      container: {
+        itemspacing: { xs: "4px", sm: "4px", md: "8px", lg: "8px", xl: "8px" },
+      },
+    },
+    formcaption: {
+      container: {
+        itemspacing: { sm: "0.125rem", md: "0.125rem", lg: "0.125rem" },
+        padding_h: { sm: "0px", md: "0px", lg: "0px" },
+        padding_v: { sm: "0rem", md: "0rem", lg: "0rem" },
+        padding: { sm: "0rem 0px", md: "0rem 0px", lg: "0rem 0px" },
+      },
+      iconwrapper: {
+        paddingtop: { sm: "0.0625rem", md: "0.0313rem", lg: "0.3125rem" },
+      },
+      icon: {
+        iconsize: { sm: "0.875rem", md: "1rem", lg: "1rem" },
+        iconcolor: {
+          hint: "hsla(220, 10%, 40%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+      },
+      textwrapper: {
+        padding_h: { sm: "0px", md: "0px", lg: "0px" },
+        padding_v: { sm: "0rem", md: "0rem", lg: "0rem" },
+        padding: { sm: "0rem 0px", md: "0rem 0px", lg: "0rem 0px" },
+      },
+      text: {
+        textcolor: {
+          hint: "hsla(220, 10%, 40%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        typography: {
+          sm: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.75rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          md: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          lg: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1.5rem",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+    },
+    captiongroup: {
+      container: {
+        itemspacing: { sm: "0.25rem", md: "0.3125rem", lg: "0.375rem" },
+      },
+    },
+    checkbox: {
+      contentcol: {
+        itemspacing: { sm: "0px", md: "0px", lg: "0px" },
+        paddingtop: { sm: "0rem", md: "0rem", lg: "0rem" },
+      },
+      contentrow: { itemspacing: { sm: "8px", md: "8px", lg: "12px" } },
+      controlwrapper: {
+        paddingtop: { sm: "0", md: "0.25rem", lg: "0.125rem" },
+      },
+      control: {
+        container: {
+          borderwidth: {
+            sm: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+                error: "1px",
+              },
+            },
+            md: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+                error: "1px",
+              },
+            },
+            lg: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+                error: "1px",
+              },
+            },
+          },
+          borderradius: { sm: "2px", md: "2px", lg: "2px" },
+          size: { sm: "16px", md: "16px", lg: "20px" },
+          bgcolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 90%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+            inactive: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(0, 0%, 100%, 1)",
+              error: "hsla(0, 0%, 100%, 1)",
+            },
+          },
+          bordercolor: {
+            active: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+              error: "#00000000",
+            },
+            inactive: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+          },
+        },
+        icon: {
+          iconsize: {
+            sm: {
+              rest: "16px",
+              hover: "16px",
+              pressed: "16px",
+              focus: "16px",
+              disabled: "16px",
+              error: "16px",
+            },
+            md: {
+              rest: "16px",
+              hover: "16px",
+              pressed: "16px",
+              focus: "16px",
+              disabled: "16px",
+              error: "16px",
+            },
+            lg: {
+              rest: "20px",
+              hover: "20px",
+              pressed: "20px",
+              focus: "20px",
+              disabled: "20px",
+              error: "20px",
+            },
+          },
+          iconcolor: {
+            active: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+              error: "hsla(0, 0%, 100%, 1)",
+            },
+            inactive: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+              error: "#00000000",
+            },
+          },
+        },
+      },
+    },
+    counter: {
+      container: {
+        padding_v: { sm: "0px", md: "0px", lg: "0px" },
+        padding_h: { sm: "4px", md: "4px", lg: "4px" },
+        padding: { sm: "0px 4px", md: "0px 4px", lg: "0px 4px" },
+        borderradius: { sm: "4px", md: "4px", lg: "4px" },
+        borderwidth: { sm: "1px", md: "1px", lg: "1px" },
+        itemspacing: { sm: "2px", md: "2px", lg: "2px" },
+        bordercolor: {
+          neutral: "hsla(220, 65%, 80%, 1)",
+          warning: "hsla(50, 80%, 50%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        bgcolor: {
+          neutral: "hsla(220, 65%, 95%, 1)",
+          warning: "hsla(50, 80%, 95%,1)",
+          error: "hsla(350, 65%, 95%,1)",
+        },
+      },
+      text: {
+        textcolor: {
+          neutral: "hsla(220, 10%, 30%,1)",
+          warning: "hsla(50, 80%, 20%,1)",
+          error: "hsla(350, 65%, 30%,1)",
+        },
+        typography: {
+          sm: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.75rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          md: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          lg: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1.5rem",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+    },
+    dialog: {
+      container: {
+        maxwidth: {
+          xs: "400px",
+          sm: "600px",
+          md: "900px",
+          lg: "1200px",
+          xl: "1556px",
+        },
+        padding: { xs: "64px", sm: "64px", md: "64px", lg: "64px", xl: "64px" },
+        borderradius: "8px",
+        bgcolor: "hsla(0, 0%, 100%, 1)",
+      },
+      contentsection: {
+        container: { padding: "8px 16px", padding_h: "16px", padding_v: "8px" },
+        text: {
+          textcolor: "hsla(220, 10%, 10%,1)",
+          typography: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "150%",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+      headersection: {
+        container: {
+          padding: "16px 16px",
+          padding_h: "16px",
+          padding_v: "16px",
+        },
+        headline: {
+          textcolor: "hsla(220, 10%, 10%,1)",
+          typography: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 700,
+            lineHeight: "150%",
+            fontSize: "1.25rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+      footersection: {
+        container: { padding: "8px 8px", padding_h: "8px", padding_v: "8px" },
+      },
+    },
+    divider: {
+      container: {
+        horizontal: { height: "1px" },
+        vertical: { width: "1px" },
+        bgcolor: "hsla(220, 10%, 70%,1)",
+      },
+    },
+    formlabel: {
+      container: {
+        itemspacing: { sm: "4px", md: "4px", lg: "4px" },
+        padding: { sm: "0", md: "0", lg: "0" },
+      },
+      label: {
+        textcolor: {
+          rest: "hsla(220, 10%, 10%,1)",
+          hover: "hsla(220, 10%, 10%,1)",
+          pressed: "hsla(220, 10%, 10%,1)",
+          focus: "hsla(220, 10%, 10%,1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+          readonly: "hsla(220, 10%, 10%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        typography: {
+          sm: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 600,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          md: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 600,
+            lineHeight: "1.5rem",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          lg: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 600,
+            lineHeight: "1.5rem",
+            fontSize: "1.25rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+      labelappendix: {
+        textcolor: {
+          rest: "hsla(220, 10%, 10%,1)",
+          hover: "hsla(220, 10%, 10%,1)",
+          pressed: "hsla(220, 10%, 10%,1)",
+          focus: "hsla(220, 10%, 10%,1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+          readonly: "hsla(220, 10%, 10%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        typography: {
+          sm: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.75rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          md: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          lg: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1.5rem",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+      inlinelabel: {
+        textcolor: {
+          rest: "hsla(220, 10%, 10%,1)",
+          hover: "hsla(220, 10%, 10%,1)",
+          pressed: "hsla(220, 10%, 10%,1)",
+          focus: "hsla(220, 10%, 10%,1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+          readonly: "hsla(220, 10%, 10%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        typography: {
+          sm: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          md: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1.5rem",
+            fontSize: "1rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+          lg: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1.5rem",
+            fontSize: "1.25rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+    },
+    icon: {
+      container: {
+        size: {
+          xxs: "0.5rem",
+          xs: "0.75rem",
+          sm: "1rem",
+          md: "1.5rem",
+          lg: "2rem",
+          xl: "3rem",
+        },
+      },
+    },
+    buttonicon: {
+      container: {
+        padding: {
+          xs: "0.375rem",
+          sm: "0.375rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+        },
+        itemspacing: { xs: "0", sm: "0", md: "0", lg: "0", xl: "0" },
+        borderradius: { xs: "4px", sm: "4px", md: "4px", lg: "4px", xl: "4px" },
+      },
+    },
+    icondropdown: {
+      container: {
+        paddingtop: {
+          xs: "0.375rem",
+          sm: "0.375rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+        },
+        paddingright: {
+          xs: "0.0625rem",
+          sm: "0.0625rem",
+          md: "0.0625rem",
+          lg: "0rem",
+          xl: "0rem",
+        },
+        paddingbottom: {
+          xs: "0.375rem",
+          sm: "0.375rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+        },
+        paddingleft: {
+          xs: "0.1875rem",
+          sm: "0.1875rem",
+          md: "0.1875rem",
+          lg: "0.125rem",
+          xl: "0.25rem",
+        },
+        padding: {
+          xs: "0.375rem 0.0625rem 0.375rem 0.1875rem",
+          sm: "0.375rem 0.0625rem 0.375rem 0.1875rem",
+          md: "0.5rem 0.0625rem 0.5rem 0.1875rem",
+          lg: "0.5rem 0rem 0.5rem 0.125rem",
+          xl: "0.75rem 0rem 0.75rem 0.25rem",
+        },
+        itemspacing: {
+          xs: "0",
+          sm: "0",
+          md: "0",
+          lg: "-0.125rem",
+          xl: "-0.25rem",
+        },
+        borderradius: { xs: "4px", sm: "4px", md: "4px", lg: "4px", xl: "4px" },
+      },
+    },
+    loader: {
+      container: {
+        size: { sm: "1rem", md: "1.5rem", lg: "2rem" },
+        padding: { sm: "0.0625rem", md: "0.125rem", lg: "0.1875rem" },
+      },
+      background: {
+        borderwidth: { sm: "2px", md: "2px", lg: "3px" },
+        bordercolor: {
+          default: "hsla(220, 65%, 60%,0.2)",
+          inverted: "hsla(0, 0%, 100%, 0.2)",
+        },
+      },
+      foreground: {
+        borderwidth: { sm: "2px", md: "2px", lg: "3px" },
+        bordercolor: {
+          default: "hsla(220, 65%, 40%, 1)",
+          inverted: "hsla(0, 0%, 100%, 1)",
+        },
+      },
+    },
+    menu: {
+      container: {
+        borderradius: "8px",
+        bgcolor: "hsla(0, 0%, 100%, 1)",
+        elevation: {
+          blur: "4px",
+          spread: "0",
+          color: "hsla(220, 10%, 10%,0.3)",
+          type: "dropShadow",
+          offsetX: "0",
+          offsetY: "4px",
+        },
+      },
+      menuitem: {
+        itemcontainer: {
+          padding: "0.5rem 16px",
+          borderradius: "8px",
+          padding_h: "16px",
+          padding_v: "0.5rem",
+          bgcolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+            },
+            inactive: {
+              rest: "hsla(220, 65%, 60%,0)",
+              hover: "hsla(220, 65%, 60%,0.1)",
+              pressed: "hsla(220, 65%, 60%,0.2)",
+              focus: "hsla(220, 65%, 60%,0)",
+              disabled: "hsla(220, 65%, 60%,0)",
+            },
+          },
+          bordercolor: {
+            active: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+            },
+            inactive: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+            },
+          },
+        },
+        contentrow: { itemspacing: "4px" },
+        contentstack: { itemspacing: "0" },
+        itemicon: {
+          iconsize: "1rem",
+          iconcolor: {
+            active: {
+              rest: "hsla(0, 0%, 100%, 0.8)",
+              hover: "hsla(0, 0%, 100%, 0.8)",
+              pressed: "hsla(0, 0%, 100%, 0.8)",
+              focus: "hsla(0, 0%, 100%, 0.8)",
+            },
+            inactive: {
+              rest: "hsla(220, 10%, 40%,1)",
+              hover: "hsla(220, 10%, 40%,1)",
+              pressed: "hsla(220, 10%, 40%,1)",
+              focus: "hsla(220, 10%, 40%,1)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+          },
+        },
+        itemlabel: {
+          textcolor: {
+            active: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+            },
+            inactive: {
+              rest: "hsla(220, 10%, 10%,1)",
+              hover: "hsla(220, 10%, 10%,1)",
+              pressed: "hsla(220, 10%, 10%,1)",
+              focus: "hsla(220, 10%, 10%,1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+            },
+          },
+          typography: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 600,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+        itemdescription: {
+          textcolor: {
+            active: {
+              rest: "hsla(0, 0%, 100%, 0.8)",
+              hover: "hsla(0, 0%, 100%, 0.8)",
+              pressed: "hsla(0, 0%, 100%, 0.8)",
+              focus: "hsla(0, 0%, 100%, 0.8)",
+            },
+            inactive: {
+              rest: "hsla(220, 10%, 40%,1)",
+              hover: "hsla(220, 10%, 40%,1)",
+              pressed: "hsla(220, 10%, 40%,1)",
+              focus: "hsla(220, 10%, 40%,1)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+          },
+          typography: {
+            fontFamily: "Source Sans Pro",
+            fontWeight: 400,
+            lineHeight: "1rem",
+            fontSize: "0.875rem",
+            letterSpacing: "null",
+            paragraphSpacing: "null",
+            paragraphIndent: "null",
+            textDecoration: "null",
+            textCase: "null",
+          },
+        },
+      },
+      menusection: {
+        sectiontitlewrapper: {
+          padding: "16px 16px 8px 16px",
+          padding_h: "16px",
+          paddingtop: "16px",
+          paddingbottom: "8px",
+        },
+        itemstack: { itemspacing: "0px" },
+        sectiontitle: "hsla(220, 10%, 10%,1)",
+      },
+      menusectionstack: { itemspacing: "12px", padding: "12px" },
+    },
+    inputfieldnumber: {
+      inputfield: {
+        textwrapper: { itemspacing: { sm: "4px", md: "4px", lg: "4px" } },
+      },
+    },
+    radio: {
+      control: {
+        container: {
+          size: { sm: "16px", md: "16px", lg: "16px" },
+          borderradius: "9999px",
+          borderwidth: {
+            sm: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+            },
+            md: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+            },
+            lg: {
+              active: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+              inactive: {
+                rest: "0px",
+                hover: "0px",
+                pressed: "0px",
+                focus: "0px",
+                disabled: "0px",
+                error: "0px",
+              },
+            },
+          },
+          bgcolor: {
+            inactive: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+          },
+          bordercolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 90%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+            inactive: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 40%, 1)",
+              pressed: "hsla(220, 65%, 30%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+              error: "hsla(350, 65%, 50%,1)",
+            },
+          },
+          border: {
+            sm: {
+              active: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 90%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+              inactive: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 70%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+            },
+            md: {
+              active: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 90%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+              inactive: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 70%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+            },
+            lg: {
+              active: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 90%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+              inactive: {
+                rest: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                hover: {
+                  color: "hsla(220, 65%, 40%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                pressed: {
+                  color: "hsla(220, 65%, 30%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                focus: {
+                  color: "hsla(220, 65%, 50%, 1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                disabled: {
+                  color: "hsla(220, 10%, 70%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+                error: {
+                  color: "hsla(350, 65%, 50%,1)",
+                  width: "0px",
+                  style: "solid",
+                },
+              },
+            },
+          },
+        },
+        icon: {
+          iconsize: {
+            sm: {
+              inactive: {
+                rest: "14px",
+                hover: "12px",
+                pressed: "10px",
+                focus: "14px",
+                disabled: "14px",
+                error: "14px",
+              },
+              active: {
+                rest: "6px",
+                hover: "8px",
+                pressed: "10px",
+                focus: "6px",
+                disabled: "6px",
+                error: "6px",
+              },
+            },
+            md: {
+              inactive: {
+                rest: "14px",
+                hover: "12px",
+                pressed: "10px",
+                focus: "14px",
+                disabled: "14px",
+                error: "14px",
+              },
+              active: {
+                rest: "6px",
+                hover: "8px",
+                pressed: "10px",
+                focus: "6px",
+                disabled: "6px",
+                error: "6px",
+              },
+            },
+            lg: {
+              inactive: {
+                rest: "14px",
+                hover: "12px",
+                pressed: "10px",
+                focus: "14px",
+                disabled: "14px",
+                error: "14px",
+              },
+              active: {
+                rest: "6px",
+                hover: "8px",
+                pressed: "10px",
+                focus: "6px",
+                disabled: "6px",
+                error: "6px",
+              },
+            },
+          },
+          iconcolor: {
+            inactive: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(0, 0%, 100%, 1)",
+              error: "hsla(0, 0%, 100%, 1)",
+            },
+            active: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(0, 0%, 100%, 1)",
+              error: "hsla(0, 0%, 100%, 1)",
+            },
+          },
+        },
+      },
+      contentcol: {
+        itemspacing: { sm: "0px", md: "0px", lg: "0px" },
+        paddingtop: { sm: "0rem", md: "0rem", lg: "0rem" },
+      },
+      contentrow: {
+        itemspacing: { sm: "8px", md: "8px", lg: "12px" },
+        padding: { sm: "0.5rem 0", md: "0.5rem 0", lg: "0.5rem 0" },
+        padding_v: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" },
+      },
+      controlwrapper: {
+        paddingtop: { sm: "0rem", md: "0.25rem", lg: "0.25rem" },
+      },
+    },
+    radiogroup: {
+      captionslot: { paddingtop: { sm: "1rem", md: "1rem", lg: "1rem" } },
+      legendwrapper: { paddingbottom: { sm: "1rem", md: "1rem", lg: "1rem" } },
+      radiostackhorizontal: {
+        itemspacing: { sm: "1rem", md: "1rem", lg: "1rem" },
+      },
+      radiostackvertical: {
+        itemspacing: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" },
+      },
+      legend: {
+        textcolor: {
+          default: "hsla(220, 10%, 10%,1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+          error: "hsla(350, 65%, 50%,1)",
+        },
+        sm: {
+          fontFamily: "Source Sans Pro",
+          fontWeight: 600,
+          lineHeight: "1rem",
+          fontSize: "0.75rem",
+          letterSpacing: "null",
+          paragraphSpacing: "null",
+          paragraphIndent: "null",
+          textDecoration: "null",
+          textCase: "null",
+        },
+        md: {
+          fontFamily: "Source Sans Pro",
+          fontWeight: 600,
+          lineHeight: "1rem",
+          fontSize: "0.875rem",
+          letterSpacing: "null",
+          paragraphSpacing: "null",
+          paragraphIndent: "null",
+          textDecoration: "null",
+          textCase: "null",
+        },
+        lg: {
+          fontFamily: "Source Sans Pro",
+          fontWeight: 600,
+          lineHeight: "1.5rem",
+          fontSize: "1rem",
+          letterSpacing: "null",
+          paragraphSpacing: "null",
+          paragraphIndent: "null",
+          textDecoration: "null",
+          textCase: "null",
+        },
+      },
+    },
+    slider: {
+      thumb: {
+        shape: {
+          borderwidth: {
+            rest: "2px",
+            hover: "4px",
+            pressed: "4px",
+            focus: "2px",
+            disabled: "2px",
+            readonly: "2px",
+          },
+          size: {
+            rest: "14px",
+            hover: "20px",
+            pressed: "20px",
+            focus: "14px",
+            disabled: "14px",
+            readonly: "14px",
+          },
+          bgcolor: {
+            rest: "hsla(0, 0%, 100%, 1)",
+            hover: "hsla(0, 0%, 100%, 1)",
+            pressed: "hsla(0, 0%, 100%, 1)",
+            focus: "hsla(0, 0%, 100%, 1)",
+            disabled: "hsla(0, 0%, 100%, 1)",
+            readonly: "hsla(0, 0%, 100%, 1)",
+            error: "hsla(350, 65%, 95%,1)",
+          },
+          bordercolor: {
+            rest: "hsla(220, 65%, 50%, 1)",
+            hover: "hsla(220, 65%, 40%, 1)",
+            pressed: "hsla(220, 65%, 30%, 1)",
+            focus: "hsla(220, 65%, 50%, 1)",
+            disabled: "hsla(220, 10%, 80%,1)",
+            readonly: "hsla(220, 10%, 80%,1)",
+            error: "hsla(350, 65%, 50%,1)",
+          },
+          border: {
+            rest: {
+              color: "hsla(220, 65%, 50%, 1)",
+              width: "2px",
+              style: "solid",
+            },
+            hover: {
+              color: "hsla(220, 65%, 40%, 1)",
+              width: "4px",
+              style: "solid",
+            },
+            pressed: {
+              color: "hsla(220, 65%, 30%, 1)",
+              width: "4px",
+              style: "solid",
+            },
+            focus: {
+              color: "hsla(220, 65%, 50%, 1)",
+              width: "2px",
+              style: "solid",
+            },
+            disabled: {
+              color: "hsla(220, 10%, 80%,1)",
+              width: "2px",
+              style: "solid",
+            },
+            readonly: {
+              color: "hsla(220, 10%, 80%,1)",
+              width: "2px",
+              style: "solid",
+            },
+          },
+        },
+        container: { size: "24px" },
+      },
+      tickmark: {
+        borderwidth: {
+          default: { active: "1px", inactive: "11px" },
+          mute: { active: "1px", inactive: "1px" },
+        },
+        size: "6px",
+        bordercolor: {
+          default: {
+            active: "hsla(220, 65%, 50%, 1)",
+            inactive: "hsla(220, 65%, 80%,0.3)",
+          },
+          mute: {
+            active: "hsla(220, 10%, 70%,1)",
+            inactive: "hsla(220, 10%, 90%,1)",
+          },
+        },
+        bgcolor: {
+          default: {
+            active: "hsla(0, 0%, 100%, 1)",
+            inactive: "hsla(0, 0%, 100%, 1)",
+          },
+          mute: {
+            active: "hsla(0, 0%, 100%, 1)",
+            inactive: "hsla(0, 0%, 100%, 1)",
+          },
+        },
+        border: {
+          default: {
+            active: {
+              color: "hsla(220, 65%, 50%, 1)",
+              width: "1px",
+              style: "solid",
+            },
+            inactive: {
+              color: "hsla(220, 65%, 80%,0.3)",
+              width: "11px",
+              style: "solid",
+            },
+          },
+          mute: {
+            active: {
+              color: "hsla(220, 10%, 70%,1)",
+              width: "1px",
+              style: "solid",
+            },
+            inactive: {
+              color: "hsla(220, 10%, 90%,1)",
+              width: "1px",
+              style: "solid",
+            },
+          },
+        },
+      },
+      track: {
+        bordercolor: {
+          default: {
+            active: "hsla(220, 65%, 50%, 1)",
+            inactive: "hsla(220, 65%, 80%,0.3)",
+          },
+          mute: {
+            active: "hsla(220, 10%, 70%,1)",
+            inactive: "hsla(220, 10%, 90%,1)",
+          },
+        },
+        border: {
+          default: {
+            active: {
+              color: "hsla(220, 65%, 50%, 1)",
+              width: "4px",
+              style: "solid",
+            },
+            inactive: {
+              color: "hsla(220, 65%, 80%,0.3)",
+              width: "4px",
+              style: "solid",
+            },
+          },
+          mute: {
+            active: {
+              color: "hsla(220, 10%, 70%,1)",
+              width: "4px",
+              style: "solid",
+            },
+            inactive: {
+              color: "hsla(220, 10%, 90%,1)",
+              width: "4px",
+              style: "solid",
+            },
+          },
+        },
+      },
+      legend: {
+        textcolor: {
+          default: "hsla(220, 10%, 40%,1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+        },
+        typography: {
+          fontFamily: "Source Sans Pro",
+          fontWeight: 400,
+          lineHeight: "1rem",
+          fontSize: "0.75rem",
+          letterSpacing: "null",
+          paragraphSpacing: "null",
+          paragraphIndent: "null",
+          textDecoration: "null",
+          textCase: "null",
+        },
+      },
+    },
+    stepperbutton: {
+      container: {
+        width: { sm: "2rem", md: "2.5rem", lg: "3rem" },
+        borderradius: { sm: "0", md: "0", lg: "0" },
+        borderwidth: "1px",
+        bgcolor: {
+          rest: "hsla(220, 65%, 60%,0)",
+          hover: "hsla(220, 65%, 60%,0.1)",
+          pressed: "hsla(220, 65%, 60%,0.2)",
+          focus: "hsla(220, 65%, 60%,0)",
+          disabled: "hsla(220, 10%, 90%,0)",
+        },
+        bordercolor: {
+          rest: "#00000000",
+          hover: "#00000000",
+          pressed: "#00000000",
+          focus: "#00000000",
+          disabled: "#00000000",
+        },
+      },
+      icon: {
+        iconsize: { sm: "1rem", md: "1rem", lg: "1.5rem" },
+        iconcolor: {
+          rest: "hsla(220, 65%, 50%, 1)",
+          hover: "hsla(220, 65%, 40%, 1)",
+          pressed: "hsla(220, 65%, 30%, 1)",
+          focus: "hsla(220, 65%, 50%, 1)",
+          disabled: "hsla(220, 10%, 70%,1)",
+        },
+      },
+    },
+    steppercombo: {
+      container: {
+        width: {
+          vertical: { sm: "2rem", md: "2.5rem", lg: "3rem" },
+          horizontal: { sm: "4rem", md: "5rem", lg: "6rem" },
+        },
+      },
+      dividerwrapper: {
+        padding_v: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" },
+        padding_h: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" },
+        padding: {
+          verticallayout: { sm: "0 0.5rem", md: "0 0.5rem", lg: "0 0.5rem" },
+          horizontallayout: { sm: "0.5rem 0", md: "0.5rem 0", lg: "0.5rem 0" },
+        },
+      },
+    },
+    tabbar: {
+      buttonwrapper: {
+        innerpadding: { sm: "0.5rem", md: "0.5rem", lg: "0.75rem" },
+        padding: {
+          leading: { sm: "0 0.5rem", md: "0 0.5rem 0 0", lg: "0 0.75rem 0 0" },
+          trailing: {
+            sm: "0 0 0 0.5rem",
+            md: "0 0 0 0.5rem",
+            lg: "0 0 0 0.75rem",
+          },
+        },
+      },
+      tab: {
+        highlightline: {
+          height: { sm: "2px", md: "2px", lg: "2px" },
+          bgcolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 50%, 1)",
+              pressed: "hsla(220, 65%, 50%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+            },
+            inactive: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 50%, 1)",
+              pressed: "hsla(220, 65%, 50%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+            },
+          },
+          opacity: {
+            active: { rest: "1", hover: "1", pressed: "1", focus: "0" },
+            inactive: {
+              rest: "0",
+              hover: "0",
+              pressed: "0",
+              focus: "0",
+              disabled: "0",
+            },
+          },
+        },
+        contentcol: {
+          paddingtop: { sm: "0.25rem", md: "0.5rem", lg: "0.5rem" },
+          itemspacing: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" },
+        },
+        contentrow: {
+          padding_h: { sm: "12px", md: "16px", lg: "16px" },
+          itemspacing: { sm: "2px", md: "2px", lg: "4px" },
+        },
+        icon: {
+          iconsize: { sm: "0.75rem", md: "1rem", lg: "1rem" },
+          iconcolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 50%, 1)",
+              pressed: "hsla(220, 65%, 50%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+            },
+            inactive: {
+              rest: "hsla(220, 10%, 10%,1)",
+              hover: "hsla(220, 10%, 10%,1)",
+              pressed: "hsla(220, 10%, 10%,1)",
+              focus: "hsla(220, 10%, 10%,1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+            },
+          },
+        },
+        label: {
+          textcolor: {
+            active: {
+              rest: "hsla(220, 65%, 50%, 1)",
+              hover: "hsla(220, 65%, 50%, 1)",
+              pressed: "hsla(220, 65%, 50%, 1)",
+              focus: "hsla(220, 65%, 50%, 1)",
+            },
+            inactive: {
+              rest: "hsla(220, 10%, 10%,1)",
+              hover: "hsla(220, 10%, 10%,1)",
+              pressed: "hsla(220, 10%, 10%,1)",
+              focus: "hsla(220, 10%, 10%,1)",
+              disabled: "hsla(220, 10%, 70%,1)",
+            },
+          },
+          typography: {
+            sm: {
+              fontFamily: "Source Sans Pro",
+              fontWeight: 600,
+              lineHeight: "1rem",
+              fontSize: "0.75rem",
+              letterSpacing: "null",
+              paragraphSpacing: "null",
+              paragraphIndent: "null",
+              textDecoration: "null",
+              textCase: "null",
+            },
+            md: {
+              fontFamily: "Source Sans Pro",
+              fontWeight: 600,
+              lineHeight: "1rem",
+              fontSize: "0.875rem",
+              letterSpacing: "null",
+              paragraphSpacing: "null",
+              paragraphIndent: "null",
+              textDecoration: "null",
+              textCase: "null",
+            },
+            lg: {
+              fontFamily: "Source Sans Pro",
+              fontWeight: 600,
+              lineHeight: "1.5rem",
+              fontSize: "1rem",
+              letterSpacing: "null",
+              paragraphSpacing: "null",
+              paragraphIndent: "null",
+              textDecoration: "null",
+              textCase: "null",
+            },
+          },
+        },
+      },
+    },
+    textarea: {
+      inputfield: { minheight: { sm: "4rem", md: "5rem", lg: "7rem" } },
+    },
+    buttontext: {
+      container: {
+        padding_v: {
+          xs: "0.25rem",
+          sm: "0.25rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "1rem",
+        },
+        padding_h: {
+          xs: "12px",
+          sm: "12px",
+          md: "16px",
+          lg: "24px",
+          xl: "40px",
+        },
+        padding: {
+          xs: "0.25rem 12px",
+          sm: "0.25rem 12px",
+          md: "0.5rem 16px",
+          lg: "0.5rem 24px",
+          xl: "1rem 40px",
+        },
+        itemspacing: { xs: "4px", sm: "4px", md: "4px", lg: "4px", xl: "4px" },
+        borderradius: { xs: "4px", sm: "4px", md: "4px", lg: "4px", xl: "4px" },
+      },
+    },
+    textdropdown: {
+      container: {
+        paddingtop: {
+          xs: "0.25rem",
+          sm: "0.25rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "1rem",
+        },
+        paddingright: {
+          xs: "8px",
+          sm: "8px",
+          md: "12px",
+          lg: "16px",
+          xl: "32px",
+        },
+        paddingbottom: {
+          xs: "0.25rem",
+          sm: "0.25rem",
+          md: "0.5rem",
+          lg: "0.5rem",
+          xl: "1rem",
+        },
+        paddingleft: {
+          xs: "12px",
+          sm: "12px",
+          md: "20px",
+          lg: "24px",
+          xl: "40px",
+        },
+        padding: {
+          xs: "0.25rem 8px 0.25rem 12px",
+          sm: "0.25rem 8px 0.25rem 12px",
+          md: "0.5rem 12px 0.5rem 20px",
+          lg: "0.5rem 16px 0.5rem 24px",
+          xl: "1rem 32px 1rem 40px",
+        },
+        itemspacing: { xs: "2px", sm: "2px", md: "2px", lg: "2px", xl: "2px" },
+        borderradius: { xs: "4px", sm: "4px", md: "4px", lg: "4px", xl: "4px" },
+      },
+    },
+    toggleswitch: {
+      container: { itemspacing: { sm: "0.5rem", md: "0.5rem", lg: "0.5rem" } },
+      contentcol: { itemspacing: { sm: "0rem", md: "0rem", lg: "0rem" } },
+      control: {
+        container: {
+          borderradius: "2.5rem",
+          borderwidth: {
+            sm: {
+              active: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+              inactive: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+            },
+            md: {
+              active: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+              inactive: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+            },
+            lg: {
+              active: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+              inactive: {
+                rest: "0",
+                hover: "0",
+                pressed: "0",
+                focus: "0",
+                disabled: "0",
+              },
+            },
+          },
+          width: { sm: "2.25rem", md: "2.75rem", lg: "3.25rem" },
+          height: { sm: "1.25rem", md: "1.5rem", lg: "1.75rem" },
+          padding: { sm: "2px", md: "2px", lg: "2px" },
+          bgcolor: {
+            inactive: {
+              rest: "hsla(220, 10%, 70%,1)",
+              hover: "hsla(220, 10%, 60%,1)",
+              pressed: "hsla(220, 10%, 50%,1)",
+              focus: "hsla(220, 10%, 70%,1)",
+              disabled: "hsla(220, 10%, 90%,1)",
+            },
+            active: {
+              rest: "hsla(100, 65%, 30%,1)",
+              hover: "hsla(100, 65%, 20%,1)",
+              pressed: "hsla(100, 65%, 10%,1)",
+              focus: "hsla(100, 65%, 30%,1)",
+              disabled: "hsla(220, 10%, 90%,1)",
+            },
+          },
+          bordercolor: {
+            inactive: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+            },
+            active: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+            },
+          },
+        },
+        ay11icon: {
+          iconsize: { sm: "1rem", md: "1rem", lg: "1rem" },
+          iconcolor: {
+            inactive: {
+              rest: "hsla(220, 10%, 10%,0.7)",
+              hover: "hsla(220, 10%, 10%,0.7)",
+              pressed: "hsla(220, 10%, 10%,0.7)",
+              focus: "hsla(220, 10%, 10%,0.7)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+            active: {
+              rest: "hsla(0, 0%, 100%, 0.8)",
+              hover: "hsla(0, 0%, 100%, 0.8)",
+              pressed: "hsla(0, 0%, 100%, 0.8)",
+              focus: "hsla(0, 0%, 100%, 0.8)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+          },
+        },
+        ay11iconcontainer: {
+          padding_h: { sm: "0rem", md: "0.125rem", lg: "0.2188rem" },
+        },
+        knob: {
+          size: { sm: "1rem", md: "1.25rem", lg: "1.5rem" },
+          borderwidth: {
+            sm: {
+              active: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+            },
+            md: {
+              active: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+            },
+            lg: {
+              active: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+              inactive: {
+                rest: "1px",
+                hover: "1px",
+                pressed: "1px",
+                focus: "1px",
+                disabled: "1px",
+              },
+            },
+          },
+          bgcolor: {
+            inactive: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+            active: {
+              rest: "hsla(0, 0%, 100%, 1)",
+              hover: "hsla(0, 0%, 100%, 1)",
+              pressed: "hsla(0, 0%, 100%, 1)",
+              focus: "hsla(0, 0%, 100%, 1)",
+              disabled: "hsla(220, 10%, 70%,0.7)",
+            },
+          },
+          bordercolor: {
+            inactive: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+            },
+            active: {
+              rest: "#00000000",
+              hover: "#00000000",
+              pressed: "#00000000",
+              focus: "#00000000",
+              disabled: "#00000000",
+            },
+          },
+        },
+      },
+      controlwithstatelabel: {
+        container: { itemspacing: { sm: "8px", md: "8px", lg: "8px" } },
+      },
+    },
+    tooltip: {
+      textwrapper: {
+        padding: "6px 8px",
+        borderradius: "4px",
+        minwidth: "2.5rem",
+        maxwidth: "5rem",
+        padding_v: "6px",
+        padding_h: "8px",
+      },
+      nosewrapper: { padding_v: "5px", padding_h: "8px" },
+      container: {
+        bgcolor: "hsla(220, 10%, 10%,1)",
+        elevation: {
+          elevated: {
+            blur: "4px",
+            spread: "0",
+            color: "hsla(220, 10%, 10%,0.3)",
+            type: "dropShadow",
+            offsetX: "0",
+            offsetY: "4px",
+          },
+        },
+      },
+      text: {
+        textcolor: "hsla(0, 0%, 100%, 1)",
+        typography: {
+          fontFamily: "Source Sans Pro",
+          fontWeight: 400,
+          lineHeight: "1rem",
+          fontSize: "0.75rem",
+          letterSpacing: "null",
+          paragraphSpacing: "null",
+          paragraphIndent: "null",
+          textDecoration: "null",
+          textCase: "null",
+        },
+      },
+    },
+    blanket: { surface: "hsla(220, 10%, 10%,0.2)" },
+  },
+};
