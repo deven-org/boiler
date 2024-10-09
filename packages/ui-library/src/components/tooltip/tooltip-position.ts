@@ -7,7 +7,10 @@ import {
   arrow,
   Placement as PlacementType,
 } from '@floating-ui/dom';
-import { componentTokens } from '../../foundation/_tokens-generated/__component-tokens.Light_value.generated.mjs';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+const { componentTokens } = await import(
+  `../../foundation/_tokens-generated/__component-tokens.${Themes[0]}.generated.mjs`
+);
 
 const toolTip = componentTokens.cmp.tooltip;
 

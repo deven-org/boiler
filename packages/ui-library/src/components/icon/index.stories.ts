@@ -114,7 +114,7 @@ type IconType = {
   fillParent: boolean;
 };
 const defaultParams: IconType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   icon: 'blr360',
   fillParent: false,

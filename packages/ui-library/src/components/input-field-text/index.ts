@@ -5,7 +5,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { styleCustom } from './index.css.js';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -68,7 +68,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
   @property() accessor name!: string;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor currentType: InputTypes = this.type;
   @state() protected accessor isFocused = false;

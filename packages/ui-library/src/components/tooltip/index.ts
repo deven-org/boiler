@@ -8,7 +8,7 @@ import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
@@ -16,7 +16,7 @@ const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 export class BlrTooltip extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
   @property() accessor message!: string;
   @property() accessor hasArrow: boolean | undefined = true;
   @property() accessor elevation: boolean | undefined = true;

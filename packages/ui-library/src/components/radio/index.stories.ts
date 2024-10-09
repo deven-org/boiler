@@ -218,7 +218,7 @@ const args: BlrRadioType & {
   value: string;
   ariaLabel: string;
 } = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   value: 'radioValue',
   checked: false,

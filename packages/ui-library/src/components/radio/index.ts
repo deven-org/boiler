@@ -7,7 +7,7 @@ import { staticStyles as staticFormStyles } from '../../foundation/semantic-toke
 import { staticStyles as staticRadioStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
@@ -50,7 +50,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor value: string | undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {

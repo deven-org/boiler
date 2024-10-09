@@ -4,7 +4,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { FormSizesType } from '../../globals/types.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
@@ -60,7 +60,7 @@ export class BlrCheckbox extends LitElementCustom {
 
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
   @property({ type: Boolean }) accessor required: boolean | undefined;
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.checked;

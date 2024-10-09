@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction.js';
 import { staticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/types.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
@@ -19,7 +19,7 @@ export class BlrFormCaption extends LitElementCustom {
   @property() accessor variant: CaptionVariantType = 'hint';
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
   @property() accessor childElement: TemplateResult<1> | undefined = undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected render() {
     if (this.sizeVariant) {

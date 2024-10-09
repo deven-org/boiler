@@ -6,7 +6,7 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { TAG_NAME } from './renderFunction.js';
 import { BlrDividerRenderFunction } from '../divider/renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { FormSizesType, UnitType, UnitVariantType } from '../../globals/types.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
@@ -75,7 +75,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() accessor stepDecreaseAriaLabel: string | undefined = '\u2212'; // minus-sign (not minus-hyphen)
   @property() accessor name: string | undefined;
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor currentValue = 0;
   @state() protected accessor isFocused = false;

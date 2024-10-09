@@ -7,7 +7,7 @@ import { staticStyles } from './index.css.js';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType, DisplayType } from '../../globals/types.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { BlrCounterRenderFunction } from '../counter/renderFunction.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -74,7 +74,7 @@ export class BlrTextarea extends LitElementCustom {
   @property({ type: Number }) accessor cols: number | undefined;
   @property() accessor name: string | undefined;
   @property() accessor textAreaDisplay: DisplayType | undefined = 'block';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor count = 0;
   @query('textarea') protected accessor textareaElement: HTMLTextAreaElement | null = null;

@@ -7,7 +7,7 @@ import { FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { BlrIconRenderFunction } from '../icon/renderFunction.js';
 import { TAG_NAME } from './renderFunction.js';
@@ -67,7 +67,7 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property() accessor hasHint: boolean | undefined;
   @property() accessor icon: SizelessIconType | undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
   @property() accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
 

@@ -5,6 +5,7 @@ import { BlrButtonIconRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrButtonIconType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrButtonIconType = {
   arialabel: 'Button',
@@ -13,7 +14,7 @@ const sampleParams: BlrButtonIconType = {
   disabled: false,
   buttonIconId: 'button-id',
   variant: 'cta',
-  theme: 'Light_value',
+  theme: Themes[0],
 };
 
 describe('blr-button-icon', () => {

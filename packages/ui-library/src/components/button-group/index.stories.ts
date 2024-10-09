@@ -84,7 +84,7 @@ export const ButtonGroup = (
   const contentButtons = html`
     ${BlrButtonTextRenderFunction({
       label: typeof primaryLabel === 'string' ? primaryLabel : 'Button Text',
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'primary',
       disabled: false,
@@ -92,14 +92,14 @@ export const ButtonGroup = (
     })}
     ${BlrButtonTextRenderFunction({
       label: secondaryLabel,
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'secondary',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
     ${BlrButtonIconRenderFunction({
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'silent',
       disabled: false,
@@ -115,7 +115,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   alignment: 'left',
 };
