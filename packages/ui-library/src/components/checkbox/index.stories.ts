@@ -246,7 +246,7 @@ export default {
 };
 // Default parameters for Checkbox component
 const defaultParams: BlrCheckboxType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   checked: false,
   checkedIcon: 'blrCheckmark',
@@ -431,7 +431,7 @@ export const Required = () => {
       <div class="stories-checkbox">
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Required',
           placeholder: '',

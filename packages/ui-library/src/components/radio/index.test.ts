@@ -5,6 +5,7 @@ import { BlrRadioRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrRadioType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRadioType = {
   checked: false,
@@ -15,7 +16,7 @@ const sampleParams: BlrRadioType = {
   required: false,
   hasHint: true,
   hasError: false,
-  theme: 'Light_value',
+  theme: Themes[0],
   errorMessageIcon: undefined,
 };
 

@@ -5,6 +5,7 @@ import { BlrToggleSwitchRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrToggleSwitchType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrToggleSwitchType = {
   toogleSwitchId: 'switch',
@@ -17,7 +18,7 @@ const sampleParams: BlrToggleSwitchType = {
   hintMessage: 'Field is used for hint',
   hintMessageIcon: 'blrInfo',
   hasStateLabel: false,
-  theme: 'Light_value',
+  theme: Themes[0],
   name: 'Toogle Switch',
 };
 

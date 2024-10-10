@@ -1,7 +1,10 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
+
+import * as semanticTokenTypes from "../../foundation/_tokens-generated/module_declarations/__semantic-tokens.Licht_value.generated.js";
+
+// import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
 import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
 export const styleCustom = css`
@@ -275,7 +278,7 @@ export const styleCustom = css`
   })}
 `;
 
-function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: semanticTokens["sem"] }) {
+function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: typeof semanticTokenTypes.default.sem }) {
   const iconClassName = "icon-input";
   const { inputfield } = semanticTokens.forms;
 

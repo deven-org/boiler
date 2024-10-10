@@ -7,13 +7,13 @@ import { staticStyles } from './index.css.js';
 
 import { TAG_NAME } from './renderFunction.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 export class BlrFormCaptionGroup extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor sizeVariant: FormSizesType = 'md';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected render() {
     const classes = classMap({

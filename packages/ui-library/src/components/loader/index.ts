@@ -4,7 +4,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { staticStyles } from './index.css.js';
 
 import { TAG_NAME } from './renderFunction.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
@@ -13,7 +13,7 @@ export class BlrLoader extends LitElementCustom {
 
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
   @property() accessor variant: FeedbackVariantType | undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected render() {
     if (this.sizeVariant) {

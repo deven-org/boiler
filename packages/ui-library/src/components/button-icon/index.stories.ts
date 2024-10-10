@@ -175,7 +175,7 @@ export const BlrButtonIcon = (params: BlrButtonIconType) => BlrButtonIconRenderF
 BlrButtonIcon.storyName = 'Button Icon';
 
 const defaultParams: BlrButtonIconType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   variant: 'primary',
   sizeVariant: 'md',
   icon: 'blr360',

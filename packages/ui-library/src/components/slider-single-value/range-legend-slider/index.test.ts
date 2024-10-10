@@ -5,9 +5,10 @@ import { BlrRangeLegendSliderRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
 import { BlrRangeLegendSliderType } from './index.js';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRangeLegendSliderType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   rangeInputId: 'range-cmpt',
   initialValue: '300 $',
   list: ['100 $', '200 $', '300 $', '400 $', '500 $', '600 $'],

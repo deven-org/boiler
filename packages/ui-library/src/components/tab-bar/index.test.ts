@@ -6,9 +6,10 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { html } from 'lit-html';
 import { BlrTabBarType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrTabBarType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   overflowVariantStandard: 'wrap',
   overflowVariantFullWidth: 'wrap',
   showDivider: true,

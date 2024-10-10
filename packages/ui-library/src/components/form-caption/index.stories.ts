@@ -96,7 +96,7 @@ export const BlrFormCaption = (params: BlrFormCaptionType) => BlrFormCaptionRend
 BlrFormCaption.storyName = 'Form Caption';
 
 const args: BlrFormCaptionType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   message: 'Message-text',
   icon: 'blrInfo',
   variant: 'hint',
@@ -117,7 +117,7 @@ export const Variant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Hint',
         icon: 'blrInfo',
@@ -126,7 +126,7 @@ export const Variant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'error',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Error',
         icon: 'blrErrorFilled',
@@ -147,7 +147,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Form Caption SM',
         icon: 'blrInfo',
@@ -156,7 +156,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'md',
         message: 'Form Caption MD',
         icon: 'blrInfo',
@@ -166,7 +166,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'lg',
         message: 'Form Caption LG',
         icon: 'blrInfo',
@@ -189,7 +189,7 @@ export const Icon = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'With icon',
         icon: 'blrInfo',
@@ -198,7 +198,7 @@ export const Icon = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light_value',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Without icon',
       })}

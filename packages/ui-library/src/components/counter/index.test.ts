@@ -5,9 +5,10 @@ import type { BlrCounterType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrCounterType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   variant: 'neutral',
   value: 3,
   maxValue: 100,

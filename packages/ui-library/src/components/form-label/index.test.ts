@@ -6,9 +6,10 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
 import { LitElementCustom } from '../../utils/lit/element.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrFormLabelType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   label: 'Label text',
   labelAppendix: 'Appendix txt',
   forValue: 'for_txt',

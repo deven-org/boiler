@@ -6,9 +6,10 @@ import { fixture, expect, aTimeout } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrRadioGroupType } from './index.js';
 import { html } from 'lit-html';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRadioGroupType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   disabled: false,
   name: 'Default Name',

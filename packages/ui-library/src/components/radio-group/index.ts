@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property } from '../../utils/lit/decorators.js';
 import { staticStyles as componentSpecificStaticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticRadioStyles } from '../radio/index.css.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType, RadioGroupDirection } from '../../globals/types.js';
@@ -49,7 +49,7 @@ export class BlrRadioGroup extends LitElementCustom {
   @property() accessor groupErrorMessageIcon: SizelessIconType | undefined;
   @property() accessor legend: string | undefined;
   @property() accessor direction: RadioGroupDirection = 'horizontal';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected _radioElements: BlrRadio[] = [];
   private _selectedRadio?: BlrRadio;

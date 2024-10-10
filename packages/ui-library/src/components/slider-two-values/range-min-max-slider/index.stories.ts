@@ -60,7 +60,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
 };
 
 const args: BlrRangeMinMaxSliderType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   onBtnClick: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-cmpt',

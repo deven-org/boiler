@@ -5,7 +5,7 @@ import { query, state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import {
   OverflowVariantTypeStandard,
@@ -44,7 +44,7 @@ export class BlrTabBar extends LitElementCustom {
   @property() accessor alignment: TabAlignmentVariantType = 'left';
   @property() accessor size: FormSizesType | undefined = 'md';
   @property() accessor showDivider = true;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor _selectedTab: BlrTabBarItem | undefined;
   protected _tabBarElements: BlrTabBarItem[] = [];

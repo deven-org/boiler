@@ -6,14 +6,14 @@ import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/ty
 
 import { TAG_NAME } from './renderFunction.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 export class BlrButtonGroup extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor sizeVariant: ButtonGroupSizesType = 'md';
   @property() accessor alignment: ButtonGroupAlignmentType = 'center';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected render() {
     const classes = classMap({

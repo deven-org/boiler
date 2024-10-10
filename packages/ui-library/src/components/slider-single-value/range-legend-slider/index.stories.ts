@@ -57,7 +57,7 @@ const btnEventType = (value: number) => {
   console.log('storybook:story:logEventType', value);
 };
 const args: BlrRangeLegendSliderType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   onClickMinMax: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-cmpt',

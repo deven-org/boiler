@@ -4,9 +4,10 @@ import { BlrTextareaRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
 import type { BlrTextareaType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrTextareaType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   resize: 'both',
   cols: 40,

@@ -6,9 +6,10 @@ import type { BlrInputFieldTextType } from './index.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrInputFieldTextType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   type: 'text',
   placeholder: 'Placeholder-text',

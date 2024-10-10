@@ -84,7 +84,7 @@ export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(para
 BlrTabBar.storyName = 'TabBar';
 
 const args: BlrTabBarType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   variant: 'standard',
   overflowVariantStandard: 'buttons',
   overflowVariantFullWidth: 'browserOverflow',

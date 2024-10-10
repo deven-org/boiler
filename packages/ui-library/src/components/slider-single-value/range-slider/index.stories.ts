@@ -57,7 +57,7 @@ const btnEventType = (value: number) => {
 };
 
 const args: BlrRangeSliderType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   onClickMinMax: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-id',
