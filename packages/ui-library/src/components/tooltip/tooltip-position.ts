@@ -8,9 +8,18 @@ import {
   Placement as PlacementType,
 } from '@floating-ui/dom';
 import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-const { componentTokens } = await import(
-  `../../foundation/_tokens-generated/__component-tokens.${Themes[0]}.generated.mjs`
-);
+
+let componentTokens;
+
+try {
+  const { tokens } = await import(
+    `../../foundation/_tokens-generated/mjs_modules/__component-tokens.${Themes[0]}.generated.mjs`
+  );
+  componentTokens = tokens;
+} catch (error) {
+  const msg = typeof error == 'string' ? error : 'module import failed';
+  throw new Error(msg);
+}
 
 const toolTip = componentTokens.cmp.tooltip;
 

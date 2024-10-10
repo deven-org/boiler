@@ -8,8 +8,7 @@ import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
 import * as fs from 'fs';
 import { Buffer } from 'node:buffer';
 import prettier from 'prettier';
-
-// const JsonToTS = require('json-to-ts');
+import { buildpaths } from './buildpaths.mjs';
 import JsonToTS from 'json-to-ts';
 
 register(StyleDictionary, {
@@ -17,6 +16,7 @@ register(StyleDictionary, {
 });
 
 //-- registered formats oldschool
+/*
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',
   format: async ({ dictionary, file }) => {
@@ -51,6 +51,14 @@ StyleDictionary.registerFormat({
   },
 });
 
+StyleDictionary.registerFormat({
+  name: 'custom/format/minifiedJSON',
+  format: function ({ dictionary }) {
+    return JSON.stringify(minifyDictionary(dictionary.tokens, true));
+  },
+});
+*/
+
 // mjs
 StyleDictionary.registerFormat({
   name: 'custom/format/mjs',
@@ -63,13 +71,6 @@ StyleDictionary.registerFormat({
       parser: 'babel',
     });
     return (await fileHeader({ file })) + prettyBody;
-  },
-});
-
-StyleDictionary.registerFormat({
-  name: 'custom/format/minifiedJSON',
-  format: function ({ dictionary }) {
-    return JSON.stringify(minifyDictionary(dictionary.tokens, true));
   },
 });
 
@@ -130,7 +131,8 @@ async function run() {
         typesMap: expandTypesMap,
       },
       platforms: {
-        js: {
+        /*
+        js_old: {
           transforms: [
             'attribute/cti',
             'name/pascal',
@@ -233,6 +235,7 @@ async function run() {
             },
           ],
         },
+        */
         mjs_modules: {
           transforms: [
             'attribute/cti',
@@ -243,7 +246,7 @@ async function run() {
             'custom/strReplace',
           ],
           // transformGroup: 'tokens-studio',
-          buildPath: '../ui-library/src/foundation/__tokens-generated_new/mjs_modules/',
+          buildPath: buildpaths.mjs_modules,
           files: [
             {
               format: 'custom/format/mjs',
@@ -269,16 +272,16 @@ async function run() {
           ],
         },
         ts_module_declaration: {
-          // transforms: [
-          //   'attribute/cti',
-          //   'name/pascal',
-          //   'ts/resolveMath',
-          //   'ts/size/px',
-          //   'ts/typography/fontWeight',
-          //   'custom/strReplace',
-          // ],
-          transformGroup: 'js',
-          buildPath: '../ui-library/src/foundation/__tokens-generated_new/module_declarations/',
+          transforms: [
+            'attribute/cti',
+            'name/pascal',
+            'ts/resolveMath',
+            'ts/size/px',
+            'ts/typography/fontWeight',
+            'custom/strReplace',
+          ],
+          // transformGroup: 'js',
+          buildPath: buildpaths.modul_declarations,
           files: [
             {
               format: 'typescript/accurate-module-declarations',
@@ -318,7 +321,9 @@ async function run() {
     // console.log(cfg);
     const sd = new StyleDictionary(cfg);
     await sd.cleanAllPlatforms(); // optionally, cleanup files first..
-    await sd.buildAllPlatforms();
+    // await sd.buildAllPlatforms();
+    await sd.buildPlatform('mjs_modules');
+    await sd.buildPlatform('ts_module_declaration');
   }
 
   await Promise.all(config.map(cleanAndBuild));

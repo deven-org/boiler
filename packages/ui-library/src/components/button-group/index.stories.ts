@@ -6,6 +6,7 @@ import { BlrButtonIconRenderFunction } from '../button-icon/renderFunction.js';
 import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
 import { BlrButtonGroupType } from './index.js';
 import { BlrButtonGroupRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sharedStyles = html`
   <style>

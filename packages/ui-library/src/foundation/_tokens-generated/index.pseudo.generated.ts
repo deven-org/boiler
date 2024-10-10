@@ -14,10 +14,10 @@
 
 console.log('# # # pseudo generated');
 import { makeIterator, joinCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
-import { componentTokens as cmpLight } from './__component-tokens.Licht_value.generated.mjs';
-import { componentTokens as cmpDark } from './__component-tokens.Dunkel_value.generated.mjs';
-import { semanticTokens as semLight } from './__semantic-tokens.Licht_value.generated.mjs';
-import { semanticTokens as semDark } from './__semantic-tokens.Dunkel_value.generated.mjs';
+import { tokens as cmpLight } from './mjs_modules/__component-tokens.Licht_value.generated.mjs';
+import { tokens as cmpDark } from './mjs_modules/__component-tokens.Dunkel_value.generated.mjs';
+import { tokens as semLight } from './mjs_modules/__semantic-tokens.Licht_value.generated.mjs';
+import { tokens as semDark } from './mjs_modules/__semantic-tokens.Dunkel_value.generated.mjs';
 
 export const componentTokenTree = {
   Licht_value: cmpLight.cmp,

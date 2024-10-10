@@ -3,6 +3,7 @@ import { BlrFormCaptionGroupRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
 import { FormSizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import '../../index.js';
 
 export default {
