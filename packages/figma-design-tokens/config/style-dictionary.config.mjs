@@ -1,7 +1,3 @@
-// get an themes array not needed anymore if we derive themes from $themes.json
-// import * as hardCodedThemes from './themes.cjs';
-// console.log(hardCodedThemes.array);
-
 import { register, permutateThemes, expandTypesMap } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
@@ -96,7 +92,6 @@ async function run() {
             'ts/typography/fontWeight',
             'custom/strReplace',
           ],
-          // transformGroup: 'tokens-studio',
           buildPath: buildpaths.mjs_modules,
           files: [
             {
@@ -131,7 +126,6 @@ async function run() {
             'ts/typography/fontWeight',
             'custom/strReplace',
           ],
-          // transformGroup: 'js',
           buildPath: buildpaths.modul_declarations,
           files: [
             {
