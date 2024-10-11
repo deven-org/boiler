@@ -20,7 +20,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrSelectType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   hasLabel: true,
   label: 'Label-text',

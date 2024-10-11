@@ -14,7 +14,7 @@ export class BlrCounter extends LitElementCustom {
   @property() accessor value = 0;
   @property() accessor maxValue = 0;
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     if (this.sizeVariant) {

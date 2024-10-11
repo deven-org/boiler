@@ -12,7 +12,7 @@ const sampleParams: BlrInputFieldNumberType = {
   placeholder: 'Type your message here ..',
   disabled: false,
   stepperVariant: 'vertical',
-  theme: 'Light',
+  theme: 'Light_value',
   readonly: true,
   required: true,
   hasLabel: true,

@@ -6,7 +6,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrDividerType } from './index.js';
 
-const sampleParams: BlrDividerType = { theme: 'Light', direction: 'vertical' };
+const sampleParams: BlrDividerType = { theme: 'Light_value', direction: 'vertical' };
 
 describe('blr-divider', () => {
   it('renders a <div> element inside Shadow DOM', async () => {

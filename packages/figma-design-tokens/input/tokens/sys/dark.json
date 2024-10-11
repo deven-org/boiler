@@ -2,488 +2,478 @@
   "sys": {
     "bgcolor": {
       "transparent": {
-        "value": "{core.color.neutral.transparent}",
-        "type": "color"
+        "$type": "color",
+        "$value": "{core.color.neutral.transparent}"
       },
       "container": {
         "disabled": {
-          "value": "{core.color.coolgray.200.solid}",
-          "type": "color",
-          "description": "bg for disabled, readonly"
+          "$type": "color",
+          "$value": "{core.color.coolgray.200.solid}",
+          "$description": "bg for disabled, readonly"
         },
         "neutral": {
-          "value": "{core.color.black.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.black.solid}"
         },
         "danger": {
-          "value": "{core.color.crimson.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.crimson.100.solid}"
         },
         "warning": {
-          "value": "{core.color.gold.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.gold.100.solid}"
         },
         "safe": {
-          "value": "{core.color.limegreen.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.limegreen.100.solid}"
         },
         "informative": {
-          "value": "{core.color.azure.100.solid}",
-          "type": "color",
-          "description": "Use on: Counter"
+          "$type": "color",
+          "$value": "{core.color.azure.100.solid}",
+          "$description": "Use on: Counter"
         }
       },
       "bold": {
         "disabled": {
-          "value": "{core.color.coolgray.200.solid}",
-          "type": "color",
-          "description": "bg for disabled, readonly"
+          "$type": "color",
+          "$value": "{core.color.coolgray.200.solid}",
+          "$description": "bg for disabled, readonly"
         },
         "neutral": {
           "rest": {
-            "value": "{core.color.coolgray.700.solid}",
-            "type": "color",
-            "description": "for toggleSwitch\n"
+            "$type": "color",
+            "$value": "{core.color.coolgray.700.solid}",
+            "$description": "for toggleSwitch\n"
           },
           "hover": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color",
-            "description": "for toggleSwitch"
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.solid}",
+            "$description": "for toggleSwitch"
           },
           "pressed": {
-            "value": "{core.color.coolgray.900.solid}",
-            "type": "color",
-            "description": "for toggleswitch\n"
+            "$type": "color",
+            "$value": "{core.color.coolgray.900.solid}",
+            "$description": "for toggleswitch\n"
           }
         },
         "primary": {
           "rest": {
-            "value": "{core.color.azure.400.solid}",
-            "type": "color",
-            "description": "rest"
+            "$type": "color",
+            "$value": "{core.color.azure.400.solid}",
+            "$description": "rest"
           },
           "hover": {
-            "value": "{core.color.azure.500.solid}",
-            "type": "color",
-            "description": "hover"
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "hover"
           },
           "pressed": {
-            "value": "{core.color.azure.600.solid}",
-            "type": "color",
-            "description": "pressed"
+            "$type": "color",
+            "$value": "{core.color.azure.600.solid}",
+            "$description": "pressed"
           }
         },
         "cta": {
           "rest": {
-            "value": "{core.color.purple.400.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.purple.400.solid}"
           },
           "hover": {
-            "value": "{core.color.purple.500.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.purple.500.solid}"
           },
           "pressed": {
-            "value": "{core.color.purple.600.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.purple.600.solid}"
           }
         },
         "danger": {
           "rest": {
-            "value": "{core.color.crimson.400.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.crimson.400.solid}"
           },
           "hover": {
-            "value": "{core.color.crimson.500.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.crimson.500.solid}"
           },
           "pressed": {
-            "value": "{core.color.crimson.600.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.crimson.600.solid}"
           }
         },
         "warning": {
           "rest": {
-            "value": "{core.color.gold.500.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.gold.500.solid}"
           },
           "hover": {
-            "value": "{core.color.gold.600.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.gold.600.solid}"
           },
           "pressed": {
-            "value": "{core.color.gold.700.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.gold.700.solid}"
           }
         },
         "safe": {
           "rest": {
-            "value": "{core.color.limegreen.400.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.limegreen.400.solid}"
           },
           "hover": {
-            "value": "{core.color.limegreen.500.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.limegreen.500.solid}"
           },
           "pressed": {
-            "value": "{core.color.limegreen.600.solid}",
-            "type": "color"
-          }
-        },
-        "informative": {
-          "rest": {
-            "value": "{core.color.coolgray.300.solid}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{core.color.coolgray.400.solid}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{core.color.coolgray.500.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.limegreen.600.solid}"
           }
         }
       },
       "inverse": {
         "disabled": {
-          "value": "{core.color.coolgray.200.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.solid}"
         },
         "rest": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.solid}"
         },
         "hover": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.solid}"
         },
         "pressed": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.solid}"
         }
       },
       "secondary": {
         "disabled": {
-          "value": "{core.color.coolgray.200.opa20}",
-          "type": "color",
-          "description": "disabled"
+          "$type": "color",
+          "$value": "{core.color.coolgray.200.opa20}",
+          "$description": "disabled"
         },
         "rest": {
-          "value": "{core.color.azure.400.opa20}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.400.opa20}"
         },
         "hover": {
-          "value": "{core.color.azure.400.opa30}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.400.opa30}"
         },
         "pressed": {
-          "value": "{core.color.azure.400.opa40}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.400.opa40}"
         }
       },
       "silent": {
         "disabled": {
-          "value": "{core.color.coolgray.200.opa0}",
-          "type": "color",
-          "description": "disabled"
+          "$type": "color",
+          "$value": "{core.color.coolgray.200.opa0}",
+          "$description": "disabled"
         },
         "rest": {
-          "value": "{core.color.azure.600.opa0}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.600.opa0}"
         },
         "hover": {
-          "value": "{core.color.azure.600.opa10}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.600.opa10}"
         },
         "pressed": {
-          "value": "{core.color.azure.600.opa20}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.600.opa20}"
         }
       },
       "surface": {
         "blanket": {
-          "value": "{core.color.coolgray.100.opa20}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.opa20}"
         },
         "level_1": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.100.solid}"
         },
         "level_2": {
-          "value": "{core.color.coolgray.200.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.200.solid}"
         },
         "inverted": {
-          "value": "{core.color.coolgray.950.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.coolgray.950.solid}"
         }
       }
     },
     "content": {
       "transparent": {
-        "value": "{core.color.neutral.transparent}",
-        "type": "color"
+        "$type": "color",
+        "$value": "{core.color.neutral.transparent}"
       },
       "container": {
         "disabled": {
           "regular": {
-            "value": "{core.color.coolgray.300.solid}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.solid}",
+            "$description": "use for disabled states"
           },
           "subtle": {
-            "value": "{core.color.coolgray.300.opa70}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.opa70}",
+            "$description": "use for disabled states"
           }
         },
         "neutral": {
           "regular": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color",
-            "description": "Forms"
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.solid}",
+            "$description": "Forms"
           },
           "subtle": {
-            "value": "{core.color.coolgray.800.opa70}",
-            "type": "color",
-            "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.opa70}",
+            "$description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
           }
         },
         "danger": {
           "regular": {
-            "value": "{core.color.crimson.800.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.crimson.800.solid}"
           },
           "subtle": {
-            "value": "{core.color.crimson.800.opa70}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.crimson.800.opa70}"
           }
         },
         "warning": {
           "regular": {
-            "value": "{core.color.gold.800.solid}",
-            "type": "color",
-            "description": "Use on: Counter"
+            "$type": "color",
+            "$value": "{core.color.gold.800.solid}",
+            "$description": "Use on: Counter"
           },
           "subtle": {
-            "value": "{core.color.gold.800.opa70}",
-            "type": "color",
-            "description": "Use on: Counter"
+            "$type": "color",
+            "$value": "{core.color.gold.800.opa70}",
+            "$description": "Use on: Counter"
           }
         },
         "safe": {
           "regular": {
-            "value": "{core.color.limegreen.800.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.limegreen.800.solid}"
           },
           "subtle": {
-            "value": "{core.color.limegreen.800.opa70}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.limegreen.800.opa70}"
           }
         },
         "informative": {
           "regular": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color",
-            "description": "Use on: Counter"
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.solid}",
+            "$description": "Use on: Counter"
           },
           "subtle": {
-            "value": "{core.color.coolgray.800.opa70}",
-            "type": "color",
-            "description": "Use on: Counter"
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.opa70}",
+            "$description": "Use on: Counter"
           }
         }
       },
       "bold": {
         "disabled": {
           "regular": {
-            "value": "{core.color.coolgray.300.solid}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.solid}",
+            "$description": "use for disabled states"
           },
           "subtle": {
-            "value": "{core.color.coolgray.300.opa70}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.opa70}",
+            "$description": "use for disabled states"
           }
         },
         "neutral": {
           "regular": {
-            "value": "{core.color.coolgray.100.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.solid}"
           },
           "subtle": {
-            "value": "{core.color.coolgray.100.opa70}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.opa70}"
           }
         },
         "danger": {
           "regular": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           },
           "subtle": {
-            "value": "{core.color.white.opa80}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.opa80}"
           }
         },
         "warning": {
           "regular": {
-            "value": "{core.color.coolgray.100.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.solid}"
           },
           "subtle": {
-            "value": "{core.color.coolgray.100.opa70}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.opa70}"
           }
         },
         "safe": {
           "regular": {
-            "value": "{core.color.coolgray.100.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.solid}"
           },
           "subtle": {
-            "value": "{core.color.coolgray.100.opa80}",
-            "type": "color"
-          }
-        },
-        "informative": {
-          "regular": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
-          },
-          "subtle": {
-            "value": "{core.color.white.opa80}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.coolgray.100.opa80}"
           }
         },
         "primary": {
           "regular": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           },
           "subtle": {
-            "value": "{core.color.white.opa80}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.opa80}"
           }
         },
         "cta": {
           "regular": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           },
           "subtle": {
-            "value": "{core.color.white.opa80}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.opa80}"
           }
         }
       },
       "inverse": {
         "disabled": {
-          "value": "{core.color.coolgray.300.solid}",
-          "type": "color",
-          "description": "use for disabled states"
+          "$type": "color",
+          "$value": "{core.color.coolgray.300.solid}",
+          "$description": "use for disabled states"
         },
-        "rest": {
-          "value": "{core.color.azure.500.solid}",
-          "type": "color",
-          "description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.600.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.700.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "value": "{core.color.azure.600.solid}",
-          "type": "color",
-          "description": "hover"
-        },
-        "pressed": {
-          "value": "{core.color.azure.700.solid}",
-          "type": "color",
-          "description": "pressed"
-        },
-        "transparent": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color",
-          "description": "Forms"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.700.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.800.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.900.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
         "disabled": {
-          "value": "{core.color.coolgray.300.solid}",
-          "type": "color",
-          "description": "use for disabled states"
+          "$type": "color",
+          "$value": "{core.color.coolgray.300.solid}",
+          "$description": "use for disabled states"
         },
         "rest": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.white.solid}"
         },
         "hover": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.white.solid}"
         },
         "pressed": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.white.solid}"
         }
       },
       "silent": {
         "primary": {
           "disabled": {
-            "value": "{core.color.coolgray.300.solid}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.solid}",
+            "$description": "use for disabled states"
           },
           "rest": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           },
           "hover": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           },
           "pressed": {
-            "value": "{core.color.white.solid}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.white.solid}"
           }
         },
         "neutral": {
           "regular": {
             "disabled": {
-              "value": "{core.color.coolgray.300.solid}",
-              "type": "color",
-              "description": "use for disabled states"
+              "$type": "color",
+              "$value": "{core.color.coolgray.300.solid}",
+              "$description": "use for disabled states"
             },
             "rest": {
-              "value": "{core.color.white.solid}",
-              "type": "color"
+              "$type": "color",
+              "$value": "{core.color.white.solid}"
             },
             "hover": {
-              "value": "{core.color.white.solid}",
-              "type": "color"
+              "$type": "color",
+              "$value": "{core.color.white.solid}"
             },
             "pressed": {
-              "value": "{core.color.white.solid}",
-              "type": "color"
+              "$type": "color",
+              "$value": "{core.color.white.solid}"
             }
           },
           "subtle": {
             "disabled": {
-              "value": "{core.color.coolgray.300.opa70}",
-              "type": "color",
-              "description": "use for disabled states"
+              "$type": "color",
+              "$value": "{core.color.coolgray.300.opa70}",
+              "$description": "use for disabled states"
             },
             "rest": {
-              "value": "{core.color.white.opa70}",
-              "type": "color",
-              "description": "for prefix, suffix"
+              "$type": "color",
+              "$value": "{core.color.white.opa70}",
+              "$description": "for prefix, suffix"
             },
             "hover": {
-              "value": "{core.color.white.opa70}",
-              "type": "color",
-              "description": "for prefix, suffix"
+              "$type": "color",
+              "$value": "{core.color.white.opa70}",
+              "$description": "for prefix, suffix"
             },
             "pressed": {
-              "value": "{core.color.white.opa70}",
-              "type": "color",
-              "description": "for prefix, suffix"
+              "$type": "color",
+              "$value": "{core.color.white.opa70}",
+              "$description": "for prefix, suffix"
             }
           }
         }
@@ -491,326 +481,331 @@
       "surface": {
         "subtle": {
           "disabled": {
-            "value": "{core.color.coolgray.300.opa70}",
-            "type": "color",
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.opa70}",
+            "$description": "use for disabled states"
           },
           "neutral": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color",
-            "description": "use for captions, legends and alike"
+            "$type": "color",
+            "$value": "{core.color.coolgray.800.solid}",
+            "$description": "use for captions, legends and alike"
           }
         },
         "regular": {
           "disabled": {
-            "value": "{core.color.coolgray.300.solid}",
-            "type": "color",
             "inverted": {
               "value": "{core.color.coolgray.400.solid}",
               "type": "color"
             },
-            "description": "use for disabled states"
+            "$type": "color",
+            "$value": "{core.color.coolgray.300.solid}",
+            "$description": "use for disabled states"
           },
           "neutral": {
-            "value": "{core.color.white.solid}",
-            "type": "color",
-            "description": "Forms"
+            "$type": "color",
+            "$value": "{core.color.white.solid}",
+            "$description": "Forms"
           },
           "danger": {
-            "value": "{core.color.crimson.700.solid}",
-            "type": "color",
-            "description": "use on form captions, fieldset.legend, label"
+            "$type": "color",
+            "$value": "{core.color.crimson.700.solid}",
+            "$description": "use on form captions, fieldset.legend, label"
           },
           "link": {
-            "value": "{core.color.azure.700.solid}",
-            "type": "color",
-            "description": "Use for link or active text"
+            "$type": "color",
+            "$value": "{core.color.azure.700.solid}",
+            "$description": "Use for link or active text"
           }
         },
         "inverted": {
           "regular": {
             "disabled": {
-              "value": "{core.color.coolgray.700.solid}",
-              "type": "color",
-              "description": "use on surface.inverted > Tooltip.Text"
+              "$type": "color",
+              "$value": "{core.color.coolgray.700.solid}",
+              "$description": "use on surface.inverted > Tooltip.Text"
             },
             "neutral": {
-              "value": "{core.color.coolgray.100.solid}",
-              "type": "color",
-              "description": "use on surface.inverted > Tooltip.Text"
+              "$type": "color",
+              "$value": "{core.color.coolgray.100.solid}",
+              "$description": "use on surface.inverted > Tooltip.Text"
             },
             "danger": {
-              "value": "{core.color.crimson.400.solid}",
-              "type": "color",
-              "description": "use on form captions, fieldset.legend, label"
+              "$type": "color",
+              "$value": "{core.color.crimson.400.solid}",
+              "$description": "use on form captions, fieldset.legend, label"
             },
             "link": {
-              "value": "{core.color.azure.500.solid}",
-              "type": "color",
-              "description": "Use for link or active text"
+              "$type": "color",
+              "$value": "{core.color.azure.500.solid}",
+              "$description": "Use for link or active text"
             }
           },
           "subtle": {
             "disabled": {
-              "value": "{core.color.coolgray.700.opa70}",
-              "type": "color",
-              "description": "use on surface.inverted > Tooltip.Text"
+              "$type": "color",
+              "$value": "{core.color.coolgray.700.opa70}",
+              "$description": "use on surface.inverted > Tooltip.Text"
             },
             "neutral": {
-              "value": "{core.color.coolgray.100.opa70}",
-              "type": "color"
+              "$type": "color",
+              "$value": "{core.color.coolgray.100.opa70}"
             }
           }
-        }
-      }
-    },
-    "static": {
-      "regular": {
-        "disabled": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color",
-          "description": "use for disabled states"
-        },
-        "primary_dimmed": {
-          "value": "{core.color.azure.400.solid}",
-          "type": "color",
-          "description": "Use for components which can be used anywhere e.g: Loader"
-        },
-        "white": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "Use for components which can be used anywhere e.g: Loader"
-        }
-      },
-      "subtle": {
-        "disabled": {
-          "value": "{core.color.coolgray.700.opa70}",
-          "type": "color",
-          "description": "use for disabled states"
-        },
-        "primary_dimmed": {
-          "value": "{core.color.azure.600.opa20}",
-          "type": "color",
-          "description": "Use for components which can be used anywhere e.g: Loader"
-        },
-        "white": {
-          "value": "{core.color.white.opa20}",
-          "type": "color",
-          "description": "Use for components which can be used anywhere e.g: Loader"
         }
       }
     },
     "bordercolor": {
       "transparent": {
-        "value": "{core.color.neutral.transparent}",
-        "type": "color"
+        "$type": "color",
+        "$value": "{core.color.neutral.transparent}"
       },
       "container": {
         "disabled": {
-          "value": "{core.color.coolgray.300.solid}",
-          "type": "color",
-          "description": "use for disabled"
+          "$type": "color",
+          "$value": "{core.color.coolgray.300.solid}",
+          "$description": "use for disabled"
         },
         "neutral": {
-          "value": "{core.color.coolgray.400.solid}",
-          "type": "color",
-          "description": "use for input borders"
+          "$type": "color",
+          "$value": "{core.color.coolgray.400.solid}",
+          "$description": "use for input borders"
         },
         "danger": {
-          "value": "{core.color.crimson.400.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.crimson.400.solid}"
         },
         "safe": {
-          "value": "{core.color.limegreen.400.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.limegreen.400.solid}"
         },
         "warning": {
-          "value": "{core.color.gold.400.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.gold.400.solid}"
         },
         "informative": {
-          "value": "{core.color.coolgray.400.solid}",
-          "type": "color",
-          "description": "Use on: Counter"
+          "$type": "color",
+          "$value": "{core.color.coolgray.400.solid}",
+          "$description": "Use on: Counter"
         }
       },
       "bold": {
         "disabled": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.neutral.transparent}"
         },
         "neutral": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         },
         "primary": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         },
         "cta": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         },
         "danger": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         },
         "warning": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         },
         "safe": {
           "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           },
           "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          }
-        },
-        "informative": {
-          "rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
+            "$type": "color",
+            "$value": "{core.color.neutral.transparent}"
           }
         }
       },
       "inverse": {
         "disabled": {
-          "value": "{core.color.coolgray.300.solid}",
-          "type": "color",
-          "description": "bg for disabled, readonly"
+          "$type": "color",
+          "$value": "{core.color.coolgray.300.solid}",
+          "$description": "bg for disabled, readonly"
         },
-        "rest": {
-          "value": "{core.color.azure.500.solid}",
-          "type": "color",
-          "description": "rest"
+        "primary": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.azure.500.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.azure.600.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.azure.700.solid}",
+            "$description": "pressed"
+          }
         },
-        "hover": {
-          "value": "{core.color.azure.600.solid}",
-          "type": "color",
-          "description": "hover"
-        },
-        "pressed": {
-          "value": "{core.color.azure.700.solid}",
-          "type": "color",
-          "description": "pressed"
+        "error": {
+          "rest": {
+            "$type": "color",
+            "$value": "{core.color.crimson.700.solid}",
+            "$description": "rest"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{core.color.crimson.800.solid}",
+            "$description": "hover"
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{core.color.crimson.900.solid}",
+            "$description": "pressed"
+          }
         }
       },
       "secondary": {
         "disabled": {
-          "value": "{core.color.coolgray.300.solid}",
-          "type": "color",
-          "description": "use for disabled states"
+          "$type": "color",
+          "$value": "{core.color.coolgray.300.solid}",
+          "$description": "use for disabled states"
         },
         "rest": {
-          "value": "{core.color.azure.400.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.400.solid}"
         },
         "hover": {
-          "value": "{core.color.azure.500.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.500.solid}"
         },
         "pressed": {
-          "value": "{core.color.azure.600.solid}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.azure.600.solid}"
         }
       },
       "silent": {
         "disabled": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color",
-          "description": "use for disabled states"
+          "$type": "color",
+          "$value": "{core.color.neutral.transparent}",
+          "$description": "use for disabled states"
         },
         "rest": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.neutral.transparent}"
         },
         "hover": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.neutral.transparent}"
         },
         "pressed": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color"
+          "$type": "color",
+          "$value": "{core.color.neutral.transparent}"
         }
       },
       "global": {
         "focusring": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "use for focus ring"
+          "$type": "color",
+          "$value": "{core.color.white.solid}",
+          "$description": "use for focus ring"
         }
       }
     },
     "shadow": {
       "100": {
-        "value": "{core.color.coolgray.100.opa30}",
-        "type": "color",
-        "description": "Apply on elevation Box shadow"
+        "$type": "color",
+        "$value": "{core.color.coolgray.100.opa30}",
+        "$description": "Apply on elevation Box shadow"
+      }
+    },
+    "static": {
+      "regular": {
+        "disabled": {
+          "$type": "color",
+          "$value": "{core.color.coolgray.700.solid}",
+          "$description": "use for disabled states"
+        },
+        "primary_dimmed": {
+          "$type": "color",
+          "$value": "{core.color.azure.400.solid}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{core.color.white.solid}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        }
+      },
+      "subtle": {
+        "disabled": {
+          "$type": "color",
+          "$value": "{core.color.coolgray.700.opa70}",
+          "$description": "use for disabled states"
+        },
+        "primary_dimmed": {
+          "$type": "color",
+          "$value": "{core.color.azure.600.opa20}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{core.color.white.opa20}",
+          "$description": "Use for components which can be used anywhere e.g: Loader"
+        }
       }
     }
   },
@@ -818,42 +813,42 @@
     "accent": {
       "pink": {
         "subtle": {
-          "value": "#453344DD",
-          "type": "color",
-          "description": "Only for internal purposes e.g. slot component"
+          "$type": "color",
+          "$value": "#453344DD",
+          "$description": "Only for internal purposes e.g. slot component"
         },
         "strong": {
-          "value": "#FF5AFFFF",
-          "type": "color"
+          "$type": "color",
+          "$value": "#FF5AFFFF"
         }
       },
       "blue": {
-        "value": "#1969D5",
-        "type": "color"
+        "$type": "color",
+        "$value": "#1969D5"
       }
     },
     "bgcolor": {
       "default": {
-        "value": "#616060EE",
-        "type": "color"
+        "$type": "color",
+        "$value": "#616060EE"
       },
       "dimmed": {
-        "value": "#0A0A0A",
-        "type": "color"
+        "$type": "color",
+        "$value": "#0A0A0A"
       }
     },
     "content": {
       "onlightbg": {
-        "value": "#FFFFFF",
-        "type": "color"
+        "$type": "color",
+        "$value": "#FFFFFF"
       },
       "onactive": {
-        "value": "#FFFFFF",
-        "type": "color"
+        "$type": "color",
+        "$value": "#FFFFFF"
       },
       "subtle": {
-        "value": "#858585",
-        "type": "color"
+        "$type": "color",
+        "$value": "#858585"
       }
     }
   }

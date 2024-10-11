@@ -19,7 +19,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrToggleSwitchType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   hasStateLabel: false,
   active: false,
@@ -32,7 +32,6 @@ const defaultParams: BlrToggleSwitchType = {
   hintMessage: 'This is a small hint',
   hintMessageIcon: 'blrInfo',
   disabled: false,
-  readonly: false,
   arialabel: 'Toggle Switch',
   toogleSwitchId: 'toggle-switchId',
   name: 'toggle-switch-name',
@@ -166,12 +165,6 @@ export default {
         category: 'Events',
       },
     },
-    readonly: {
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      table: {
-        category: 'States',
-      },
-    },
   },
   parameters: {
     badges: ['Draft'],
@@ -193,8 +186,7 @@ They can also be used to control more complex features, such as the state of a s
  - [**On Label**](#on-label) 
  - [**Off Label**](#off-label)  
 - [**States**](#states)
- - [**Disabled**](#disabled) 
- - [**Readonly**](#readonly)
+ - [**Disabled**](#disabled)
 - [**Dependencies**](#dependencies)
  - [**Form Caption**](#form-caption)  
 </markdown>
@@ -350,7 +342,7 @@ OffLabel.story = { name: ' ' };
 
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled or readonly.
+ * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled.
  * ### Disabled
  * The Toggle Switch component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -379,36 +371,6 @@ export const Disabled = () => {
   `;
 };
 Disabled.story = { name: ' ' };
-
-/**
- * ### Readonly
- * The Toggle Switch component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    <div class="stories-toggle-switch">
-      ${BlrToggleSwitchRenderFunction({
-        ...defaultParams,
-        hasStateLabel: false,
-        readonly: true,
-        hasHint: false,
-        label: 'Readonly',
-      })}
-      ${BlrToggleSwitchRenderFunction({
-        ...defaultParams,
-        hasStateLabel: true,
-        readonly: true,
-        hasHint: false,
-        label: 'Readonly with state label',
-
-        onLabel: 'On Readonly',
-        offLabel: 'Off Readonly',
-      })}
-    </div>
-  `;
-};
-Readonly.story = { name: ' ' };
 
 /**
  * ## Dependencies

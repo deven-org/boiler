@@ -11,7 +11,7 @@ const sampleParams: BlrButtonIconType = {
   disabled: false,
   buttonIconId: 'button-id',
   variant: 'cta',
-  theme: 'Light',
+  theme: 'Light_value',
 };
 
 describe('blr-button-icon', () => {

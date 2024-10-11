@@ -32,7 +32,7 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
   @property() accessor selected: boolean = false;
   @property() accessor label = '';
   @property() accessor icon: string | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor selectedTabIndex: number | undefined;
 

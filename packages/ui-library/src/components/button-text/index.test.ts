@@ -14,7 +14,7 @@ const sampleParams: BlrButtonTextType = {
   disabled: false,
   buttonTextId: 'button-id',
   variant: 'cta',
-  theme: 'Light',
+  theme: 'Light_value',
   buttonDisplay: 'inline-block',
 };
 

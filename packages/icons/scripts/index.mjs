@@ -39,8 +39,8 @@ fs.readdir(iconDir, (err, files) => {
   });
 
   console.log(chalk.greenBright(`\n... 🖼️ compiles ${iconNames.length} icons:\n`));
-  iconNames.forEach((icon) => console.log(chalk.green.bold(`${icon}`)));
-  console.log('\n');
+  // iconNames.forEach((icon) => console.log(chalk.green.bold(`${icon}`)));
+  // console.log('\n');
 
   const template = `
     ${iconTemplateStrings.join('\n')}

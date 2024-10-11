@@ -47,7 +47,7 @@ export const staticStyles = css`
       outline-style: solid;
     }
 
-    .blr-label-switch-wrapper:not(.disabled, .readonly) {
+    .blr-label-switch-wrapper:not(.disabled) {
       cursor: pointer;
     }
 
@@ -211,20 +211,6 @@ export const staticStyles = css`
                   color: ${toggleswitch.control.ay11icon.iconcolor.inactive.disabled};
                 }
               }
-
-              &.readonly {
-                background-color: ${toggleswitch.control.container.bgcolor.inactive.readonly};
-                outline-color: ${toggleswitch.control.container.bordercolor.inactive.readonly};
-
-                .knob {
-                  outline-color: ${toggleswitch.control.knob.bordercolor.inactive.readonly};
-                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.readonly};
-                }
-
-                .toggle-icon > .toggle-icon-class {
-                  color: ${toggleswitch.control.ay11icon.iconcolor.inactive.readonly};
-                }
-              }
             }
 
             &.checked {
@@ -290,19 +276,6 @@ export const staticStyles = css`
                   color: ${toggleswitch.control.ay11icon.iconcolor.active.disabled};
                 }
               }
-
-              &.readonly {
-                background-color: ${toggleswitch.control.container.bgcolor.active.readonly};
-                outline-color: ${toggleswitch.control.container.bordercolor.active.readonly};
-
-                .knob {
-                  outline-color: ${toggleswitch.control.knob.bordercolor.active.readonly};
-                }
-
-                .toggle-icon > .toggle-icon-class {
-                  color: ${toggleswitch.control.ay11icon.iconcolor.active.readonly};
-                }
-              }
             }
           }
 
@@ -314,14 +287,6 @@ export const staticStyles = css`
         &.disabled {
           .blr-form-label-inline {
             color: ${formlabel.inlinelabel.textcolor.disabled};
-          }
-        }
-
-        &.readonly {
-          > .toggle-content-col {
-            > .blr-form-label-inline {
-              color: ${formlabel.inlinelabel.textcolor.readonly};
-            }
           }
         }
 
@@ -379,17 +344,6 @@ export const staticStyles = css`
                     background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                   }
                 }
-
-                &.readonly {
-                  outline-width: ${toggleswitch.control.container.borderwidth.sm.inactive.readonly};
-                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.inactive.readonly} * -1);
-
-                  .knob {
-                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.readonly};
-                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.readonly});
-                    background-color: ${toggleswitch.control.knob.bgcolor.inactive.readonly};
-                  }
-                }
               }
 
               &.checked {
@@ -430,17 +384,6 @@ export const staticStyles = css`
                     outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.disabled};
                     outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.disabled});
                     background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
-                  }
-                }
-
-                &.readonly {
-                  outline-width: ${toggleswitch.control.container.borderwidth.sm.active.readonly};
-                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.readonly} * -1);
-
-                  .knob {
-                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.readonly};
-                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.readonly});
-                    background-color: ${toggleswitch.control.knob.bgcolor.active.readonly};
                   }
                 }
               }
@@ -527,17 +470,6 @@ export const staticStyles = css`
                   background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
-
-              &.readonly {
-                outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.readonly};
-                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.readonly} * -1);
-
-                .knob {
-                  outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.readonly};
-                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.readonly} * -1);
-                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.readonly};
-                }
-              }
             }
 
             &.checked {
@@ -578,17 +510,6 @@ export const staticStyles = css`
                   outline-width: ${toggleswitch.control.knob.borderwidth.md.active.disabled};
                   outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.disabled} * -1);
                   background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
-                }
-              }
-
-              &.readonly {
-                outline-width: ${toggleswitch.control.container.borderwidth.md.active.readonly};
-                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.readonly} * -1);
-
-                .knob {
-                  outline-width: ${toggleswitch.control.knob.borderwidth.md.active.readonly};
-                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.readonly} * -1);
-                  background-color: ${toggleswitch.control.knob.bgcolor.active.readonly};
                 }
               }
             }
@@ -672,17 +593,6 @@ export const staticStyles = css`
                   background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
-
-              &.readonly {
-                outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.readonly};
-                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.readonly} * -1);
-
-                .knob {
-                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.readonly};
-                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.readonly} * -1);
-                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.readonly};
-                }
-              }
             }
 
             &.checked {
@@ -723,17 +633,6 @@ export const staticStyles = css`
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.disabled};
                   outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.disabled} * -1);
                   background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
-                }
-              }
-
-              &.readonly {
-                outline-width: ${toggleswitch.control.container.borderwidth.lg.active.readonly};
-                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.readonly} * -1);
-
-                .knob {
-                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.readonly};
-                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.readonly} * -1);
-                  background-color: ${toggleswitch.control.knob.bgcolor.active.readonly};
                 }
               }
             }

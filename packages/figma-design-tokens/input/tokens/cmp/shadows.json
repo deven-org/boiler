@@ -4,9 +4,17 @@
       "container": {
         "elevation": {
           "elevated": {
-            "value": "{sem.elevation.lvl_1}",
-            "type": "boxShadow"
+            "$type": "boxShadow",
+            "$value": "{sys.elevation.lvl_1}"
           }
+        }
+      }
+    },
+    "menu": {
+      "container": {
+        "elevation": {
+          "$type": "boxShadow",
+          "$value": "{sys.elevation.lvl_1}"
         }
       }
     }

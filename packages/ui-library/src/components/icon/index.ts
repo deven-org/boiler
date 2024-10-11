@@ -25,7 +25,7 @@ export class BlrIcon extends LitElementCustom {
   @property() accessor sizeVariant: SizesType | undefined = 'md';
   @property() accessor fillParent: boolean | undefined = true;
 
-  @property() accessor theme: ThemeType | undefined = 'Light';
+  @property() accessor theme: ThemeType | undefined = 'Light_value';
   @property() accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
 
   protected handleClick = (event: MouseEvent | KeyboardEvent) => {

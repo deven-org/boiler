@@ -46,7 +46,7 @@ export class BlrButtonIcon extends LitElementCustom {
   @property() accessor variant: ActionVariantType = 'primary';
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor focused = false;
 
@@ -138,7 +138,7 @@ export class BlrButtonIcon extends LitElementCustom {
             },
             {
               'aria-hidden': true,
-            }
+            },
           )}
         </span>
       `;

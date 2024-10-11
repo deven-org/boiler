@@ -4,7 +4,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { staticStyles as componentSpecificStaticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
-import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css.js';
+import { staticStyles as staticRadioStyles } from '../radio/index.css.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType, RadioGroupDirection } from '../../globals/types.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -36,7 +36,6 @@ export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
   @property() accessor disabled: boolean | undefined;
-  @property() accessor readonly: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType = 'md';
   @property() accessor hasLegend: boolean | undefined;
@@ -50,7 +49,7 @@ export class BlrRadioGroup extends LitElementCustom {
   @property() accessor groupErrorMessageIcon: SizelessIconType | undefined;
   @property() accessor legend: string | undefined;
   @property() accessor direction: RadioGroupDirection = 'horizontal';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected _radioElements: BlrRadio[] = [];
   private _selectedRadio?: BlrRadio;
@@ -96,7 +95,6 @@ export class BlrRadioGroup extends LitElementCustom {
 
       item.hasError = this.hasError;
       item.disabled = this.disabled;
-      item.readonly = this.readonly;
       item.theme = this.theme;
       item.sizeVariant = this.sizeVariant;
 
@@ -127,7 +125,6 @@ export class BlrRadioGroup extends LitElementCustom {
       [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
-      readonly: this.readonly || false,
       error: this.hasError || false,
       [this.direction]: this.direction,
     });
