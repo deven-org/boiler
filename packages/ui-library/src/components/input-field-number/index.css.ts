@@ -27,6 +27,7 @@ export const staticBaseStyles = css`
 
     .input-unit-container {
       display: flex;
+      align-items: center;
     }
 
     .input-unit-container .unit.prepend {
@@ -152,10 +153,20 @@ export const staticSemanticStyles = css`
           }
         }
 
+        &.disabled {
+          .input-unit-container .unit {
+            color: ${inputfield.prefixsuffix.textcolor.default.disabled};
+          }
+        }
+
         &.error-input {
           outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
             ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
+
+          .input-unit-container .unit {
+            color: ${inputfield.prefixsuffix.textcolor.error.rest};
+          }
 
           &:focus-within {
             outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
@@ -264,8 +275,6 @@ export const staticSemanticStyles = css`
       }
 
       &.readonly.${theme} {
-        outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style}
-          ${inputfield.container.border.default.readonly.color};
         color: ${inputfield.userinput.textcolor.default.readonly};
         background-color: ${inputfield.container.bgcolor.default.readonly};
 
@@ -419,6 +428,19 @@ export const staticComponentStyles = css`
 
         &.vertical {
           width: inherit;
+          align-items: flex-start;
+
+          & > blr-icon {
+            height: ${stepperbutton.icon.iconsize.sm};
+          }
+
+          &.md > blr-icon {
+            height: ${stepperbutton.icon.iconsize.md};
+          }
+
+          &.lg > blr-icon {
+            height: ${stepperbutton.icon.iconsize.lg};
+          }
         }
       }
     `;
