@@ -164,6 +164,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
     const buttonClass = classMap({
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
+      [this.sizeVariant]: true,
       [this.stepperVariant]: true,
       [this.theme]: this.theme,
     });
@@ -235,8 +236,10 @@ export class BlrInputFieldNumber extends LitElementCustom {
     if (this.sizeVariant) {
       const inputClasses = classMap({
         [this.sizeVariant]: this.sizeVariant,
-        prepend: this.unitPosition === 'prefix',
-        suffix: this.unitPosition === 'suffix',
+        'prepend': this.unitPosition === 'prefix',
+        'suffix': this.unitPosition === 'suffix',
+        'readonly': this.readonly || false,
+        'error-input': this.hasError || false,
         [this.theme]: this.theme,
       });
 
@@ -335,7 +338,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 ? html`<div class="${unitClasses}">${this.unit}</div>`
                 : nothing}
             </div>
-            ${this.renderMode()}
+            ${!this.readonly ? this.renderMode() : nothing}
           </div>
         </div>
 

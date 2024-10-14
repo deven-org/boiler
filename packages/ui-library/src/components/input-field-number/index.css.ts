@@ -16,6 +16,10 @@ export const staticBaseStyles = css`
     margin: 0;
   }
 
+  input[type="number"]::-moz-number-spin-box {
+    -moz-appearance: none;
+  }
+
   .input-wrapper {
     display: flex;
     overflow: hidden;
@@ -23,6 +27,7 @@ export const staticBaseStyles = css`
 
     .input-unit-container {
       display: flex;
+      align-items: center;
     }
 
     .input-unit-container .unit.prepend {
@@ -111,6 +116,7 @@ export const staticSemanticStyles = css`
 
       .input-wrapper.${theme} {
         box-sizing: border-box;
+        background-color: ${inputfield.container.bgcolor.default.rest};
         width: 100%;
         outline-width: ${inputfield.container.border.default.rest.width};
         outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
@@ -118,7 +124,20 @@ export const staticSemanticStyles = css`
         outline-color: ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
 
-        &:focus-within {
+        &.readonly {
+          color: ${inputfield.userinput.textcolor.default.readonly};
+          background-color: ${inputfield.container.bgcolor.default.readonly};
+
+          & > input {
+            color: ${inputfield.userinput.textcolor.default.readonly};
+
+            &::placeholder {
+              color: ${inputfield.placeholder.textcolor.default.readonly};
+            }
+          }
+        }
+
+        &:focus-within.${theme} {
           outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
           outline-style: ${inputfield.container.border.default.focus.style};
@@ -133,14 +152,56 @@ export const staticSemanticStyles = css`
             }
           }
         }
+
+        &.disabled {
+          .input-unit-container .unit {
+            color: ${inputfield.prefixsuffix.textcolor.default.disabled};
+          }
+        }
+
+        &.error-input {
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+            ${inputfield.container.border.error.rest.color};
+          background-color: ${inputfield.container.bgcolor.error.rest};
+
+          .input-unit-container .unit {
+            color: ${inputfield.prefixsuffix.textcolor.error.rest};
+          }
+
+          &:focus-within {
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
+            background-color: ${inputfield.container.bgcolor.error.focus};
+          }
+        }
       }
 
       input.${theme} {
-        all: initial;
+        outline: none;
+        background-color: ${inputfield.container.bgcolor.default.rest};
         color: ${inputfield.userinput.textcolor.default.rest};
+        border: none;
 
         &::placeholder {
           color: ${inputfield.placeholder.textcolor.default.rest};
+        }
+
+        &.readonly {
+          color: ${inputfield.userinput.textcolor.default.readonly};
+          background-color: ${inputfield.container.bgcolor.default.readonly};
+
+          &::placeholder {
+            color: ${inputfield.placeholder.textcolor.default.readonly};
+          }
+        }
+
+        &:disabled {
+          color: ${inputfield.userinput.textcolor.default.disabled};
+          background-color: ${inputfield.container.bgcolor.default.disabled};
+
+          &::placeholder {
+            color: ${inputfield.placeholder.textcolor.default.disabled};
+          }
         }
       }
 
@@ -181,20 +242,10 @@ export const staticSemanticStyles = css`
           ${inputfield.container.border.default.disabled.color};
         background-color: ${inputfield.container.bgcolor.default.disabled};
         cursor: not-allowed;
-
-        & > input {
-          color: ${inputfield.userinput.textcolor.default.disabled};
-          cursor: not-allowed;
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.default.disabled};
-          }
-        }
       }
 
       &.error-input.${theme} {
-        outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
-          ${inputfield.container.border.error.rest.color};
+        outline: none;
         color: ${inputfield.userinput.textcolor.error.rest};
         background-color: ${inputfield.container.bgcolor.error.rest};
 
@@ -202,20 +253,8 @@ export const staticSemanticStyles = css`
           color: ${inputfield.placeholder.textcolor.error.rest};
         }
 
-        &:hover {
-          outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style}
-            ${inputfield.container.border.error.hover.color};
-          color: ${inputfield.userinput.textcolor.error.hover};
-          background-color: ${inputfield.container.bgcolor.error.hover};
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.error.hover};
-          }
-        }
-
         &:active {
-          outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-            ${inputfield.container.border.error.pressed.color};
+          outline: none;
           color: ${inputfield.userinput.textcolor.error.pressed};
           background-color: ${inputfield.container.bgcolor.error.pressed};
 
@@ -225,8 +264,7 @@ export const staticSemanticStyles = css`
         }
 
         &:focus-within {
-          outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-            ${inputfield.container.border.error.focus.color};
+          outline: none;
           color: ${inputfield.userinput.textcolor.error.focus};
           background-color: ${inputfield.container.bgcolor.error.focus};
 
@@ -237,8 +275,6 @@ export const staticSemanticStyles = css`
       }
 
       &.readonly.${theme} {
-        outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style}
-          ${inputfield.container.border.default.readonly.color};
         color: ${inputfield.userinput.textcolor.default.readonly};
         background-color: ${inputfield.container.bgcolor.default.readonly};
 
@@ -377,11 +413,34 @@ export const staticComponentStyles = css`
         }
 
         &.horizontal {
-          width: unset;
+          &.sm {
+            width: ${stepperbutton.container.width.sm};
+          }
+
+          &.md {
+            width: ${stepperbutton.container.width.md};
+          }
+
+          &.lg {
+            width: ${stepperbutton.container.width.lg};
+          }
         }
 
         &.vertical {
           width: inherit;
+          align-items: flex-start;
+
+          & > blr-icon {
+            height: ${stepperbutton.icon.iconsize.sm};
+          }
+
+          &.md > blr-icon {
+            height: ${stepperbutton.icon.iconsize.md};
+          }
+
+          &.lg > blr-icon {
+            height: ${stepperbutton.icon.iconsize.lg};
+          }
         }
       }
     `;
