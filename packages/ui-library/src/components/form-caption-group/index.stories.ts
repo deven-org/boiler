@@ -55,14 +55,14 @@ const hintCaption = BlrFormCaptionRenderFunction({
   message: 'Hint-Message-Text',
   variant: 'hint',
   icon: 'blrInfo',
-  theme: 'Light',
+  theme: 'Light_value',
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
   message: 'Error-Message-Text',
   variant: 'error',
   icon: 'blrErrorFilled',
-  theme: 'Light',
+  theme: 'Light_value',
 });
 
 const mixedCaptions = html` ${hintCaption} ${errorCaption} `;
@@ -74,7 +74,7 @@ BlrFormCaptionGroup.storyName = 'Form Caption Group';
 
 const args: BlrFormCaptionGroupType = {
   sizeVariant: 'sm',
-  theme: 'Light',
+  theme: 'Light_value',
 };
 
 BlrFormCaptionGroup.args = args;

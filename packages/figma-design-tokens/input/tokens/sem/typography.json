@@ -4,24 +4,29 @@
       "label": {
         "typography": {
           "xs": {
-            "value": "{core.typography.sourcesanspro.semibold.50fixheight}",
-            "type": "typography"
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_50}",
+            "$description": "label.50"
           },
           "sm": {
-            "value": "{core.typography.sourcesanspro.semibold.75fixheight}",
-            "type": "typography"
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_100}",
+            "$description": "label.100"
           },
           "md": {
-            "value": "{core.typography.sourcesanspro.semibold.87fixheight}",
-            "type": "typography"
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_200}",
+            "$description": "label.200"
           },
           "lg": {
-            "value": "{core.typography.sourcesanspro.semibold.100fixheight}",
-            "type": "typography"
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_300}",
+            "$description": "label.300"
           },
           "xl": {
-            "value": "{core.typography.sourcesanspro.semibold.125fixheight}",
-            "type": "typography"
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_400}",
+            "$description": "label.400"
           }
         }
       }
@@ -31,19 +36,19 @@
         "legend": {
           "typography": {
             "sm": {
-              "value": "{core.typography.sourcesanspro.semibold.75fixheight}",
-              "type": "typography",
-              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_100}",
+              "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             },
             "md": {
-              "value": "{core.typography.sourcesanspro.semibold.87fixheight}",
-              "type": "typography",
-              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_200}",
+              "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             },
             "lg": {
-              "value": "{core.typography.sourcesanspro.semibold.100fixheight}",
-              "type": "typography",
-              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_300}",
+              "$description": "Apply on forms group-legends eg.: <RadioGroup>"
             }
           }
         }
@@ -52,135 +57,50 @@
         "placeholder": {
           "typography": {
             "sm": {
-              "value": "{core.typography.sourcesanspro.regular.87fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
-              "value": "{core.typography.sourcesanspro.regular.100fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
-              "value": "{core.typography.sourcesanspro.regular.125fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
         },
         "prefixsuffix": {
           "typography": {
             "sm": {
-              "value": "{core.typography.sourcesanspro.regular.87fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
-              "value": "{core.typography.sourcesanspro.regular.100fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
-              "value": "{core.typography.sourcesanspro.regular.125fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
         },
         "userinput": {
           "typography": {
             "sm": {
-              "value": "{core.typography.sourcesanspro.regular.87fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_100}"
             },
             "md": {
-              "value": "{core.typography.sourcesanspro.regular.100fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_200}"
             },
             "lg": {
-              "value": "{core.typography.sourcesanspro.regular.125fixheight}",
-              "type": "typography"
+              "$type": "typography",
+              "$value": "{sys.typography.input.inp_300}"
             }
           }
-        }
-      }
-    },
-    "ui": {
-      "headline": {
-        "h1": {
-          "value": "{core.typography.sourcesanspro.bold.400}",
-          "type": "typography"
-        },
-        "h2": {
-          "value": "{core.typography.sourcesanspro.bold.300}",
-          "type": "typography"
-        },
-        "h3": {
-          "value": "{core.typography.sourcesanspro.bold.300}",
-          "type": "typography"
-        },
-        "h4": {
-          "value": "{core.typography.sourcesanspro.bold.150}",
-          "type": "typography"
-        },
-        "h5": {
-          "value": "{core.typography.sourcesanspro.bold.125}",
-          "type": "typography"
-        },
-        "h6": {
-          "value": "{core.typography.sourcesanspro.bold.100}",
-          "type": "typography"
-        }
-      },
-      "paragraph": {
-        "s_50": {
-          "regular": {
-            "value": "{core.typography.sourcesanspro.regular.75}",
-            "type": "typography"
-          },
-          "strong": {
-            "value": "{core.typography.sourcesanspro.semibold.75}",
-            "type": "typography"
-          }
-        },
-        "s_100": {
-          "regular": {
-            "value": "{core.typography.sourcesanspro.regular.87}",
-            "type": "typography"
-          },
-          "strong": {
-            "value": "{core.typography.sourcesanspro.semibold.87}",
-            "type": "typography"
-          }
-        },
-        "s_200": {
-          "regular": {
-            "value": "{core.typography.sourcesanspro.regular.100}",
-            "type": "typography"
-          },
-          "strong": {
-            "value": "{core.typography.sourcesanspro.semibold.100}",
-            "type": "typography"
-          }
-        },
-        "s_300": {
-          "regular": {
-            "value": "{core.typography.sourcesanspro.regular.125}",
-            "type": "typography"
-          },
-          "strong": {
-            "value": "{core.typography.sourcesanspro.semibold.125}",
-            "type": "typography"
-          }
-        }
-      },
-      "caption": {
-        "s_100": {
-          "value": "{core.typography.sourcesanspro.regular.75fixheight}",
-          "type": "typography",
-          "description": "Apply on captions"
-        },
-        "s_200": {
-          "value": "{core.typography.sourcesanspro.regular.87fixheight}",
-          "type": "typography"
-        },
-        "s_300": {
-          "value": "{core.typography.sourcesanspro.regular.100fixheight}",
-          "type": "typography"
         }
       }
     }

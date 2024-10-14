@@ -2,8 +2,8 @@ import { css } from './css-in-ts/nested-typesafe-css-literals.js';
 import { ThemeType } from '../foundation/_tokens-generated/index.themes.js';
 
 import { Cmp as ComponentTokens } from '../foundation/_tokens-generated/componentTokensType.generated.js';
-import { componentTokens as componentTokensLight } from '../foundation/_tokens-generated/index.Light.generated.js';
-import { componentTokens as componentTokensDark } from '../foundation/_tokens-generated/index.Light.generated.js';
+import { componentTokens as componentTokensLight } from '../foundation/_tokens-generated/index.Light_value.generated.js';
+import { componentTokens as componentTokensDark } from '../foundation/_tokens-generated/index.Light_value.generated.js';
 
 export const findToolTipPosition = (minVal: string, maxVal: string, offsetWidthVal: number, value: number) => {
   const min = parseFloat(minVal);
@@ -34,8 +34,8 @@ export const findPercentage = (min: number, max: number, value: number) => {
 };
 
 const ThemedTokens: { [P in ThemeType]: ComponentTokens } = {
-  Dark: componentTokensDark.cmp,
-  Light: componentTokensLight.cmp,
+  Dark_value: componentTokensDark.cmp,
+  Light_value: componentTokensLight.cmp,
 };
 
 export const generateRangeBar = (

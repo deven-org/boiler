@@ -2,50 +2,50 @@
   "sys": {
     "borderradius": {
       "sm": {
-        "value": "{core.borderradius.base}*0.5",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "{core.borderradius.base}*0.5"
       },
       "md": {
-        "value": "{core.borderradius.base}*1",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "{core.borderradius.base}*1"
       },
       "lg": {
-        "value": "{core.borderradius.base}*2",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "{core.borderradius.base}*2"
       },
       "xl": {
-        "value": "{core.borderradius.base}*3",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "{core.borderradius.base}*3"
       },
       "round": {
-        "value": "9999",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "9999"
       },
       "none": {
-        "value": "0",
-        "type": "borderRadius"
+        "$type": "borderRadius",
+        "$value": "0"
       }
     },
     "borderwidth": {
       "thin": {
-        "value": "{core.borderwidth.base}*0.5",
-        "type": "borderWidth"
+        "$type": "borderWidth",
+        "$value": "{core.borderwidth.base}*0.5"
       },
       "medium": {
-        "value": "{core.borderwidth.base}*1",
-        "type": "borderWidth"
+        "$type": "borderWidth",
+        "$value": "{core.borderwidth.base}*1"
       },
       "bold": {
-        "value": "{core.borderwidth.base}*2",
-        "type": "borderWidth"
+        "$type": "borderWidth",
+        "$value": "{core.borderwidth.base}*2"
       },
       "heavy": {
-        "value": "{core.borderwidth.base}*3",
-        "type": "borderWidth"
+        "$type": "borderWidth",
+        "$value": "{core.borderwidth.base}*3"
       },
       "none": {
-        "value": "0",
-        "type": "borderWidth"
+        "$type": "borderWidth",
+        "$value": "0"
       }
     }
   }

@@ -20,7 +20,7 @@ const sharedStyles = html`
 
 //Default parameters for Loader component
 const defaultParams: BlrLoaderType = {
-  theme: 'Light',
+  theme: 'Light_value',
   variant: 'default',
   sizeVariant: 'md',
 };
@@ -91,7 +91,7 @@ export const Variant = () => {
     ${sharedStyles}
     ${BlrLoaderRenderFunction({
       ...defaultParams,
-      theme: 'Light',
+      theme: 'Light_value',
       variant: 'default',
       sizeVariant: 'md',
     })}
@@ -133,7 +133,7 @@ export const SizeVariant = () => {
             ...defaultParams,
             sizeVariant: size,
           })}
-        </div>`
+        </div>`,
     )}
   `;
 };

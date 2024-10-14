@@ -16,7 +16,7 @@ const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 export class BlrTooltip extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
   @property() accessor message!: string;
   @property() accessor hasArrow: boolean | undefined = true;
   @property() accessor elevation: boolean | undefined = true;

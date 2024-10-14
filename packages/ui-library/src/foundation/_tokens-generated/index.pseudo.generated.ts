@@ -11,26 +11,28 @@
 
   This will make it possible to switch prebuild themes on the fly on a component level
 */
+
+console.log('# # # pseudo generated');
 import { makeIterator, joinCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
-import { componentTokens as cmpLight } from './__component-tokens.Light.generated.mjs';
-import { componentTokens as cmpDark } from './__component-tokens.Dark.generated.mjs';
-import { semanticTokens as semLight } from './__semantic-tokens.Light.generated.mjs';
-import { semanticTokens as semDark } from './__semantic-tokens.Dark.generated.mjs';
+import { componentTokens as cmpLight } from './__component-tokens.Light_value.generated.mjs';
+import { componentTokens as cmpDark } from './__component-tokens.Dark_value.generated.mjs';
+import { semanticTokens as semLight } from './__semantic-tokens.Light_value.generated.mjs';
+import { semanticTokens as semDark } from './__semantic-tokens.Dark_value.generated.mjs';
 
 export const componentTokenTree = {
-  Light: cmpLight.cmp,
-  Dark: cmpDark.cmp,
+  Light_value: cmpLight.cmp,
+  Dark_value: cmpDark.cmp,
 };
 
 export const semanticTokenTree = {
-  Light: semLight.sem,
-  Dark: semDark.sem,
+  Light_value: semLight.sem,
+  Dark_value: semDark.sem,
 };
 
 export const ComponentThemeIterator = (
   renderFunction: (
     theme: keyof typeof componentTokenTree,
-    cmp: typeof componentTokenTree.Light,
+    cmp: typeof componentTokenTree.Light_value,
     css: typeof joinCss,
   ) => string,
 ) => {
@@ -42,7 +44,7 @@ export const ComponentThemeIterator = (
 export const SemanticThemeIterator = (
   renderFunction: (
     theme: keyof typeof semanticTokenTree,
-    sem: typeof semanticTokenTree.Light,
+    sem: typeof semanticTokenTree.Light_value,
     css: typeof joinCss,
   ) => string,
 ) => {

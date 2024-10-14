@@ -19,7 +19,7 @@ export class BlrFormCaption extends LitElementCustom {
   @property() accessor variant: CaptionVariantType = 'hint';
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
   @property() accessor childElement: TemplateResult<1> | undefined = undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     if (this.sizeVariant) {
@@ -51,14 +51,14 @@ export class BlrFormCaption extends LitElementCustom {
                 {
                   icon: calculateIconName(
                     this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
-                    iconSizeVariant
+                    iconSizeVariant,
                   ),
                   sizeVariant: iconSizeVariant,
                   classMap: iconClasses,
                 },
                 {
                   'aria-hidden': true,
-                }
+                },
               )
             : nothing}
           <span class="blr-caption-text">${this.message}</span>

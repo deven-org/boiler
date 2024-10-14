@@ -75,7 +75,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() accessor stepDecreaseAriaLabel: string | undefined = '\u2212'; // minus-sign (not minus-hyphen)
   @property() accessor name: string | undefined;
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor currentValue = 0;
   @state() protected accessor isFocused = false;
@@ -189,7 +189,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
           },
           {
             'aria-hidden': true,
-          }
+          },
         )}
       </button>
     `;

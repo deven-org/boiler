@@ -51,7 +51,6 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() accessor name!: string;
   @property() accessor hasLabel: boolean | undefined;
   @property() accessor disabled: boolean | undefined;
-  @property() accessor readonly: boolean | undefined;
   @property() accessor active: boolean | undefined = undefined;
 
   @property() accessor hasHint: boolean | undefined;
@@ -64,7 +63,7 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
   @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
 
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.active;
 
@@ -75,7 +74,7 @@ export class BlrToggleSwitch extends LitElementCustom {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.currentCheckedState = !this.currentCheckedState;
       this.dispatchEvent(
         createBlrCheckedChangeEvent({
@@ -105,13 +104,13 @@ export class BlrToggleSwitch extends LitElementCustom {
   @state() protected accessor hovered = false;
 
   protected handleEnter = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.hovered = true;
     }
   };
 
   protected handleLeave = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.hovered = false;
     }
   };
@@ -119,14 +118,14 @@ export class BlrToggleSwitch extends LitElementCustom {
   @state() protected accessor pressed = false;
 
   protected handlePress = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.pressed = true;
       this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.pressed = false;
     }
   };
@@ -137,7 +136,6 @@ export class BlrToggleSwitch extends LitElementCustom {
         'blr-semantic-action': true,
         'blr-label-toggleswitch': true,
         'disabled': this.disabled || false,
-        'readonly': this.readonly || false,
         [this.theme]: this.theme,
         [this.sizeVariant]: this.sizeVariant,
         [this.hasStateLabel ? 'has-state-label' : '']: this.hasStateLabel,
@@ -147,7 +145,6 @@ export class BlrToggleSwitch extends LitElementCustom {
         'blr-label-switch-wrapper': true,
         'checked': this.currentCheckedState || false,
         'disabled': this.disabled || false,
-        'readonly': this.readonly || false,
         'hover': this.hovered || false,
         'active': this.pressed || false,
         'focus': this.focused || false,

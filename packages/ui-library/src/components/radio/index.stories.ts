@@ -99,13 +99,6 @@ export default {
         category: 'States',
       },
     },
-    readonly: {
-      name: 'readonly',
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      table: {
-        category: 'States',
-      },
-    },
     required: {
       name: 'required',
       description: 'Choose if the component must hold a value after an interaction or a submit.',
@@ -205,7 +198,6 @@ export default {
           - [**Checked**](#checked)
         - [**States**](#states)
           - [**Disabled**](#disabled)
-          - [**Readonly**](#readonly)
         - [**Validation**](#validation)
           - [**Required**](#required)
           - [**Has Error**](#has-error)
@@ -226,7 +218,7 @@ const args: BlrRadioType & {
   value: string;
   ariaLabel: string;
 } = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   value: 'radioValue',
   checked: false,
@@ -235,7 +227,6 @@ const args: BlrRadioType & {
   hintMessage: 'This is a small hint',
   hintMessageIcon: 'blrInfo',
   disabled: false,
-  readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
@@ -309,7 +300,7 @@ export const Checked = () => html`
 Checked.story = { name: ' ' };
 /**
  * ## States
- *  Apart from states like rest, hover, pressed and focus, the Radio component can also be disabled or readonly. The error state is documented under [Validation](#validation).
+ *  Apart from states like rest, hover, pressed and focus, the Radio component can also be disabled. The error state is documented under [Validation](#validation).
  * ### Disabled
  * The Radio component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -326,20 +317,6 @@ export const Disabled = () => {
 };
 
 Disabled.story = { name: ' ' };
-
-/**
- * The Radio component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    ${BlrRadio({
-      ...args,
-      readonly: true,
-      label: 'Readonly',
-    })}
-  `;
-};
 
 /**
  * ## Validation

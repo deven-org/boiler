@@ -13,7 +13,7 @@ export class BlrButtonGroup extends LitElementCustom {
 
   @property() accessor sizeVariant: ButtonGroupSizesType = 'md';
   @property() accessor alignment: ButtonGroupAlignmentType = 'center';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     const classes = classMap({
