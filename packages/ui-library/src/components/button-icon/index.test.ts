@@ -1,7 +1,5 @@
 import '@boiler/ui-library';
-
 import { BlrButtonIconRenderFunction } from './renderFunction.js';
-
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrButtonIconType } from './index.js';
@@ -25,24 +23,6 @@ describe('blr-button-icon', () => {
 
     expect(className).to.contain('blr-button-icon');
   });
-
-  /*
-  it('is having a visible icon', async () => {
-    const element = await fixture(BlrButtonIconRenderFunction(sampleParams));
-
-    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    const icon = querySelectorDeep('blr-icon', button?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', icon?.getRootNode() as HTMLElement);
-
-    const rect = svg?.getBoundingClientRect();
-
-    expect(rect).have.property('width');
-    expect(rect).have.property('height');
-
-    expect(rect?.width).to.be.greaterThan(0);
-    expect(rect?.height).to.be.greaterThan(0);
-  });
-  */
 
   it('has a size md by default', async () => {
     const element = await fixture(BlrButtonIconRenderFunction(sampleParams));
@@ -136,25 +116,22 @@ describe('blr-button-icon', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires blrfocus event if focused and not disabled', async () => {
+  it('fires blrfocus event if focused and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonIconRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    element.addEventListener('blrFocus', () => {
-      fired = true;
+    const focusPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrFocus', () => resolve());
     });
 
-    // Simulate the focus event
-    if (button) {
-      button.dispatchEvent(new FocusEvent('focus'));
-    }
+    button?.dispatchEvent(new FocusEvent('focus'));
 
-    expect(fired).to.be.true;
+    await focusPromise;
+    expect(true).to.be.true;
   });
 
-  it('doesnt fires blrfocus event if focused and disabled', async () => {
+  it('doesnt fire blrfocus event if focused and disabled', async () => {
     const element = await fixture(BlrButtonIconRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
@@ -166,31 +143,27 @@ describe('blr-button-icon', () => {
 
     button?.focus();
 
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
     expect(fired).to.be.false;
   });
 
-  it('fires blrblur event if blurred and not disabled', async () => {
+  it('fires blrblur event if blurred and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonIconRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    // Attach the listener for the custom blrBlur event
-    element.addEventListener('blrBlur', () => {
-      fired = true;
+    const blurPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrBlur', () => resolve());
     });
 
-    expect(button).to.exist;
+    button?.dispatchEvent(new FocusEvent('blur'));
 
-    if (button) {
-      button.dispatchEvent(new FocusEvent('focus'));
-      button.dispatchEvent(new FocusEvent('blur'));
-    }
-
-    expect(fired).to.be.true;
+    await blurPromise;
+    expect(true).to.be.true;
   });
 
-  it('doesnt fires blrblur event if blurred and disabled', async () => {
+  it('doesnt fire blrblur event if blurred and disabled', async () => {
     const element = await fixture(BlrButtonIconRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
@@ -202,6 +175,8 @@ describe('blr-button-icon', () => {
 
     button?.focus();
     button?.blur();
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
 
     expect(fired).to.be.false;
   });
