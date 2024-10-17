@@ -141,7 +141,7 @@ export class BlrRangeLegendMinMaxSlider extends LitElementCustom {
                 id=${minSliderId}
                 type="range"
                 min="0"
-                .value="${this.selectedStartIndex}"
+                .value="${String(this.selectedStartIndex)}"
                 max="${stepsArray.length - 1}"
                 step="${this.stepFactor}"
                 class="range ${this.theme}"
@@ -154,7 +154,7 @@ export class BlrRangeLegendMinMaxSlider extends LitElementCustom {
                 id=${maxSliderId}
                 type="range"
                 min="0"
-                .value="${this.selectedEndIndex}"
+                .value="${String(this.selectedEndIndex)}"
                 max="${stepsArray.length - 1}"
                 step="${this.stepFactor}"
                 class="range ${this.theme}"

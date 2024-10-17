@@ -23,10 +23,10 @@ export class BlrIcon extends LitElementCustom {
 
   @property() accessor icon: IconType | undefined = 'blr360Xs';
   @property() accessor sizeVariant: SizesType | undefined = 'md';
-  @property() accessor fillParent: boolean | undefined = true;
+  @property({ type: Boolean }) accessor fillParent: boolean | undefined = true;
 
   @property() accessor theme: ThemeType | undefined = 'Light_value';
-  @property() accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
+  @property({ type: Object }) accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
 
   protected handleClick = (event: MouseEvent | KeyboardEvent) => {
     this.dispatchEvent(createBlrClickEvent({ originalEvent: event }));

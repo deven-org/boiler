@@ -28,8 +28,8 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
   @property() accessor iconPosition: IconPositionVariant = 'leading';
   @property() accessor tabContent: TabContentVariantType = 'labelOnly';
   @property() accessor size: FormSizesType | undefined = 'md';
-  @property() accessor disabled = false;
-  @property() accessor selected: boolean = false;
+  @property({ type: Boolean }) accessor disabled = false;
+  @property({ type: Boolean }) accessor selected: boolean = false;
   @property() accessor label = '';
   @property() accessor icon: string | undefined;
   @property() accessor theme: ThemeType = 'Light_value';
@@ -115,9 +115,14 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
                 )
               : nothing}
             ${this.tabContent !== 'iconOnly'
-              ? html` <label class="blr-semantic-action ${this.theme} ${this.size}" name="${this.label}"
-                  >${this.label}</label
-                >`
+              ? html` <label
+                    class="blr-semantic-action ${this.theme} ${this.size}"
+                    id="${this.label}-label"
+                    for="${this.label}"
+                  >
+                    ${this.label}
+                  </label>
+                  >`
               : nothing}
           </p>
         </div>

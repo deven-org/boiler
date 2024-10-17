@@ -226,7 +226,7 @@ export const styleCustom = css`
           }
         }
 
-        &[readonly] {
+        &.readonly {
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};

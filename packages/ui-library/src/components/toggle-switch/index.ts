@@ -23,6 +23,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrToggleSwitchEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -48,16 +49,16 @@ export class BlrToggleSwitch extends LitElementCustom {
 
   @property() accessor toogleSwitchId!: string;
   @property() accessor name!: string;
-  @property() accessor hasLabel: boolean | undefined;
-  @property() accessor disabled: boolean | undefined;
-  @property() accessor active: boolean | undefined = undefined;
+  @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor active: boolean | undefined = undefined;
 
-  @property() accessor hasHint: boolean | undefined;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
 
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor hasStateLabel: boolean = false;
+  @property({ type: Boolean }) accessor hasStateLabel: boolean = false;
 
   @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
   @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
@@ -219,16 +220,16 @@ export class BlrToggleSwitch extends LitElementCustom {
           }}
           tabindex="0"
         >
-          <label for=${this.toogleSwitchId || nothing} class=${wrapperClass}>
+          <label for=${ifDefined(this.toogleSwitchId)} class=${wrapperClass}>
             <div class="${focusRingClasses}"></div>
             <input
               aria-label=${this.ariaLabel || nothing}
               type="checkbox"
               class="input-control"
-              id=${this.toogleSwitchId || nothing}
-              name=${this.toogleSwitchId || nothing}
+              id=${ifDefined(this.toogleSwitchId)}
+              name=${ifDefined(this.toogleSwitchId)}
               ?disabled=${this.disabled}
-              .checked=${this.currentCheckedState || nothing}
+              .checked=${this.currentCheckedState === true}
               @change=${this.handleChange}
               tabindex="-1"
             />

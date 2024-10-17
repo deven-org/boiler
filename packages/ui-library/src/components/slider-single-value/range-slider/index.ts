@@ -26,11 +26,11 @@ export class BlrRangeSlider extends LitElementCustom {
 
   @property() accessor rangeInputId!: string;
 
-  @property() accessor initialValue!: number;
-  @property() accessor minValue!: number;
-  @property() accessor maxValue!: number;
+  @property({ type: Number }) accessor initialValue!: number;
+  @property({ type: Number }) accessor minValue!: number;
+  @property({ type: Number }) accessor maxValue!: number;
   @property() accessor units: string | undefined = '';
-  @property() accessor stepFactor!: number;
+  @property({ type: Number }) accessor stepFactor!: number;
 
   @property() accessor size: FormSizesType = 'md';
   @property() accessor btnVariant: ActionVariantType = 'silent';
@@ -38,8 +38,8 @@ export class BlrRangeSlider extends LitElementCustom {
   @property() accessor incrementIcon!: SizelessIconType;
   @property() accessor decrementIcon!: SizelessIconType;
 
-  @property() accessor showLegend: boolean | undefined = true;
-  @property() accessor disabled: boolean | undefined = false;
+  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
   @property() accessor theme: ThemeType = 'Light_value';
 
@@ -121,7 +121,7 @@ export class BlrRangeSlider extends LitElementCustom {
                 id=${this.rangeInputId || 'rangeInputId'}
                 type="range"
                 min="0"
-                .value=${this.valueToSlider}
+                .value="${String(this.valueToSlider)}"
                 max="100"
                 step="${this.stepFactor}"
                 class="range"

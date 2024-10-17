@@ -29,6 +29,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrButtonTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -161,10 +162,10 @@ export class BlrButtonText extends LitElementCustom {
       return html`
         <span
           class="${classes}"
-          aria-disabled=${this.disabled ? 'true' : nothing}
+          aria-disabled=${this.disabled ? 'true' : 'false'}
           aria-label=${this.label}
           @click="${this.handleClick}"
-          tabindex=${this.disabled ? nothing : '0'}
+          tabindex=${ifDefined(this.disabled ? undefined : 0)}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           role="button"
@@ -173,7 +174,7 @@ export class BlrButtonText extends LitElementCustom {
               this.handleClick(event);
             }
           }}
-          id=${this.buttonTextId || nothing}
+          id="${ifDefined(this.buttonTextId)}"
         >
           ${this.focused && !this.loading ? html`<span class="${focusLayerClasses}"></span>` : nothing}
           ${this.loading

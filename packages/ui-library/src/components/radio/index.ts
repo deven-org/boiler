@@ -21,6 +21,7 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom } from '../../utils/lit/element.js';
 import { SignalHub } from '../../utils/lit/signals.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 /**
  * @fires blrFocus Radio received focus
@@ -38,15 +39,15 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
 
   @property() accessor optionId!: string;
   @property() accessor label!: string;
-  @property() accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property({ type: Boolean }) accessor checked: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
-  @property() accessor required: boolean | undefined;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
-  @property() accessor hasHint: boolean | undefined;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor value: string | undefined;
@@ -127,14 +128,14 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
       return html`
         <div class="blr-radio ${classes}">
           <input
-            id=${id || nothing}
+            id=${id ? id : ''}
             class="${classes} input-control"
             type="radio"
-            name=${this.name}
+            name="${ifDefined(this.name)}"
             ?disabled=${this.disabled}
-            ?invalid=${this.hasError}
+            ?data-has-error=${this.hasError || false}
             ?checked=${this.checked}
-            .checked=${this.checked || nothing}
+            .checked=${this.checked === true}
             ?required=${this.required}
             @click=${this.handleClick}
             @focus=${this.handleFocus}
