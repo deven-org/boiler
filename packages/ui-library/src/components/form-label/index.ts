@@ -1,4 +1,4 @@
-import { html, nothing } from 'lit';
+import { html } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { TAG_NAME } from './renderFunction.js';
 import { classMap } from 'lit/directives/class-map.js';
