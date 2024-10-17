@@ -18,8 +18,8 @@ export class BlrTooltip extends LitElementCustom {
 
   @property() accessor theme: ThemeType = 'Light_value';
   @property() accessor message!: string;
-  @property() accessor hasArrow: boolean | undefined = true;
-  @property() accessor elevation: boolean | undefined = true;
+  @property({ type: Boolean }) accessor hasArrow: boolean | undefined = true;
+  @property({ type: Boolean }) accessor elevation: boolean | undefined = true;
   @property() accessor placement: PlacementType | undefined = 'top';
   @property() accessor offset: number | string | undefined = 4;
 

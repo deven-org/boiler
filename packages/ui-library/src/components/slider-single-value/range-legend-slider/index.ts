@@ -24,8 +24,8 @@ export class BlrRangeLegendSlider extends LitElementCustom {
   @property() accessor rangeInputId!: string;
 
   @property() accessor initialValue!: string;
-  @property() accessor list!: Array<string>;
-  @property() accessor stepFactor!: number;
+  @property({ type: Array }) accessor list!: Array<string>;
+  @property({ type: Number }) accessor stepFactor!: number;
 
   @property() accessor size: FormSizesType = 'md';
   @property() accessor btnVariant: ActionVariantType = 'silent';
@@ -33,8 +33,8 @@ export class BlrRangeLegendSlider extends LitElementCustom {
   @property() accessor incrementIcon!: SizelessIconType;
   @property() accessor decrementIcon!: SizelessIconType;
 
-  @property() accessor showLegend: boolean | undefined = true;
-  @property() accessor disabled: boolean | undefined = false;
+  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
   @property() accessor theme: ThemeType = 'Light_value';
 
@@ -108,7 +108,7 @@ export class BlrRangeLegendSlider extends LitElementCustom {
                 id=${inputCmp1}
                 type="range"
                 min="0"
-                .value="${this.selectedIndex}"
+                .value="${String(this.selectedIndex)}"
                 max="${stepsArray.length - 1}"
                 step="${this.stepFactor}"
                 class="range ${this.theme}"

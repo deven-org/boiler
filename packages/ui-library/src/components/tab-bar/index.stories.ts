@@ -66,7 +66,7 @@ export default {
 };
 
 const tabsAsChildren = html`
-  <blr-tab-bar-item disabled="true" label="Tab 1" icon="blr360">Tab 1</blr-tab-bar-item>
+  <blr-tab-bar-item .disabled=${true} label="Tab 1" icon="blr360">Tab 1</blr-tab-bar-item>
   <blr-tab-bar-item label="Tab 2" icon="blr360" @blrFocus=${(e) => e} @blrBlur=${(e) => e}>Tab 2</blr-tab-bar-item>
   <blr-tab-bar-item label="Tab 3" icon="blr360">Tab 3</blr-tab-bar-item>
   <blr-tab-bar-item label="Tab 4" icon="blr360">Tab 4</blr-tab-bar-item>

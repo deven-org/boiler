@@ -7,6 +7,7 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export class BlrFormLabel extends LitElementCustom {
   static styles = [];
@@ -16,7 +17,7 @@ export class BlrFormLabel extends LitElementCustom {
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
   @property() accessor forValue: string | undefined;
   @property() accessor theme: ThemeType = 'Light_value';
-  @property() accessor hasError: boolean = false;
+  @property({ type: Boolean }) accessor hasError: boolean = false;
 
   private _error: Error | null = null;
 
@@ -63,7 +64,7 @@ export class BlrFormLabel extends LitElementCustom {
       // Since it doesnt have a shadowRoot, lit cant apply styles to it.
       // We have to render styles inline here, which is not great
       return html` ${unsafeHTML(`<style>${dynamicStyles.map((style) => style.cssText).join('\n')}</style>`)}
-        <label class=${labelClasses} for=${this.forValue || nothing}>
+        <label class=${labelClasses} for=${ifDefined(this.forValue)}>
           ${this.label}
           <span class=${spanClasses}>${this.labelAppendix}</span>
         </label>`;
