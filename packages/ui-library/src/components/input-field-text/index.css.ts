@@ -74,12 +74,6 @@ export const styleCustom = css`
             }
           }
 
-          &:active {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.pressed};
-            }
-          }
-
           &[readonly] {
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.readonly};
@@ -125,15 +119,6 @@ export const styleCustom = css`
 
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
-              }
-            }
-
-            &:active {
-              border: none;
-              outline: none;
-
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.pressed};
               }
             }
 
@@ -230,6 +215,13 @@ export const styleCustom = css`
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
+
+          &.focus {
+            outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
+            outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+              ${inputfield.container.border.default.focus.color};
+            background-color: ${inputfield.container.bgcolor.default.focus};
+          }
         }
 
         &:active {
@@ -256,13 +248,6 @@ export const styleCustom = css`
             border-color: ${inputfield.container.border.error.hover.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
-          }
-
-          &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-              ${inputfield.container.border.error.pressed.color};
-            color: ${inputfield.userinput.textcolor.error.pressed};
-            background-color: ${inputfield.container.bgcolor.error.pressed};
           }
 
           .blr-form-input {
@@ -316,10 +301,6 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
           color: ${inputfield.icon.iconcolor.default.focus};
         }
 
-        &:active .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.pressed};
-        }
-
         &:has(input[readonly]):not(.error-input) .${iconClassName} {
           color: ${inputfield.icon.iconcolor.default.readonly};
         }
@@ -339,10 +320,6 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
 
           &:focus-within .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.focus};
-          }
-
-          &:active .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.pressed};
           }
         }
       }

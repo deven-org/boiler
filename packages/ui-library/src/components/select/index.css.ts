@@ -116,12 +116,6 @@ export const staticStyles = css`
             ${inputfield.container.border.default.focus.color};
         }
 
-        &:active {
-          color: ${inputfield.userinput.textcolor.default.pressed};
-          background-color: ${inputfield.container.bgcolor.default.pressed};
-          border-color: ${inputfield.container.border.default.pressed.color};
-        }
-
         &.disabled {
           color: ${inputfield.userinput.textcolor.default.disabled};
           background-color: ${inputfield.container.bgcolor.default.disabled};
@@ -137,12 +131,6 @@ export const staticStyles = css`
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
             border-color: ${inputfield.container.border.error.hover.color};
-          }
-
-          &:active {
-            color: ${inputfield.userinput.textcolor.error.pressed};
-            background-color: ${inputfield.container.bgcolor.error.pressed};
-            border-color: ${inputfield.container.border.error.pressed.color};
           }
 
           &.focus {
@@ -190,10 +178,6 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
         color: ${inputfield.icon.iconcolor.default.focus};
       }
 
-      &:active .${directionIndicatorIconClassName} {
-        color: ${inputfield.icon.iconcolor.default.pressed};
-      }
-
       &.disabled {
         .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.default.disabled};
@@ -212,10 +196,6 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
 
         &:focus-within .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.error.focus};
-        }
-
-        &:active .${directionIndicatorIconClassName} {
-          color: ${inputfield.icon.iconcolor.error.pressed};
         }
       }
     }
