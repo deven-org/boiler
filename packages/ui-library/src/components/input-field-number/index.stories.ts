@@ -44,6 +44,7 @@ const defaultParams: BlrInputFieldNumberType = {
   stepDecreaseAriaLabel: '\u2212',
   inputFieldNumberId: 'inputFieldNumberId',
   name: 'inputFieldNumber',
+  isInitialized: false,
 };
 
 export default {
