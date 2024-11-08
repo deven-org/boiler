@@ -53,22 +53,20 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor selectId!: string;
   @property() accessor labelAppendix: string | undefined;
   @property() accessor name!: string;
-  @property() accessor hasLabel: boolean | undefined;
+  @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
   @property() accessor label!: string;
-  @property() accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property() accessor sizeVariant: FormSizesType = 'md';
-  @property() accessor required: boolean | undefined;
-  @property() accessor blrBlur: HTMLElement['blur'] | undefined;
-  @property() accessor blrFocus: HTMLElement['focus'] | undefined;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
-  @property() accessor hasHint: boolean | undefined;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor icon: SizelessIconType | undefined;
   @property() accessor theme: ThemeType = 'Light_value';
-  @property() accessor options!: Options[] | JSON;
+  @property({ type: Array }) accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
 
   protected handleFocus = (event: FocusEvent) => {
@@ -178,8 +176,8 @@ export class BlrSelect extends LitElementCustom {
             <select
               aria-label=${this.ariaLabel || nothing}
               class=${selectClasses}
-              id=${this.selectId || nothing}
-              name=${this.name || nothing}
+              id=${this.selectId ? this.selectId : ''}
+              name=${this.name ? this.name : ''}
               ?disabled=${this.disabled}
               ?required=${this.required}
               @input=${this.handleChange}
