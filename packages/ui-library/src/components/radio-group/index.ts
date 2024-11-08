@@ -35,14 +35,14 @@ export type BlrRadioGroupEventHandlers = {
 export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
-  @property() accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType = 'md';
-  @property() accessor hasLegend: boolean | undefined;
-  @property() accessor required: boolean | undefined;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor hasLegend: boolean | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorIcon: SizelessIconType | undefined;
-  @property() accessor hasHint = true;
+  @property({ type: Boolean }) accessor hasHint = true;
   @property() accessor groupHintMessageIcon: SizelessIconType | undefined;
   @property() accessor groupErrorMessage: string | undefined;
   @property() accessor groupHintMessage: string | undefined;

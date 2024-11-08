@@ -165,7 +165,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 id=${this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`}
                 type="range"
                 min="0"
-                .value=${this.startValueToSlider}
+                .value="${String(this.startValueToSlider)}"
                 max="100"
                 step="${this.stepFactor}"
                 class="range ${this.theme}"
@@ -176,7 +176,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 id=${this.rangeInputId ? `${this.rangeInputId}-2` : `rangeInputId-2`}
                 type="range"
                 min="0"
-                .value=${this.endValueToSlider}
+                .value="${String(this.endValueToSlider)}"
                 max="100"
                 step="${this.stepFactor}"
                 class="range ${this.theme}"

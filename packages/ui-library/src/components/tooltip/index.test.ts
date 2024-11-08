@@ -12,10 +12,7 @@ const sampleParams: BlrTooltipType = {
   placement: 'right',
 };
 
-const testContent = html`<div
-  className="blue-box"
-  style="height: 200px; width: 200px; background-color: lightblue"
-></div>`;
+const testContent = html`<div class="blue-box" style="height: 200px; width: 200px; background-color: lightblue"></div>`;
 
 describe('blr-tooltip', () => {
   it('is having a tooltip element', async () => {
