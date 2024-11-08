@@ -23,6 +23,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrButtonIconEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -40,8 +41,8 @@ export class BlrButtonIcon extends LitElementCustom {
 
   @property() accessor arialabel!: string;
   @property() accessor icon: SizelessIconType | undefined;
-  @property() accessor loading: boolean | undefined;
-  @property() accessor disabled!: boolean;
+  @property({ type: Boolean }) accessor loading: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled!: boolean;
   @property() accessor buttonIconId: string | undefined;
   @property() accessor variant: ActionVariantType = 'primary';
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
@@ -108,10 +109,10 @@ export class BlrButtonIcon extends LitElementCustom {
         <span
           aria-label=${this.arialabel || nothing}
           class="${classes}"
-          aria-disabled=${this.disabled ? 'true' : nothing}
+          aria-disabled=${this.disabled ? 'true' : 'false'}
           @click=${this.handleClick}
-          id=${this.buttonIconId || nothing}
-          tabindex=${this.disabled ? nothing : '0'}
+          id=${ifDefined(this.buttonIconId)}
+          tabindex=${ifDefined(this.disabled ? undefined : 0)}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           role="button"
