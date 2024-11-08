@@ -22,6 +22,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -44,16 +45,16 @@ export class BlrCheckbox extends LitElementCustom {
   @property() accessor checkboxId: string | undefined = '';
   @property() accessor arialabel: string | undefined;
 
-  @property() accessor disabled: boolean | undefined;
-  @property() accessor checked: boolean | undefined = false;
-  @property() accessor indeterminate: boolean | undefined = false;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor checked: boolean | undefined = false;
+  @property({ type: Boolean }) accessor indeterminate: boolean | undefined = false;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
-  @property() accessor hasHint: boolean | undefined;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor hintMessage: string | undefined;
-  @property() accessor hasLabel!: boolean;
+  @property({ type: Boolean }) accessor hasLabel!: boolean;
   @property() accessor name: string | undefined;
   @property() accessor checkedIcon: SizelessIconType | undefined = 'blrCheckmark';
   @property() accessor indeterminateIcon: SizelessIconType | undefined = 'blrMinus';
@@ -246,8 +247,8 @@ export class BlrCheckbox extends LitElementCustom {
               this.handleRelease();
             }
           }}
-          tabindex=${this.disabled ? nothing : '0'}
-          aria-checked=${this.currentIndeterminateState ? 'mixed' : this.currentCheckedState}
+          tabindex=${ifDefined(this.disabled ? undefined : 0)}
+          aria-checked=${ifDefined(this.currentIndeterminateState ? 'mixed' : this.currentCheckedState)}
           role="checkbox"
           aria-label=${this.label}
         >
@@ -255,14 +256,14 @@ export class BlrCheckbox extends LitElementCustom {
             type="checkbox"
             class="input-control"
             tabindex="-1"
-            aria-label="${this.ariaLabel}"
-            id=${this.checkboxId || nothing}
-            name=${this.name || nothing}
+            aria-label=${ifDefined(this.ariaLabel ?? undefined)}
+            id=${ifDefined(this.checkboxId)}
+            name=${ifDefined(this.name)}
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
-            ?indeterminate=${this.currentIndeterminateState}
+            .indeterminate=${this.currentIndeterminateState ?? false}
             ?required="${this.required}"
-            ?hasError=${this.hasError}
+            ?data-has-error=${this.hasError}
             @change=${this.handleChange}
             aria-hidden="true"
           />

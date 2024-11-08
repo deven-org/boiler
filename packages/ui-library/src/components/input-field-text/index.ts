@@ -25,6 +25,7 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { BlrIconEventHandlers } from '../icon/index.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -48,21 +49,21 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor inputFieldTextId!: string;
   @property() accessor type: InputTypes = 'text';
   @property() accessor arialabel!: string;
-  @property() accessor hasLabel!: boolean;
+  @property({ type: Boolean }) accessor hasLabel!: boolean;
   @property() accessor label!: string;
   @property() accessor labelAppendix: string | undefined;
   @property() accessor value!: string;
   @property() accessor placeholder: string | undefined;
-  @property() accessor disabled: boolean | undefined;
-  @property() accessor readonly: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor readonly: boolean | undefined;
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor required: boolean | undefined;
-  @property() accessor maxLength: number | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Number }) accessor maxLength: number | undefined;
   @property() accessor pattern: string | undefined;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor icon: SizelessIconType | undefined = 'blr360';
-  @property() accessor hasHint = true;
+  @property({ type: Boolean }) accessor hasHint = true;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
@@ -192,6 +193,7 @@ export class BlrInputFieldText extends LitElementCustom {
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
+        'readonly': this.readonly ? true : false,
         [this.sizeVariant]: this.sizeVariant,
         [this.theme]: this.theme,
       });
@@ -233,25 +235,25 @@ export class BlrInputFieldText extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div class="blr-input-wrapper ${inputContainerClasses}" ?readonly="${this.readonly}">
+          <div class="blr-input-wrapper ${inputContainerClasses}">
             <div class="blr-input-inner-container ${this.theme}">
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.inputFieldTextId}
-                name="${this.name || nothing}"
+                name="${ifDefined(this.name)}"
                 aria-label=${this.arialabel}
                 type="${this.currentType}"
                 .value="${this.value}"
-                placeholder="${this.placeholder}"
+                placeholder="${ifDefined(this.placeholder)}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
                 @input=${this.handleChange}
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
-                maxlength="${this.maxLength}"
-                pattern="${this.pattern}"
-                hasError="${this.hasError}"
+                maxlength="${ifDefined(this.maxLength)}"
+                pattern="${ifDefined(this.pattern)}"
+                ?data-has-error=${this.hasError}
                 @select=${this.handleSelect}
               />
             </div>

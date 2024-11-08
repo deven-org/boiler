@@ -11,8 +11,8 @@ export class BlrCounter extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor variant: CounterVariantType = 'neutral';
-  @property() accessor value = 0;
-  @property() accessor maxValue = 0;
+  @property({ type: Number }) accessor value = 0;
+  @property({ type: Number }) accessor maxValue = 0;
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
   @property() accessor theme: ThemeType = 'Light_value';
 

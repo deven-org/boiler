@@ -18,7 +18,7 @@ export class BlrFormCaption extends LitElementCustom {
   @property() accessor icon: SizelessIconType | undefined = undefined;
   @property() accessor variant: CaptionVariantType = 'hint';
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor childElement: TemplateResult<1> | undefined = undefined;
+  @property({ type: Object }) accessor childElement: TemplateResult<1> | undefined = undefined;
   @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
