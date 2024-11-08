@@ -52,24 +52,24 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() accessor inputFieldNumberId!: string;
   @property() accessor stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
   @property() accessor label!: string;
-  @property() accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property() accessor placeholder: string | undefined;
-  @property() accessor readonly: boolean | undefined;
-  @property() accessor required: boolean | undefined;
-  @property() accessor hasLabel: boolean | undefined;
+  @property({ type: Boolean }) accessor readonly: boolean | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
   @property() accessor labelAppendix: string | undefined;
-  @property() accessor hasError: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
-  @property() accessor hasHint = true;
+  @property({ type: Boolean }) accessor hasHint = true;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
-  @property() accessor value: number | undefined;
-  @property() accessor step: number | undefined;
+  @property({ type: Number }) accessor value: number | undefined;
+  @property({ type: Number }) accessor step: number | undefined;
   @property() accessor unit: UnitType | undefined;
-  @property() accessor leadingZeros: number | undefined;
-  @property() accessor decimals: number | undefined;
+  @property({ type: Number }) accessor leadingZeros: number | undefined;
+  @property({ type: Number }) accessor decimals: number | undefined;
   @property() accessor unitPosition: UnitVariantType | undefined;
   @property() accessor stepIncreaseAriaLabel: string | undefined = '+';
   @property() accessor stepDecreaseAriaLabel: string | undefined = '\u2212'; // minus-sign (not minus-hyphen)
@@ -323,8 +323,8 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 type="number"
                 .value=${this.currentValue != 0
                   ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
-                  : nothing}
-                step="${this.step || nothing}"
+                  : '0'}
+                step="${this.step !== undefined ? this.step : 1}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
