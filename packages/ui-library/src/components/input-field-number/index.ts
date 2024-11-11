@@ -332,7 +332,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 .value=${!this.currentValue && this.currentValue !== 0
                   ? ''
                   : this.customFormat(Number(this.currentValue), this.decimals || 0, this.leadingZeros || 0)}
-                step="${this.step || nothing}"
+                step="${this.step !== undefined ? this.step : 1}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
