@@ -22,7 +22,7 @@ const defaultParams: BlrInputFieldNumberType = {
   sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
-  value: undefined,
+  value: 0,
   decimals: 0,
   leadingZeros: 0,
   unit: undefined,
@@ -44,7 +44,6 @@ const defaultParams: BlrInputFieldNumberType = {
   stepDecreaseAriaLabel: '\u2212',
   inputFieldNumberId: 'inputFieldNumberId',
   name: 'inputFieldNumber',
-  isInitialized: false,
 };
 
 export default {

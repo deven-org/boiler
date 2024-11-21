@@ -77,7 +77,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
   @property() accessor theme: ThemeType = 'Light_value';
 
-  @state() protected accessor currentValue: number | undefined;
+  @state() protected accessor currentValue = 0;
   @state() protected accessor isFocused = false;
 
   protected stepperUp(event: MouseEvent) {
@@ -106,9 +106,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
   connectedCallback() {
     super.connectedCallback();
-    if (this.currentValue === undefined) {
-      this.currentValue = this.value !== undefined ? this.value : undefined;
-    }
+    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
   }
 
   protected handleFocus = (event: FocusEvent) => {
@@ -138,18 +136,12 @@ export class BlrInputFieldNumber extends LitElementCustom {
   }
 
   protected customFormat(cur: number, fractions: number, digits: number): string {
-    const numberValue = isNaN(Number(cur)) ? 0 : Number(cur);
-
-    if (typeof numberValue !== 'number' || isNaN(numberValue)) {
-      return '0';
-    }
-
-    const formattedNumber = numberValue.toFixed(fractions);
+    const formattedNumber = cur.toFixed(fractions);
     const [integerPart, fractionPart] = formattedNumber.split('.');
 
     let paddedInteger = integerPart;
     if (digits > 0) {
-      paddedInteger = '0'.repeat(digits - integerPart.length) + integerPart;
+      paddedInteger = '0'.repeat(digits) + integerPart;
     }
     return `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
   }
@@ -329,9 +321,9 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 id="${this.inputFieldNumberId}"
                 class="${inputClasses}"
                 type="number"
-                .value=${!this.currentValue && this.currentValue !== 0
-                  ? ''
-                  : this.customFormat(Number(this.currentValue), this.decimals || 0, this.leadingZeros || 0)}
+                .value=${this.currentValue != 0
+                  ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
+                  : ''}
                 step="${this.step !== undefined ? this.step : 1}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
