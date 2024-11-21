@@ -224,30 +224,22 @@ export const styleCustom = css`
           }
         }
 
-        &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
-          color: ${inputfield.userinput.textcolor.default.pressed};
-          background-color: ${inputfield.container.bgcolor.default.pressed};
-        }
-
         &.error-input {
           outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
             ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
+          &:hover {
+            outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+              ${inputfield.container.border.error.rest.color};
+            color: ${inputfield.userinput.textcolor.error.hover};
+            background-color: ${inputfield.container.bgcolor.error.hover};
+          }
           &.focus {
             outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
               ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
             background-color: ${inputfield.container.bgcolor.error.focus};
-          }
-
-          &:hover {
-            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style};
-            border-color: ${inputfield.container.border.error.hover.color};
-            color: ${inputfield.userinput.textcolor.error.hover};
-            background-color: ${inputfield.container.bgcolor.error.hover};
           }
 
           .blr-form-input {
