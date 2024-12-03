@@ -26,6 +26,8 @@ import {
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { BlrIconEventHandlers } from '../icon/index.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -34,6 +36,12 @@ export type BlrInputFieldTextEventHandlers = {
   blrSelect?: (event: BlrSelectEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrInputFieldTextType) => ({
+  type: unsanitized.type ?? 'text',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? 'Light_value',
+}));
+
 /**
  * @fires blrFocus InputFieldText received focus
  * @fires blrBlur InputFieldText lost focus
@@ -41,13 +49,30 @@ export type BlrInputFieldTextEventHandlers = {
  * @fires blrSelect Text in InputFieldText got selected
  */
 export class BlrInputFieldText extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrInputFieldTextType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrInputFieldTextType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [styleCustom];
 
   @query('input')
   protected accessor _inputFieldTextNode!: HTMLInputElement;
 
   @property() accessor inputFieldTextId!: string;
-  @property() accessor type: InputTypes = 'text';
+  @property() accessor type: InputTypes | undefined;
   @property() accessor arialabel!: string;
   @property({ type: Boolean }) accessor hasLabel!: boolean;
   @property() accessor label!: string;
@@ -56,7 +81,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor placeholder: string | undefined;
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property({ type: Boolean }) accessor readonly: boolean | undefined;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Number }) accessor maxLength: number | undefined;
   @property() accessor pattern: string | undefined;
@@ -69,9 +94,9 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
   @property() accessor name!: string;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType | undefined;
 
-  @state() protected accessor currentType: InputTypes = this.type;
+  @state() protected accessor currentType: InputTypes | undefined;
   @state() protected accessor isFocused = false;
 
   protected willUpdate(_changedProperties: PropertyValueMap<never> | Map<PropertyKey, unknown>): void {
@@ -155,7 +180,7 @@ export class BlrInputFieldText extends LitElementCustom {
       'icon-input': true,
       [this.sizeVariant!]: this.sizeVariant!,
       'no-pointer-events': Boolean(this.disabled || this.type !== 'password'),
-      [this.theme]: this.theme,
+      [this.theme!]: this.theme!,
     });
 
     const iconName: SizelessIconType | undefined =
@@ -174,19 +199,20 @@ export class BlrInputFieldText extends LitElementCustom {
       },
     );
   }
-
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const classes = classMap({
         'blr-input-field-text': true,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: this.theme,
       });
 
       const inputClasses = classMap({
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
@@ -194,16 +220,16 @@ export class BlrInputFieldText extends LitElementCustom {
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
         'readonly': this.readonly ? true : false,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitized.theme,
+              sizeVariant: sanitized.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -211,7 +237,7 @@ export class BlrInputFieldText extends LitElementCustom {
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
-              theme: this.theme,
+              theme: sanitized.theme,
               sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
@@ -226,10 +252,10 @@ export class BlrInputFieldText extends LitElementCustom {
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.sizeVariant,
+                    sizeVariant: sanitized.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldTextId,
-                    theme: this.theme,
+                    theme: sanitized.theme,
                     hasError: Boolean(this.hasError),
                   })}
                 </div>
@@ -242,7 +268,7 @@ export class BlrInputFieldText extends LitElementCustom {
                 id=${this.inputFieldTextId}
                 name="${ifDefined(this.name)}"
                 aria-label=${this.arialabel}
-                type="${this.currentType}"
+                type="${sanitized.type === 'text' ? this.currentType : sanitized.type}"
                 .value="${this.value}"
                 placeholder="${ifDefined(this.placeholder)}"
                 ?disabled="${this.disabled}"
@@ -260,7 +286,10 @@ export class BlrInputFieldText extends LitElementCustom {
             ${this.renderInputIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction(
+                { theme: sanitized.theme, sizeVariant: sanitized.sizeVariant },
+                captionContent,
+              )
             : nothing}
         </div>
       `;
