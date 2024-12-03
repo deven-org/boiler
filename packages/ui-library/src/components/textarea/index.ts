@@ -24,6 +24,8 @@ import {
   createBlrTextValueChangeEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrTextareaEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -32,6 +34,16 @@ export type BlrTextareaEventHandlers = {
   blrSelect?: (event: BlrSelectEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrTextareaType) => ({
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  warningLimitType: unsanitized.warningLimitType ?? 'warningLimitInt',
+  warningLimitInt: unsanitized.warningLimitInt ?? 105,
+  warningLimitPer: unsanitized.warningLimitPer ?? 75,
+  resize: unsanitized.resize ?? 'none',
+  hasHint: unsanitized.hasHint ?? true,
+  theme: unsanitized.theme ?? 'Light_value',
+}));
+
 /**
  * @fires blrFocus Textarea received focus
  * @fires blrBlur Textarea lost focus
@@ -39,6 +51,24 @@ export type BlrTextareaEventHandlers = {
  * @fires blrSelect Text in Textarea got selected
  */
 export class BlrTextarea extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrTextareaType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrTextareaType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [staticFormStyles, staticStyles];
 
   @query('textarea')
@@ -53,13 +83,13 @@ export class BlrTextarea extends LitElementCustom {
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property({ type: Boolean }) accessor readonly: boolean | undefined;
   @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Number }) accessor maxLength: number | undefined;
   @property({ type: Number }) accessor minLength: number | undefined;
-  @property() accessor warningLimitType: WarningLimits = 'warningLimitInt';
-  @property({ type: Number }) accessor warningLimitInt = 105;
-  @property({ type: Number }) accessor warningLimitPer = 75;
+  @property() accessor warningLimitType: WarningLimits | undefined;
+  @property({ type: Number }) accessor warningLimitInt: number | undefined;
+  @property({ type: Number }) accessor warningLimitPer: number | undefined;
   @property() accessor pattern: string | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
@@ -69,12 +99,12 @@ export class BlrTextarea extends LitElementCustom {
   @property() accessor hintMessage: string | undefined;
   @property({ type: Boolean }) accessor hasCounter: boolean | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
-  @property() accessor resize: ResizeType = 'none';
+  @property() accessor resize: ResizeType | undefined;
   @property({ type: Number }) accessor rows: number | undefined;
   @property({ type: Number }) accessor cols: number | undefined;
   @property() accessor name: string | undefined;
   @property() accessor textAreaDisplay: DisplayType | undefined = 'block';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor count = 0;
   @query('textarea') protected accessor textareaElement: HTMLTextAreaElement | null = null;
@@ -113,11 +143,15 @@ export class BlrTextarea extends LitElementCustom {
   protected determinateCounterVariant(): CounterVariantType {
     let counterVariant: CounterVariantType = 'neutral';
 
-    if (this.maxLength) {
-      if (this.warningLimitType === 'warningLimitPer' && this.count >= (this.maxLength / 100) * this.warningLimitPer) {
-        counterVariant = 'warn';
-      } else if (this.warningLimitType === 'warningLimitInt' && this.count >= this.warningLimitInt) {
-        counterVariant = 'warn';
+    if (this.maxLength !== undefined) {
+      if (this.warningLimitType === 'warningLimitPer' && this.warningLimitPer !== undefined) {
+        if (this.count >= (this.maxLength / 100) * this.warningLimitPer) {
+          counterVariant = 'warn';
+        }
+      } else if (this.warningLimitType === 'warningLimitInt' && this.warningLimitInt !== undefined) {
+        if (this.count >= this.warningLimitInt) {
+          counterVariant = 'warn';
+        }
       }
 
       if (this.count >= this.maxLength) {
@@ -153,33 +187,35 @@ export class BlrTextarea extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant && this.textAreaDisplay) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant && this.textAreaDisplay) {
       const classes = classMap({
         'blr-textarea': true,
-        [this.theme]: true,
+        [sanitized.theme]: true,
         'error': this.hasError || false,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         [this.textAreaDisplay]: this.textAreaDisplay,
       });
 
       const textareaClasses = classMap({
         'textarea-input-control': true,
-        [this.theme]: true,
+        [sanitized.theme]: true,
         'error': this.hasError || false,
-        [this.resize]: this.resize,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.resize]: sanitized.resize,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         [this.textAreaDisplay]: this.textAreaDisplay,
         'disabled': this.disabled || false,
       });
 
       const textareaInfoContainer = classMap({
         'blr-textarea-info-container': true,
-        [this.theme]: this.theme,
+        [sanitized.theme]: sanitized.theme,
         'hint': this.hasHint || false,
         'error': this.hasError || false,
         'error-message': this.errorMessage || false,
         'hint-message': this.hintMessage || false,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
       });
 
       const counterVariant = this.determinateCounterVariant();
@@ -188,7 +224,7 @@ export class BlrTextarea extends LitElementCustom {
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
-              theme: this.theme,
+              theme: sanitized.theme,
               sizeVariant: this.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
@@ -197,8 +233,8 @@ export class BlrTextarea extends LitElementCustom {
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitized.theme,
+              sizeVariant: sanitized.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -211,10 +247,10 @@ export class BlrTextarea extends LitElementCustom {
             ? html`<div class="label-wrapper">
                 ${BlrFormLabelRenderFunction({
                   label: this.label,
-                  sizeVariant: this.sizeVariant,
+                  sizeVariant: sanitized.sizeVariant,
                   labelAppendix: this.labelAppendix,
                   forValue: this.textAreaId,
-                  theme: this.theme,
+                  theme: sanitized.theme,
                   hasError: Boolean(this.hasError),
                 })}
               </div>`
@@ -243,7 +279,7 @@ export class BlrTextarea extends LitElementCustom {
           <div class="${textareaInfoContainer}">
             ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
               ? BlrFormCaptionGroupRenderFunction(
-                  { sizeVariant: this.sizeVariant, theme: this.theme },
+                  { sizeVariant: sanitized.sizeVariant, theme: sanitized.theme },
                   getCaptionContent(),
                 )
               : nothing}
@@ -252,8 +288,8 @@ export class BlrTextarea extends LitElementCustom {
                   variant: counterVariant,
                   value: this.count,
                   maxValue: this.maxLength || 0,
-                  sizeVariant: this.sizeVariant,
-                  theme: this.theme,
+                  sizeVariant: sanitized.sizeVariant,
+                  theme: sanitized.theme,
                 })
               : nothing}
           </div>
