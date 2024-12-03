@@ -22,7 +22,7 @@ const defaultParams: BlrInputFieldNumberType = {
   sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
-  value: 0,
+  value: undefined,
   decimals: 0,
   leadingZeros: 0,
   unit: undefined,
