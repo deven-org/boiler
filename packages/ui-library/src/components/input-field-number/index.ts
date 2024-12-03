@@ -65,7 +65,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property({ type: Boolean }) accessor hasHint = true;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
-  @property({ type: Number }) accessor value: number | undefined;
+  @property() accessor value: number | string | undefined;
   @property({ type: Number }) accessor step: number | undefined;
   @property() accessor unit: UnitType | undefined;
   @property({ type: Number }) accessor leadingZeros: number | undefined;
@@ -77,7 +77,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
   @property() accessor theme: ThemeType = 'Light_value';
 
-  @state() protected accessor currentValue = 0;
+  @state() protected accessor currentValue: number | undefined;
   @state() protected accessor isFocused = false;
 
   protected stepperUp(event: MouseEvent) {
@@ -106,7 +106,10 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
   connectedCallback() {
     super.connectedCallback();
-    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
+
+    if (this.value !== '') {
+      this.currentValue = Number(this.currentValue) || Number(this.value);
+    }
   }
 
   protected handleFocus = (event: FocusEvent) => {
@@ -321,9 +324,9 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 id="${this.inputFieldNumberId}"
                 class="${inputClasses}"
                 type="number"
-                .value=${this.currentValue != 0
+                .value=${this.currentValue !== undefined
                   ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
-                  : '0'}
+                  : ''}
                 step="${this.step !== undefined ? this.step : 1}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
