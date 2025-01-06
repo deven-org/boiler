@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/await-thenable */
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrIconRenderFunction } from './renderFunction.js';
+import { BlrIconRenderFunction } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { classMap } from 'lit/directives/class-map.js';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrIconType } from './index.js';
+import type { BlrIconType } from '.';
 
 const TEST_CLASS = 'test-class';
 

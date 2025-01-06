@@ -4,29 +4,29 @@
       "loader": {
         "sizevariant": {
           "xs": {
-            "$type": "componentConfig",
-            "$value": "SM",
-            "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
           "sm": {
-            "$type": "componentConfig",
-            "$value": "SM",
-            "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
           "md": {
-            "$type": "componentConfig",
-            "$value": "MD",
-            "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
           "lg": {
-            "$type": "componentConfig",
-            "$value": "MD",
-            "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
           "xl": {
-            "$type": "componentConfig",
-            "$value": "LG",
-            "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            "value": "LG",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         }
       }
@@ -36,19 +36,19 @@
         "icon": {
           "sizevariant": {
             "sm": {
-              "$type": "componentConfig",
-              "$value": "SM",
-              "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
             "md": {
-              "$type": "componentConfig",
-              "$value": "MD",
-              "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+              "value": "MD",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
             "lg": {
-              "$type": "componentConfig",
-              "$value": "MD",
-              "$description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+              "value": "MD",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         }

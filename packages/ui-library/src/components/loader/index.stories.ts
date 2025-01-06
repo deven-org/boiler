@@ -1,10 +1,10 @@
-import { BlrLoaderType } from './index.js';
-import { BlrLoaderRenderFunction } from './renderFunction.js';
+import { BlrLoaderType } from './index';
+import { BlrLoaderRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 // this loads the all components instances and registers their html tags
-import '../../index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { FeedbackVariants, FeedbackSizes } from '../../globals/constants.js';
+import '../../index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { FeedbackVariants, FeedbackSizes } from '../../globals/constants';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -20,7 +20,7 @@ const sharedStyles = html`
 
 //Default parameters for Loader component
 const defaultParams: BlrLoaderType = {
-  theme: Themes[0],
+  theme: 'Light',
   variant: 'default',
   sizeVariant: 'md',
 };
@@ -91,7 +91,7 @@ export const Variant = () => {
     ${sharedStyles}
     ${BlrLoaderRenderFunction({
       ...defaultParams,
-      theme: Themes[0],
+      theme: 'Light',
       variant: 'default',
       sizeVariant: 'md',
     })}
@@ -133,7 +133,7 @@ export const SizeVariant = () => {
             ...defaultParams,
             sizeVariant: size,
           })}
-        </div>`,
+        </div>`
     )}
   `;
 };

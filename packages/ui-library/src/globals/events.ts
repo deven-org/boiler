@@ -47,16 +47,6 @@ export function createBlrSelectEvent(detail: BlrSelectEventDetail): BlrSelectEve
 
 /* per-input change events */
 
-export type BlrChangeEventDetail = {
-  originalEvent: Event;
-  changedValue: string | null;
-};
-export type BlrChangeEvent = CustomEvent<BlrChangeEventDetail>;
-export const BlrChangeEventName = 'blrChange';
-export function createBlrChangeEvent(detail: BlrChangeEventDetail): BlrChangeEvent {
-  return new CustomEvent(BlrChangeEventName, { bubbles: true, composed: true, detail });
-}
-
 export type BlrCheckedChangeEventDetail = {
   originalEvent: Event;
   checkedState: boolean | undefined;
@@ -68,20 +58,18 @@ export function createBlrCheckedChangeEvent(detail: BlrCheckedChangeEventDetail)
 }
 
 export type BlrSelectedValueChangeEventDetail = {
-  originalEvent?: Event;
-  selectedValue: string;
+  originalEvent: Event;
 };
 export type BlrSelectedValueChangeEvent = CustomEvent<BlrSelectedValueChangeEventDetail>;
 export const BlrSelectedValueChangeEventName = 'blrSelectedValueChange';
 export function createBlrSelectedValueChangeEvent(
-  detail: BlrSelectedValueChangeEventDetail,
+  detail: BlrSelectedValueChangeEventDetail
 ): BlrSelectedValueChangeEvent {
-  return new CustomEvent(BlrSelectedValueChangeEventName, { bubbles: false, composed: true, detail, cancelable: true });
+  return new CustomEvent(BlrSelectedValueChangeEventName, { bubbles: true, composed: true, detail });
 }
 
 export type BlrTextValueChangeEventDetail = {
   originalEvent: Event;
-  inputValue: string;
 };
 export type BlrTextValueChangeEvent = CustomEvent<BlrTextValueChangeEventDetail>;
 export const BlrTextValueChangeEventName = 'blrTextValueChange';
@@ -91,7 +79,8 @@ export function createBlrTextValueChangeEvent(detail: BlrTextValueChangeEventDet
 
 export type BlrNumberValueChangeEventDetail = {
   originalEvent: Event;
-  inputValue: number;
+  oldValue: number;
+  newValue: number;
 };
 export type BlrNumberValueChangeEvent = CustomEvent<BlrNumberValueChangeEventDetail>;
 export const BlrNumberValueChangeEventName = 'blrNumberValueChange';
@@ -106,7 +95,6 @@ declare global {
     [BlrClickEventName]: BlrClickEvent;
     [BlrNumberStepperClickEventName]: BlrNumberStepperClickEvent;
     [BlrSelectEventName]: BlrSelectEvent;
-    [BlrChangeEventName]: BlrChangeEvent;
     [BlrCheckedChangeEventName]: BlrCheckedChangeEvent;
     [BlrSelectedValueChangeEventName]: BlrSelectedValueChangeEvent;
     [BlrTextValueChangeEventName]: BlrTextValueChangeEvent;

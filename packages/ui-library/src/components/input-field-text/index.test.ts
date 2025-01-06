@@ -1,15 +1,14 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrInputFieldTextRenderFunction } from './renderFunction.js';
-import type { BlrInputFieldTextType } from './index.js';
+import { BlrInputFieldTextRenderFunction } from './renderFunction';
+import type { BlrInputFieldTextType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../utils/get-random.string.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { getRandomString } from '../../utils/get-random.string';
 
 const sampleParams: BlrInputFieldTextType = {
-  theme: Themes[0],
+  theme: 'Light',
   sizeVariant: 'md',
   type: 'text',
   placeholder: 'Placeholder-text',
@@ -18,6 +17,7 @@ const sampleParams: BlrInputFieldTextType = {
   hasLabel: true,
   label: 'Label',
   labelAppendix: '(Appendix)',
+  hasIcon: true,
   icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',
@@ -26,7 +26,7 @@ const sampleParams: BlrInputFieldTextType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: "OMG it's an error",
+  errorMessage: '',
   errorMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   inputFieldTextId: 'Input Id',
@@ -50,7 +50,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         placeholder: randomString,
-      }),
+      })
     );
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
@@ -89,7 +89,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
-      }),
+      })
     );
 
     const inputContainer = querySelectorDeep('.blr-input', element.getRootNode() as HTMLElement);
@@ -106,7 +106,7 @@ describe('blr-input-field-text', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      }),
+      })
     );
 
     const formCaptions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
@@ -119,22 +119,6 @@ describe('blr-input-field-text', () => {
 
     expect(hintClassName).to.contain('hint');
     expect(errorClassName).to.contain('error');
-  });
-
-  it('has error Icon set to undefined', async () => {
-    const element = await fixture(
-      BlrInputFieldTextRenderFunction({
-        ...sampleParams,
-        hasHint: false,
-        hasError: true,
-        errorMessage: 'error',
-        errorMessageIcon: undefined,
-      }),
-    );
-
-    const formCaption = querySelectorDeep('.blr-form-caption', element?.getRootNode() as HTMLElement);
-    const errorIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
-    expect(errorIcon).to.not.exist;
   });
 
   it('has a size md by default', async () => {
@@ -160,7 +144,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: true,
-      }),
+      })
     );
 
     const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);
@@ -173,7 +157,7 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
-      }),
+      })
     );
 
     const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);

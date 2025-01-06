@@ -1,52 +1,46 @@
 import { html, nothing } from 'lit';
-import { state } from 'lit/decorators.js';
-import { property } from '../../../utils/lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { staticStyles } from './index.css.js';
-import { TAG_NAME } from './renderFunction.js';
+import { styleCustom } from './index.css';
+import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes.js';
-import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css.js';
-import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
-import {
-  findPercentage,
-  generateRangeBar,
-  findNearestValue,
-  setOnclickValue,
-} from '../../../utils/range-slider-utils.js';
-import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
-import { LitElementCustom, ElementInterface } from '../../../utils/lit/element.js';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
+import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
+import { findPercentage, generateRangeBar, findNearestValue, setOnclickValue } from '../../../utils/range-slider-utils';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
+import { LitElementCustom } from '../../../utils/lit-element-custom';
 
 export class BlrRangeMinMaxSlider extends LitElementCustom {
-  static styles = [staticSharedStyles, staticStyles];
+  static styles = [styleCustom];
 
-  @property() accessor onBtnClick: ((min: number, max: number) => void) | undefined = undefined;
-  @property() accessor onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
+  @property() onBtnClick?: (min: number, max: number) => void;
+  @property() onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
 
-  @property() accessor rangeInputId!: string;
+  @property() rangeInputId!: string;
 
-  @property({ type: Number }) accessor startValue!: number;
-  @property({ type: Number }) accessor endValue!: number;
-  @property({ type: Number }) accessor minValue!: number;
-  @property({ type: Number }) accessor maxValue!: number;
-  @property() accessor units: string | undefined = '';
-  @property({ type: Number }) accessor stepFactor!: number;
+  @property({ type: Number }) startValue!: number;
+  @property({ type: Number }) endValue!: number;
+  @property({ type: Number }) minValue!: number;
+  @property({ type: Number }) maxValue!: number;
+  @property() units?: string = '';
+  @property({ type: Number }) stepFactor!: number;
 
-  @property() accessor size: FormSizesType = 'md';
-  @property() accessor btnVariant: ActionVariantType = 'silent';
+  @property() size: FormSizesType = 'md';
+  @property() btnVariant: ActionVariantType = 'silent';
 
-  @property() accessor incrementIcon!: SizelessIconType;
-  @property() accessor decrementIcon!: SizelessIconType;
+  @property() incrementIcon!: SizelessIconType;
+  @property() decrementIcon!: SizelessIconType;
 
-  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
-  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
+  @property({ type: Boolean }) showLegend?: boolean = true;
+  @property({ type: Boolean }) disabled?: boolean = false;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() theme: ThemeType = 'Light';
 
-  @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
+  @property({ type: Boolean }) isUpdated? = false;
 
-  @state() protected accessor startValueToSlider = 0;
-  @state() protected accessor endValueToSlider = 0;
+  @state() protected startValueToSlider = 0;
+  @state() protected endValueToSlider = 0;
 
   protected updated(changedProperties: Map<string, number>) {
     if ((changedProperties.has('startValueToSlider') || changedProperties.has('endValueToSlider')) && !this.isUpdated) {
@@ -78,10 +72,11 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       this.endValueToSlider,
       this.disabled,
       'twoKnob',
-      isMinLesserThanMax,
+      isMinLesserThanMax
     );
 
-    const dynamicStyles = [rangeStyle];
+    const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
+    const dynamicStyles = [...generatedStyles, ...rangeStyle];
 
     const showValue = (isMaxValue: boolean) => (event: Event) => {
       const value = Number((event.target as HTMLInputElement).value);
@@ -121,8 +116,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
-      [this.size || 'md']: this.size || 'md',
-      [this.theme]: this.theme,
+      [`${this.size || 'md'}`]: this.size || 'md',
     });
 
     const inlineLegendStyles = classMap({
@@ -134,7 +128,6 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       'range__bar': true,
       'blr-slider-bar': true,
       'bar-disabled': this.disabled || false,
-      [this.theme]: this.theme,
     });
 
     return html`<style>
@@ -142,7 +135,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       </style>
       <div class=${classes}>
         <fieldset class="range__field">
-          <div class="input-wrapper ${this.theme}">
+          <div class="input-wrapper">
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
@@ -165,10 +158,10 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 id=${this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`}
                 type="range"
                 min="0"
-                .value="${String(this.startValueToSlider)}"
+                .value=${this.startValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range ${this.theme}"
+                class="range"
                 @input=${showValue(false)}
                 ?disabled=${this.disabled}
               />
@@ -176,10 +169,10 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 id=${this.rangeInputId ? `${this.rangeInputId}-2` : `rangeInputId-2`}
                 type="range"
                 min="0"
-                .value="${String(this.endValueToSlider)}"
+                .value=${this.endValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range ${this.theme}"
+                class="range"
                 @input=${showValue(true)}
                 ?disabled=${this.disabled}
               />
@@ -219,4 +212,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeMinMaxSlider);
 }
 
-export type BlrRangeMinMaxSliderType = ElementInterface<BlrRangeMinMaxSlider>;
+export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElementCustom>;

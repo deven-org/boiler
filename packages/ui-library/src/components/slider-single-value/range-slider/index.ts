@@ -1,51 +1,45 @@
 import { html, nothing } from 'lit';
-import { state } from 'lit/decorators.js';
-import { property } from '../../../utils/lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { staticStyles } from './index.css.js';
-import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider.css.js';
-import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
+import { styleCustom } from './index.css';
+import { sliderDark, sliderLight } from '../../../foundation/component-tokens/slider.css';
+import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 
-import { TAG_NAME } from './renderFunction.js';
+import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes.js';
-import {
-  findPercentage,
-  generateRangeBar,
-  setOnclickValue,
-  findNearestValue,
-} from '../../../utils/range-slider-utils.js';
-import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
-import { LitElementCustom, ElementInterface } from '../../../utils/lit/element.js';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { findPercentage, generateRangeBar, setOnclickValue, findNearestValue } from '../../../utils/range-slider-utils';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
+import { LitElementCustom } from '../../../utils/lit-element-custom';
 
 export class BlrRangeSlider extends LitElementCustom {
-  static styles = [staticSharedStyles, staticStyles];
+  static styles = [styleCustom];
 
-  @property() accessor onClickMinMax: ((param: number) => void) | undefined = undefined;
-  @property() accessor onChange!: (val: number, event: Event) => HTMLButtonElement['onchange'];
+  @property() onClickMinMax?: (param: number) => void;
+  @property() onChange!: (val: number, event: Event) => HTMLButtonElement['onchange'];
 
-  @property() accessor rangeInputId!: string;
+  @property() rangeInputId!: string;
 
-  @property({ type: Number }) accessor initialValue!: number;
-  @property({ type: Number }) accessor minValue!: number;
-  @property({ type: Number }) accessor maxValue!: number;
-  @property() accessor units: string | undefined = '';
-  @property({ type: Number }) accessor stepFactor!: number;
+  @property() initialValue!: number;
+  @property() minValue!: number;
+  @property() maxValue!: number;
+  @property() units?: string = '';
+  @property() stepFactor!: number;
 
-  @property() accessor size: FormSizesType = 'md';
-  @property() accessor btnVariant: ActionVariantType = 'silent';
+  @property() size: FormSizesType = 'md';
+  @property() btnVariant: ActionVariantType = 'silent';
 
-  @property() accessor incrementIcon!: SizelessIconType;
-  @property() accessor decrementIcon!: SizelessIconType;
+  @property() incrementIcon!: SizelessIconType;
+  @property() decrementIcon!: SizelessIconType;
 
-  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
-  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
+  @property() showLegend?: boolean = true;
+  @property() disabled?: boolean = false;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() theme: ThemeType = 'Light';
 
-  @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
+  @property({ type: Boolean }) isUpdated? = false;
 
-  @state() protected accessor valueToSlider = 0;
+  @state() protected valueToSlider = 0;
 
   protected updated(changedProperties: Map<string, number>) {
     if (changedProperties.has('valueToSlider') && !this.isUpdated) {
@@ -68,13 +62,14 @@ export class BlrRangeSlider extends LitElementCustom {
     })}`;
 
   protected render() {
-    const dynamicStyles = [generateRangeBar(this.theme, this.valueToSlider, 0, this.disabled)];
+    const rangeStyle = generateRangeBar(this.theme, this.valueToSlider, 0, this.disabled);
+    const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
+    const dynamicStyles = [...generatedStyles, ...rangeStyle];
 
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
-      [this.size || 'md']: this.size || 'md',
-      [this.theme]: this.theme,
+      [`${this.size || 'md'}`]: this.size || 'md',
     });
 
     const setValue = (btnType: string) => {
@@ -121,7 +116,7 @@ export class BlrRangeSlider extends LitElementCustom {
                 id=${this.rangeInputId || 'rangeInputId'}
                 type="range"
                 min="0"
-                .value="${String(this.valueToSlider)}"
+                .value=${this.valueToSlider}
                 max="100"
                 step="${this.stepFactor}"
                 class="range"
@@ -152,4 +147,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeSlider);
 }
 
-export type BlrRangeSliderType = ElementInterface<BlrRangeSlider>;
+export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElementCustom>;

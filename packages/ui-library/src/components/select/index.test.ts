@@ -1,9 +1,11 @@
-import '@boiler/ui-library';
-import { BlrSelectRenderFunction } from './renderFunction.js';
+import '@boiler/ui-library/dist/';
+
+import { BlrSelectRenderFunction } from './renderFunction';
+
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrSelectType } from './index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { html } from 'lit-html';
+import { BlrSelectType } from '.';
 
 const sampleParams: BlrSelectType = {
   name: 'Input Field Text',
@@ -16,19 +18,22 @@ const sampleParams: BlrSelectType = {
   hintMessageIcon: 'blrInfo',
   selectId: 'Peter',
   errorMessageIcon: 'blrErrorFilled',
-  theme: Themes[0],
-  options: [
-    { label: 'option 1', value: 'option1' },
-    { label: 'option 2', value: 'option2' },
-    { label: 'option 3', value: 'option3', disabled: true },
-    { label: 'option 4', value: 'option4' },
-    { label: 'option 5', value: 'option5', selected: true },
-  ],
+  theme: 'Light',
 };
+
+const optionsAsChildren = html`
+  <option value="" label="--Please choose an option--"></option>
+  <option value="option1" label="Option 1"></option>
+  <option value="option2" label="Option 2"></option>
+  <option value="option3" label="Option 3"></option>
+  <option value="option4" label="Option 4"></option>
+  <option value="option5" label="Option 5"></option>
+  <option value="option6" label="Option 6"></option>
+`;
 
 describe('blr-select', () => {
   it('is having a select containing the right className', async () => {
-    const element = await fixture(BlrSelectRenderFunction(sampleParams));
+    const element = await fixture(BlrSelectRenderFunction(sampleParams, optionsAsChildren));
 
     const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
     const className = select?.className;
@@ -44,41 +49,28 @@ describe('blr-select', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      }),
+      })
     );
 
-    const captionGroup = querySelectorDeep('blr-form-caption-group', element.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionGroup?.getRootNode() as HTMLElement);
+    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
 
-    expect(formCaptions.length).to.equal(2);
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
 
-    const hintCaption = formCaptions[0];
-    const errorCaption = formCaptions[1];
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
 
-    expect(hintCaption.getAttribute('variant')).to.equal('hint');
-    expect(errorCaption.getAttribute('variant')).to.equal('error');
-  });
-
-  it('has error Icon set to undefined', async () => {
-    const element = await fixture(
-      BlrSelectRenderFunction({
-        ...sampleParams,
-        hasHint: false,
-        hasError: true,
-        errorMessageIcon: undefined,
-      }),
-    );
-
-    const errorCaption = querySelectorDeep('blr-form-caption[variant="error"]', element.getRootNode() as HTMLElement);
-    const errorIcon = querySelectorDeep('blr-icon', errorCaption?.getRootNode() as HTMLElement);
-    expect(errorIcon).to.not.exist;
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
   });
 
   it('has a size md by default', async () => {
     const element = await fixture(BlrSelectRenderFunction(sampleParams));
 
-    const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
-    const className = select?.className;
+    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
+    const className = selectWrapper?.className;
 
     expect(className).to.contain('md');
   });
@@ -86,9 +78,16 @@ describe('blr-select', () => {
   it('has a size sm when "size" is set to "sm" ', async () => {
     const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
-    const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
-    const className = select?.className;
+    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
+    const className = selectWrapper?.className;
 
     expect(className).to.contain('sm');
+  });
+
+  it('is rendering options inside slot', async () => {
+    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, optionsAsChildren));
+    const options = querySelectorAllDeep('.blr-select-option', element?.getRootNode() as HTMLElement);
+    const optionsLength = optionsAsChildren.strings[0].trim().split('</option>').filter(Boolean).length;
+    expect(options).to.be.lengthOf(optionsLength);
   });
 });

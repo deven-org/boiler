@@ -1,10 +1,10 @@
 // this loads the all components instances and registers their html tags
-import '../../index.js';
+import '../../index';
 import { html } from 'lit-html';
-import { BlrTooltipType } from './index.js';
-import { BlrTooltipRenderFunction } from './renderFunction.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { TooltipPlacement } from '../../globals/constants.js';
+import { BlrTooltipType } from './index';
+import { BlrTooltipRenderFunction } from './renderFunction';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { TooltipPlacement } from '../../globals/constants';
 
 const sharedStyles = html`
   <style>
@@ -33,9 +33,7 @@ const sharedStyles = html`
       background-color: lightblue;
     }
     .label {
-      font-family:
-        Source Sans Pro,
-        sans-serif;
+      font-family: Source Sans Pro, sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1rem;
@@ -55,8 +53,7 @@ export default {
       },
     },
     placement: {
-      description:
-        'Select preferred placement of the component to the related element. If the preferred placement is not in the viewport, the component will adjust the placement on its own.',
+      description: 'Select placement of the component to the related element.',
       options: TooltipPlacement,
       control: { type: 'select' },
       table: {
@@ -106,7 +103,7 @@ export default {
         component: `
   <markdown>
   Tooltip is triggered by hovering the mouse cursor over the element. It is designed to be unobtrusive and usually consist
-  of a short snippet of text. Tooltip component utilizes [Floating UI](https://floating-ui.com/) library for granular positioning and interactions
+  of a short snippet of text. Tooltip component utilizes Floating UI library for granular positioning and interactions
   based on user events.
   
   - [**Appearance**](#appearance)
@@ -114,6 +111,8 @@ export default {
     - [**Elevation**](#elevation)  
     - [**Has Arrow**](#has-arrow)
     - [**Offset**](#offset)
+  - [**Dependencies**](#dependencies)
+    - [**Tooltip Bubble**](#tooltip-bubble)
   </markdown>
 `,
       },
@@ -121,11 +120,12 @@ export default {
   },
 };
 
-export const Tooltip = (params: BlrTooltipType) =>
-  html` <div class="container">${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}</div>`;
+export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
+  ${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}
+</div>`;
 
 const defaultParams: BlrTooltipType = {
-  theme: Themes[0],
+  theme: 'Light',
   placement: 'top',
   elevation: true,
   hasArrow: true,
@@ -138,7 +138,7 @@ Tooltip.args = defaultParams;
 /**
  * ## Appearance
  * ### Placement
- * The Tooltip component can be positioned in any of the following placements: top, top-start, top-end, right, right-start, right-end, bottom, bottom-start, bottom-end, left, left-start, and left-end. Via the placement prop you can select your preferred placement, which the component will display when the viewport allows it. If the preferred placement is not in the viewport, the component will adjust the placement on its own.
+ * The Tooltip component can be positioned in any of the following placements: top, top-start, top-end, right, right-start, right-end, bottom, bottom-start, bottom-end, left, left-start, and left-end.
  */
 
 export const Placement = () => {
@@ -231,3 +231,20 @@ export const Offset = () => {
     
   `;
 };
+/**
+ * ## Dependencies
+ * ### Tooltip Bubble
+ * The Tooltip component makes use of the Tooltip Bubble component. For more information have a look at the [Tooltip Bubble](?path=/docs/design-system-web-components-feedback-tooltip-tooltip-bubble--docs) component.
+ */
+
+export const TooltipBubble = () => {
+  return html`
+    ${sharedStyles}
+    ${Tooltip({
+      ...defaultParams,
+      message: 'This is the tooltip bubble',
+    })}
+  `;
+};
+
+TooltipBubble.story = { name: ' ' };

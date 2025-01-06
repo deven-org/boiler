@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import { BlrToggleSwitchType } from './index.js';
-import { BlrToggleSwitchRenderFunction } from './renderFunction.js';
+import { BlrToggleSwitchType } from './index';
+import { BlrToggleSwitchRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes } from '../../globals/constants.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { FormSizes, IconPositionVariant } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
-import '../../index.js';
+import '../../index';
 
 const sharedStyles = html`
   <style>
@@ -17,30 +17,36 @@ const sharedStyles = html`
     }
   </style>
 `;
+const logEventType = (event: Event) => {
+  console.log('storybook:story:logEventType', event.type);
+};
 
 const defaultParams: BlrToggleSwitchType = {
-  theme: Themes[0],
-  sizeVariant: 'md',
-  hasStateLabel: false,
-  active: false,
-  hasLabel: true,
-
+  theme: 'Light',
+  size: 'md',
+  checked: false,
+  showStateLabel: true,
   label: 'Label-text',
   onLabel: 'On-label-text',
   offLabel: 'Off-label-text',
   hasHint: false,
   hintMessage: 'This is a small hint',
-  hintMessageIcon: 'blrInfo',
+  hintIcon: 'blrInfo',
   disabled: false,
-  arialabel: 'Toggle Switch',
-  toogleSwitchId: 'toggle-switchId',
+  readonly: false,
+  checkInputId: 'toggle-switchId',
+  variant: 'trailing',
   name: 'toggle-switch-name',
+  onChange: logEventType,
+  onFocus: logEventType,
+  onBlur: logEventType,
 };
 
 export default {
   title: 'Components/Toggle Switch',
   argTypes: {
-    sizeVariant: {
+    size: {
+      name: 'sizeVariant',
       description: 'Choose size of the component.',
       options: FormSizes,
       control: { type: 'radio' },
@@ -48,23 +54,16 @@ export default {
         category: 'Appearance',
       },
     },
-    hasStateLabel: {
+    variant: {
       description: 'Choose if the control has a state label.',
-      options: { type: 'boolean' },
-
+      options: IconPositionVariant,
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
     },
-    active: {
+    checked: {
       description: 'Choose if component is active.',
-      options: { type: 'boolean' },
-      table: {
-        category: 'Content / Settings',
-      },
-    },
-    hasLabel: {
-      description: 'Choose if component has a label.',
       options: { type: 'boolean' },
       table: {
         category: 'Content / Settings',
@@ -73,7 +72,6 @@ export default {
     hasHint: {
       description: 'Choose if component has a hint message.',
       options: { type: 'boolean' },
-      if: { arg: 'hasLabel', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -85,7 +83,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintMessageIcon: {
+    hintIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       options: [undefined, ...PureIconKeys],
@@ -102,27 +100,32 @@ export default {
         category: 'Appearance',
       },
     },
-
+    showStateLabel: {
+      description: 'Choose if component has a state label.',
+      table: {
+        disable: true,
+      },
+    },
     label: {
       description: 'Enter string used as label text.',
-      if: { arg: 'hasLabel', eq: true },
       table: {
         category: 'Content / Settings',
       },
+      if: { arg: 'showStateLabel', eq: true },
     },
     onLabel: {
       description: 'Enter string used as on label text.',
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasStateLabel', eq: true },
+      if: { arg: 'variant', eq: 'leading' },
     },
     offLabel: {
       description: 'Enter string used as off label text.',
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasStateLabel', eq: true },
+      if: { arg: 'variant', eq: 'leading' },
     },
     disabled: {
       description:
@@ -131,7 +134,7 @@ export default {
         category: 'States',
       },
     },
-    toogleSwitchId: {
+    checkInputId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical attributes',
@@ -143,26 +146,28 @@ export default {
         category: 'Technical attributes',
       },
     },
-    // Events
-    blrCheckedChange: {
-      description: 'Fires when the component checked state changes.',
-      action: 'blrCheckedChange',
+    onChange: {
+      description: 'Fires when the value changes.',
       table: {
         category: 'Events',
       },
     },
-    blrFocus: {
+    onFocus: {
       description: 'Fires when the component is focused.',
-      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    blrBlur: {
+    onBlur: {
       description: 'Fires when the component lost focus.',
-      action: 'blrBlur',
       table: {
         category: 'Events',
+      },
+    },
+    readonly: {
+      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
+      table: {
+        category: 'States',
       },
     },
   },
@@ -186,7 +191,8 @@ They can also be used to control more complex features, such as the state of a s
  - [**On Label**](#on-label) 
  - [**Off Label**](#off-label)  
 - [**States**](#states)
- - [**Disabled**](#disabled)
+ - [**Disabled**](#disabled) 
+ - [**Readonly**](#readonly)
 - [**Dependencies**](#dependencies)
  - [**Form Caption**](#form-caption)  
 </markdown>
@@ -212,19 +218,25 @@ export const SizeVariant = () => {
         ...defaultParams,
         label: 'Toggle Switch SM',
         hasHint: false,
-        sizeVariant: 'sm',
+        offLabel: undefined,
+        onLabel: undefined,
+        size: 'sm',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch MD',
         hasHint: false,
-        sizeVariant: 'md',
+        offLabel: undefined,
+        onLabel: undefined,
+        size: 'md',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch LG',
         hasHint: false,
-        sizeVariant: 'lg',
+        offLabel: undefined,
+        onLabel: undefined,
+        size: 'lg',
       })}
     </div>
   `;
@@ -241,13 +253,15 @@ export const HasStateLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: false,
+        variant: 'trailing',
         hasHint: false,
         label: 'Without state label',
+        offLabel: undefined,
+        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: true,
+        variant: 'leading',
         label: 'With state label',
         hasHint: false,
         offLabel: 'Off',
@@ -271,21 +285,23 @@ export const Active = () => {
         ...defaultParams,
         hasHint: false,
         label: 'Active',
-        hasStateLabel: true,
-        active: true,
+        offLabel: undefined,
+        onLabel: undefined,
+        checked: true,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         hasHint: false,
         label: 'Inactive',
-        hasStateLabel: true,
+        offLabel: undefined,
+        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: true,
-        active: true,
+        variant: 'leading',
+        showStateLabel: true,
+        checked: true,
         hasHint: false,
-        hasLabel: true,
         label: 'Active and Inactive state labels',
         offLabel: 'Inactive',
         onLabel: 'Active',
@@ -305,12 +321,13 @@ export const OnLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        active: true,
+        checked: true,
         hasHint: false,
         label: 'With on label',
         onLabel: 'On',
         offLabel: 'Off',
-        hasStateLabel: true,
+        variant: 'leading',
+        showStateLabel: true,
       })}
     </div>
   `;
@@ -327,13 +344,13 @@ export const OffLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: true,
+        variant: 'leading',
         hasHint: false,
         label: 'With off label',
         offLabel: 'Off',
         onLabel: 'On',
-
-        active: false,
+        showStateLabel: true,
+        checked: false,
       })}
     </div>
   `;
@@ -342,7 +359,7 @@ OffLabel.story = { name: ' ' };
 
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled.
+ * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled or readonly.
  * ### Disabled
  * The Toggle Switch component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -352,18 +369,21 @@ export const Disabled = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: false,
+        variant: 'trailing',
         disabled: true,
         hasHint: false,
         label: 'Disabled',
+        showStateLabel: true,
+        onLabel: undefined,
+        offLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: true,
+        variant: 'leading',
         disabled: true,
         hasHint: false,
         label: 'Disabled with state label',
-
+        showStateLabel: true,
         onLabel: 'On Disabled',
         offLabel: 'Off Disabled',
       })}
@@ -373,9 +393,42 @@ export const Disabled = () => {
 Disabled.story = { name: ' ' };
 
 /**
+ * ### Readonly
+ * The Toggle Switch component in the readonly state can not be interacted with, but it can still be selected and receive focus.
+ */
+export const Readonly = () => {
+  return html`
+    ${sharedStyles}
+    <div class="stories-toggle-switch">
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'trailing',
+        readonly: true,
+        hasHint: false,
+        label: 'Readonly',
+        showStateLabel: true,
+        onLabel: undefined,
+        offLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'leading',
+        readonly: true,
+        hasHint: false,
+        label: 'Readonly with state label',
+        showStateLabel: true,
+        onLabel: 'On Readonly',
+        offLabel: 'Off Readonly',
+      })}
+    </div>
+  `;
+};
+Readonly.story = { name: ' ' };
+
+/**
  * ## Dependencies
  * ### Form Caption
- * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption](/docs/components-form-caption--docs) component.
+ * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption](/docs/design-system-web-components-internal-components-formcaptiongroup-formcaption--docs) component.
  */
 export const FormCaption = () => {
   return html`
@@ -383,19 +436,22 @@ export const FormCaption = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: false,
+        variant: 'trailing',
         hasHint: true,
         hintMessage: 'This is a small hint message',
-        hintMessageIcon: 'blrInfo',
+        hintIcon: 'blrInfo',
+        showStateLabel: true,
         label: 'Hint message',
+        offLabel: undefined,
+        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: true,
-
+        variant: 'leading',
+        showStateLabel: true,
         hasHint: true,
         hintMessage: 'This is a small hint message',
-        hintMessageIcon: 'blrInfo',
+        hintIcon: 'blrInfo',
         label: 'Hint message with state label',
         offLabel: 'Off',
         onLabel: 'On',

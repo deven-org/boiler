@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrInputFieldText } from './index.js';
+import { BlrInputFieldText } from '.';
 
 export const BlrInputFieldTextReact = createComponent({
   tagName: 'blr-input-field-text',

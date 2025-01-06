@@ -1,49 +1,28 @@
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-export const staticStyles = css`
+const { CaptionGroup } = componentTokens.cmp;
+const { captionslot } = semanticTokens.sem.forms;
+
+export const formCaptionGroupStyle = typeSafeNestedCss`
   .blr-form-caption-group {
     display: flex;
     flex-direction: column;
+    
+    &.sm {
+      gap: ${CaptionGroup.Container.ItemSpacing.SM};
+      margin: ${captionslot.margin.sm};
+    }
+
+    &.md {
+      gap: ${CaptionGroup.Container.ItemSpacing.MD};
+      margin: ${captionslot.margin.sm};
+    }
+
+    &.lg {
+      gap: ${CaptionGroup.Container.ItemSpacing.LG};
+      margin: ${captionslot.margin.sm};
+    }
   }
-
-  ${ComponentThemeIterator((theme, cmp, css) => {
-    const { captiongroup } = cmp;
-
-    return css`
-      .blr-form-caption-group.${theme} {
-        &.sm {
-          gap: ${captiongroup.container.itemspacing.sm};
-        }
-
-        &.md {
-          gap: ${captiongroup.container.itemspacing.md};
-        }
-
-        &.lg {
-          gap: ${captiongroup.container.itemspacing.lg};
-        }
-      }
-    `;
-  })}
-
-  ${SemanticThemeIterator((theme, sem, css) => {
-    const { forms } = sem;
-
-    return css`
-      .blr-form-caption-group.${theme} {
-        &.sm {
-          margin: ${forms.captionslot.margin.sm};
-        }
-
-        &.md {
-          margin: ${forms.captionslot.margin.sm};
-        }
-
-        &.lg {
-          margin: ${forms.captionslot.margin.sm};
-        }
-      }
-    `;
-  })}
 `;

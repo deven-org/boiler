@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrInputFieldNumberType } from './index.js';
-import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
-import { FormSizes, Units } from '../../globals/constants.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { PureIconKeys } from '@boiler/icons';
+import { BlrInputFieldNumberType } from './index';
+import { BlrInputFieldNumberRenderFunction } from './renderFunction';
+import { FormSizes, Units } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
-import '../../index.js';
+import '../../index';
 
 const sharedStyles = html`
   <style>
@@ -18,32 +18,31 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrInputFieldNumberType = {
-  theme: Themes[0],
+  theme: 'Light',
   sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
   value: undefined,
   decimals: 0,
   leadingZeros: 0,
-  unit: undefined,
-  unitPosition: 'prefix',
+  prependUnit: true,
+  unit: 'kg',
   step: 1,
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint',
-  hintMessageIcon: 'blrInfo',
+  hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
-  errorMessageIcon: undefined,
+  errorIcon: undefined,
+  inputFieldNumberId: 'test-id',
   stepIncreaseAriaLabel: '+',
   stepDecreaseAriaLabel: '\u2212',
-  inputFieldNumberId: 'inputFieldNumberId',
-  name: 'inputFieldNumber',
 };
 
 export default {
@@ -118,6 +117,12 @@ export default {
         type: 'number',
       },
     },
+    prependUnit: {
+      description: 'Choose if unit is displayed as a prefix or suffix.',
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     unit: {
       description: 'Select a unit which is displayed next to the input.',
       options: [undefined, ...Units],
@@ -127,21 +132,6 @@ export default {
       table: {
         category: 'Content / Settings',
       },
-    },
-    unitPosition: {
-      description: 'Choose if unit is displayed as a prefix or suffix.',
-      options: ['prefix', 'suffix'],
-      table: {
-        category: 'Content / Settings',
-      },
-      control: {
-        type: 'radio',
-        labels: {
-          prefix: 'prefix',
-          suffix: 'suffix',
-        },
-      },
-      if: { arg: 'unit', neq: undefined },
     },
     step: {
       description: 'Enter how much the value should change when the stepper buttons are used.',
@@ -199,7 +189,8 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintMessageIcon: {
+    hintIcon: {
+      name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
@@ -245,7 +236,8 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorMessageIcon: {
+    errorIcon: {
+      name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validations',
@@ -277,6 +269,7 @@ export default {
       },
     },
     blrSelect: {
+      name: 'blrSelect',
       description: 'Fires when some text is selected.',
       action: 'blrSelect',
       table: {
@@ -284,6 +277,7 @@ export default {
       },
     },
     blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
       action: 'blrFocus',
       table: {
@@ -291,6 +285,7 @@ export default {
       },
     },
     blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
       action: 'blrBlur',
       table: {
@@ -298,6 +293,7 @@ export default {
       },
     },
     blrNumberStepperClick: {
+      name: 'blrNumberStepperClick',
       description: 'Fires when one of the stepper buttons is clicked.',
       action: 'blrNumberStepperClick',
       table: {
@@ -345,8 +341,7 @@ export default {
         - [**Required**](#required)
         - [**Has Error**](#has-error)
       - [**Dependencies**](#dependencies)
-        - [**Stepper Button**](#stepper-button)
-        - [**Stepper Combo**](#stepper-combo)
+        - [**Button Icon**](#button-icon)
         - [**Form Label**](#form-label)
         - [**Form Caption Group**](#form-caption-group)
     </markdown>`,
@@ -404,41 +399,42 @@ SizeVariant.story = { name: ' ' };
 The Input Field Number component has 3 stepper variants: vertical, horizontal and split.
  */
 
-export const StepperVariant = (params: BlrInputFieldNumberType) => html`
-  <div class="wrapper">
-    ${BlrInputFieldNumberRenderFunction({
-      ...params,
-      stepperVariant: 'vertical',
-      label: 'Vertical',
-      labelAppendix: undefined,
-      unit: 'kg',
-      value: undefined,
-      inputFieldNumberId: 'test-vert',
-    })}
-  </div>
-  <div class="wrapper">
-    ${BlrInputFieldNumberRenderFunction({
-      ...params,
-      stepperVariant: 'horizontal',
-      label: 'Horizontal',
-      labelAppendix: undefined,
-      unit: 'kg',
-      value: undefined,
-      inputFieldNumberId: 'test-hor',
-    })}
-  </div>
-  <div class="wrapper">
-    ${BlrInputFieldNumberRenderFunction({
-      ...params,
-      stepperVariant: 'split',
-      label: 'Split',
-      labelAppendix: undefined,
-      unit: 'kg',
-      value: undefined,
-      inputFieldNumberId: 'test-split',
-    })}
-  </div>
-`;
+export const StepperVariant = (params: BlrInputFieldNumberType) =>
+  html`
+    <div class="wrapper">
+      ${BlrInputFieldNumberRenderFunction({
+        ...params,
+        stepperVariant: 'vertical',
+        label: 'Vertical',
+        labelAppendix: undefined,
+        unit: 'kg',
+        value: undefined,
+        inputFieldNumberId: 'test-vert',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrInputFieldNumberRenderFunction({
+        ...params,
+        stepperVariant: 'horizontal',
+        label: 'Horizontal',
+        labelAppendix: undefined,
+        unit: 'kg',
+        value: undefined,
+        inputFieldNumberId: 'test-hor',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrInputFieldNumberRenderFunction({
+        ...params,
+        stepperVariant: 'split',
+        label: 'Split',
+        labelAppendix: undefined,
+        unit: 'kg',
+        value: undefined,
+        inputFieldNumberId: 'test-split',
+      })}
+    </div>
+  `;
 
 /**
  * ## Content / Settings 
@@ -493,7 +489,7 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit prefix',
-        unitPosition: 'prefix',
+        prependUnit: true,
         unit: 'kg',
         labelAppendix: undefined,
         inputFieldNumberId: 'test-kg-pre',
@@ -503,7 +499,7 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit suffix',
-        unitPosition: 'suffix',
+        prependUnit: false,
         unit: 'kg',
         labelAppendix: undefined,
         inputFieldNumberId: 'test-kg-suff',
@@ -513,11 +509,11 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
 };
 
 /**
- * ## States
- * Apart from states like rest, hover, pressed and focus, the Input Field Number component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * ## States 
+ *  Apart from states like rest, hover, pressed and focus, the Input Field Number component can also be disabled or readonly. The error state is documented under [validation](#validation).
  * ### Disabled
- * The Input Field Number component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
- */
+The Input Field Number component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+*/
 export const Disabled = (params: BlrInputFieldNumberType) => {
   return html`
     ${sharedStyles}
@@ -596,11 +592,10 @@ export const HasError = (params: BlrInputFieldNumberType) => {
 
 /**
  * ## Dependencies
- * ### Stepper Button
- * The Input Field Number component makes use of the Stepper Button component when `stepperVariant='split'` for increasing or decreasing the value. For more information have a look at the [Stepper Button (Not yet implemented)](?path=/docs/components-stepper-button--docs) component.
- * > Since the Stepper Button component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Button Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=3618-108974) component directly.
+ * ### Button Icon
+ * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/design-system-web-components-actions-buttons-button-icon--docs) component.
  */
-export const StepperButton = (params: BlrInputFieldNumberType) => {
+export const ButtonIcon = (params: BlrInputFieldNumberType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -615,41 +610,10 @@ export const StepperButton = (params: BlrInputFieldNumberType) => {
   `;
 };
 
-StepperButton.story = { name: ' ' };
+ButtonIcon.story = { name: ' ' };
 
 /**
- * ### Stepper Combo
- * The Input Field Number component makes use of the Stepper Combo component when `stepperVariant='horizontal | vertical'` for increasing or decreasing the value. For more information have a look at the [Stepper Combo (Not yet implemented)](?path=/docs/components-stepper-combo--docs) component.
- * > Since the Stepper Combo component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Combo Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=10636-18946) directly.
- */
-export const StepperCombo = (params: BlrInputFieldNumberType) => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      ${BlrInputFieldNumberRenderFunction({
-        ...params,
-        unit: 'kg',
-        labelAppendix: undefined,
-        stepperVariant: 'horizontal',
-        inputFieldNumberId: 'test-icon',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrInputFieldNumberRenderFunction({
-        ...params,
-        unit: 'kg',
-        labelAppendix: undefined,
-        stepperVariant: 'vertical',
-        inputFieldNumberId: 'test-icon',
-      })}
-    </div>
-  `;
-};
-
-StepperCombo.story = { name: ' ' };
-
-/**
- * The Input Field Number component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
+ * The Input Field Number component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = (params: BlrInputFieldNumberType) => {
   return html`
@@ -679,7 +643,7 @@ export const FormLabel = (params: BlrInputFieldNumberType) => {
 };
 
 /**
- * The Input Field Number component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/components-form-caption-group--docs) component.
+ * The Input Field Number component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
   return html`
@@ -689,7 +653,7 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         ...params,
         hasHint: true,
         label: 'Hint message',
-        hintMessageIcon: 'blrInfo',
+        hintIcon: 'blrInfo',
         labelAppendix: '',
         inputFieldNumberId: 'test-hint',
       })}
@@ -702,7 +666,7 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         hasError: true,
         errorMessage: "OMG it's an error",
         hasHint: true,
-        errorMessageIcon: 'blrErrorFilled',
+        errorIcon: 'blrErrorFilled',
         inputFieldNumberId: 'test-hint-error',
       })}
     </div>

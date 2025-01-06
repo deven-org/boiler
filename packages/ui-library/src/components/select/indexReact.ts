@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrSelect } from './index.js';
+import { BlrSelect } from '.';
 
 export const BlrSelectReact = createComponent({
   tagName: 'blr-select',

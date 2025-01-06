@@ -1,13 +1,12 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrDividerRenderFunction } from './renderFunction.js';
+import { BlrDividerRenderFunction } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrDividerType } from './index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import type { BlrDividerType } from '.';
 
-const sampleParams: BlrDividerType = { theme: Themes[0], direction: 'vertical' };
+const sampleParams: BlrDividerType = { theme: 'Light', direction: 'vertical' };
 
 describe('blr-divider', () => {
   it('renders a <div> element inside Shadow DOM', async () => {

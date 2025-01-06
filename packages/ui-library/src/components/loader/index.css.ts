@@ -1,76 +1,75 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-export const staticStyles = css`
-  :host {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark } = renderThemedCssStrings((componentTokens) => {
+  const { Loader } = componentTokens.cmp;
 
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
+  return typeSafeNestedCss`
+    :host {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    100% {
-      transform: rotate(360deg);
+    .blr-loader {
+      border-radius: 50%;
+      border-style: solid;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+
+      &.default { 
+        border-color: ${Loader.Background.BorderColor.Default};
+        border-bottom-color: ${Loader.Foreground.BorderColor.Default};
+      }
+
+      &.inverted {
+        border-color: ${Loader.Background.BorderColor.Inverted};
+        border-bottom-color: ${Loader.Foreground.BorderColor.Inverted};
+      }
+
+      &.sm {
+        width: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
+        height: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
+        border-width: ${Loader.Background.BorderWidth.SM};
+      }
+
+      &.md {
+        width: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
+        height: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
+        border-width: ${Loader.Background.BorderWidth.MD};
+      }
+
+      &.lg {
+        width:  calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
+        height: calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
+        border-width: ${Loader.Background.BorderWidth.LG};
+      }
     }
-  }
 
-  ${ComponentThemeIterator((theme, cmp, css) => {
-    const { loader } = cmp;
-
-    return css`
-      .loader-container.${theme} {
-        &.sm {
-          padding: ${loader.container.padding.sm};
-        }
-
-        &.md {
-          padding: ${loader.container.padding.md};
-        }
-
-        &.lg {
-          padding: ${loader.container.padding.lg};
-        }
+    .loader-container {
+      &.sm {
+        padding: ${Loader.Container.Padding.SM};
       }
 
-      .blr-loader.${theme} {
-        border-radius: 50%;
-        border-style: solid;
-        box-sizing: border-box;
-        animation: rotation 1s linear infinite;
-        
-        &.default { 
-          border-color: ${loader.background.bordercolor.default};
-          border-bottom-color: ${loader.foreground.bordercolor.default};
-        }
-
-        &.inverted {
-          border-color: ${loader.background.bordercolor.inverted};
-          border-bottom-color: ${loader.foreground.bordercolor.inverted};
-        }
-
-        &.sm {
-          width: calc(${loader.container.size.sm} - (${loader.container.padding.sm} * 2));
-          height: calc(${loader.container.size.sm} - (${loader.container.padding.sm} * 2));
-          border-width: ${loader.background.borderwidth.sm};
-        }
-
-        &.md {
-          width: calc(${loader.container.size.md} - (${loader.container.padding.md} * 2));
-          height: calc(${loader.container.size.md} - (${loader.container.padding.md} * 2));
-          border-width: ${loader.background.borderwidth.md};
-        }
-
-        &.lg {
-          width:  calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
-          height: calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
-          border-width: ${loader.background.borderwidth.lg};
-        }
+      &.md {
+        padding: ${Loader.Container.Padding.MD};
       }
-    `;
-  })}
-`;
+
+      &.lg {
+        padding: ${Loader.Container.Padding.LG};
+       
+      }
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  `;
+});

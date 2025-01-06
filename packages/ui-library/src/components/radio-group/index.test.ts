@@ -1,38 +1,34 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrRadioGroupRenderFunction } from './renderFunction.js';
+import { BlrRadioGroupRenderFunction } from './renderFunction';
 
-import { fixture, expect, aTimeout } from '@open-wc/testing';
+import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrRadioGroupType } from './index.js';
-import { html } from 'lit-html';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { BlrRadioGroupType } from '.';
 
 const sampleParams: BlrRadioGroupType = {
-  theme: Themes[0],
-  sizeVariant: 'md',
+  theme: 'Light',
+  size: 'md',
   disabled: false,
   name: 'Default Name',
   required: false,
+  readonly: false,
+  options: [
+    { label: 'Multi-line option 1', value: 'option1', hintMessage: 'Hint 1', errorMessage: 'Error Message 1' },
+    { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
+    { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
+  ],
   hasHint: true,
   groupHintMessage: 'This is a sample hint message',
-  groupHintMessageIcon: 'blrInfo',
+  groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
-  groupErrorMessageIcon: undefined,
-  direction: 'horizontal',
+  groupErrorIcon: undefined,
 };
-
-const radioButtonsAsChildren = html`
-  <blr-radio label="Option 1"></blr-radio>
-  <blr-radio label="Option 2"> </blr-radio>
-  <blr-radio label="Option 3"> </blr-radio>
-  <blr-radio label="Option 4"> </blr-radio>
-`;
 
 describe('blr-radio-group', () => {
   it('is having a radioGroup containing the right className', async () => {
-    const element = await fixture(BlrRadioGroupRenderFunction(sampleParams, radioButtonsAsChildren));
+    const element = await fixture(BlrRadioGroupRenderFunction(sampleParams));
 
     const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
@@ -41,7 +37,7 @@ describe('blr-radio-group', () => {
   });
 
   it('has a size md by default', async () => {
-    const element = await fixture(BlrRadioGroupRenderFunction(sampleParams, radioButtonsAsChildren));
+    const element = await fixture(BlrRadioGroupRenderFunction(sampleParams));
 
     const radioGroup = querySelectorDeep('.blr-radio-group', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
@@ -50,9 +46,7 @@ describe('blr-radio-group', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(
-      BlrRadioGroupRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, radioButtonsAsChildren),
-    );
+    const element = await fixture(BlrRadioGroupRenderFunction({ ...sampleParams, size: 'sm' }));
 
     const radioGroup = querySelectorDeep('.blr-radio-group', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
@@ -62,52 +56,29 @@ describe('blr-radio-group', () => {
 
   it('has a error state if hasError is true', async () => {
     const element = await fixture(
-      BlrRadioGroupRenderFunction(
-        {
-          ...sampleParams,
-          hasError: true,
-        },
-        radioButtonsAsChildren,
-      ),
+      BlrRadioGroupRenderFunction({
+        ...sampleParams,
+        hasError: true,
+      })
     );
 
     const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
-    await aTimeout(100);
     const className = radioGroup?.className;
+
     expect(className).to.contain('error');
   });
 
   it('does not have a error state if hasError is false', async () => {
     const element = await fixture(
-      BlrRadioGroupRenderFunction(
-        {
-          ...sampleParams,
-          hasError: false,
-        },
-        radioButtonsAsChildren,
-      ),
+      BlrRadioGroupRenderFunction({
+        ...sampleParams,
+        hasError: false,
+      })
     );
 
     const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
 
     expect(className).not.to.contain('error');
-  });
-
-  it('has error Icon set to undefined', async () => {
-    const element = await fixture(
-      BlrRadioGroupRenderFunction({
-        ...sampleParams,
-        hasHint: false,
-        hasError: true,
-        errorIcon: undefined,
-      }),
-    );
-
-    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
-    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
-    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
-    expect(errorMessageIcon).to.not.exist;
   });
 });

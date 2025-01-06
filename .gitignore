@@ -12,12 +12,24 @@ packages/js-example-app/src/assets/index.html
 
 .yarn/install-state.gz
 
-
-packages/ui-library/src/foundation/_tokens-generated/mjs_modules/*
-packages/ui-library/src/foundation/_tokens-generated/module_declarations/*
-
-# packages/ui-library/src/foundation/_tokens-generated/index.*.generated.ts
-packages/ui-library/src/foundation/_tokens-generated/index.Dunkel_value.generated.ts
-packages/ui-library/src/foundation/_tokens-generated/index.Licht_value.generated.ts
+packages/ui-library/src/foundation/_tokens-generated/__component-tokens.*.generated.mjs
+packages/ui-library/src/foundation/_tokens-generated/__semantic-tokens.*.generated.mjs
+packages/ui-library/src/foundation/_tokens-generated/_border-radius.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_border-width.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_color.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_font-families.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_font-sizes.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_font-weights.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_letter-spacing.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_line-heights.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/_pargraph-spacing.generated.scss
+packages/ui-library/src/foundation/_tokens-generated/config-tokens/__component-config.generated.mjs
+packages/ui-library/src/foundation/_tokens-generated/index.*.generated.ts
+packages/ui-library/src/foundation/_tokens-generated/index.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/index.themes.ts
 
+packages/ui-library/src/foundation/_tokens-generated/component.generated.json
+packages/ui-library/src/foundation/_tokens-generated/semantic.generated.json
+
+packages/ui-library/src/foundation/_tokens-generated/componentTokensType.generated.ts
+packages/ui-library/src/foundation/_tokens-generated/semanticTokensType.generated.ts

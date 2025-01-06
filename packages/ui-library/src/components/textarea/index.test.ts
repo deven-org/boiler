@@ -1,13 +1,12 @@
-import '@boiler/ui-library';
-import { getRandomString } from '../../utils/get-random.string.js';
-import { BlrTextareaRenderFunction } from './renderFunction.js';
+import '@boiler/ui-library/dist/';
+import { getRandomString } from '../../utils/get-random.string';
+import { BlrTextareaRenderFunction } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
-import type { BlrTextareaType } from './index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import type { BlrTextareaType } from '.';
 
 const sampleParams: BlrTextareaType = {
-  theme: Themes[0],
+  theme: 'Light',
   sizeVariant: 'md',
   resize: 'both',
   cols: 40,
@@ -34,7 +33,6 @@ const sampleParams: BlrTextareaType = {
   arialabel: 'TextArea',
   textAreaId: '#674',
   name: 'TextArea',
-  placeholder: 'Placeholder-text',
 };
 
 describe('blr-textarea', () => {
@@ -54,7 +52,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         placeholder: randomString,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -68,7 +66,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         placeholder: undefined,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -82,7 +80,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         maxLength: 5,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -96,7 +94,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         maxLength: undefined,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -110,7 +108,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         disabled: true,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -120,28 +118,12 @@ describe('blr-textarea', () => {
     expect(disabled).to.be.equal('');
   });
 
-  it('has error Icon set to undefined', async () => {
-    const element = await fixture(
-      BlrTextareaRenderFunction({
-        ...sampleParams,
-        hasHint: false,
-        hasError: true,
-        errorMessageIcon: undefined,
-      }),
-    );
-
-    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
-    const formCaption = querySelectorDeep('.blr-form-caption', textarea?.getRootNode() as HTMLElement);
-    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
-    expect(errorMessageIcon).to.not.exist;
-  });
-
   it('is is disabled when attribute disabled is set', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         disabled: false,
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -159,7 +141,7 @@ describe('blr-textarea', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -180,7 +162,7 @@ describe('blr-textarea', () => {
         ...sampleParams,
         hasHint: true,
         hintMessageIcon: 'blrInfo',
-      }),
+      })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
@@ -271,7 +253,7 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasCounter: true,
-      }),
+      })
     );
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const hasCounter = textarea?.getAttribute('hasCounter');
@@ -285,80 +267,12 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasCounter: false,
-      }),
+      })
     );
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const hasCounter = textarea?.getAttribute('hasCounter');
 
     // in html disabled will become an empty string when it's true
     expect(hasCounter).to.be.equal(null);
-  });
-
-  it('should align counter to the right when hasError, hasHint, hintMessage, errorMessage is disabled and hasCounter is enabled', async () => {
-    const elementWithoutError = await fixture(
-      BlrTextareaRenderFunction({
-        ...sampleParams,
-        hasError: false,
-        hasHint: false,
-        errorMessage: '',
-        hintMessage: '',
-        hasCounter: true,
-      }),
-    );
-    const counterContainerWithoutError = querySelectorDeep(
-      '.blr-textarea-info-container',
-      elementWithoutError.getRootNode() as HTMLElement,
-    );
-
-    expect(counterContainerWithoutError?.classList.contains('error')).to.be.false;
-    expect(counterContainerWithoutError?.classList.contains('hint')).to.be.false;
-    expect(counterContainerWithoutError?.classList.contains('error-message')).to.be.false;
-    expect(counterContainerWithoutError?.classList.contains('hint-message')).to.be.false;
-    const styleWithoutError = getComputedStyle(counterContainerWithoutError!);
-    expect(styleWithoutError.justifyContent).to.equal('right');
-  });
-
-  it('should align counter to the right when hasError, hasCounter is enabled and hasHint, errormessage is disabled', async () => {
-    const elementWithError = await fixture(
-      BlrTextareaRenderFunction({
-        ...sampleParams,
-        hasError: true,
-        hasHint: false,
-        errorMessage: '',
-        hintMessage: '',
-        hasCounter: true,
-      }),
-    );
-    const counterContainerWithError = querySelectorDeep(
-      '.blr-textarea-info-container',
-      elementWithError.getRootNode() as HTMLElement,
-    );
-
-    expect(counterContainerWithError?.classList.contains('error')).to.be.true;
-    expect(counterContainerWithError?.classList.contains('hint')).to.be.false;
-    expect(counterContainerWithError?.classList.contains('error-message')).to.be.false;
-    expect(counterContainerWithError?.classList.contains('hint-message')).to.be.false;
-    const styleWithError = getComputedStyle(counterContainerWithError!);
-    expect(styleWithError.justifyContent).to.equal('right');
-  });
-
-  it('should align counter to the right and adds a space between hint message and error message when hasError, hasCounter and hasHint is enabled', async () => {
-    const elementWithErrorAndHint = await fixture(
-      BlrTextareaRenderFunction({
-        ...sampleParams,
-        hasError: true,
-        hasHint: true,
-        hasCounter: true,
-      }),
-    );
-    const counterContainerWithErrorAndHint = querySelectorDeep(
-      '.blr-textarea-info-container',
-      elementWithErrorAndHint.getRootNode() as HTMLElement,
-    );
-
-    expect(counterContainerWithErrorAndHint?.classList.contains('error')).to.be.true;
-    expect(counterContainerWithErrorAndHint?.classList.contains('hint')).to.be.true;
-    const styleWithErrorAndHint = getComputedStyle(counterContainerWithErrorAndHint!);
-    expect(styleWithErrorAndHint.justifyContent).to.equal('space-between');
   });
 });

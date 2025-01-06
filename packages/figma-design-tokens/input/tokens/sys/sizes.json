@@ -1,51 +1,51 @@
 {
   "sys": {
-    "borderradius": {
+    "borderRadius": {
       "sm": {
-        "$type": "borderRadius",
-        "$value": "{core.borderradius.base}*0.5"
+        "value": "{core.borderradius.base}*0.5",
+        "type": "borderRadius"
       },
       "md": {
-        "$type": "borderRadius",
-        "$value": "{core.borderradius.base}*1"
+        "value": "{core.borderradius.base}*1",
+        "type": "borderRadius"
       },
       "lg": {
-        "$type": "borderRadius",
-        "$value": "{core.borderradius.base}*2"
+        "value": "{core.borderradius.base}*2",
+        "type": "borderRadius"
       },
       "xl": {
-        "$type": "borderRadius",
-        "$value": "{core.borderradius.base}*3"
+        "value": "{core.borderradius.base}*3",
+        "type": "borderRadius"
       },
       "round": {
-        "$type": "borderRadius",
-        "$value": "9999"
+        "value": "9999",
+        "type": "borderRadius"
       },
       "none": {
-        "$type": "borderRadius",
-        "$value": "0"
+        "value": "0",
+        "type": "borderRadius"
       }
     },
-    "borderwidth": {
+    "borderWidth": {
       "thin": {
-        "$type": "borderWidth",
-        "$value": "{core.borderwidth.base}*0.5"
+        "value": "{core.borderwidth.base}*0.5",
+        "type": "borderWidth"
       },
       "medium": {
-        "$type": "borderWidth",
-        "$value": "{core.borderwidth.base}*1"
+        "value": "{core.borderwidth.base}*1",
+        "type": "borderWidth"
       },
       "bold": {
-        "$type": "borderWidth",
-        "$value": "{core.borderwidth.base}*2"
+        "value": "{core.borderwidth.base}*2",
+        "type": "borderWidth"
       },
       "heavy": {
-        "$type": "borderWidth",
-        "$value": "{core.borderwidth.base}*3"
+        "value": "{core.borderwidth.base}*3",
+        "type": "borderWidth"
       },
       "none": {
-        "$type": "borderWidth",
-        "$value": "0"
+        "value": "0",
+        "type": "borderWidth"
       }
     }
   }

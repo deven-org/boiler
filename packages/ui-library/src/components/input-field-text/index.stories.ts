@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrInputFieldTextType } from './index.js';
-import { BlrInputFieldTextRenderFunction } from './renderFunction.js';
-import { FormSizes, InputTypes } from '../../globals/constants.js';
+import { BlrInputFieldTextType } from './index';
+import { BlrInputFieldTextRenderFunction } from './renderFunction';
+import { FormSizes, InputTypes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
-import '../../index.js';
+import '../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -111,10 +111,19 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
+    hasIcon: {
+      description: 'Choose if component has an icon.',
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'boolean' },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -303,19 +312,18 @@ Input Field Text allows users to enter textual information or data into a design
 export const BlrInputFieldText = (params: BlrInputFieldTextType) => BlrInputFieldTextRenderFunction(params);
 BlrInputFieldText.storyName = 'Input Field Text';
 
-// sizeVariant and Theme should work with default values,
-// but they aren't
-
 // Default parameters for Input Field Text component
 const defaultParams: BlrInputFieldTextType = {
-  theme: Themes[0],
+  theme: 'Light',
   sizeVariant: 'md',
+  type: 'text',
   placeholder: 'Placeholder-text',
   value: '',
   maxLength: 140,
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
+  hasIcon: true,
   icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',
@@ -325,7 +333,7 @@ const defaultParams: BlrInputFieldTextType = {
   required: false,
   hasError: false,
   errorMessage: '',
-  errorMessageIcon: undefined,
+  errorMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   name: 'InputFieldText',
   inputFieldTextId: 'Input Id',
@@ -392,28 +400,28 @@ export const SizeVariant = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'sm',
           label: 'Input Field Text SM',
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           label: 'Input Field Text MD',
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'lg',
           label: 'Input Field Text LG',
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -432,7 +440,7 @@ SizeVariant.story = {
 /**
  * ## Content / Settings
  * ### Type
- * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/components-input-field-number--docs) component.
+ * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/design-system-web-components-forms-input-field-number--docs) component.
  */
 export const Type = () => {
   return html`
@@ -441,18 +449,18 @@ export const Type = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           type: 'text',
           sizeVariant: 'md',
           label: 'Enter text',
-          icon: undefined,
+          hasIcon: false,
           labelAppendix: '',
           placeholder: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           type: 'password',
           sizeVariant: 'md',
           label: 'Enter password',
@@ -481,21 +489,21 @@ export const Placeholder = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           label: 'With placeholder',
           placeholder: 'Add a message here',
-          icon: undefined,
+          hasIcon: false,
           labelAppendix: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -521,10 +529,10 @@ export const Disabled = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           label: 'Disabled',
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           labelAppendix: '',
           disabled: true,
@@ -551,11 +559,11 @@ export const Readonly = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           label: 'Readonly',
           readonly: true,
-          icon: undefined,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -580,12 +588,12 @@ export const Required = () => {
       <div class="stories-textarea">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: 'Label-text',
           labelAppendix: '(required)',
-          icon: undefined,
+          hasIcon: false,
           value: '',
         })}
       </div>
@@ -614,7 +622,7 @@ export const HasError = () => {
       <div class="stories-textarea">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           hasError: true,
           placeholder: '',
@@ -636,7 +644,7 @@ HasError.argTypes = {
 /**
  * ## Dependencies
  * ### Form Label
- * The Input Field Text component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
+ * The Input Field Text component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = () => {
   return html`
@@ -645,12 +653,12 @@ export const FormLabel = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: 'Label',
           labelAppendix: '(Appendix)',
-          icon: undefined,
+          hasIcon: false,
           value: '',
         })}
       </div>
@@ -664,7 +672,7 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The Input Field Text component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/components-icon--docs) component.
+ * The Input Field Text component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 export const Icon = () => {
   return html`
@@ -673,7 +681,7 @@ export const Icon = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: 'With Icon',
@@ -683,11 +691,11 @@ export const Icon = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: 'Without Icon',
-          icon: undefined,
+          hasIcon: false,
           labelAppendix: '',
           value: '',
         })}
@@ -699,7 +707,7 @@ Icon.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Form Caption Group component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/components-form-caption-group--docs) component.
+ * The Form Caption Group component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -708,28 +716,27 @@ export const FormCaptionGroup = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
           labelAppendix: '',
           hasHint: true,
-          icon: undefined,
+          hasIcon: false,
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: Themes[0],
+          theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
           label: ' Hint and error message',
           labelAppendix: '',
           hasHint: true,
-          hintMessage: 'This is a small hint',
           hasError: true,
           errorMessage: "OMG it's an error",
           errorMessageIcon: 'blrErrorFilled',
-          icon: undefined,
+          hasIcon: false,
           value: '',
         })}
       </div>

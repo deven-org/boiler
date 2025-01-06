@@ -1,15 +1,14 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrFormLabelRenderFunction } from './renderFunction.js';
-import type { BlrFormLabel, BlrFormLabelType } from './index.js';
+import { BlrFormLabelRenderFunction } from './renderFunction';
+import type { BlrFormLabel, BlrFormLabelType } from '.';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 const sampleParams: BlrFormLabelType = {
-  theme: Themes[0],
+  theme: 'Light',
   label: 'Label text',
   labelAppendix: 'Appendix txt',
   forValue: 'for_txt',
@@ -52,7 +51,7 @@ describe('blr-form-label', () => {
         ...sampleParams,
         label: 'New label',
         labelAppendix: '',
-      }),
+      })
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
 
@@ -82,7 +81,7 @@ describe('blr-form-label', () => {
         ...sampleParams,
         label: 'New label',
         labelAppendix: '',
-      }),
+      })
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const eleAppendix = querySelectorDeep('span.blr-form-label-appendix', blrLabel?.getRootNode() as HTMLElement);
@@ -104,7 +103,7 @@ describe('blr-form-label', () => {
       WrappedBlrFormLabelRenderFunction({
         ...sampleParams,
         hasError: true,
-      }),
+      })
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const errorLabel = blrLabel?.getAttribute('class');

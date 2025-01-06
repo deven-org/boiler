@@ -1,5 +1,5 @@
-import type { BlrIconType } from './index.js';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
+import type { BlrIconType } from '.';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-icon';
 

@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import { BlrRangeLegendMinMaxSliderType } from './index.js';
-import { BlrRangeLegendMinMaxSliderRenderFunction } from './renderFunction.js';
+import { BlrRangeLegendMinMaxSliderType } from './index';
+import { BlrRangeLegendMinMaxSliderRenderFunction } from './renderFunction';
 // this loads the all components instances and registers their html tags
-import '../../../index.js';
+import '../../../index';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
-import { Sizes } from '../../../globals/constants.js';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { Sizes } from '../../../globals/constants';
 
 export default {
   title: 'Components/Slider Two Values',
@@ -61,7 +61,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
 };
 
 const args: BlrRangeLegendMinMaxSliderType = {
-  theme: Themes[0],
+  theme: 'Light',
   onBtnClick: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-cmpt',

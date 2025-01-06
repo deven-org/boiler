@@ -1,26 +1,30 @@
 import { html } from 'lit';
-import { property } from '../../utils/lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { staticStyles } from './index.css.js';
-import { TAG_NAME } from './renderFunction.js';
-import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { DividerVariationTypes } from '../../globals/types.js';
-import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { dividerDark, dividerLight } from './index.css';
+import { TAG_NAME } from './renderFunction';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { DividerVariationTypes } from '../../globals/types';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrDivider extends LitElementCustom {
-  static styles = [staticStyles];
-
-  @property() accessor direction: DividerVariationTypes = 'vertical';
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() direction: DividerVariationTypes = 'vertical';
+  @property() theme: ThemeType = 'Light';
 
   protected render() {
+    const dynamicStyles = this.theme === 'Light' ? [dividerLight] : [dividerDark];
+
     const dividerClasses = classMap({
       'blr-divider': true,
       [this.direction]: true,
-      [this.theme]: this.theme,
     });
 
-    return html` <div class="${dividerClasses}"></div> `;
+    return html`
+      <style>
+        ${dynamicStyles}
+      </style>
+      <div class="${dividerClasses}"></div>
+    `;
   }
 }
 
@@ -28,4 +32,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrDivider);
 }
 
-export type BlrDividerType = ElementInterface<BlrDivider>;
+export type BlrDividerType = Omit<BlrDivider, keyof LitElementCustom>;

@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-restricted-imports */
 import { css, unsafeCSS } from 'lit';
 
 export const wrapValuesWithCss = (obj: any) => {

@@ -1,14 +1,13 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrCounterRenderFunction } from './renderFunction.js';
-import type { BlrCounterType } from './index.js';
+import { BlrCounterRenderFunction } from './renderFunction';
+import type { BlrCounterType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrCounterType = {
-  theme: Themes[0],
+  theme: 'Light',
   variant: 'neutral',
   value: 3,
   maxValue: 100,
