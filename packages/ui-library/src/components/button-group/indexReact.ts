@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrButtonGroup } from './index.js';
+import { BlrButtonGroup } from '.';
 
 export const BlrButtonGroupReact = createComponent({
   tagName: 'blr-button-group',

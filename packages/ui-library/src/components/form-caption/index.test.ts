@@ -1,14 +1,13 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrFormCaptionRenderFunction } from './renderFunction.js';
-import { BlrFormCaptionType } from './index.js';
+import { BlrFormCaptionRenderFunction } from './renderFunction';
+import { BlrFormCaptionType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrFormCaptionType = {
-  theme: Themes[0],
+  theme: 'Light',
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
@@ -27,12 +26,12 @@ describe('blr-form-caption', () => {
       BlrFormCaptionRenderFunction({
         ...sampleParams,
         message: 'New hint message added',
-      }),
+      })
     );
 
     const blrCaptionLabel = querySelectorDeep(
       'div.blr-form-caption .blr-caption-text',
-      element.getRootNode() as HTMLElement,
+      element.getRootNode() as HTMLElement
     );
 
     const blrText = blrCaptionLabel?.textContent;
@@ -44,12 +43,12 @@ describe('blr-form-caption', () => {
       BlrFormCaptionRenderFunction({
         ...sampleParams,
         message: '',
-      }),
+      })
     );
 
     const blrCaptionLabel = querySelectorDeep(
       'div.blr-form-caption .blr-caption-text',
-      element.getRootNode() as HTMLElement,
+      element.getRootNode() as HTMLElement
     );
 
     const blrText = blrCaptionLabel?.textContent;

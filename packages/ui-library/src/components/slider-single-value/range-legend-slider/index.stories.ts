@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import { BlrRangeLegendSliderType } from './index.js';
-import { BlrRangeLegendSliderRenderFunction } from './renderFunction.js';
+import { BlrRangeLegendSliderType } from './index';
+import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
 // this loads the all components instances and registers their html tags
-import '../../../index.js';
+import '../../../index';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
-import { Sizes } from '../../../globals/constants.js';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { Sizes } from '../../../globals/constants';
 
 export default {
   title: 'Components/Slider Single Value',
@@ -57,7 +57,7 @@ const btnEventType = (value: number) => {
   console.log('storybook:story:logEventType', value);
 };
 const args: BlrRangeLegendSliderType = {
-  theme: Themes[0],
+  theme: 'Light',
   onClickMinMax: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-cmpt',

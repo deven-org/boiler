@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrTabBar } from './index.js';
+import { BlrTabBar } from '.';
 
 export const BlrInputFieldTextReact = createComponent({
   tagName: 'blr-tab-bar',

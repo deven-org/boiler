@@ -1,10 +1,9 @@
-import '@boiler/ui-library';
-import { BlrButtonGroupRenderFunction } from './renderFunction.js';
+import '@boiler/ui-library/dist/';
+import { BlrButtonGroupRenderFunction } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrButtonGroupType } from './index.js';
-import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import type { BlrButtonGroupType } from '.';
+import { BlrButtonTextRenderFunction } from '../button-text/renderFunction';
 
 const sampleParams: BlrButtonGroupType = {
   sizeVariant: 'md',
@@ -13,7 +12,7 @@ const sampleParams: BlrButtonGroupType = {
 
 const testContent = BlrButtonTextRenderFunction({
   label: 'Jaok',
-  theme: Themes[0],
+  theme: 'Light',
   loading: false,
   variant: 'primary',
   disabled: false,

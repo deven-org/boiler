@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrButtonTextType } from './index.js';
-import { BlrButtonTextRenderFunction } from './renderFunction.js';
+import { BlrButtonTextType } from './index';
+import { BlrButtonTextRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
-import '../../index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { ActionVariants, ActionSizes, DisplayOptions, IconPositionVariant } from '../../globals/constants.js';
+import '../../index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { ActionVariants, ActionSizes, ButtonDisplayOptions, IconPositionVariant } from '../../globals/constants';
 // this loads the all components instances and registers their html tags
 
 // Shared Style inside the Stories
@@ -25,10 +25,11 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrButtonTextType = {
-  theme: Themes[0],
+  theme: 'Light',
   variant: 'primary',
   sizeVariant: 'md',
   label: 'Label-text',
+  hasIcon: true,
   icon: 'blr360',
   iconPosition: 'leading',
   disabled: false,
@@ -66,7 +67,7 @@ export default {
     },
     buttonDisplay: {
       description: 'Choose if button should fill its parent container or hug its content.',
-      options: DisplayOptions,
+      options: ButtonDisplayOptions,
       control: { type: 'radio' },
       table: {
         category: 'Appearance',
@@ -82,11 +83,21 @@ export default {
         category: 'Content / Settings',
       },
     },
-
+    hasIcon: {
+      description: 'Choose if component has an icon.',
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     icon: {
       description: 'Select an icon which is displayed next to the label.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -95,6 +106,7 @@ export default {
       description: 'Choose the position of the icon next to the label.',
       options: IconPositionVariant,
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -229,31 +241,37 @@ export const Variant = () => {
           ...defaultParams,
           variant: 'cta',
           label: 'Cta',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'primary',
           label: 'Primary',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'secondary',
           label: 'Secondary',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'silent',
           label: 'Silent',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'destructive',
           label: 'Destructive',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'encourage',
           label: 'Encourage',
+          hasIcon: false,
         })}
       </div>
     </div>
@@ -276,26 +294,31 @@ export const SizeVariant = () => {
           ...defaultParams,
           sizeVariant: 'xs',
           label: 'Button XS',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'sm',
           label: 'Button SM',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'md',
           label: 'Button MD',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'lg',
           label: 'Button LG',
+          hasIcon: false,
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'xl',
           label: 'Button XL',
+          hasIcon: false,
         })}
       </div>
     </div>
@@ -321,6 +344,7 @@ export const Disabled = () => {
           ...defaultParams,
           disabled: true,
           label: 'Disabled',
+          hasIcon: false,
         })}
       </div>
     </div>
@@ -336,7 +360,7 @@ Disabled.story = {
 /**
  * ## Dependencies
  * ### Icon
- * The Button Text component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/components-icon--docs) component.
+ * The Button Text component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 
 export const Icon = () => {
@@ -346,11 +370,13 @@ export const Icon = () => {
       <div class="stories-buttontext">
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
+          hasIcon: true,
           label: 'Leading icon',
           iconPosition: 'leading',
         })}
         ${BlrButtonTextRenderFunction({
           ...defaultParams,
+          hasIcon: true,
           label: 'Trailing icon',
           iconPosition: 'trailing',
         })}
@@ -363,7 +389,7 @@ Icon.argTypes = {
 };
 Icon.story = { name: ' ' };
 /**
- * The Button Text uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/components-loader--docs) component.
+ * The Button Text uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/design-system-web-components-feedback-loader--docs) component.
  */
 export const Loader = () => {
   return html`

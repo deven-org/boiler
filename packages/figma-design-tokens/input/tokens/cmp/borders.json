@@ -1,312 +1,360 @@
 {
   "cmp": {
-    "radio": {
-      "control": {
-        "container": {
-          "border": {
-            "sm": {
-              "active": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.rest}",
+    "Radio": {
+      "Control": {
+        "Container": {
+          "Border": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.active.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               },
-              "inactive": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.rest}",
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.sm.inactive.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               }
             },
-            "md": {
-              "active": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.rest}",
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.active.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               },
-              "inactive": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.rest}",
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.md.inactive.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               }
             },
-            "lg": {
-              "active": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.rest}",
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.active.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.active.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               },
-              "inactive": {
-                "rest": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.rest}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.rest}",
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "hover": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.hover}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.hover}",
+                "Hover": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "pressed": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.pressed}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.pressed}",
+                "Pressed": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "focus": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.focus}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.focus}",
+                "Focus": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "disabled": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.disabled}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.disabled}",
+                "Disabled": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
                 },
-                "error": {
-                  "$type": "border",
-                  "$value": {
-                    "color": "{cmp.radio.control.container.bordercolor.inactive.error}",
-                    "width": "{cmp.radio.control.container.borderwidth.lg.inactive.error}",
+                "ReadOnly": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
                     "style": "solid"
-                  }
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{cmp.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{cmp.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
                 }
               }
             }
@@ -314,138 +362,179 @@
         }
       }
     },
-    "slider": {
-      "thumb": {
-        "shape": {
-          "border": {
-            "rest": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.rest}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.rest}",
+    "Slider": {
+      "Thumb": {
+        "Shape": {
+          "Border": {
+            "Rest": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.Rest}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.Rest}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "hover": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.hover}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.hover}",
+            "Hover": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.Hover}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.Hover}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "pressed": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.pressed}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.pressed}",
+            "Pressed": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.Pressed}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.Pressed}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "focus": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.focus}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.focus}",
+            "Focus": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.Focus}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.Focus}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "disabled": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.disabled}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.disabled}",
+            "Disabled": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.Disabled}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.Disabled}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "readonly": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.thumb.shape.bordercolor.readonly}",
-                "width": "{cmp.slider.thumb.shape.borderwidth.readonly}",
+            "ReadOnly": {
+              "value": {
+                "color": "{cmp.Slider.Thumb.Shape.BorderColor.ReadOnly}",
+                "width": "{cmp.Slider.Thumb.Shape.BorderWidth.ReadOnly}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             }
           }
         }
       },
-      "track": {
-        "border": {
-          "default": {
-            "active": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.track.bordercolor.default.active}",
-                "width": "{core.dimensionpx.4}",
+      "Track": {
+        "Border": {
+          "Default": {
+            "Active": {
+              "value": {
+                "color": "{cmp.Slider.Track.BorderColor.Default.Active}",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "inactive": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.track.bordercolor.default.inactive}",
-                "width": "{core.dimensionpx.4}",
+            "Inactive": {
+              "value": {
+                "color": "{cmp.Slider.Track.BorderColor.Default.Inactive}",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             }
           },
-          "mute": {
-            "active": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.track.bordercolor.mute.active}",
-                "width": "{core.dimensionpx.4}",
+          "Mute": {
+            "Active": {
+              "value": {
+                "color": "{cmp.Slider.Track.BorderColor.Mute.Active}",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "inactive": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.track.bordercolor.mute.inactive}",
-                "width": "{core.dimensionpx.4}",
+            "Inactive": {
+              "value": {
+                "color": "{cmp.Slider.Track.BorderColor.Mute.Inactive}",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             }
           }
         }
       },
-      "tickmark": {
-        "border": {
-          "default": {
-            "active": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.tickmark.bordercolor.default.active}",
-                "width": "{cmp.slider.tickmark.borderwidth.default.active}",
+      "TickMark": {
+        "Border": {
+          "Default": {
+            "Active": {
+              "value": {
+                "color": "{cmp.Slider.TickMark.BorderColor.Default.Active}",
+                "width": "{cmp.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "inactive": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.tickmark.bordercolor.default.inactive}",
-                "width": "{cmp.slider.tickmark.borderwidth.default.active}1",
+            "Inactive": {
+              "value": {
+                "color": "{cmp.Slider.TickMark.BorderColor.Default.Inactive}",
+                "width": "{cmp.Slider.TickMark.BorderWidth.Default.Active}1",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             }
           },
-          "mute": {
-            "active": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.tickmark.bordercolor.mute.active}",
-                "width": "{cmp.slider.tickmark.borderwidth.default.active}",
+          "Mute": {
+            "Active": {
+              "value": {
+                "color": "{cmp.Slider.TickMark.BorderColor.Mute.Active}",
+                "width": "{cmp.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             },
-            "inactive": {
-              "$type": "border",
-              "$value": {
-                "color": "{cmp.slider.tickmark.bordercolor.mute.inactive}",
-                "width": "{cmp.slider.tickmark.borderwidth.default.active}",
+            "Inactive": {
+              "value": {
+                "color": "{cmp.Slider.TickMark.BorderColor.Mute.Inactive}",
+                "width": "{cmp.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
-              }
+              },
+              "type": "border"
             }
+          }
+        }
+      }
+    },
+    "StepperButton": {
+      "Container": {
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{cmp.StepperButton.Container.BorderColor.Rest}",
+              "width": "{cmp.StepperButton.Container.BorderWidth}"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{cmp.StepperButton.Container.BorderColor.Hover}",
+              "width": "{cmp.StepperButton.Container.BorderWidth}"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{cmp.StepperButton.Container.BorderColor.Pressed}",
+              "width": "{cmp.StepperButton.Container.BorderWidth}"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": {
+              "color": "{cmp.StepperButton.Container.BorderColor.Focus}",
+              "width": "{cmp.StepperButton.Container.BorderWidth}"
+            },
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{cmp.StepperButton.Container.BorderColor.Disabled}",
+              "width": "{cmp.StepperButton.Container.BorderWidth}"
+            },
+            "type": "border"
           }
         }
       }

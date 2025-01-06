@@ -37,7 +37,5 @@
     120 // prettier print width
   ],
   "lit-plugin.rules.no-missing-import": "off",
-  "lit-plugin.strict": true,
-  "lit-plugin.cssTemplateTags": [],
-  "stylelint.validate": ["typescript"]
+  "lit-plugin.strict": true
 }

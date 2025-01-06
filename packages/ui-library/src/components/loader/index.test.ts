@@ -1,15 +1,14 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrLoaderRenderFunction } from './renderFunction.js';
-import type { BlrLoaderType } from './index.js';
+import { BlrLoaderRenderFunction } from './renderFunction';
+import type { BlrLoaderType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrLoaderType = {
   variant: 'default',
-  theme: Themes[0],
+  theme: 'Light',
 };
 
 describe('blr-loader', () => {

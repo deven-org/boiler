@@ -1,17 +1,15 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrFormCaptionGroupRenderFunction } from './renderFunction.js';
-import { BlrFormCaptionGroupType } from './index.js';
+import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
+import { BlrFormCaptionGroupType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep } from 'query-selector-shadow-dom';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { html } from 'lit-html';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrFormCaptionGroupType = {
   sizeVariant: 'md',
-  theme: Themes[0],
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({
@@ -19,7 +17,7 @@ const hintCaption = BlrFormCaptionRenderFunction({
   variant: 'hint',
   icon: 'blrInfo',
   sizeVariant: 'md',
-  theme: Themes[0],
+  theme: 'Light',
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
@@ -27,7 +25,7 @@ const errorCaption = BlrFormCaptionRenderFunction({
   variant: 'error',
   icon: 'blrInfo',
   sizeVariant: 'md',
-  theme: Themes[0],
+  theme: 'Light',
 });
 
 const mixedCaptions = html` ${hintCaption} ${errorCaption} `;

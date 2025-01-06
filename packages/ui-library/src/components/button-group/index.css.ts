@@ -1,48 +1,42 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
+const { ButtonGroup } = componentTokens.cmp;
 
-export const staticStyles = css`
-  ${ComponentThemeIterator((theme, cmp, css) => {
-    const { buttongroup } = cmp;
+export const styleCustom = typeSafeNestedCss`
+  .blr-button-group {
+    display: flex;
 
+    &.left {
+      justify-content: flex-start;
+    }
 
-    return css`
-      .blr-button-group.${theme} {
-        display: flex;
+    &.center {
+      justify-content: center;
+    }
 
-        &.left {
-          justify-content: flex-start;
-        }
+    &.right {
+      justify-content: flex-end;
+    }
 
-        &.center {
-          justify-content: center;
-        }
+    &.xs {
+      gap: ${ButtonGroup.Container.ItemSpacing.XS};
+    }
 
-        &.right {
-          justify-content: flex-end;
-        }
+    &.sm {
+      gap: ${ButtonGroup.Container.ItemSpacing.SM};
+    }
 
-        &.xs {
-          gap: ${buttongroup.container.itemspacing.xs};
-        }
+    &.md {
+      gap: ${ButtonGroup.Container.ItemSpacing.MD};
+    }
 
-        &.sm {
-          gap: ${buttongroup.container.itemspacing.sm};
-        }
+    &.lg {
+      gap: ${ButtonGroup.Container.ItemSpacing.LG};
+    }
 
-        &.md {
-          gap: ${buttongroup.container.itemspacing.md};
-        }
-
-        &.lg {
-          gap: ${buttongroup.container.itemspacing.lg};
-        }
-
-        &.xl {
-          gap: ${buttongroup.container.itemspacing.xl};
-        }
-      }
-    `;
-  })}
+    &.xl {
+      gap: ${ButtonGroup.Container.ItemSpacing.XL};
+    }
+  }
 `;

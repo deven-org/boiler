@@ -1,5 +1,5 @@
-import { BlrCheckboxType } from './index.js';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
+import { BlrCheckboxType } from '.';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-checkbox';
 

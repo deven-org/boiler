@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrLoader } from './index.js';
+import { BlrLoader } from '.';
 
 export const BlrIconLinkReact = createComponent({
   tagName: 'blr-loader',

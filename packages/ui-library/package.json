@@ -2,21 +2,13 @@
   "name": "@boiler/ui-library",
   "version": "0.0.1",
   "description": "",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
   "scripts": {
     "start:storybook": "sb dev -p 1337",
     "analyze": "npx lit-analyzer src",
-    "compile": "tsc --project ./tsconfig.json --incremental",
+    "compile": "tsc --project tsconfig.json",
     "build:storybook": "sb build",
-    "build": "yarn compile && cp -R ../assets ./dist/assets",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "build:types": "rimraf types && tsc --emitDeclarationOnly",
     "lint": "yarn lint:eslint && yarn lint:stylelint",
     "format": "yarn format:eslint && yarn format:prettier",
     "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
@@ -35,10 +27,9 @@
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",
-    "@floating-ui/dom": "^1.6.3",
-    "@lit-labs/preact-signals": "1.0.2",
+    "@floating-ui/dom": "^1.5.3",
     "@lit-labs/react": "^1.1.1",
-    "lit": "^3.1.2",
+    "lit": "^2.6.1",
     "nested-css-to-flat": "^1.0.5"
   }
 }

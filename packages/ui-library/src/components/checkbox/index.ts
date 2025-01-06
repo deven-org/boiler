@@ -1,18 +1,18 @@
 import { html, nothing } from 'lit';
-import { query, state } from 'lit/decorators.js';
-import { property } from '../../utils/lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction.js';
+import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { FormSizesType } from '../../globals/types.js';
-import { calculateIconName } from '../../utils/calculate-icon-name.js';
-import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
-import { BlrIconRenderFunction } from '../icon/renderFunction.js';
-import { staticStyles } from './index.css.js';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { FormSizesType } from '../../globals/types';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrIconRenderFunction } from '../icon/renderFunction';
+import { checkboxLight, checkboxDark } from './index.css';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -20,9 +20,8 @@ import {
   createBlrCheckedChangeEvent,
   createBlrBlurEvent,
   createBlrFocusEvent,
-} from '../../globals/events.js';
-import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
+} from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,39 +32,39 @@ export type BlrCheckboxEventHandlers = {
 /**
  * @fires blrFocus Checkbox received focus
  * @fires blrBlur Checkbox lost focus
- * @fires blrCheckedChange Checkbox state changed (currentCheckedState)
+ * @fires blrCheckedChange Checkbox state changed (event.checkState)
  */
 export class BlrCheckbox extends LitElementCustom {
-  static styles = [staticStyles];
+  static styles = [];
 
   @query('input')
-  protected accessor _checkboxNode!: HTMLInputElement;
+  protected _checkboxNode!: HTMLInputElement;
 
-  @property() accessor label!: string;
-  @property() accessor checkboxId: string | undefined = '';
-  @property() accessor arialabel: string | undefined;
+  @property() label!: string;
+  @property() checkInputId?: string = '';
+  @property() arialabel?: string;
 
-  @property({ type: Boolean }) accessor disabled: boolean | undefined;
-  @property({ type: Boolean }) accessor checked: boolean | undefined = false;
-  @property({ type: Boolean }) accessor indeterminate: boolean | undefined = false;
-  @property({ type: Boolean }) accessor hasError: boolean | undefined;
-  @property() accessor errorMessage: string | undefined;
-  @property() accessor errorMessageIcon: SizelessIconType | undefined;
-  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
-  @property() accessor hintMessageIcon: SizelessIconType | undefined;
-  @property() accessor hintMessage: string | undefined;
-  @property({ type: Boolean }) accessor hasLabel!: boolean;
-  @property() accessor name: string | undefined;
-  @property() accessor checkedIcon: SizelessIconType | undefined = 'blrCheckmark';
-  @property() accessor indeterminateIcon: SizelessIconType | undefined = 'blrMinus';
+  @property() disabled?: boolean;
+  @property() checked?: boolean;
+  @property() indeterminate?: boolean;
+  @property() readonly?: boolean;
+  @property() hasError?: boolean;
+  @property() errorMessage?: string;
+  @property() errorIcon?: SizelessIconType;
+  @property() hasHint?: boolean;
+  @property() hintIcon?: SizelessIconType;
+  @property() hintMessage?: string;
+  @property() hasLabel!: boolean;
+  @property() name?: string;
+  @property() checkedIcon?: SizelessIconType = 'blrCheckmark';
+  @property() indeterminatedIcon?: SizelessIconType = 'blrMinus';
 
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() size?: FormSizesType = 'md';
 
-  @property() accessor theme: ThemeType = Themes[0];
-  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property() theme: ThemeType = 'Light';
 
-  @state() protected accessor currentCheckedState: boolean | undefined = this.checked;
-  @state() protected accessor currentIndeterminateState: boolean | undefined = this.indeterminate;
+  @state() protected currentCheckedState: boolean | undefined = this.checked;
+  @state() protected currentIndeterminateState: boolean | undefined = this.indeterminate;
 
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
@@ -81,22 +80,22 @@ export class BlrCheckbox extends LitElementCustom {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.currentIndeterminateState = false;
 
       this.dispatchEvent(
         createBlrCheckedChangeEvent({
           originalEvent: event,
           checkedState: this.currentCheckedState,
-        }),
+        })
       );
     }
   }
 
-  @state() protected accessor focused = false;
+  @state() protected focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.focused = true;
 
       this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
@@ -104,50 +103,51 @@ export class BlrCheckbox extends LitElementCustom {
   };
 
   protected handleBlur = (event: FocusEvent) => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.focused = false;
 
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
-  @state() protected accessor hovered = false;
+  @state() protected hovered = false;
 
   protected handleEnter = () => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.hovered = true;
     }
   };
 
   protected handleLeave = () => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.hovered = false;
     }
   };
 
-  @state() protected accessor active = false;
+  @state() protected active = false;
 
   protected handlePress = () => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.active = true;
       this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.active = false;
     }
   };
 
   protected render() {
-    if (this.sizeVariant && this.checkboxId) {
+    if (this.size && this.checkInputId) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
+
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-checkbox': true,
         'error': this.hasError || false,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [`${this.size}`]: this.size,
       });
 
       const labelWrapperClasses = classMap({
@@ -158,7 +158,7 @@ export class BlrCheckbox extends LitElementCustom {
         'hover': this.hovered || false,
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
-        'required': this.required || false,
+        'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
       });
 
@@ -169,7 +169,7 @@ export class BlrCheckbox extends LitElementCustom {
         'hover': this.hovered || false,
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
-        'required': this.required || false,
+        'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
         'focus': this.focused || false,
       });
@@ -181,41 +181,40 @@ export class BlrCheckbox extends LitElementCustom {
       const focusRingClasses = classMap({
         'focus-ring': true,
         'focus': this.focused || false,
-        [this.theme]: this.theme,
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'checkbox',
-        'control',
-        'icon',
-        'sizevariant',
-        this.sizeVariant,
-      ]) as FormSizesType;
+        'Checkbox',
+        'Control',
+        'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
+      ]).toLowerCase() as FormSizesType;
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
           ? html`
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  sizeVariant: this.size,
                   message: this.hintMessage,
-                  icon: this.hintMessageIcon,
+                  icon: this.hintIcon,
                 })}
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
+        ${this.hasError && (this.errorMessage || this.errorIcon)
           ? html`
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  sizeVariant: this.size,
                   message: this.errorMessage,
-                  icon: this.errorMessageIcon,
+                  icon: this.errorIcon,
                 })}
               </div>
             `
@@ -223,6 +222,10 @@ export class BlrCheckbox extends LitElementCustom {
       `;
 
       return html`
+        <style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+
         <div
           class="${classes}"
           @mouseenter=${this.handleEnter}
@@ -247,8 +250,8 @@ export class BlrCheckbox extends LitElementCustom {
               this.handleRelease();
             }
           }}
-          tabindex=${ifDefined(this.disabled ? undefined : 0)}
-          aria-checked=${ifDefined(this.currentIndeterminateState ? 'mixed' : this.currentCheckedState)}
+          tabindex=${this.disabled ? nothing : '0'}
+          aria-checked=${this.currentIndeterminateState ? 'mixed' : this.currentCheckedState}
           role="checkbox"
           aria-label=${this.label}
         >
@@ -256,28 +259,28 @@ export class BlrCheckbox extends LitElementCustom {
             type="checkbox"
             class="input-control"
             tabindex="-1"
-            aria-label=${ifDefined(this.ariaLabel ?? undefined)}
-            id=${ifDefined(this.checkboxId)}
-            name=${ifDefined(this.name)}
+            aria-label="${this.arialabel}"
+            id=${this.checkInputId || nothing}
+            name=${this.name || nothing}
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
-            .indeterminate=${this.currentIndeterminateState ?? false}
-            ?required="${this.required}"
-            ?data-has-error=${this.hasError}
+            ?indeterminate=${this.currentIndeterminateState}
+            ?readonly=${this.readonly}
+            ?hasError=${this.hasError}
             @change=${this.handleChange}
             aria-hidden="true"
           />
 
-          <label class="${visualCheckboxClasses}" for="${this.checkboxId}" aria-hidden="true" tabindex="-1">
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true" tabindex="-1">
             ${this.currentIndeterminateState
               ? BlrIconRenderFunction(
                   {
-                    icon: calculateIconName(this.indeterminateIcon, checkerIconSizeVariant),
+                    icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
                   },
                   {
                     'aria-hidden': true,
-                  },
+                  }
                 )
               : BlrIconRenderFunction(
                   {
@@ -286,7 +289,7 @@ export class BlrCheckbox extends LitElementCustom {
                   },
                   {
                     'aria-hidden': true,
-                  },
+                  }
                 )}
 
             <div class="${focusRingClasses}"></div>
@@ -296,13 +299,12 @@ export class BlrCheckbox extends LitElementCustom {
             ${this.hasLabel
               ? html`${BlrFormLabelInlineRenderFunction({
                   labelText: this.label,
-                  forValue: this.checkboxId,
-                  labelSize: this.sizeVariant,
-                  theme: this.theme,
+                  forValue: this.checkInputId,
+                  labelSize: this.size,
                 })}`
               : nothing}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
           </div>
         </div>
@@ -315,4 +317,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCheckbox);
 }
 
-export type BlrCheckboxType = ElementInterface<BlrCheckbox>;
+export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElementCustom> & BlrCheckboxEventHandlers;

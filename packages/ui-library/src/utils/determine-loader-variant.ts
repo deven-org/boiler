@@ -1,4 +1,4 @@
-import { ActionVariantType, FeedbackVariantType } from '../globals/types.js';
+import { ActionVariantType, FeedbackVariantType } from '../globals/types';
 
 export const determineLoaderVariant = (variant: ActionVariantType): FeedbackVariantType =>
   variant === 'secondary' || variant === 'silent' ? 'default' : 'inverted';

@@ -1,11 +1,20 @@
 {
   "extends": "stylelint-config-standard",
-  "customSyntax": "postcss-styled-syntax",
+  "customSyntax": "postcss-lit",
   "rules": {
-    "declaration-block-no-redundant-longhand-properties": null,
-    "selector-class-pattern": null,
+    "comment-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "declaration-colon-newline-after": null,
     "property-no-vendor-prefix": null,
-    "no-duplicate-selectors": null,
-    "no-descending-specificity": null
-  }
+    "alpha-value-notation": null,
+    "value-keyword-case": ["lower", { "ignoreProperties": ["--font-family-sans"], "ignoreKeywords": ["/POSTCSS/"] }],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "value-no-vendor-prefix": null,
+    "font-family-name-quotes": null,
+    "selector-not-notation": null,
+    "max-line-length": null
+  },
+  "ignoreShorthands": ["outline"]
 }

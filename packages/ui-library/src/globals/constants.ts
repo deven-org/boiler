@@ -22,8 +22,6 @@ export const Units = [
   'ml',
   's',
   'min',
-  '€',
-  '$',
 ] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
@@ -33,7 +31,6 @@ export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destruc
 export const FeedbackVariants = ['default', 'inverted'] as const;
 export const CaptionVariants = ['hint', 'error'] as const;
 export const CounterVariants = ['neutral', 'warn', 'error'] as const;
-export const UnitVariants = ['prefix', 'suffix'] as const;
 export const DividerVariations = ['vertical', 'horizontal'] as const;
 export const TabVariants = ['standard', 'fullWidth'] as const;
 export const TabContentVariants = ['labelOnly', 'iconOnly', 'labelAndIcon'] as const;
@@ -70,4 +67,4 @@ export const TooltipPlacement = [
 export const LabelVariants = ['label', 'error'] as const;
 export const Resizes = ['both', 'vertical', 'horizontal', 'none'] as const;
 
-export const DisplayOptions = ['block', 'inline-block'] as const;
+export const ButtonDisplayOptions = ['block', 'inline-block'] as const;

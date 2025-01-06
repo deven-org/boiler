@@ -1,14 +1,13 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction.js';
-import type { BlrRangeMinMaxSliderType } from './index.js';
+import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction';
+import type { BlrRangeMinMaxSliderType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRangeMinMaxSliderType = {
-  theme: Themes[0],
+  theme: 'Light',
   rangeInputId: 'range-cmpt',
   startValue: 80,
   endValue: 85,
@@ -45,7 +44,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      }),
+      })
     );
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
     const rangeWrapper = querySelectorAllDeep('.range-wrapper', inputWrapper?.getRootNode() as HTMLElement);
@@ -74,7 +73,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      }),
+      })
     );
     const inputWrapper = querySelectorAllDeep('.input-wrapper', element.getRootNode() as HTMLElement);
     const expectedLabels = ['inc_btn_min', 'dec_btn_min', 'inc_btn_max', 'dec_btn_max'];

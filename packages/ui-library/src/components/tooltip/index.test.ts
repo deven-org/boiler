@@ -1,7 +1,7 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrTooltipRenderFunction } from './renderFunction.js';
-import type { BlrTooltipType } from './index.js';
+import { BlrTooltipRenderFunction } from './renderFunction';
+import type { BlrTooltipType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { html } from 'lit';
@@ -12,13 +12,16 @@ const sampleParams: BlrTooltipType = {
   placement: 'right',
 };
 
-const testContent = html`<div class="blue-box" style="height: 200px; width: 200px; background-color: lightblue"></div>`;
+const testContent = html`<div
+  className="blue-box"
+  style="height: 200px; width: 200px; background-color: lightblue"
+></div>`;
 
 describe('blr-tooltip', () => {
-  it('is having a tooltip element', async () => {
+  it('is having a tooltip bubble element', async () => {
     const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
-    const tooltip = querySelectorDeep('blr-tooltip', element.getRootNode() as HTMLElement);
+    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
 
     expect(tooltip).to.exist;
   });

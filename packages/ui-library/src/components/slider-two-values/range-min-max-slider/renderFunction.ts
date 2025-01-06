@@ -1,5 +1,5 @@
-import { BlrRangeMinMaxSliderType } from './index.js';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer.js';
+import { BlrRangeMinMaxSliderType } from '.';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-range-min-max-slider';
 

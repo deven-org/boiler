@@ -1,31 +1,37 @@
 import { html } from 'lit';
-import { property } from '../../utils/lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { CounterVariantType, FormSizesType } from '../../globals/types.js';
-import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { staticStyles } from './index.css.js';
-import { TAG_NAME } from './renderFunction.js';
-import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { CounterVariantType, FormSizesType } from '../../globals/types';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { counterLight, counterDark } from './index.css';
+import { TAG_NAME } from './renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrCounter extends LitElementCustom {
-  static styles = [staticStyles];
+  static styles = [];
 
-  @property() accessor variant: CounterVariantType = 'neutral';
-  @property({ type: Number }) accessor value = 0;
-  @property({ type: Number }) accessor maxValue = 0;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() variant: CounterVariantType = 'neutral';
+  @property() value = 0;
+  @property() maxValue = 0;
+  @property() sizeVariant?: FormSizesType = 'md';
+  @property() theme: ThemeType = 'Light';
 
   protected render() {
     if (this.sizeVariant) {
+      const dynamicStyles = this.theme === 'Light' ? [counterLight] : [counterDark];
+
       const classes = classMap({
         'blr-counter': true,
         [this.variant]: this.variant,
         [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: true,
       });
 
-      return html` <div class=${classes}>${this.value} / ${this.maxValue}</div> `;
+      return html`
+        <style>
+          ${dynamicStyles}
+        </style>
+        <div class=${classes}>${this.value} / ${this.maxValue}</div>
+      `;
     }
   }
 }
@@ -34,4 +40,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCounter);
 }
 
-export type BlrCounterType = ElementInterface<BlrCounter>;
+export type BlrCounterType = Omit<BlrCounter, keyof LitElementCustom>;

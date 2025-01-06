@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   plugins: [
     'removeComments',
     'removeUselessDefs',
@@ -14,5 +14,3 @@ const config = {
     },
   ],
 };
-
-export default config;

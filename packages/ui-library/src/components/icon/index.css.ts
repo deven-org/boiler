@@ -1,6 +1,8 @@
-import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+
+const { Icon } = componentTokens.cmp;
 
 /*
   the full class is used by "ignoreSize" attribute, so that consumers can take care about sizing
@@ -10,47 +12,41 @@ import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index
   when only setting their widths
 */
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   :host {
     display: inline-flex;
     flex-shrink: 0;
+
+    .blr-icon {
+      line-height: 0;
+    }
+
+    .blr-icon.full > svg {
+      width: 100%;
+    }
+
+    .blr-icon.xxs > svg {
+      width: ${Icon.Container.Size.XXS};
+    }
+
+    .blr-icon.xs > svg {
+      width: ${Icon.Container.Size.XS};
+    }
+
+    .blr-icon.sm > svg {
+      width: ${Icon.Container.Size.SM};
+    }
+
+    .blr-icon.md > svg {
+      width: ${Icon.Container.Size.MD};
+    }
+
+    .blr-icon.lg > svg {
+      width: ${Icon.Container.Size.LG};
+    }
+
+    .blr-icon.xl > svg {
+      width: ${Icon.Container.Size.XL};
+    }
   }
-
-  ${ComponentThemeIterator((theme, cmp, css) => {
-    const { icon } = cmp;
-
-    return css`
-      .blr-icon.${theme} {
-        line-height: 0;
-
-        &.full > svg {
-          width: 100%;
-        }
-
-        &.xxs > svg {
-          width: ${icon.container.size.xxs};
-        }
-
-        &.xs > svg {
-          width: ${icon.container.size.xs};
-        }
-
-        &.sm > svg {
-          width: ${icon.container.size.sm};
-        }
-
-        &.md > svg {
-          width: ${icon.container.size.md};
-        }
-
-        &.lg > svg {
-          width: ${icon.container.size.lg};
-        }
-
-        &.xl > svg {
-          width: ${icon.container.size.xl};
-        }
-      }
-    `;
-  })}
 `;

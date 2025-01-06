@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { CounterVariants, FormSizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { CounterVariants, FormSizes } from '../../globals/constants';
 import { html } from 'lit-html';
-import { BlrCounterType } from './index.js';
-import { BlrCounterRenderFunction } from './renderFunction.js';
+import { BlrCounterType } from './index';
+import { BlrCounterRenderFunction } from './renderFunction';
 
 // this loads the all components instances and registers their html tags
-import '../../index.js';
+import '../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -94,7 +94,7 @@ It is not intended to use the Counter directly when creating new applications.
 export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(params);
 BlrCounter.storyName = 'Counter';
 const defaultParams: BlrCounterType = {
-  theme: Themes[0],
+  theme: 'Light',
   variant: 'neutral',
   sizeVariant: 'md',
   value: 3,
@@ -146,7 +146,7 @@ export const SizeVariant = () => {
             ...defaultParams,
             sizeVariant: size,
           })}
-        </div>`,
+        </div>`
     )}
   `;
 };

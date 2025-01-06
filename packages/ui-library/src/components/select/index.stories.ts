@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrSelectType } from './index.js';
-import { BlrSelectRenderFunction } from './renderFunction.js';
-import { FormSizes } from '../../globals/constants.js';
+import { BlrSelectType } from './index';
+import { BlrSelectRenderFunction } from './renderFunction';
+import { FormSizes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import '../../index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import '../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -20,7 +20,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrSelectType = {
-  theme: Themes[0],
+  theme: 'Light',
   sizeVariant: 'md',
   hasLabel: true,
   label: 'Label-text',
@@ -32,19 +32,11 @@ const defaultParams: BlrSelectType = {
   disabled: false,
   required: false,
   hasError: false,
-  errorMessage: '',
+  errorMessage: ' ',
   errorMessageIcon: undefined,
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
-  options: [
-    { label: '--Please choose an option--', value: '', selected: true },
-    { label: 'option 1', value: 'option1' },
-    { label: 'option 2', value: 'option2' },
-    { label: 'option 3', value: 'option3', disabled: true },
-    { label: 'option 4', value: 'option4' },
-    { label: 'option 5', value: 'option5' },
-  ],
 };
 
 export default {
@@ -216,6 +208,7 @@ export default {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125198&mode=dev',
     },
+    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
@@ -239,7 +232,17 @@ Select presents users with a list of options from which they can make a single s
   },
 };
 
-export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params);
+const optionsAsChildren = html`
+  <option value="" label="--Please choose an option--"></option>
+  <option value="option1" label="Option 1"></option>
+  <option value="option2" label="Option 2"></option>
+  <option value="option3" label="Option 3"></option>
+  <option value="option4" label="Option 4"></option>
+  <option value="option5" label="Option 5"></option>
+  <option value="option6" label="Option 6"></option>
+`;
+
+export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params, optionsAsChildren);
 
 BlrSelect.storyName = 'Select';
 BlrSelect.args = defaultParams;
@@ -290,24 +293,33 @@ export const SizeVariant = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        sizeVariant: 'sm',
-        label: 'Select SM',
-        labelAppendix: '',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        sizeVariant: 'md',
-        label: 'Select MD',
-        labelAppendix: '',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        sizeVariant: 'lg',
-        label: 'Select LG',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          sizeVariant: 'sm',
+          label: 'Select SM',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          sizeVariant: 'md',
+          label: 'Select MD',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          sizeVariant: 'lg',
+          label: 'Select LG',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -326,12 +338,15 @@ export const Disabled = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        disabled: true,
-        label: 'Disabled',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          disabled: true,
+          label: 'Disabled',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -350,12 +365,15 @@ export const Required = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        required: true,
-        label: 'Required',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          required: true,
+          label: 'Required',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -371,13 +389,16 @@ export const HasError = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        hasError: true,
-        errorMessageIcon: undefined,
-        label: 'Error',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          hasError: true,
+          errorMessageIcon: undefined,
+          label: 'Error',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -388,22 +409,28 @@ HasError.argTypes = {
  * ## Dependencies
  *
  * ### Form Label
- * The Select component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/components-form-label--docs) component.
+ * The Select component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        label: 'With Label',
-        labelAppendix: '(with Appendix)',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        label: ' ',
-        labelAppendix: ' ',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          label: 'With Label',
+          labelAppendix: '(with Appendix)',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          label: ' ',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -412,25 +439,31 @@ FormLabel.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
+ * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
  */
 
 export const Icon = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: 'blrArrowUp',
-        label: 'With Icon',
-        labelAppendix: ' ',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: undefined,
-        label: 'Default Icon',
-        labelAppendix: ' ',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: 'blrArrowUp',
+          label: 'With Icon',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: undefined,
+          label: 'Default Icon',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -438,28 +471,34 @@ Icon.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/components-form-caption-group--docs) component.
+ * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        hasHint: true,
-        label: 'Hint message',
-        labelAppendix: ' ',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: undefined,
-        label: 'Hint and error message',
-        labelAppendix: '',
-        hasHint: true,
-        hasError: true,
-        errorMessage: "OMG it's an error",
-        errorMessageIcon: 'blrErrorFilled',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          hasHint: true,
+          label: 'Hint message',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: undefined,
+          label: 'Hint and error message',
+          labelAppendix: '',
+          hasHint: true,
+          hasError: true,
+          errorMessage: "OMG it's an error",
+          errorMessageIcon: 'blrError',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrRangeLegendMinMaxSlider } from './index.js';
+import { BlrRangeLegendMinMaxSlider } from '.';
 
 export const BlrLabelRangeSliderReact = createComponent({
   tagName: 'blr-label-range-slider',

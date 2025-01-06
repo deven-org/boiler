@@ -1,19 +1,20 @@
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-export const staticStyles = css`
-  ${ComponentThemeIterator((theme, cmp, css) => {
-    const { checkbox, formlabel } = cmp;
+export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { Checkbox, FormLabel } = componentTokens.cmp;
+  const { focusring } = semanticTokens.sem.global;
 
-    return css`
-      .blr-checkbox.${theme} {
+  return typeSafeNestedCss/* css */ `
+      .blr-checkbox {
         all: initial;
         display: flex;
 
         .input-control {
           all: initial;
+          position: absolute;
         }
-
+        
         .visual-checkbox {
           all: initial;
           display: inline-block;
@@ -31,96 +32,101 @@ export const staticStyles = css`
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
-
-          .hint-wrapper,
-          .error-wrapper {
+          .hint-wrapper, .error-wrapper {
             flex-basis: 100%;
-
             .blr-form-caption {
-              gap: 0;
+              gap: 0px;
             }
           }
-
           .blr-form-label-inline {
-            font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, sans-serif;
+            font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, 'sans-serif';
           }
         }
 
-        &.sm {
-          gap: ${checkbox.contentrow.itemspacing.sm};
+        .focus-ring {
+          position: absolute;
+          inset: 0;
+          outline-color: transparent;
+          outline-style: solid;
 
+          &.focus {
+            outline-width: ${focusring.border.width};
+            outline-offset: 2px;
+            outline-color: ${focusring.border.color};
+          }
+        }
+      
+        &.sm {
+          gap: ${Checkbox.ContentRow.ItemSpacing.SM};
+          
           .visual-checkbox {
-            min-width: ${checkbox.control.container.size.sm};
-            height: ${checkbox.control.container.size.sm};
-            margin-top: ${checkbox.controlwrapper.paddingtop.sm};
-            border-radius: ${checkbox.control.container.borderradius.sm};
+            width: ${Checkbox.Control.Container.Size.SM};
+            height: ${Checkbox.Control.Container.Size.SM};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.SM};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.SM};
           }
 
           .focus-ring {
-            border-radius: ${checkbox.control.container.borderradius.sm};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.SM};
           }
-
-          & .label-wrapper,
-          & .visual-checkbox {
-            padding-top: ${checkbox.contentcol.paddingtop.sm};
-            gap: ${checkbox.contentcol.itemspacing.sm};
-
+          
+          & .label-wrapper, & .visual-checkbox {
+            padding-top: ${Checkbox.ContentCol.PaddingTop.SM};
+            gap: ${Checkbox.ContentCol.ItemSpacing.SM};
             .blr-form-label-inline {
-              font-weight: ${formlabel.inlinelabel.typography.sm.fontWeight};
-              line-height: ${formlabel.inlinelabel.typography.sm.lineHeight};
-              font-size: ${formlabel.inlinelabel.typography.sm.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
             }
           }
         }
 
         &.md {
-          gap: ${checkbox.contentrow.itemspacing.md};
+          gap: ${Checkbox.ContentRow.ItemSpacing.MD};
 
           .visual-checkbox {
-            min-width: ${checkbox.control.container.size.md};
-            height: ${checkbox.control.container.size.md};
-            margin-top: ${checkbox.controlwrapper.paddingtop.md};
-            border-radius: ${checkbox.control.container.borderradius.md};
+            width: ${Checkbox.Control.Container.Size.MD};
+            height: ${Checkbox.Control.Container.Size.MD};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.MD};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.MD};
           }
 
           .focus-ring {
-            border-radius: ${checkbox.control.container.borderradius.md};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.MD};
           }
 
           .label-wrapper {
-            padding-top: ${checkbox.contentcol.paddingtop.md};
-            gap: ${checkbox.contentcol.itemspacing.md};
-
+            padding-top: ${Checkbox.ContentCol.PaddingTop.MD};
+            gap: ${Checkbox.ContentCol.ItemSpacing.MD};
             .blr-form-label-inline {
-              font-weight: ${formlabel.inlinelabel.typography.md.fontWeight};
-              line-height: ${formlabel.inlinelabel.typography.md.lineHeight};
-              font-size: ${formlabel.inlinelabel.typography.md.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
             }
           }
         }
 
         &.lg {
-          gap: ${checkbox.contentrow.itemspacing.lg};
+          gap: ${Checkbox.ContentRow.ItemSpacing.LG};
 
           .visual-checkbox {
-            min-width: ${checkbox.control.container.size.lg};
-            height: ${checkbox.control.container.size.lg};
-            margin-top: ${checkbox.controlwrapper.paddingtop.lg};
-            border-radius: ${checkbox.control.container.borderradius.lg};
+            width: ${Checkbox.Control.Container.Size.LG};
+            height: ${Checkbox.Control.Container.Size.LG};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.LG};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.LG};
           }
 
           .focus-ring {
-            border-radius: ${checkbox.control.container.borderradius.lg};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.LG};
           }
 
           .label-wrapper {
-            padding-top: ${checkbox.contentcol.paddingtop.lg};
-            gap: ${checkbox.contentcol.itemspacing.lg};
-
+            padding-top: ${Checkbox.ContentCol.PaddingTop.LG};
+            gap: ${Checkbox.ContentCol.ItemSpacing.LG};
             .blr-form-label-inline {
-              font-weight: ${formlabel.inlinelabel.typography.lg.fontWeight};
-              line-height: ${formlabel.inlinelabel.typography.lg.lineHeight};
-              font-size: ${formlabel.inlinelabel.typography.lg.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
             }
           }
         }
@@ -128,147 +134,150 @@ export const staticStyles = css`
         .label-wrapper {
           &:not(.disabled) {
             &:not(.error) {
-              color: ${formlabel.inlinelabel.textcolor.rest};
+              color: ${FormLabel.InlineLabel.TextColor.Rest};
 
               &:hover {
                 &:not(.readonly) {
-                  color: ${formlabel.inlinelabel.textcolor.hover};
+                  color: ${FormLabel.InlineLabel.TextColor.Hover};
                 }
               }
-
               &.focus {
-                color: ${formlabel.inlinelabel.textcolor.focus};
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
               }
-
               &.active {
                 &:not(.readonly) {
-                  color: ${formlabel.inlinelabel.textcolor.pressed};
+                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
+                }
+              }
+              &.readonly {
+                color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
+                .blr-form-label-inline {
+                  cursor: not-allowed !important;
+                  pointer-events: none;
                 }
               }
             }
           }
-
           &.error {
-            color: ${formlabel.inlinelabel.textcolor.error};
+            color: ${FormLabel.InlineLabel.TextColor.Error};
           }
-
           &.disabled {
             .blr-form-label-inline {
               cursor: not-allowed;
-              color: ${formlabel.inlinelabel.textcolor.disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
-          }
+          }  
         }
 
         .visual-checkbox {
           & .checker-icon {
-            color: ${checkbox.control.icon.iconcolor.inactive.rest};
+            color: ${Checkbox.Control.Icon.IconColor.Inactive.Rest};
           }
 
           &.disabled {
             & .checker-icon {
-              color: ${checkbox.control.icon.iconcolor.inactive.disabled};
+              color: ${Checkbox.Control.Icon.IconColor.Inactive.Disabled};
             }
 
             cursor: not-allowed;
           }
+          &.readonly {
+            pointer-events: none;
+          }
 
           &:not(.error) {
-            &.checked,
-            &.indeterminate {
-              background-color: ${checkbox.control.container.bgcolor.active.rest};
-              outline-color: ${checkbox.control.container.bordercolor.active.rest};
-
+            &.checked, &.indeterminate {
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
+              outline-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
               & .checker-icon {
-                color: ${checkbox.control.icon.iconcolor.active.rest};
+                color: ${Checkbox.Control.Icon.IconColor.Active.Rest};
               }
 
               &.hover {
-                &:not(.disabled) {
-                  background-color: ${checkbox.control.container.bgcolor.active.hover};
-                  outline-color: ${checkbox.control.container.bordercolor.active.hover};
-
+                &:not(.disabled):not(.readonly) {
+                  background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Hover};
+                  outline-color: ${Checkbox.Control.Container.BorderColor.Active.Hover};
                   & .checker-icon {
-                    color: ${checkbox.control.icon.iconcolor.active.hover};
+                    color: ${Checkbox.Control.Icon.IconColor.Active.Hover};
                   }
                 }
               }
-
               &.focus {
-                background-color: ${checkbox.control.container.bgcolor.active.focus};
-                outline-color: ${checkbox.control.container.bordercolor.active.focus};
-
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Focus};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Active.Focus};
                 & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.active.focus};
+                  color: ${Checkbox.Control.Icon.IconColor.Active.Focus};
                 }
               }
-
               &.active {
-                &:not(:disabled) {
-                  background-color: ${checkbox.control.container.bgcolor.active.pressed};
-                  outline-color: ${checkbox.control.container.bordercolor.active.pressed};
-
+                &:not(:disabled):not([readonly]) {
+                  background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Pressed};
+                  outline-color: ${Checkbox.Control.Container.BorderColor.Active.Pressed};
                   & .checker-icon {
-                    color: ${checkbox.control.icon.iconcolor.active.pressed};
+                    color: ${Checkbox.Control.Icon.IconColor.Active.Pressed};
                   }
                 }
               }
-
               &.disabled {
-                background-color: ${checkbox.control.container.bgcolor.active.disabled};
-                outline-color: ${checkbox.control.container.bordercolor.active.disabled};
-
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Disabled};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Active.Disabled};
                 & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.active.disabled};
+                  color: ${Checkbox.Control.Icon.IconColor.Active.Disabled};
+                }
+              }
+              &.readonly {
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Active.ReadOnly};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Active.ReadOnly};
+                & .checker-icon {
+                  color: ${Checkbox.Control.Icon.IconColor.Active.ReadOnly};
                 }
               }
             }
 
-            &:not(.checked, .indeterminate) {
-              background-color: ${checkbox.control.container.bgcolor.inactive.rest};
-              outline-color: ${checkbox.control.container.bordercolor.inactive.rest};
-
+            &:not(.checked):not(.indeterminate) {
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
+              outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
               & .checker-icon {
-                color: ${checkbox.control.icon.iconcolor.inactive.rest};
+                color: ${Checkbox.Control.Icon.IconColor.Inactive.Rest};
               }
 
               &.hover {
-                &:not(.disabled) {
-                  background-color: ${checkbox.control.container.bgcolor.inactive.hover};
-                  outline-color: ${checkbox.control.container.bordercolor.inactive.hover};
-
+                &:not(.disabled):not(.readonly) {
+                  background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Hover};
+                  outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Hover};
                   & .checker-icon {
-                    color: ${checkbox.control.icon.iconcolor.inactive.hover};
+                    color: ${Checkbox.Control.Icon.IconColor.Inactive.Hover};
                   }
                 }
               }
-
               &.focus {
-                background-color: ${checkbox.control.container.bgcolor.inactive.focus};
-                outline-color: ${checkbox.control.container.bordercolor.inactive.focus};
-
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Focus};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Focus};
                 & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.inactive.focus};
+                  color: ${Checkbox.Control.Icon.IconColor.Inactive.Focus};
                 }
               }
-
               &.active {
-                &:not(.disabled) {
-                  background-color: ${checkbox.control.container.bgcolor.inactive.pressed};
-                  outline-color: ${checkbox.control.container.bordercolor.inactive.pressed};
-
+                &:not(.disabled):not(.readonly) {
+                  background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Pressed};
+                  outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Pressed};
                   & .checker-icon {
-                    color: ${checkbox.control.icon.iconcolor.inactive.pressed};
+                    color: ${Checkbox.Control.Icon.IconColor.Inactive.Pressed};
                   }
                 }
               }
-
               &.disabled {
-                background-color: ${checkbox.control.container.bgcolor.inactive.disabled};
-                outline-color: ${checkbox.control.container.bordercolor.inactive.disabled};
-
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Disabled};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Disabled};
                 & .checker-icon {
-                  color: ${checkbox.control.icon.iconcolor.inactive.disabled};
+                  color: ${Checkbox.Control.Icon.IconColor.Inactive.Disabled};
+                }
+              }
+              &.readonly {
+                background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.ReadOnly};
+                outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.ReadOnly};
+                & .checker-icon {
+                  color: ${Checkbox.Control.Icon.IconColor.Inactive.ReadOnly};
                 }
               }
             }
@@ -276,306 +285,298 @@ export const staticStyles = css`
 
           &.error {
             &.checked {
-              background-color: ${checkbox.control.container.bgcolor.active.error};
-              outline-color: ${checkbox.control.container.bordercolor.active.error};
-
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Error};
+              outline-color: ${Checkbox.Control.Container.BorderColor.Active.Error};
               & .checker-icon {
-                color: ${checkbox.control.icon.iconcolor.active.error};
+                color: ${Checkbox.Control.Icon.IconColor.Active.Error};
               }
             }
-
             &:not(.checked) {
-              background-color: ${checkbox.control.container.bgcolor.inactive.error};
-              outline-color: ${checkbox.control.container.bordercolor.inactive.error};
-
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Error};
+              outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Error};
               & .checker-icon {
-                color: ${checkbox.control.icon.iconcolor.inactive.error};
+                color: ${Checkbox.Control.Icon.IconColor.Inactive.Error};
               }
             }
           }
         }
+
 
         &.sm {
           &:not(.error) {
             .visual-checkbox {
               & .checker-icon {
-                width: ${checkbox.control.icon.iconsize.sm.rest};
-                height: ${checkbox.control.icon.iconsize.sm.rest};
+                width: ${Checkbox.Control.Icon.IconSize.SM.Rest};
+                height: ${Checkbox.Control.Icon.IconSize.SM.Rest};
               }
-
-              outline-width: ${checkbox.control.container.borderwidth.sm.inactive.rest};
-              outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.rest} * -1);
+              outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest};
+              outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
+              
 
               &.hover {
-                &:not(.disabled) {
+                &:not(.disabled):not(.readonly) {
                   & .checker-icon {
-                    width: ${checkbox.control.icon.iconsize.sm.hover};
-                    height: ${checkbox.control.icon.iconsize.sm.hover};
+                    width: ${Checkbox.Control.Icon.IconSize.SM.Hover};
+                    height: ${Checkbox.Control.Icon.IconSize.SM.Hover};
                   }
-
-                  outline-width: ${checkbox.control.container.borderwidth.sm.inactive.hover};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.hover} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
                 }
               }
-
               &.focus {
                 & .checker-icon {
-                  width: ${checkbox.control.icon.iconsize.sm.focus};
-                  height: ${checkbox.control.icon.iconsize.sm.focus};
+                  width: ${Checkbox.Control.Icon.IconSize.SM.Focus};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.Focus};
                 }
-
-                outline-width: ${checkbox.control.container.borderwidth.sm.inactive.focus};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.focus} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus} * -1);
               }
-
               &.active {
-                &:not(.disabled) {
+                &:not(.disabled):not(.readonly) {
                   & .checker-icon {
-                    width: ${checkbox.control.icon.iconsize.sm.pressed};
-                    height: ${checkbox.control.icon.iconsize.sm.pressed};
+                    width: ${Checkbox.Control.Icon.IconSize.SM.Pressed};
+                    height: ${Checkbox.Control.Icon.IconSize.SM.Pressed};
                   }
-
-                  outline-width: ${checkbox.control.container.borderwidth.sm.inactive.pressed};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.pressed} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
                 }
               }
-
               &.disabled {
                 & .checker-icon {
-                  width: ${checkbox.control.icon.iconsize.sm.disabled};
-                  height: ${checkbox.control.icon.iconsize.sm.disabled};
+                  width: ${Checkbox.Control.Icon.IconSize.SM.Disabled};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.Disabled};
                 }
-
-                outline-width: ${checkbox.control.container.borderwidth.sm.inactive.disabled};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.disabled} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
+                
               }
+              &.readonly {
+                & .checker-icon {
+                  width: ${Checkbox.Control.Icon.IconSize.SM.ReadOnly};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.ReadOnly};
+                }
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
+              }
+
 
               &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.sm.active.rest};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.rest} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Rest} * -1);
 
                 &.hover {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.sm.active.hover};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.hover} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Hover};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Hover} * -1);
                   }
                 }
-
                 &.focus {
-                  outline-width: ${checkbox.control.container.borderwidth.sm.active.focus};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.focus} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Focus};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Focus} * -1);
                 }
-
                 &.active {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.sm.active.pressed};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.pressed} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Pressed};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
                   }
                 }
-
                 &.disabled {
-                  outline-width: ${checkbox.control.container.borderwidth.sm.active.disabled};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.disabled} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Disabled};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
+                  
                 }
-              }
+                &.readonly {
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
+                }
+              }      
             }
           }
-
-          &.error {
+          &.error{
             .visual-checkbox {
               & .checker-icon {
-                width: ${checkbox.control.icon.iconsize.sm.error};
-                height: ${checkbox.control.icon.iconsize.sm.error};
+                width: ${Checkbox.Control.Icon.IconSize.SM.Error};
+                height: ${Checkbox.Control.Icon.IconSize.SM.Error};
               }
 
               &:not(.checked) {
-                outline-width: ${checkbox.control.container.borderwidth.sm.inactive.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error} * -1);
               }
-
               &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.sm.active.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Error} * -1);
               }
             }
           }
         }
+
 
         &.md {
           &:not(.error) {
             .visual-checkbox {
               &:not(.checked) {
-                outline-width: ${checkbox.control.container.borderwidth.md.inactive.rest};
-                outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.rest} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
+                
 
                 &.hover {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.md.inactive.hover};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.hover} * -1);
+                  &.not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
                   }
                 }
-
                 &.focus {
-                  outline-width: ${checkbox.control.container.borderwidth.md.inactive.focus};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.focus} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus} * -1);
+                  
                 }
-
                 &.active {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.md.inactive.pressed};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.pressed} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed} * -1);
                   }
                 }
-
                 &.disabled {
-                  outline-width: ${checkbox.control.container.borderwidth.md.inactive.disabled};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.disabled} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled} * -1);
+                  
+                }
+                &.readonly {
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly} * -1);
                 }
               }
 
               &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.md.active.rest};
-                outline-offset: calc(${checkbox.control.container.borderwidth.md.active.rest} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Rest};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Rest} * -1);
 
                 &.hover {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.md.active.hover};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.md.active.hover} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Hover};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Hover} * -1);
                   }
                 }
-
                 &.focus {
-                  outline-width: ${checkbox.control.container.borderwidth.md.active.focus};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.active.focus} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Focus};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Focus} * -1);
+                  
                 }
-
                 &.active {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.md.active.pressed};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.md.active.pressed} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Pressed};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Pressed} * -1);
                   }
                 }
-
                 &.disabled {
-                  outline-width: ${checkbox.control.container.borderwidth.md.active.disabled};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.md.active.disabled} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Disabled};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Disabled} * -1);
+                  
                 }
-              }
+                &.readonly {
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly} * -1);
+                }
+              }      
             }
           }
-
           &.error {
             .visual-checkbox {
               &:not(.checked) {
-                outline-width: ${checkbox.control.container.borderwidth.md.inactive.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Error} * -1);
               }
-
               &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.md.active.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.md.active.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Error} * -1);
               }
             }
           }
         }
+
 
         &.lg {
           &:not(.error) {
             .visual-checkbox {
               &:not(.checked) {
-                outline-width: ${checkbox.control.container.borderwidth.lg.inactive.rest};
-                outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.rest} * -1);
-
+                outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
+                
                 &.hover {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.lg.inactive.hover};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.hover} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
                   }
                 }
-
                 &.focus {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.inactive.focus};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.focus} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus} * -1);
+                  
                 }
-
                 &.active {
-                  &:not(:disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.lg.inactive.pressed};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.pressed} * -1);
+                  &:not(:disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed} * -1);
                   }
                 }
-
                 &.disabled {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.inactive.disabled};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.disabled} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled} * -1);
+                  
+                }
+                &.readonly {
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly} * -1);
                 }
               }
 
-              &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.lg.active.rest};
-                outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.rest} * -1);
+              &.checked{
+                outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Rest};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Rest} * -1);
 
                 &.hover {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.lg.active.hover};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.hover} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Hover};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Hover} * -1);
                   }
                 }
-
                 &.focus {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.active.focus};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.focus} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Focus};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Focus} * -1);
+                  
                 }
-
                 &.active {
-                  &:not(.disabled) {
-                    outline-width: ${checkbox.control.container.borderwidth.lg.active.pressed};
-                    outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.pressed} * -1);
+                  &:not(.disabled):not(.readonly) {
+                    outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Pressed};
+                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Pressed} * -1);
                   }
                 }
-
                 &.disabled {
-                  outline-width: ${checkbox.control.container.borderwidth.lg.active.disabled};
-                  outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.disabled} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Disabled};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Disabled} * -1);
+                  
                 }
-              }
+                &.readonly {
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly} * -1);
+                }
+              }      
             }
           }
-
           &.error:not(.disbaled) {
             .visual-checkbox {
               &:not(.checked) {
-                outline-width: ${checkbox.control.container.borderwidth.lg.inactive.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Error} * -1);
               }
-
               &.checked {
-                outline-width: ${checkbox.control.container.borderwidth.lg.active.error};
-                outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.error} * -1);
+                outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Error};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Error} * -1);
               }
             }
           }
         }
       }
     `;
-  })}
-
-  ${SemanticThemeIterator((theme, sem, css) => {
-    const { focusring } = sem.global;
-
-    return css`
-      .focus-ring.${theme} {
-        position: absolute;
-        inset: 0;
-        outline-color: transparent;
-        outline-style: solid;
-
-        &.focus {
-          outline-width: ${focusring.border.width};
-          outline-offset: 2px;
-          outline-color: ${focusring.border.color};
-        }
-      }
-    `;
-  })}
-`;
+});

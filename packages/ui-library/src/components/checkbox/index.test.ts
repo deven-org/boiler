@@ -1,26 +1,26 @@
-import '@boiler/ui-library';
+import '@boiler/ui-library/dist/';
 
-import { BlrCheckboxRenderFunction } from './renderFunction.js';
+import { BlrCheckboxRenderFunction } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrCheckboxType } from './index.js';
-import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import type { BlrCheckboxType } from '.';
 
 const sampleParams: BlrCheckboxType = {
   label: 'Checkbox Option',
-  checkboxId: 'Checky',
+  checkInputId: 'Checky',
   disabled: false,
   checked: false,
   indeterminate: false,
+  readonly: false,
   hasError: false,
-  sizeVariant: 'md',
+  size: 'md',
   errorMessage: 'This is a sample error message',
-  errorMessageIcon: undefined,
+  errorIcon: undefined,
   hasHint: false,
   hintMessage: 'This is a sample hint',
-  hintMessageIcon: undefined,
-  theme: Themes[0],
+  hintIcon: undefined,
+  theme: 'Light',
   hasLabel: true,
 };
 
@@ -34,30 +34,15 @@ describe('blr-checkbox', () => {
     expect(className).to.contain('input-control');
   });
 
-  it('has error Icon set to undefined', async () => {
-    const element = await fixture(
-      BlrCheckboxRenderFunction({
-        ...sampleParams,
-        hasError: true,
-        errorIcon: undefined,
-      }),
-    );
-    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
-    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
-    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
-    expect(errorMessageIcon).to.not.exist;
-  });
-
   it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintMessageIcon: 'blrInfo',
+        hintIcon: 'blrInfo',
         hasError: true,
-        errorMessageIcon: 'blrErrorFilled',
-      }),
+        errorIcon: 'blrErrorFilled',
+      })
     );
 
     const captionWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
@@ -82,7 +67,7 @@ describe('blr-checkbox', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrCheckboxRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
+    const element = await fixture(BlrCheckboxRenderFunction({ ...sampleParams, size: 'sm' }));
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
     const className = checkbox?.className;
@@ -95,7 +80,7 @@ describe('blr-checkbox', () => {
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasError: true,
-      }),
+      })
     );
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
@@ -109,7 +94,7 @@ describe('blr-checkbox', () => {
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasError: false,
-      }),
+      })
     );
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
