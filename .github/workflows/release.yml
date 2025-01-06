@@ -19,7 +19,7 @@ jobs:
           node-version: '18.x'
 
       - name: Release Please Action
-        uses: googleapis/release-please-action@v4
+        uses: googleapis/release-please-action@v16
         id: release
         with:
           release-type: node
