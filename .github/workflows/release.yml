@@ -23,8 +23,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: '@boiler/boiler'
+          package-name: '@ashk1996/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: main
           branch: main
-          pre-release: beta
