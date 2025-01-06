@@ -5,6 +5,7 @@ import type { BlrButtonTextType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrButtonTextType = {
   label: 'Button',
@@ -14,7 +15,7 @@ const sampleParams: BlrButtonTextType = {
   disabled: false,
   buttonTextId: 'button-id',
   variant: 'cta',
-  theme: 'Light_value',
+  theme: Themes[0],
   buttonDisplay: 'inline-block',
 };
 

@@ -3,7 +3,7 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { TAG_NAME } from './renderFunction.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from '../../utils/lit/decorators.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
@@ -16,7 +16,7 @@ export class BlrFormLabel extends LitElementCustom {
   @property() accessor labelAppendix: string | undefined;
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
   @property() accessor forValue: string | undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
   @property({ type: Boolean }) accessor hasError: boolean = false;
 
   private _error: Error | null = null;

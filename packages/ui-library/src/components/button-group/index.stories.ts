@@ -6,6 +6,7 @@ import { BlrButtonIconRenderFunction } from '../button-icon/renderFunction.js';
 import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
 import { BlrButtonGroupType } from './index.js';
 import { BlrButtonGroupRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sharedStyles = html`
   <style>
@@ -84,7 +85,7 @@ export const ButtonGroup = (
   const contentButtons = html`
     ${BlrButtonTextRenderFunction({
       label: typeof primaryLabel === 'string' ? primaryLabel : 'Button Text',
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'primary',
       disabled: false,
@@ -92,14 +93,14 @@ export const ButtonGroup = (
     })}
     ${BlrButtonTextRenderFunction({
       label: secondaryLabel,
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'secondary',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
     ${BlrButtonIconRenderFunction({
-      theme: 'Light_value',
+      theme: Themes[0],
       loading: false,
       variant: 'silent',
       disabled: false,
@@ -115,7 +116,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   alignment: 'left',
 };

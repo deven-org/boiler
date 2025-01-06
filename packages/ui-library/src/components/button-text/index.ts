@@ -4,7 +4,7 @@ import { state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import {
   IconPositionVariant,
@@ -80,7 +80,7 @@ export class BlrButtonText extends LitElementCustom {
   @property() accessor sizeVariant: ActionSizesType | undefined;
   @property() accessor buttonDisplay: DisplayType | undefined;
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor focused = false;
 
