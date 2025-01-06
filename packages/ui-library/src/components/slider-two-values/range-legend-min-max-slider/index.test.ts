@@ -5,9 +5,10 @@ import type { BlrRangeLegendMinMaxSliderType } from './index.js';
 
 import { expect, fixture } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRangeLegendMinMaxSliderType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   rangeInputId: 'range-legend-cmpt',
   startValue: '200$',
   endValue: '400$',

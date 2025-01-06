@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { staticStyles } from './index.css.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import { IconPositionVariant, TabContentVariantType, FormSizesType, SizesType } from '../../globals/types.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
@@ -32,7 +32,7 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
   @property({ type: Boolean }) accessor selected: boolean = false;
   @property() accessor label = '';
   @property() accessor icon: string | undefined;
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor selectedTabIndex: number | undefined;
 

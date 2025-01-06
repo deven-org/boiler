@@ -4,6 +4,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrButtonGroupType } from './index.js';
 import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrButtonGroupType = {
   sizeVariant: 'md',
@@ -12,7 +13,7 @@ const sampleParams: BlrButtonGroupType = {
 
 const testContent = BlrButtonTextRenderFunction({
   label: 'Jaok',
-  theme: 'Light_value',
+  theme: Themes[0],
   loading: false,
   variant: 'primary',
   disabled: false,

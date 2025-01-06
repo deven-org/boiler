@@ -303,11 +303,13 @@ Input Field Text allows users to enter textual information or data into a design
 export const BlrInputFieldText = (params: BlrInputFieldTextType) => BlrInputFieldTextRenderFunction(params);
 BlrInputFieldText.storyName = 'Input Field Text';
 
+// sizeVariant and Theme should work with default values,
+// but they aren't
+
 // Default parameters for Input Field Text component
 const defaultParams: BlrInputFieldTextType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
-  type: 'text',
   placeholder: 'Placeholder-text',
   value: '',
   maxLength: 140,
@@ -390,7 +392,7 @@ export const SizeVariant = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'sm',
           label: 'Input Field Text SM',
           icon: undefined,
@@ -399,7 +401,7 @@ export const SizeVariant = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Input Field Text MD',
           icon: undefined,
@@ -408,7 +410,7 @@ export const SizeVariant = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'lg',
           label: 'Input Field Text LG',
           icon: undefined,
@@ -439,7 +441,7 @@ export const Type = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           type: 'text',
           sizeVariant: 'md',
           label: 'Enter text',
@@ -450,7 +452,7 @@ export const Type = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           type: 'password',
           sizeVariant: 'md',
           label: 'Enter password',
@@ -479,7 +481,7 @@ export const Placeholder = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'With placeholder',
           placeholder: 'Add a message here',
@@ -489,7 +491,7 @@ export const Placeholder = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
@@ -519,7 +521,7 @@ export const Disabled = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Disabled',
           icon: undefined,
@@ -549,7 +551,7 @@ export const Readonly = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Readonly',
           readonly: true,
@@ -578,7 +580,7 @@ export const Required = () => {
       <div class="stories-textarea">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Label-text',
@@ -612,7 +614,7 @@ export const HasError = () => {
       <div class="stories-textarea">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           hasError: true,
           placeholder: '',
@@ -643,7 +645,7 @@ export const FormLabel = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Label',
@@ -671,7 +673,7 @@ export const Icon = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'With Icon',
@@ -681,7 +683,7 @@ export const Icon = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Without Icon',
@@ -706,7 +708,7 @@ export const FormCaptionGroup = () => {
       <div class="stories-inputfieldtext">
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
@@ -717,7 +719,7 @@ export const FormCaptionGroup = () => {
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: ' Hint and error message',
