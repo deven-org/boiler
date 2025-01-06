@@ -1,383 +1,414 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
-export const styleCustom = typeSafeNestedCss/* css */ `
+export const staticStyles = css`
   .blr-label-toggleswitch {
     display: flex;
     align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &.has-state-label {
+      flex-direction: column;
+    }
 
     & input {
       all: initial;
     }
-  }
-`;
 
-export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { ToggleSwitch, FormLabel } = componentTokens.cmp;
-    const { focusring } = semanticTokens.sem.global;
+    .focus-ring {
+      position: absolute;
+      inset: 0;
+      outline-color: transparent;
+      outline-style: solid;
 
-    return typeSafeNestedCss/* css */ `
-      .blr-label-toggleswitch {
-        .focus-ring {
+      &.focus {
+        outline-offset: 2px;
+      }
+    }
+
+    &.leading {
+      flex-direction: column;
+    }
+
+    &.trailing {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & > .toggle-content-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .knob {
+      z-index: 1;
+      outline-style: solid;
+    }
+
+    .blr-label-switch-wrapper:not(.disabled) {
+      cursor: pointer;
+    }
+
+    & > .label-container {
+      all: initial;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & > .blr-label-switch-wrapper {
+        position: relative;
+        outline-style: solid;
+        outline-width: 0;
+
+        .knob {
+          border-radius: 50%;
+          transition: transform 0.2s ease;
+          display: block;
           position: absolute;
-          inset: 0;
-          outline-color: transparent;
-          outline-style: solid;
-
-          &.focus {
-            border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
-            outline: ${focusring.border.width} ${focusring.border.style} ${focusring.border.color};
-            outline-offset: 2px;
-          }
         }
 
-        &.leading {
-          flex-direction: column;
-        }
-
-        &.trailing {
-          flex-direction: row;
-          justify-content: space-between;
+        & > .toggle-icon {
+          position: absolute;
+          top: 0;
+          display: flex;
           align-items: center;
         }
 
-        & > .toggle-content-col {
-          display: flex;
-          flex-direction: column;
+        & > .toggle-switch-unselect {
+          left: 0;
+          pointer-events: none;
+        }
 
+        & > .toggle-switch-select {
+          right: 0;
+          pointer-events: none;
+        }
+
+        &:not(.checked) {
+          &.active {
+            .toggle-icon > .toggle-icon-class {
+              color: pink;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ${SemanticThemeIterator((theme, sem, css) => {
+    const { focusring } = sem.global;
+
+    return css`
+      .blr-label-toggleswitch.${theme} {
+        .focus-ring {
+          &.focus {
+            outline: ${focusring.border.width} ${focusring.border.style} ${focusring.border.color};
+          }
+        }
+      }
+    `;
+  })}
+
+  ${ComponentThemeIterator((theme, cmp, css) => {
+    const { toggleswitch, formlabel } = cmp;
+
+    return css`
+      .blr-label-toggleswitch.${theme} {
+        .focus-ring {
+          &.focus {
+            border-radius: ${toggleswitch.control.container.borderradius};
+          }
+        }
+
+        & > .toggle-content-col {
           & > .blr-form-label-inline {
-            color: ${FormLabel.InlineLabel.TextColor.Rest};
+            color: ${formlabel.inlinelabel.textcolor.rest};
           }
         }
 
         .knob {
-          z-index: 1;
-          outline-style: solid;
-          outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
-          outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
-          outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest} * -1);
-        }
-        .blr-label-switch-wrapper:not(.disabled):not(.readonly) {
-          cursor: pointer;
+          outline-color: ${toggleswitch.control.knob.bordercolor.inactive.rest};
+          outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.rest};
+          outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.rest} * -1);
         }
 
         & > .label-container {
-          all: initial;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-
           & > .blr-label-switch-wrapper {
-            border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
-            position: relative;
-            outline-style: solid;
-            outline-width: 0;
+            border-radius: ${toggleswitch.control.container.borderradius};
 
             .knob {
-              position: absolute;
-              background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
-              border-radius: 50%;
-              transition: transform 0.2s ease;
-            }
-          
-            & > .toggle-icon {
-              position: absolute;
-              top: 0;
-              display: flex;
-            }
-      
-            & > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.Rest};
+              background-color: ${toggleswitch.control.knob.bgcolor.active.rest};
             }
 
-            & > .toggle-switch-unselect {
-              left: 0;
-            }
-
-            & > .toggle-switch-select {
-              right: 0;
-            }
-            
-            &:not(.checked) {
-              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
-              outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
-              .knob {
-                outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
+            & > .toggle-content-col {
+              & > .blr-form-label-inline {
+                color: ${formlabel.inlinelabel.textcolor.rest};
               }
+            }
+
+            &:not(.checked) {
+              background-color: ${toggleswitch.control.container.bgcolor.inactive.rest};
+              outline-color: ${toggleswitch.control.container.bordercolor.inactive.rest};
+
+              .knob {
+                outline-color: ${toggleswitch.control.knob.bordercolor.inactive.rest};
+              }
+
               .toggle-icon > .toggle-icon-class {
-                color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Rest};
+                color: ${toggleswitch.control.ay11icon.iconcolor.inactive.rest};
               }
 
               &.focus {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.focus};
+                outline-color: ${toggleswitch.control.container.bordercolor.inactive.focus};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.inactive.focus};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Focus};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.inactive.focus};
                 }
               }
 
               &.hover {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Hover};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
+                outline-color: ${toggleswitch.control.container.bordercolor.inactive.hover};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Hover};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.inactive.hover};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Hover};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.inactive.hover};
                 }
               }
 
               &.active {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Pressed};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Pressed};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.pressed};
+                outline-color: ${toggleswitch.control.container.bordercolor.inactive.pressed};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Pressed};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.inactive.pressed};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Pressed};
-                  color: pink;
+                  color: ${toggleswitch.control.ay11icon.iconcolor.inactive.pressed};
                 }
               }
-
 
               &.disabled {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Disabled};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Disabled};
-                .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Disabled};
-                }
-                .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Disabled};
-                }
-              }
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.disabled};
+                outline-color: ${toggleswitch.control.container.bordercolor.inactive.disabled};
 
-              &.readonly {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.ReadOnly};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.ReadOnly};
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.inactive.disabled};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.ReadOnly};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.inactive.disabled};
                 }
               }
             }
 
             &.checked {
-              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
-              outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
+              background-color: ${toggleswitch.control.container.bgcolor.active.rest};
+              outline-color: ${toggleswitch.control.container.bordercolor.active.rest};
+
               .knob {
-                outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
+                outline-color: ${toggleswitch.control.knob.bordercolor.inactive.rest};
               }
+
               .toggle-icon > .toggle-icon-class {
-                color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
+                color: ${toggleswitch.control.ay11icon.iconcolor.active.rest};
               }
 
               &.focus {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
+                background-color: ${toggleswitch.control.container.bgcolor.active.focus};
+                outline-color: ${toggleswitch.control.container.bordercolor.active.focus};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Focus};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.active.focus};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Focus};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.active.focus};
                 }
               }
 
               &.hover {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Hover};
+                background-color: ${toggleswitch.control.container.bgcolor.active.hover};
+                outline-color: ${toggleswitch.control.container.bordercolor.active.hover};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Hover};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.active.hover};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Hover};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.active.hover};
                 }
               }
-              
 
               &.active {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
+                background-color: ${toggleswitch.control.container.bgcolor.active.pressed};
+                outline-color: ${toggleswitch.control.container.bordercolor.active.pressed};
+
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Pressed};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.active.pressed};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Pressed};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.active.pressed};
                 }
               }
 
               &.disabled {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Disabled};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Disabled};
-                .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Disabled};
-                }
-                .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Disabled};
-                }
-              }
+                background-color: ${toggleswitch.control.container.bgcolor.active.disabled};
+                outline-color: ${toggleswitch.control.container.bordercolor.active.disabled};
 
-              &.readonly {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.ReadOnly};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.ReadOnly};
-                outline-color: blue;
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.ReadOnly};
+                  outline-color: ${toggleswitch.control.knob.bordercolor.active.disabled};
                 }
+
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.ReadOnly};
+                  color: ${toggleswitch.control.ay11icon.iconcolor.active.disabled};
                 }
               }
             }
-
-            
           }
 
           & > .blr-form-label-inline {
-            color: ${FormLabel.InlineLabel.TextColor.Rest};
+            color: ${formlabel.inlinelabel.textcolor.rest};
           }
         }
 
         &.disabled {
-          & > .toggle-content-col {
-            & > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.Disabled};
-            }
-          }
-        }
-
-        &.readonly {
-          > .toggle-content-col {
-            > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
-            }
+          .blr-form-label-inline {
+            color: ${formlabel.inlinelabel.textcolor.disabled};
           }
         }
 
         &.sm {
-          gap: ${ToggleSwitch.Container.ItemSpacing.SM};
+          gap: ${toggleswitch.container.itemspacing.sm};
 
           & > .toggle-content-col {
-            gap: ${ToggleSwitch.ContentCol.ItemSpacing.SM};
+            gap: ${toggleswitch.contentcol.itemspacing.sm};
           }
 
           & > .label-container {
-            gap: ${ToggleSwitch.ControlWithStateLabel.Container.ItemSpacing.SM};
+            gap: ${toggleswitch.controlwithstatelabel.container.itemspacing.sm};
 
             & > .blr-label-switch-wrapper {
-              width: ${ToggleSwitch.Control.Container.Width.SM};
-              height: ${ToggleSwitch.Control.Container.Height.SM};
+              width: ${toggleswitch.control.container.width.sm};
+              height: ${toggleswitch.control.container.height.sm};
 
               &:not(.checked) {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.sm.inactive.rest};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.inactive.rest} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest});
+                  outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.rest};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.rest});
                 }
 
                 &.hover {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.inactive.hover};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.inactive.hover} * -1);
+                  background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Hover};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Hover});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.hover};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.hover});
                   }
                 }
+
                 &.active {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.inactive.pressed};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.inactive.pressed} * -1);
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Pressed};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Pressed});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.pressed};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.pressed});
                   }
                 }
 
                 &.disabled {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.inactive.disabled};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.inactive.disabled} * -1);
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled});
-                  }
-                }
-                &.readonly {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
-                  .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.ReadOnly};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.ReadOnly});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.inactive.disabled};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.inactive.disabled});
+                    background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                   }
                 }
               }
+
               &.checked {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.sm.active.rest};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.rest} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest});
+                  outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.rest};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.rest});
                 }
-                
+
                 &.hover {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.active.hover};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.hover} * -1);
+                  background-color: ${toggleswitch.control.container.bgcolor.active.hover};
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Hover};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Hover});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.hover};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.hover});
                   }
                 }
+
                 &.active {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.active.pressed};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.pressed} * -1);
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Pressed};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Pressed});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.pressed};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.pressed});
                   }
                 }
 
                 &.disabled {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
+                  outline-width: ${toggleswitch.control.container.borderwidth.sm.active.disabled};
+                  outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.disabled} * -1);
+
                   .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Disabled};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Disabled});
-                  }
-                }
-                &.readonly {
-                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly};
-                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
-                  .knob {
-                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.ReadOnly};
-                    outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.ReadOnly});
+                    outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.disabled};
+                    outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.disabled});
+                    background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                   }
                 }
               }
 
-
-              &  > .toggle-switch-slider {
+              & > .toggle-switch-slider {
                 & > .knob {
-                  width: ${ToggleSwitch.Control.Knob.Size.SM};
-                  height: ${ToggleSwitch.Control.Knob.Size.SM};
-                  top: ${ToggleSwitch.Control.Container.Padding.SM};
-                  left: ${ToggleSwitch.Control.Container.Padding.SM};;
+                  width: ${toggleswitch.control.knob.size.sm};
+                  height: ${toggleswitch.control.knob.size.sm};
+                  top: ${toggleswitch.control.container.padding.sm};
+                  left: ${toggleswitch.control.container.padding.sm};
                 }
               }
 
               & > input:checked + .toggle-switch-slider > .knob {
-                transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
+                transform: translateX(
+                  calc(${toggleswitch.control.container.width.sm} * 0.5 - ${toggleswitch.control.container.padding.sm})
+                );
               }
 
-              &  > .toggle-icon {
-                height: ${ToggleSwitch.Control.Container.Height.SM};
+              & > .toggle-icon {
+                height: ${toggleswitch.control.container.height.sm};
 
                 & > .toggle-icon-class {
-                  width: ${ToggleSwitch.Control.AY11Icon.IconSize.SM};
-                  padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
+                  width: ${toggleswitch.control.ay11icon.iconsize.sm};
+                  padding: 0 calc(${toggleswitch.control.ay11iconcontainer.padding_h.sm} + ${toggleswitch.control.container.padding.sm});
                 }
               }
             }
@@ -385,254 +416,251 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         }
 
         &.md {
-          gap: ${ToggleSwitch.Container.ItemSpacing.MD};
+          gap: ${toggleswitch.container.itemspacing.md};
 
           & > .toggle-content-col {
-            gap: ${ToggleSwitch.ContentCol.ItemSpacing.MD};
+            gap: ${toggleswitch.contentcol.itemspacing.md};
           }
 
           & > .label-container {
-            gap: ${ToggleSwitch.ControlWithStateLabel.Container.ItemSpacing.MD};
+            gap: ${toggleswitch.controlwithstatelabel.container.itemspacing.md};
           }
 
           & > .label-container > .blr-label-switch-wrapper {
-            width: ${ToggleSwitch.Control.Container.Width.MD};
-            height: ${ToggleSwitch.Control.Container.Height.MD};
+            width: ${toggleswitch.control.container.width.md};
+            height: ${toggleswitch.control.container.height.md};
 
             &:not(.checked) {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
+              outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.rest};
+              outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.rest} * -1);
+
               .knob {
-                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest};
-                outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest} * -1);
+                outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.rest};
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.rest} * -1);
               }
-              
+
               &.hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.hover};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.hover} * -1);
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Hover};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Hover} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.hover};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.hover} * -1);
                 }
               }
+
               &.active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Pressed} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.pressed};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.pressed} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Pressed};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.pressed};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.pressed} * -1);
                 }
               }
 
               &.disabled {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Disabled} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.disabled};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.disabled} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled} * -1);
-                }
-              }
-              &.readonly {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.ReadOnly} * -1);
-                .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.ReadOnly};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.ReadOnly} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.disabled};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.disabled} * -1);
+                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
             }
+
             &.checked {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest} * -1);
+              outline-width: ${toggleswitch.control.container.borderwidth.md.active.rest};
+              outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.rest} * -1);
+
               .knob {
-                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest};
-                outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest} * -1);
+                outline-width: ${toggleswitch.control.knob.borderwidth.md.active.rest};
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.rest} * -1);
               }
 
               &.hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.active.hover};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.hover} * -1);
+                background-color: ${toggleswitch.control.container.bgcolor.active.hover};
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Hover};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Hover} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.active.hover};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.hover} * -1);
                 }
               }
+
               &.active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Pressed} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.active.pressed};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.pressed} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Pressed};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.active.pressed};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.pressed} * -1);
                 }
               }
 
               &.disabled {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Disabled} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.md.active.disabled};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.disabled} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Disabled};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Disabled} * -1);
-                }
-              }
-              &.readonly {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.ReadOnly} * -1);
-                .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.ReadOnly};
-                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.ReadOnly} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.md.active.disabled};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.disabled} * -1);
+                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
             }
 
             & > .toggle-switch-slider {
               & > .knob {
-                width: ${ToggleSwitch.Control.Knob.Size.MD};
-                height: ${ToggleSwitch.Control.Knob.Size.MD};
-                top: ${ToggleSwitch.Control.Container.Padding.MD};
-                left: ${ToggleSwitch.Control.Container.Padding.MD};;
+                width: ${toggleswitch.control.knob.size.md};
+                height: ${toggleswitch.control.knob.size.md};
+                top: ${toggleswitch.control.container.padding.md};
+                left: ${toggleswitch.control.container.padding.md};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
+              transform: translateX(calc(${toggleswitch.control.container.width.md} * 0.5 - ${toggleswitch.control.container.padding.md}));
             }
 
             & > .toggle-icon {
-              height: ${ToggleSwitch.Control.Container.Height.MD};
+              height: ${toggleswitch.control.container.height.md};
 
               & > .toggle-icon-class {
-                width: ${ToggleSwitch.Control.AY11Icon.IconSize.MD};
-                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
+                width: ${toggleswitch.control.ay11icon.iconsize.md};
+                padding: 0 calc(${toggleswitch.control.ay11iconcontainer.padding_h.md} + ${toggleswitch.control.container.padding.md});
               }
             }
           }
         }
 
-
         &.lg {
-          gap: ${ToggleSwitch.Container.ItemSpacing.LG};
+          gap: ${toggleswitch.container.itemspacing.lg};
 
           & > .toggle-content-col {
-            gap: ${ToggleSwitch.ContentCol.ItemSpacing.LG};
+            gap: ${toggleswitch.contentcol.itemspacing.lg};
           }
 
           & > .label-container {
-            gap: ${ToggleSwitch.ControlWithStateLabel.Container.ItemSpacing.LG};
+            gap: ${toggleswitch.controlwithstatelabel.container.itemspacing.lg};
           }
 
           & > .label-container > .blr-label-switch-wrapper {
-            width: ${ToggleSwitch.Control.Container.Width.LG};
-            height: ${ToggleSwitch.Control.Container.Height.LG};
+            width: ${toggleswitch.control.container.width.lg};
+            height: ${toggleswitch.control.container.height.lg};
 
             &:not(.checked) {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
+              outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.rest};
+              outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.rest} * -1);
+
               .knob {
-                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest};
-                outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest} * -1);
+                outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.rest};
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.rest} * -1);
               }
-              
+
               &.hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.hover};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.hover} * -1);
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.hover};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.hover} * -1);
                 }
               }
+
               &.active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Pressed} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.pressed};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.pressed} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.pressed};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.pressed} * -1);
                 }
               }
 
               &.disabled {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Disabled} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.disabled};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.disabled} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled} * -1);
-                }
-              }
-              &.readonly {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.ReadOnly} * -1);
-                .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.disabled};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.disabled} * -1);
+                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
             }
+
             &.checked {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
+              outline-width: ${toggleswitch.control.container.borderwidth.lg.active.rest};
+              outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.rest} * -1);
+
               .knob {
-                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest};
-                outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest} * -1);
+                outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.rest};
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.rest} * -1);
               }
 
               &.hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.active.hover};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.hover} * -1);
+                background-color: ${toggleswitch.control.container.bgcolor.active.hover};
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.hover};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.hover} * -1);
                 }
               }
+
               &.active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Pressed} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.active.pressed};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.pressed} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.pressed};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.pressed} * -1);
                 }
               }
 
               &.disabled {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Disabled} * -1);
+                outline-width: ${toggleswitch.control.container.borderwidth.lg.active.disabled};
+                outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.disabled} * -1);
+
                 .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled} * -1);
-                }
-              }
-              &.readonly {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly} * -1);
-                .knob {
-                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly} * -1);
+                  outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.disabled};
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.disabled} * -1);
+                  background-color: ${toggleswitch.control.knob.bgcolor.inactive.disabled};
                 }
               }
             }
-            
+
             & > .toggle-switch-slider {
               & > .knob {
-                width: ${ToggleSwitch.Control.Knob.Size.LG};
-                height: ${ToggleSwitch.Control.Knob.Size.LG};
-                top: ${ToggleSwitch.Control.Container.Padding.LG};
-                left: ${ToggleSwitch.Control.Container.Padding.LG};;
+                width: ${toggleswitch.control.knob.size.lg};
+                height: ${toggleswitch.control.knob.size.lg};
+                top: ${toggleswitch.control.container.padding.lg};
+                left: ${toggleswitch.control.container.padding.lg};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
+              transform: translateX(calc(${toggleswitch.control.container.width.lg} * 0.5 - ${toggleswitch.control.container.padding.lg}));
             }
 
             & > .toggle-icon {
-              height: ${ToggleSwitch.Control.Container.Height.LG};
+              height: ${toggleswitch.control.container.height.lg};
 
               & > .toggle-icon-class {
-                width: ${ToggleSwitch.Control.AY11Icon.IconSize.LG};
-                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
+                width: ${toggleswitch.control.ay11icon.iconsize.lg};
+                padding: 0 calc(${toggleswitch.control.ay11iconcontainer.padding_h.lg} + ${toggleswitch.control.container.padding.lg});
               }
             }
           }
         }
       }
     `;
-  }
-);
+  })}
+`;

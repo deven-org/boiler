@@ -1,13 +1,14 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
+import { BlrRangeLegendSliderRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
-import { BlrRangeLegendSliderType } from '.';
+import { BlrRangeLegendSliderType } from './index.js';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRangeLegendSliderType = {
-  theme: 'Light',
+  theme: Themes[0],
   rangeInputId: 'range-cmpt',
   initialValue: '300 $',
   list: ['100 $', '200 $', '300 $', '400 $', '500 $', '600 $'],
@@ -39,7 +40,7 @@ describe('blr-range-slider', () => {
       BlrRangeLegendSliderRenderFunction({
         ...sampleParams,
         showLegend: false,
-      })
+      }),
     );
 
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -56,7 +57,7 @@ describe('blr-range-slider', () => {
       BlrRangeLegendSliderRenderFunction({
         ...sampleParams,
         initialValue: '300 $',
-      })
+      }),
     );
 
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);

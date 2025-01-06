@@ -1,308 +1,229 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import type * as semanticTokenTypes from "../../foundation/_tokens-generated/module_declarations/__semantic-tokens.Licht_value.generated.js";
+import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
-export const styleCustom = typeSafeNestedCss`
+const directionIndicatorIconClassName = "icon-direction-indicator";
+
+export const staticStyles = css`
+  .select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .${directionIndicatorIconClassName} {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
   .blr-select-option {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-`;
 
-export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
-  (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
-    const { InputIcon } = _componentTokens.cmp;
+  .blr-select > .label-wrapper {
+    display: flex;
+  }
 
-    return typeSafeNestedCss`
-      :host {
-        .blr-select {
-          &.sm {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.sm};
-            }
-          }
-          &.md {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.md};
-            }
-          }
-          &.lg {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.lg};
-            }
-          }
+  .blr-form-select {
+    all: initial;
+    box-sizing: border-box;
+    width: 100%;
+    appearance: none;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  ${SemanticThemeIterator((theme, sem, css) => {
+    const { inputfield, inputslot, labelslot } = sem.forms;
+
+    return css`
+      ${getDirectionIndicatorIconStyles({ theme, semanticTokens: sem }).cssText}
+
+      .blr-select.${theme} {
+        &.sm > .label-wrapper {
+          padding: ${labelslot.padding.sm};
+        }
+
+        &.md > .label-wrapper {
+          padding: ${labelslot.padding.md};
+        }
+
+        &.lg > .label-wrapper {
+          padding: ${labelslot.padding.lg};
         }
       }
 
-      slot {
-        display: none;
-      }
-
-      .blr-input-icon {
-        pointer-events: none;
-      }
-
-      .blr-select-inner-container {
-        flex-grow: 1;
-        flex-shrink: 1;
-
-        .blr-form-select {
-          all: initial;
-          border-radius: ${inputfield.container.borderradius};
-          box-sizing: border-box;
-          width: 100%;
-          border: none;
-          outline: none;
-          color: ${inputfield.userinput.textcolor.default.rest};
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.default.rest};
-          }
-
-          &:hover {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.hover};
-            }
-          }
-
-          &:active {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.pressed};
-            }
-          }
-
-          &[readonly] {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.readonly};
-            }
-          }
-
-          &.disabled {
-            color: ${inputfield.userinput.textcolor.default.disabled};
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.disabled};
-            }
-          }
-
-          &.focus {
-            border: none;
-            outline: none;
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.focus};
-            }
-          }
-
-          &.error-select {
-            border: none;
-            outline: none;
-
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.error.rest};
-            }
-
-            &:hover {
-              border: none;
-              outline: none;
-
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.hover};
-              }
-            }
-
-            &:active {
-              border: none;
-              outline: none;
-
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.pressed};
-              }
-            }
-
-            &.focus {
-              border: none;
-              outline: none;
-
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.focus};
-              }
-            }
-          }
-
-          &.sm {
-            font-weight: ${inputfield.userinput.typography.sm.fontWeight};
-            font-size: ${inputfield.userinput.typography.sm.fontSize};
-            font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.sm.lineHeight};
-          }
-
-          &.md {
-            font-weight: ${inputfield.userinput.typography.md.fontWeight};
-            font-size: ${inputfield.userinput.typography.md.fontSize};
-            font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.md.lineHeight};
-          }
-
-          &.lg {
-            font-weight: ${inputfield.userinput.typography.lg.fontWeight};
-            font-size: ${inputfield.userinput.typography.lg.fontSize};
-            font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.lg.lineHeight};
-          }
-        }
-      }
-
-      .blr-select-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
-          ${inputfield.container.border.default.rest.color};
+      .blr-form-select.${theme} {
         border-radius: ${inputfield.container.borderradius};
-        box-sizing: border-box;
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
+        color: ${inputfield.userinput.textcolor.default.rest};
         background-color: ${inputfield.container.bgcolor.default.rest};
-
-        .blr-form-select {
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
-        }
-
-        .blr-input-icon {
-          position: relative;
-          color: ${0};
-        }
+        outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
+          ${inputfield.container.border.default.rest.color};
 
         &.sm {
           padding: ${inputfield.container.padding.sm};
           margin: ${inputslot.margin.sm};
+          font-weight: ${inputfield.userinput.typography.sm.fontWeight};
+          font-size: ${inputfield.userinput.typography.sm.fontSize};
+          font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
+          line-height: ${inputfield.userinput.typography.sm.lineHeight};
         }
 
         &.md {
           padding: ${inputfield.container.padding.md};
           margin: ${inputslot.margin.md};
+          font-weight: ${inputfield.userinput.typography.md.fontWeight};
+          font-size: ${inputfield.userinput.typography.md.fontSize};
+          font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
+          line-height: ${inputfield.userinput.typography.md.lineHeight};
         }
 
         &.lg {
           padding: ${inputfield.container.padding.lg};
           margin: ${inputslot.margin.lg};
+          font-weight: ${inputfield.userinput.typography.lg.fontWeight};
+          font-size: ${inputfield.userinput.typography.lg.fontSize};
+          font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
+          line-height: ${inputfield.userinput.typography.lg.lineHeight};
         }
 
         &:hover {
-          border-width: ${inputfield.container.border.default.hover.width};
-          border-style: ${inputfield.container.border.default.hover.style};
-          border-color: ${inputfield.container.border.default.hover.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
-
-          &.blr-input-icon {
-            color: ${InputIcon.Icon.IconColor.Rest};
-          }
-
-          &.error-select:not(.disabled) + .blr-input-icon {
-            color: ${inputfield.container.border.error.rest.color};
-            cursor: default;
-          }
+          border-color: ${inputfield.container.border.default.hover.color};
         }
 
         &.focus {
-          border-width: ${inputfield.container.border.default.rest.width};
-          border-style: ${inputfield.container.border.default.rest.style};
-          border-color: transparent;
-          outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
-            ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
           background-color: ${inputfield.container.bgcolor.default.focus};
-        }
-
-        &.disabled {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.disabled.style};
-          border-color: transparent;
-          outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
-            ${inputfield.container.border.default.disabled.color};
-          color: ${inputfield.userinput.textcolor.default.disabled};
-          background-color: ${inputfield.container.bgcolor.default.disabled};
-          cursor: not-allowed;
-
-          .blr-form-select {
-            border: none;
-            outline: none;
-            background: transparent;
-            cursor: not-allowed;
-          }
-
-          .blr-input-icon {
-            color: ${InputIcon.Icon.IconColor.Rest};
-          }
-        }
-
-        &[readonly] {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.readonly.style};
-          border-color: transparent;
-          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
-            ${inputfield.container.border.default.readonly.color};
-          background-color: ${inputfield.container.bgcolor.default.readonly};
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
+          border-color: ${inputfield.container.border.default.focus.color};
+          outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+            ${inputfield.container.border.default.focus.color};
         }
 
         &:active {
-          border-width: ${inputfield.container.border.default.pressed.width};
-          border-style: ${inputfield.container.border.default.pressed.style};
-          border-color: transparent;
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
+          border-color: ${inputfield.container.border.default.pressed.color};
         }
 
-        &.error-input {
-          border-width: ${inputfield.container.border.error.rest.width};
-          border-style: ${inputfield.container.border.error.rest.style};
-          border-color: ${inputfield.container.border.error.rest.color};
-          background-color: ${inputfield.container.bgcolor.error.rest};
+        &.disabled {
+          color: ${inputfield.userinput.textcolor.default.disabled};
+          background-color: ${inputfield.container.bgcolor.default.disabled};
+          border-color: ${inputfield.container.border.default.disabled.color};
+        }
 
-          &.focus {
-            border-width: ${inputfield.container.border.error.rest.width};
-            border-style: ${inputfield.container.border.error.rest.style};
-            border-color: transparent;
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-              ${inputfield.container.border.error.focus.color};
-            color: ${inputfield.userinput.textcolor.error.focus};
-            background-color: ${inputfield.container.bgcolor.error.focus};
-          }
+        &.error-select {
+          color: ${inputfield.userinput.textcolor.error.rest};
+          background-color: ${inputfield.container.bgcolor.error.rest};
+          outline-color: ${inputfield.container.border.error.rest.color};
 
           &:hover {
-            border-width: ${inputfield.container.border.error.hover.width};
-            border-style: ${inputfield.container.border.error.hover.style};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
+            border-color: ${inputfield.container.border.error.hover.color};
           }
 
           &:active {
-            border-width: ${inputfield.container.border.error.pressed.width};
-            border-style: ${inputfield.container.border.error.pressed.style};
-            border-color: ${inputfield.container.border.error.pressed.color};
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-              ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
             background-color: ${inputfield.container.bgcolor.error.pressed};
+            border-color: ${inputfield.container.border.error.pressed.color};
           }
 
-          .blr-input-icon {
-            color: ${InputIcon.Icon.IconColor.Error};
-          }
-
-          .blr-form-select {
-            background: transparent;
-            color: ${inputfield.userinput.textcolor.error.rest};
+          &.focus {
+            color: ${inputfield.userinput.textcolor.error.focus};
+            background-color: ${inputfield.container.bgcolor.error.focus};
+            border-color: ${inputfield.container.border.error.focus.color};
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
           }
         }
       }
     `;
-  }
-);
+  })}
+`;
+
+function getDirectionIndicatorIconStyles({
+  theme,
+  semanticTokens,
+}: {
+  theme: ThemeType;
+  semanticTokens: typeof semanticTokenTypes.default.sem;
+}) {
+  const { inputfield } = semanticTokens.forms;
+
+  return css`
+    .${directionIndicatorIconClassName}.${theme} {
+      color: ${inputfield.icon.iconcolor.default.rest};
+
+      &.sm {
+        height: ${inputfield.icon.iconsize.sm};
+        width: ${inputfield.icon.iconsize.sm};
+      }
+
+      &.md {
+        height: ${inputfield.icon.iconsize.md};
+        width: ${inputfield.icon.iconsize.md};
+      }
+
+      &.lg {
+        height: ${inputfield.icon.iconsize.lg};
+        width: ${inputfield.icon.iconsize.lg};
+      }
+    }
+
+    .select-wrapper.${theme} {
+      &:hover .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.hover};
+      }
+
+      &:focus-within .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.focus};
+      }
+
+      &:active .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.pressed};
+      }
+
+      &.disabled {
+        .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.default.disabled};
+        }
+      }
+
+      &.error,
+      .error.disabled {
+        .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.rest};
+        }
+
+        &:hover .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.hover};
+        }
+
+        &:focus-within .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.focus};
+        }
+
+        &:active .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.pressed};
+        }
+      }
+    }
+  `;
+}

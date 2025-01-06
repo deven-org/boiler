@@ -1,13 +1,14 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRangeSliderRenderFunction } from './renderFunction';
-import type { BlrRangeSliderType } from '.';
+import { BlrRangeSliderRenderFunction } from './renderFunction.js';
+import type { BlrRangeSliderType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRangeSliderType = {
-  theme: 'Light',
+  theme: Themes[0],
   rangeInputId: 'range-id',
   initialValue: 80,
   minValue: 75,
@@ -38,7 +39,7 @@ describe('blr-range-slider', () => {
       BlrRangeSliderRenderFunction({
         ...sampleParams,
         disabled: true,
-      })
+      }),
     );
 
     const textarea = querySelectorDeep('input', element.getRootNode() as HTMLElement);
@@ -53,7 +54,7 @@ describe('blr-range-slider', () => {
       BlrRangeSliderRenderFunction({
         ...sampleParams,
         disabled: false,
-      })
+      }),
     );
 
     const textarea = querySelectorDeep('input', element.getRootNode() as HTMLElement);
@@ -68,7 +69,7 @@ describe('blr-range-slider', () => {
       BlrRangeSliderRenderFunction({
         ...sampleParams,
         showLegend: false,
-      })
+      }),
     );
 
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -86,7 +87,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      })
+      }),
     );
 
     const inputWrapper = querySelectorAllDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -123,7 +124,7 @@ describe('blr-range-slider', () => {
         minValue: 75,
         maxValue: 130,
         disabled: false,
-      })
+      }),
     );
 
     const inputWrapper = querySelectorAllDeep('.input-wrapper', element.getRootNode() as HTMLElement);

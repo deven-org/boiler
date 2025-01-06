@@ -12,40 +12,43 @@
   This will make it possible to switch prebuild themes on the fly on a component level
 */
 
-import { componentTokens as componentTokensType } from './componentTokensType.generated';
-import { semanticTokens as semanticTokensType } from './semanticTokensType.generated';
+console.log('# # # pseudo generated');
+import { makeIterator, joinCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
+import { tokens as cmpLight } from './mjs_modules/__component-tokens.Licht_value.generated.mjs';
+import { tokens as cmpDark } from './mjs_modules/__component-tokens.Dunkel_value.generated.mjs';
+import { tokens as semLight } from './mjs_modules/__semantic-tokens.Licht_value.generated.mjs';
+import { tokens as semDark } from './mjs_modules/__semantic-tokens.Dunkel_value.generated.mjs';
 
-import {
-  semanticTokens as semanticTokensLight,
-  componentTokens as componentTokensLight,
-} from './index.Light.generated';
+export const componentTokenTree = {
+  Licht_value: cmpLight.cmp,
+  Dunkel_value: cmpDark.cmp,
+};
 
-import { semanticTokens as semanticTokensDark, componentTokens as componentTokensDark } from './index.Dark.generated';
+export const semanticTokenTree = {
+  Licht_value: semLight.sem,
+  Dunkel_value: semDark.sem,
+};
 
-import { CSSResult } from 'lit';
+export const ComponentThemeIterator = (
+  renderFunction: (
+    theme: keyof typeof componentTokenTree,
+    cmp: typeof componentTokenTree.Licht_value,
+    css: typeof joinCss,
+  ) => string,
+) => {
+  const it = makeIterator<typeof componentTokenTree>();
 
-export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT: semanticTokensType) => CSSResult): {
-  tokenizedLight: CSSResult;
-  tokenizedDark: CSSResult;
-} {
-  let tokenizedLight, tokenizedDark;
+  return it(componentTokenTree, renderFunction);
+};
 
-  try {
-    tokenizedLight = renderFunc(componentTokensLight, semanticTokensLight);
-  } catch (error) {
-    console.error(error);
-  }
+export const SemanticThemeIterator = (
+  renderFunction: (
+    theme: keyof typeof semanticTokenTree,
+    sem: typeof semanticTokenTree.Licht_value,
+    css: typeof joinCss,
+  ) => string,
+) => {
+  const it = makeIterator<typeof semanticTokenTree>();
 
-  try {
-    tokenizedDark = renderFunc(componentTokensDark, semanticTokensDark);
-  } catch (error) {
-    console.error(error);
-  }
-
-  return {
-    // @ts-expect-error todo
-    tokenizedLight,
-    // @ts-expect-error todo
-    tokenizedDark,
-  };
-}
+  return it(semanticTokenTree, renderFunction);
+};

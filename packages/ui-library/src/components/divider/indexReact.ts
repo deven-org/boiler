@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrDivider } from '.';
+import { BlrDivider } from './index.js';
 
 export const BlrDividerReact = createComponent({
   tagName: 'blr-divider',

@@ -1,188 +1,188 @@
 {
   "cmp": {
-    "CaptionComponent": {
-      "Text": {
-        "Typography": {
-          "SM": {
-            "value": "{sem.ui.caption.s_100}",
-            "type": "typography"
+    "formcaption": {
+      "text": {
+        "typography": {
+          "sm": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_100}"
           },
-          "MD": {
-            "value": "{sem.ui.caption.s_200}",
-            "type": "typography"
+          "md": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_200}"
           },
-          "LG": {
-            "value": "{sem.ui.caption.s_300}",
-            "type": "typography"
+          "lg": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       }
     },
-    "Counter": {
-      "Text": {
-        "Typography": {
-          "SM": {
-            "value": "{sem.ui.caption.s_100}",
-            "type": "typography"
+    "counter": {
+      "text": {
+        "typography": {
+          "sm": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_100}"
           },
-          "MD": {
-            "value": "{sem.ui.caption.s_200}",
-            "type": "typography"
+          "md": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_200}"
           },
-          "LG": {
-            "value": "{sem.ui.caption.s_300}",
-            "type": "typography"
+          "lg": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       }
     },
-    "Dialog": {
-      "ContentSection": {
-        "Text": {
-          "Typography": {
-            "value": "{sem.ui.paragraph.s_200.regular}",
-            "type": "typography"
+    "dialog": {
+      "contentsection": {
+        "text": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{sys.typography.paragraph.p_200.regular}"
           }
         }
       },
-      "HeaderSection": {
-        "Headline": {
-          "Typography": {
-            "value": "{sem.ui.headline.h5}",
-            "type": "typography"
+      "headersection": {
+        "headline": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{sys.typography.headline.h5}"
           }
         }
       }
     },
-    "FormLabel": {
-      "Label": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-            "type": "typography"
+    "formlabel": {
+      "label": {
+        "typography": {
+          "sm": {
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_200}"
           },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-            "type": "typography"
+          "md": {
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_300}"
           },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
-            "type": "typography"
+          "lg": {
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_400}"
           }
         }
       },
-      "LabelAppendix": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-            "type": "typography"
+      "labelappendix": {
+        "typography": {
+          "sm": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_100}"
           },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-            "type": "typography"
+          "md": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_200}"
           },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-            "type": "typography"
+          "lg": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_300}"
           }
         }
       },
-      "InlineLabel": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-            "type": "typography"
+      "inlinelabel": {
+        "typography": {
+          "sm": {
+            "$type": "typography",
+            "$value": "{sys.typography.input.inp_100}"
           },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-            "type": "typography"
+          "md": {
+            "$type": "typography",
+            "$value": "{sys.typography.input.inp_200}"
           },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-            "type": "typography"
+          "lg": {
+            "$type": "typography",
+            "$value": "{sys.typography.input.inp_300}"
           }
         }
       }
     },
-    "Menu": {
-      "MenuItem": {
-        "ItemLabel": {
-          "Typography": {
-            "value": "{sem.buttons.label.typography.md}",
-            "type": "typography"
+    "menu": {
+      "menuitem": {
+        "itemlabel": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{sys.typography.label.lbl_200}"
           }
         },
-        "ItemDescription": {
-          "Typography": {
-            "value": "{sem.ui.caption.s_200}",
-            "type": "typography"
+        "itemdescription": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{sys.typography.caption.cap_200}"
           }
         }
       },
-      "MenuSection": {
-        "SectionTitle": {
-          "Typography": {
-            "value": "{core.typography.sourceSansPro.semibold.75}",
-            "type": "typography"
+      "menusection": {
+        "sectiontitle": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{sys.typography.paragraph.p_50.strong}"
           }
         }
       }
     },
-    "RadioGroup": {
-      "Legend": {
-        "SM": {
-          "value": "{sem.buttons.label.typography.sm}",
-          "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+    "radiogroup": {
+      "legend": {
+        "sm": {
+          "$type": "typography",
+          "$value": "{sem.forms.fieldset.legend.typography.sm}",
+          "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
-        "MD": {
-          "value": "{sem.buttons.label.typography.md}",
-          "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+        "md": {
+          "$type": "typography",
+          "$value": "{sem.forms.fieldset.legend.typography.md}",
+          "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
-        "LG": {
-          "value": "{sem.buttons.label.typography.lg}",
-          "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+        "lg": {
+          "$type": "typography",
+          "$value": "{sem.forms.fieldset.legend.typography.lg}",
+          "$description": "apply on <...radiogroup/.../legendwrapper/legend>"
         }
       }
     },
-    "Slider": {
-      "Legend": {
-        "Typography": {
-          "value": "{core.typography.sourceSansPro.regular.75}",
-          "type": "typography"
+    "slider": {
+      "legend": {
+        "typography": {
+          "$type": "typography",
+          "$value": "{sys.typography.caption.cap_100}"
         }
       }
     },
-    "TabBar": {
-      "Tab": {
-        "Label": {
-          "Typography": {
-            "SM": {
-              "value": "{sem.buttons.label.typography.sm}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+    "tabbar": {
+      "tab": {
+        "label": {
+          "typography": {
+            "sm": {
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_100}",
+              "$description": "typography of the label of a tab-button"
             },
-            "MD": {
-              "value": "{sem.buttons.label.typography.md}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+            "md": {
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_200} label",
+              "$description": "typography of the label of a tab-button"
             },
-            "LG": {
-              "value": "{sem.buttons.label.typography.lg}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+            "lg": {
+              "$type": "typography",
+              "$value": "{sys.typography.label.lbl_300}",
+              "$description": "typography of the label of a tab-button"
             }
           }
         }
       }
     },
-    "Tooltip": {
-      "Text": {
-        "Typography": {
-          "value": "{sem.ui.caption.s_100}",
-          "type": "typography"
+    "tooltip": {
+      "text": {
+        "typography": {
+          "$type": "typography",
+          "$value": "{sys.typography.caption.cap_100}"
         }
       }
     }

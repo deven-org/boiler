@@ -1,6 +1,6 @@
 import { IconKeys, IconType } from '@boiler/icons';
-import { InputSizesType, SizesType } from '../globals/types';
-import { capturingRegex } from './capture-size-regex';
+import { InputSizesType, SizesType } from '../globals/types.js';
+import { capturingRegex } from './capture-size-regex.js';
 
 const hasIconSize = (icon: string) => IconKeys.includes(icon);
 

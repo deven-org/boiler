@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+import { css } from "../../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const styleCustom = typeSafeNestedCss`
+export const staticStyles = css`
   .input-row {
     margin-top: 13px;
   }

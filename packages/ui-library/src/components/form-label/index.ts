@@ -1,31 +1,33 @@
-import { html, nothing } from 'lit';
-import { TAG_NAME } from './renderFunction';
-import { classMap } from 'lit-html/directives/class-map.js';
-import { property } from 'lit/decorators.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
-import { InputSizesType } from '../../globals/types';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { html } from 'lit';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { TAG_NAME } from './renderFunction.js';
+import { classMap } from 'lit/directives/class-map.js';
+import { property } from '../../utils/lit/decorators.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { InputSizesType } from '../../globals/types.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export class BlrFormLabel extends LitElementCustom {
   static styles = [];
 
-  @property() label = '';
-  @property() labelAppendix?: string;
-  @property() sizeVariant?: InputSizesType = 'md';
-  @property() forValue: string | undefined;
-  @property() theme: ThemeType = 'Light';
-  @property() hasError: boolean = false;
+  @property() accessor label = '';
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor sizeVariant: InputSizesType | undefined = 'md';
+  @property() accessor forValue: string | undefined;
+  @property() accessor theme: ThemeType = Themes[0];
+  @property({ type: Boolean }) accessor hasError: boolean = false;
 
   private _error: Error | null = null;
 
-  createRenderRoot() {
+  protected createRenderRoot() {
     const isInShadowRoot = this.getRootNode() instanceof ShadowRoot;
     if (!isInShadowRoot) {
       // BlrFormLabel is not supposed to be rendered outside of another
       // component's shadow-dom, as it is unencapsulated!
       this._error = new Error(
-        "BlrFormLabel is not supposed to be rendered outside of another component's shadow-dom, as it is unencapsulated!"
+        "BlrFormLabel is not supposed to be rendered outside of another component's shadow-dom, as it is unencapsulated!",
       );
     }
 
@@ -38,29 +40,31 @@ export class BlrFormLabel extends LitElementCustom {
   }
 
   /** Readonly error */
-  get error(): Error | null {
-    return this._error;
+  get error(): Error | undefined {
+    return this._error ?? undefined;
   }
 
   protected render() {
     if (this.sizeVariant && !this._error) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+      const dynamicStyles = [staticFormStyles];
 
       const labelClasses = classMap({
         'blr-form-label': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         'error': this.hasError,
+        [this.theme]: this.theme,
       });
 
       const spanClasses = classMap({
         'blr-form-label-appendix': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
-        <label class=${labelClasses} for=${this.forValue || nothing}>
+      // Since it doesnt have a shadowRoot, lit cant apply styles to it.
+      // We have to render styles inline here, which is not great
+      return html` ${unsafeHTML(`<style>${dynamicStyles.map((style) => style.cssText).join('\n')}</style>`)}
+        <label class=${labelClasses} for=${ifDefined(this.forValue)}>
           ${this.label}
           <span class=${spanClasses}>${this.labelAppendix}</span>
         </label>`;
@@ -72,4 +76,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrFormLabel);
 }
 
-export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElementCustom | 'createRenderRoot' | 'error'>;
+export type BlrFormLabelType = ElementInterface<BlrFormLabel>;

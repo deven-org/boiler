@@ -1,45 +1,46 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { html, nothing } from 'lit';
-import { property, state } from 'lit/decorators.js';
+import { state } from 'lit/decorators.js';
+import { property } from '../../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
-import { styleCustom } from './index.css';
+import { staticStyles } from './index.css.js';
 
-import { TAG_NAME } from './renderFunction';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
-import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
-import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils';
-import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
-import { LitElementCustom } from '../../../utils/lit-element-custom';
+import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes.js';
+import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css.js';
+import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
+import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils.js';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
+import { LitElementCustom, ElementInterface } from '../../../utils/lit/element.js';
 
 export class BlrRangeLegendSlider extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticSharedStyles, staticStyles];
 
-  @property() onClickMinMax?: (param: number) => void;
-  @property() onChange!: (val: number, event: Event) => HTMLButtonElement['onchange'];
+  @property() accessor onClickMinMax: ((param: number) => void) | undefined = undefined;
+  @property() accessor onChange!: (val: number, event: Event) => HTMLButtonElement['onchange'];
 
-  @property() rangeInputId!: string;
+  @property() accessor rangeInputId!: string;
 
-  @property() initialValue!: string;
-  @property() list!: Array<string>;
-  @property() stepFactor!: number;
+  @property() accessor initialValue!: string;
+  @property({ type: Array }) accessor list!: Array<string>;
+  @property({ type: Number }) accessor stepFactor!: number;
 
-  @property() size: FormSizesType = 'md';
-  @property() btnVariant: ActionVariantType = 'silent';
+  @property() accessor size: FormSizesType = 'md';
+  @property() accessor btnVariant: ActionVariantType = 'silent';
 
-  @property() incrementIcon!: SizelessIconType;
-  @property() decrementIcon!: SizelessIconType;
+  @property() accessor incrementIcon!: SizelessIconType;
+  @property() accessor decrementIcon!: SizelessIconType;
 
-  @property() showLegend?: boolean = true;
-  @property() disabled?: boolean = false;
+  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = Themes[0];
 
-  @property({ type: Boolean }) isUpdated? = false;
+  @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 
-  @state() protected selectedIndex = 0;
+  @state() protected accessor selectedIndex = 0;
 
   protected updated(changedProperties: Map<string, number>) {
     if (changedProperties.has('selectedIndex') && !this.isUpdated) {
@@ -62,8 +63,6 @@ export class BlrRangeLegendSlider extends LitElementCustom {
     })}`;
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
-
     const stepsArray = this.list;
 
     const tickFrequency = 1;
@@ -85,91 +84,89 @@ export class BlrRangeLegendSlider extends LitElementCustom {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
-      [`${this.size || 'md'}`]: this.size || 'md',
+      [this.size || 'md']: this.size || 'md',
+      [this.theme]: this.theme,
     });
 
     const inputCmp1 = this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`;
     const slider = this.shadowRoot?.querySelector(`#${inputCmp1}`) as HTMLInputElement;
     const toolTipPos = slider && findToolTipPosition(slider.min, slider.max, slider.offsetWidth, this.selectedIndex);
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class=${classes}>
-        <fieldset class="range__field">
-          <div class="input-wrapper">
-            <div class="min-max-btnwrapper">
-              ${this.renderBtn({
-                btnId: 'dec_btn',
-                btnEventHandler: () => setValue('DEC'),
-                iconName: this.decrementIcon,
-              })}
-            </div>
-            <div class="input-row">
-              <div class="range-wrapper" id="range-wrapper">
-                <input
-                  id=${inputCmp1}
-                  type="range"
-                  min="0"
-                  .value="${this.selectedIndex}"
-                  max="${stepsArray.length - 1}"
-                  step="${this.stepFactor}"
-                  class="range"
-                  style=""
-                  @change=${showVal}
-                  @input=${showVal}
-                  ?disabled=${this.disabled}
-                />
-                <div id="tooltip1" class="tooltip" style="bottom:0px; left: ${toolTipPos}">
-                  ${stepsArray[this.selectedIndex]}
-                </div>
-              </div>
-              <div class="tick-wrapper">
-                <div class="range__bar-row">
-                  ${map(filteredStepsArray, (step, i) => {
-                    const currentIndex = this.selectedIndex;
-
-                    const barClasses = `range__bar ${
-                      i >= currentIndex ? 'range__bar-unselected' : 'range__bar-selected'
-                    }   ${this.disabled ? `bar-disabled` : ``}`;
-
-                    const pipClasses = `range__pip ${
-                      i >= currentIndex ? 'range__pip-unselected' : 'range__pip-selected'
-                    }  ${this.disabled ? `pip-disabled` : ``}`;
-
-                    return html`
-                      <div class="range__container">
-                        <div class=${pipClasses} id="pip-${i}"><span></span></div>
-                      </div>
-                      <div class=${barClasses}></div>
-                    `;
-                  })}
-                </div>
-              </div>
-              ${this.showLegend
-                ? html`
-                    <div class="legend-wrapper">
-                      <div class="range__numbers">
-                        ${map(filteredStepsArray, (step) => {
-                          return html`<div class="range__container legend_values"><p class="range__point ${
-                            this.disabled ? `point-disabled` : ``
-                          }">${step}</p></div></div> `;
-                        })}
-                      </div>
-                    </div>
-                  `
-                : nothing}
-            </div>
-            <div class="min-max-btnwrapper">
-              ${this.renderBtn({
-                btnId: 'inc_btn',
-                btnEventHandler: () => setValue('INC'),
-                iconName: this.incrementIcon,
-              })}
-            </div>
+    return html` <div class=${classes}>
+      <fieldset class="range__field">
+        <div class="input-wrapper ${this.theme}">
+          <div class="min-max-btnwrapper">
+            ${this.renderBtn({
+              btnId: 'dec_btn',
+              btnEventHandler: () => setValue('DEC'),
+              iconName: this.decrementIcon,
+            })}
           </div>
-        </fieldset>
-      </div>`;
+          <div class="input-row">
+            <div class="range-wrapper" id="range-wrapper">
+              <input
+                id=${inputCmp1}
+                type="range"
+                min="0"
+                .value="${String(this.selectedIndex)}"
+                max="${stepsArray.length - 1}"
+                step="${this.stepFactor}"
+                class="range ${this.theme}"
+                style=""
+                @change=${showVal}
+                @input=${showVal}
+                ?disabled=${this.disabled}
+              />
+              <div id="tooltip1" class="tooltip" style="bottom:0px; left: ${toolTipPos}">
+                ${stepsArray[this.selectedIndex]}
+              </div>
+            </div>
+            <div class="tick-wrapper">
+              <div class="range__bar-row">
+                ${map(filteredStepsArray, (step, i) => {
+                  const currentIndex = this.selectedIndex;
+
+                  const barClasses = `range__bar ${this.theme} ${
+                    i >= currentIndex ? 'range__bar-unselected' : 'range__bar-selected'
+                  }   ${this.disabled ? `bar-disabled` : ``}`;
+
+                  const pipClasses = `range__pip ${
+                    i >= currentIndex ? 'range__pip-unselected' : 'range__pip-selected'
+                  }  ${this.disabled ? `pip-disabled` : ``}`;
+
+                  return html`
+                    <div class="range__container ${this.theme}">
+                      <div class=${pipClasses} id="pip-${i}"><span></span></div>
+                    </div>
+                    <div class=${barClasses}></div>
+                  `;
+                })}
+              </div>
+            </div>
+            ${this.showLegend
+              ? html`
+                  <div class="legend-wrapper">
+                    <div class="range__numbers">
+                      ${map(filteredStepsArray, (step) => {
+                        return html`<div class="range__container ${this.theme} legend_values"><p class="range__point ${
+                          this.disabled ? `point-disabled` : ``
+                        }">${step}</p></div></div> `;
+                      })}
+                    </div>
+                  </div>
+                `
+              : nothing}
+          </div>
+          <div class="min-max-btnwrapper">
+            ${this.renderBtn({
+              btnId: 'inc_btn',
+              btnEventHandler: () => setValue('INC'),
+              iconName: this.incrementIcon,
+            })}
+          </div>
+        </div>
+      </fieldset>
+    </div>`;
   }
 }
 
@@ -177,4 +174,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeLegendSlider);
 }
 
-export type BlrRangeLegendSliderType = Omit<BlrRangeLegendSlider, keyof LitElementCustom>;
+export type BlrRangeLegendSliderType = ElementInterface<BlrRangeLegendSlider>;

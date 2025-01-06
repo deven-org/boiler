@@ -1,11 +1,11 @@
 import { html } from 'lit-html';
-import { Sizes } from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import '../../index';
-import { BlrIconRenderFunction } from './renderFunction';
-import { SizesType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { PureIconKeys, SizelessIconType } from '@boiler/icons/icons-optimized';
+import { Sizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import '../../index.js';
+import { BlrIconRenderFunction } from './renderFunction.js';
+import { SizesType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { PureIconKeys, SizelessIconType } from '@boiler/icons';
 
 const sharedStyles = html`
   <style>
@@ -16,7 +16,9 @@ const sharedStyles = html`
       align-items: center;
     }
     .label {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1.2rem;
@@ -112,7 +114,7 @@ type IconType = {
   fillParent: boolean;
 };
 const defaultParams: IconType = {
-  theme: 'Light',
+  theme: Themes[0],
   sizeVariant: 'md',
   icon: 'blr360',
   fillParent: false,

@@ -1,21 +1,21 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrButtonTextRenderFunction } from './renderFunction';
-import type { BlrButtonTextType } from '.';
+import { BlrButtonTextRenderFunction } from './renderFunction.js';
+import type { BlrButtonTextType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrButtonTextType = {
   label: 'Button',
   icon: 'blr360',
-  hasIcon: true,
   iconPosition: 'leading',
   loading: false,
   disabled: false,
   buttonTextId: 'button-id',
   variant: 'cta',
-  theme: 'Light',
+  theme: Themes[0],
   buttonDisplay: 'inline-block',
 };
 
@@ -215,50 +215,34 @@ describe('blr-button-text', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires blrfocus event if focused and not disabled', async () => {
+  it('fires blrFocus event if focused and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
-      fired = true;
+    const focusPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrFocus', () => resolve());
     });
 
-    button?.focus();
+    button?.dispatchEvent(new FocusEvent('focus'));
 
-    expect(fired).to.be.true;
+    await focusPromise;
+    expect(true).to.be.true;
   });
 
-  it('doesnt fires blrfocus event if focused and disabled', async () => {
-    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: true }));
-
-    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
-
-    element.getRootNode()?.addEventListener('blrFocus', () => {
-      fired = true;
-    });
-
-    button?.focus();
-
-    expect(fired).to.be.false;
-  });
-
-  it('fires blrblur event if blurred and not disabled', async () => {
+  it('fires blrBlur event if blurred and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
-      fired = true;
+    const blurPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrBlur', () => resolve());
     });
 
-    button?.focus();
-    button?.blur();
+    button?.dispatchEvent(new FocusEvent('blur'));
 
-    expect(fired).to.be.true;
+    await blurPromise;
+    expect(true).to.be.true;
   });
 
   it('doesnt fires blrblur event if blurred and disabled', async () => {

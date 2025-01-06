@@ -1,4 +1,4 @@
-import { capturingRegex } from './capture-size-regex';
+import { capturingRegex } from './capture-size-regex.js';
 
 const removeIconSizes = (icons: string[]) => {
   return icons.map((icon: string) => {

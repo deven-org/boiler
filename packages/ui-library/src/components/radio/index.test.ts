@@ -1,22 +1,23 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRadioRenderFunction } from './renderFunction';
+import { BlrRadioRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrRadioType } from '.';
+import { BlrRadioType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrRadioType = {
   checked: false,
   disabled: false,
   name: 'Default Name',
-  optionId: 'testId',
+  radioId: 'testId',
   label: 'harald',
   required: false,
-  readonly: false,
   hasHint: true,
   hasError: false,
-  theme: 'Light',
+  theme: Themes[0],
+  errorMessageIcon: undefined,
 };
 
 describe('blr-radio', () => {
@@ -34,10 +35,10 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
-      })
+        errorMessageIcon: 'blrErrorFilled',
+      }),
     );
 
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
@@ -64,7 +65,7 @@ describe('blr-radio', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrRadioRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrRadioRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const radioGroup = querySelectorDeep('.blr-radio', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
@@ -77,7 +78,7 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasError: true,
-      })
+      }),
     );
 
     const radio = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
@@ -91,12 +92,28 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasError: false,
-      })
+      }),
     );
 
     const radio = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
     const className = radio?.className;
 
     expect(className).not.to.contain('error');
+  });
+
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrRadioRenderFunction({
+        ...sampleParams,
+        hasHint: false,
+        hasError: true,
+        errorMessageIcon: undefined,
+      }),
+    );
+    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
+    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorMessageIcon).to.not.exist;
   });
 });

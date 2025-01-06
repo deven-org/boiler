@@ -1,109 +1,156 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
-import { InputSizesType } from '../../globals/types';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
-import { TAG_NAME } from './renderFunction';
+import { query } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { InputSizesType } from '../../globals/types.js';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { staticStyles as staticRadioStyles } from './index.css.js';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
+import {
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectedValueChangeEvent,
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrCheckedChangeEvent,
+} from '../../globals/events.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { SignalHub } from '../../utils/lit/signals.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
-export class BlrRadio extends LitElementCustom {
-  static styles = [styleCustom];
+/**
+ * @fires blrFocus Radio received focus
+ * @fires blrBlur Radio lost focus
+ * @fires blrSelectedValueChangeEvent Radio selected value changed
+ */
 
-  @property() optionId!: string;
-  @property() label!: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() checked?: boolean;
-  @property() name?: string;
-  @property() size?: InputSizesType = 'md';
-  @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType;
-  @property() hasHint?: boolean;
-  @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType;
+export class BlrRadio extends LitElementCustom implements PublicReactiveProperties {
+  public declare signals: SignalHub<PublicReactiveProperties>;
 
-  @property() theme: ThemeType = 'Light';
+  static styles = [staticFormStyles, staticRadioStyles];
+
+  @query('input')
+  protected accessor _radioNode!: HTMLInputElement;
+
+  @property() accessor optionId!: string;
+  @property() accessor label!: string;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor checked: boolean | undefined;
+  @property() accessor name: string | undefined;
+  @property() accessor sizeVariant: InputSizesType | undefined = 'md';
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor value: string | undefined;
+  @property() accessor theme: ThemeType = Themes[0];
+
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleClick(event: Event) {
+    event.preventDefault();
+
+    if (!this.disabled) {
+      const changeEvent = createBlrSelectedValueChangeEvent({
+        originalEvent: event,
+        selectedValue: this._radioNode.value,
+      });
+
+      this.dispatchEvent(changeEvent);
+
+      if (!changeEvent.defaultPrevented) {
+        this.checked = true;
+      }
+    }
+  }
 
   protected render() {
-    if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
-
+    if (this.sizeVariant) {
       const classes = classMap({
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
         disabled: this.disabled || false,
-        readonly: this.readonly || false,
         checked: this.checked || false,
         error: this.hasError || false,
       });
 
+      const calculateOptionId = (label: string) => {
+        return label.replace(/ /g, '_').toLowerCase();
+      };
+
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? html`
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  sizeVariant: this.size,
+                  sizeVariant: this.sizeVariant,
                   message: this.hintMessage,
-                  icon: this.hintIcon,
+                  icon: this.hintMessageIcon,
                 })}
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? html`
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  sizeVariant: this.size,
+                  sizeVariant: this.sizeVariant,
                   message: this.errorMessage,
-                  icon: this.errorIcon,
+                  icon: this.errorMessageIcon,
                 })}
               </div>
             `
           : nothing}
       `;
-
+      const id = calculateOptionId(this.label);
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
         <div class="blr-radio ${classes}">
           <input
-            id=${this.optionId || nothing}
+            id=${id ? id : ''}
             class="${classes} input-control"
             type="radio"
-            name=${this.name}
+            name="${ifDefined(this.name)}"
             ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
-            ?invalid=${this.hasError}
+            ?data-has-error=${this.hasError || false}
             ?checked=${this.checked}
+            .checked=${this.checked === true}
             ?required=${this.required}
-            @input=${this.onChange}
-            @blur=${this.onBlur}
-            @focus=${this.onFocus}
+            @click=${this.handleClick}
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
           />
           <div class="label-wrapper">
             ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
-              forValue: this.optionId,
-              labelSize: this.size,
+              forValue: id,
+              labelSize: this.sizeVariant,
+              theme: this.theme,
             })}
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
+            ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) ||
+            (this.hasError && (this.errorMessageIcon || this.errorMessage))
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
               : nothing}
           </div>
         </div>
@@ -116,4 +163,30 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadio);
 }
 
-export type BlrRadioType = Omit<BlrRadio, keyof LitElementCustom>;
+export type BlrRadioType = PublicReactiveProperties & PublicMethods & BlrRadioEventHandlers;
+
+export type PublicReactiveProperties = {
+  optionId: string;
+  label: string;
+  disabled?: boolean;
+  name?: string;
+  sizeVariant?: InputSizesType;
+  required?: boolean;
+  hasError?: boolean;
+  errorMessage?: string;
+  errorMessageIcon?: SizelessIconType;
+  hasHint?: boolean;
+  hintMessage?: string;
+  hintMessageIcon?: SizelessIconType;
+  value?: string;
+  theme: ThemeType;
+  checked?: boolean;
+};
+
+export type PublicMethods = unknown;
+
+export type BlrRadioEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrSelectedValueChangeEvent?: (event: BlrCheckedChangeEvent) => void;
+};

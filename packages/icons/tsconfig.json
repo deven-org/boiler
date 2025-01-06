@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "target": "es2020",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "useDefineForClassFields": false
+  },
+  "include": ["src"]
+}

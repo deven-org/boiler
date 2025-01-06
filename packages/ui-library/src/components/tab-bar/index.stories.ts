@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
-import { BlrTabBarType } from './index';
-import { BlrTabBarRenderFunction } from './renderFunction';
+import { BlrTabBarType } from './index.js';
+import { BlrTabBarRenderFunction } from './renderFunction.js';
 import {
   FormSizes,
   IconPositionVariant,
@@ -9,11 +9,12 @@ import {
   TabAlignmentVariants,
   TabContentVariants,
   TabVariants,
-} from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+} from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Components/TabBar',
@@ -65,17 +66,17 @@ export default {
 };
 
 const tabsAsChildren = html`
-  <p disabled label="Tab 1" icon="blr360">Tab 1</p>
-  <p label="Tab 2" icon="blr360">Tab 2</p>
-  <p label="Tab 3" icon="blr360">Tab 3</p>
-  <p label="Tab 4" icon="blr360">Tab 4</p>
-  <p label="Tab 5" icon="blr360">Tab 5</p>
-  <p label="Tab 6" icon="blr360">Tab 6</p>
-  <p label="Tab 7" icon="blr360">Tab 7</p>
-  <p label="Tab 8" icon="blr360">Tab 8</p>
-  <p label="Tab 9" icon="blr360">Tab 9</p>
-  <p label="Tab 10" icon="blr360">Tab 10</p>
-  <p label="Tab 11" icon="blr360">Tab 11</p>
+  <blr-tab-bar-item .disabled=${true} label="Tab 1" icon="blr360">Tab 1</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 2" icon="blr360" @blrFocus=${(e) => e} @blrBlur=${(e) => e}>Tab 2</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 3" icon="blr360">Tab 3</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 4" icon="blr360">Tab 4</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 5" icon="blr360">Tab 5</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 6" icon="blr360">Tab 6</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 7" icon="blr360">Tab 7</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 8" icon="blr360">Tab 8</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 9" icon="blr360">Tab 9</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 10" icon="blr360">Tab 10</blr-tab-bar-item>
+  <blr-tab-bar-item label="Tab 11" icon="blr360">Tab 11</blr-tab-bar-item>
 `;
 
 export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(params, tabsAsChildren);
@@ -83,7 +84,7 @@ export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(para
 BlrTabBar.storyName = 'TabBar';
 
 const args: BlrTabBarType = {
-  theme: 'Light',
+  theme: Themes[0],
   variant: 'standard',
   overflowVariantStandard: 'buttons',
   overflowVariantFullWidth: 'browserOverflow',
@@ -92,6 +93,7 @@ const args: BlrTabBarType = {
   tabContent: 'labelAndIcon',
   iconPosition: 'leading',
   alignment: 'left',
+  blrSelectedValueChange: () => action('blrSelectedValueChange'),
 };
 
 BlrTabBar.args = args;
