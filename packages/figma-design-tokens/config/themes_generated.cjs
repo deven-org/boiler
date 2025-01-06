@@ -1,2 +1,2 @@
-const themes = ["Light_value","Dark_value"] 
+const themes = ["Licht_value","Dunkel_value"] 
 exports.array = themes;

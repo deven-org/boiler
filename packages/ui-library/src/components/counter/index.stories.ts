@@ -94,7 +94,7 @@ It is not intended to use the Counter directly when creating new applications.
 export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(params);
 BlrCounter.storyName = 'Counter';
 const defaultParams: BlrCounterType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   variant: 'neutral',
   sizeVariant: 'md',
   value: 3,

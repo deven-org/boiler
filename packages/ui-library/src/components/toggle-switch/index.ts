@@ -4,7 +4,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { TAG_NAME } from './renderFunction.js';
 import { BlrIconRenderFunction } from '../icon/renderFunction.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
@@ -63,7 +63,7 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
   @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.active;
 

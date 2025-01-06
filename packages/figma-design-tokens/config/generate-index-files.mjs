@@ -1,8 +1,9 @@
 import fs from 'fs';
 import chalk from 'chalk';
 import themes from './themes_generated.cjs';
+import { buildpaths } from './buildpaths.mjs';
 
-const files = fs.readdirSync(`../ui-library/src/foundation/_tokens-generated`);
+const files = fs.readdirSync(buildpaths.mjs_modules);
 
 const convertToCamelCase = (item) => {
   let convertedString = item;
@@ -32,9 +33,9 @@ themes.array.map((theme) => {
 
   const filteredJsFiles = files.filter((item) => item.endsWith(theme + '.generated.mjs') && item.startsWith('__'));
 
-  const importsPart = filteredJsFiles.map(
-    (item) => `import {${convertToCamelCase(item.split('.')[0])}} from './${item}'`,
-  );
+  const importsPart = filteredJsFiles.map((item) => {
+    return `import {tokens as ${convertToCamelCase(item.split('.')[0])}} from './mjs_modules/${item}';`;
+  });
   const constsPart = filteredJsFiles.map(
     (item) =>
       `const ${convertToCamelCase(item.split('.')[0])}Wrapped = wrapValuesWithCss(${convertToCamelCase(
@@ -47,9 +48,7 @@ themes.array.map((theme) => {
 
   const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css.js';
       ${importsPart.join('\n')}
-  
       ${constsPart.join('\n')}
-      
       ${exportsPart.join('\n')}`;
 
   console.log(chalk.cyanBright(`👷 creates foundation/_tokens-generated/index.${theme}.generated.ts... \n`));

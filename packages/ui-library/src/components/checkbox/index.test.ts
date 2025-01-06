@@ -5,6 +5,7 @@ import { BlrCheckboxRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrCheckboxType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrCheckboxType = {
   label: 'Checkbox Option',
@@ -19,7 +20,7 @@ const sampleParams: BlrCheckboxType = {
   hasHint: false,
   hintMessage: 'This is a sample hint',
   hintMessageIcon: undefined,
-  theme: 'Light_value',
+  theme: Themes[0],
   hasLabel: true,
 };
 

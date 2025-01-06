@@ -7,12 +7,13 @@ import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-d
 import { getRandomString } from '../../utils/get-random.string.js';
 
 import { BlrFocusEvent } from '../../globals/events.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrInputFieldNumberType = {
   placeholder: 'Type your message here ..',
   disabled: false,
   stepperVariant: 'vertical',
-  theme: 'Light_value',
+  theme: Themes[0],
   readonly: true,
   required: true,
   hasLabel: true,

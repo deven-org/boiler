@@ -7,7 +7,7 @@ import { staticStyles } from './index.css.js';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType, DisplayType } from '../../globals/types.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { BlrCounterRenderFunction } from '../counter/renderFunction.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -41,7 +41,7 @@ const propertySanitizer = makeSanitizer((unsanitized: BlrTextareaType) => ({
   warningLimitPer: unsanitized.warningLimitPer ?? 75,
   resize: unsanitized.resize ?? 'none',
   hasHint: unsanitized.hasHint ?? true,
-  theme: unsanitized.theme ?? 'Light_value',
+  theme: unsanitized.theme ?? Themes[0],
 }));
 
 /**
@@ -95,7 +95,7 @@ export class BlrTextarea extends LitElementCustom {
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined = undefined;
   @property() accessor hint: string | undefined;
-  @property({ type: Boolean }) accessor hasHint = true;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property({ type: Boolean }) accessor hasCounter: boolean | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;

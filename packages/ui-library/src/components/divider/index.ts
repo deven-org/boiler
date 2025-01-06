@@ -3,7 +3,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { DividerVariationTypes } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
@@ -11,7 +11,7 @@ export class BlrDivider extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor direction: DividerVariationTypes = 'vertical';
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   protected render() {
     const dividerClasses = classMap({
