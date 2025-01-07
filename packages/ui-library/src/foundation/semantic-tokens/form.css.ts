@@ -90,18 +90,6 @@ export const staticSemanticStyles = css`
           }
         }
 
-        &:active {
-          outline-offset: calc(${forms.inputfield.container.border.default.hover.width} * -1);
-          outline: ${forms.inputfield.container.border.default.pressed.width} ${forms.inputfield.container.border.default.pressed.style}
-            ${forms.inputfield.container.border.default.pressed.color};
-          color: ${forms.inputfield.userinput.textcolor.default.pressed};
-          background-color: ${forms.inputfield.container.bgcolor.default.pressed};
-
-          &::placeholder {
-            color: ${forms.inputfield.placeholder.textcolor.default.pressed};
-          }
-        }
-
         &[readonly] {
           outline-offset: calc(1px * -1);
           outline: ${forms.inputfield.container.border.default.hover.width} ${forms.inputfield.container.border.default.readonly.style}
@@ -157,18 +145,6 @@ export const staticSemanticStyles = css`
 
             &::placeholder {
               color: ${forms.inputfield.placeholder.textcolor.error.hover};
-            }
-          }
-
-          &:active {
-            outline-offset: calc(${forms.inputfield.container.border.error.focus.width} * -1);
-            outline: ${forms.inputfield.container.border.error.pressed.width} ${forms.inputfield.container.border.error.pressed.style}
-              ${forms.inputfield.container.border.error.pressed.color};
-            color: ${forms.inputfield.userinput.textcolor.error.pressed};
-            background-color: ${forms.inputfield.container.bgcolor.error.pressed};
-
-            &::placeholder {
-              color: ${forms.inputfield.placeholder.textcolor.error.pressed};
             }
           }
 

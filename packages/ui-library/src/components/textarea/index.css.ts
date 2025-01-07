@@ -193,17 +193,6 @@ export const staticStyles = css`
           }
         }
 
-        &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
-          color: ${inputfield.userinput.textcolor.default.pressed};
-          background-color: ${inputfield.container.bgcolor.default.pressed};
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.default.pressed};
-          }
-        }
-
         &.disabled {
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
@@ -268,17 +257,6 @@ export const staticStyles = css`
 
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.focus};
-            }
-          }
-
-          &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-              ${inputfield.container.border.error.pressed.color};
-            color: ${inputfield.userinput.textcolor.error.pressed};
-            background-color: ${inputfield.container.bgcolor.error.pressed};
-
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.error.pressed};
             }
           }
         }

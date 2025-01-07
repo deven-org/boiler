@@ -77,12 +77,6 @@ export const styleCustom = css`
             }
           }
 
-          &:active {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.pressed};
-            }
-          }
-
           &[readonly] {
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.readonly};
@@ -128,15 +122,6 @@ export const styleCustom = css`
 
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
-              }
-            }
-
-            &:active {
-              border: none;
-              outline: none;
-
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.pressed};
               }
             }
 
@@ -233,13 +218,13 @@ export const styleCustom = css`
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
-        }
 
-        &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
-          color: ${inputfield.userinput.textcolor.default.pressed};
-          background-color: ${inputfield.container.bgcolor.default.pressed};
+          &.focus {
+            outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
+            outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+              ${inputfield.container.border.default.focus.color};
+            background-color: ${inputfield.container.bgcolor.default.focus};
+          }
         }
 
         &.error-input {
@@ -247,25 +232,18 @@ export const styleCustom = css`
             ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
+          &:hover {
+            outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+              ${inputfield.container.border.error.rest.color};
+            color: ${inputfield.userinput.textcolor.error.hover};
+            background-color: ${inputfield.container.bgcolor.error.hover};
+          }
+
           &.focus {
             outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
               ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
             background-color: ${inputfield.container.bgcolor.error.focus};
-          }
-
-          &:hover {
-            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style};
-            border-color: ${inputfield.container.border.error.hover.color};
-            color: ${inputfield.userinput.textcolor.error.hover};
-            background-color: ${inputfield.container.bgcolor.error.hover};
-          }
-
-          &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-              ${inputfield.container.border.error.pressed.color};
-            color: ${inputfield.userinput.textcolor.error.pressed};
-            background-color: ${inputfield.container.bgcolor.error.pressed};
           }
 
           .blr-form-input {
@@ -319,10 +297,6 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
           color: ${inputfield.icon.iconcolor.default.focus};
         }
 
-        &:active .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.pressed};
-        }
-
         &:has(input[readonly]):not(.error-input) .${iconClassName} {
           color: ${inputfield.icon.iconcolor.default.readonly};
         }
@@ -342,10 +316,6 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
 
           &:focus-within .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.focus};
-          }
-
-          &:active .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.pressed};
           }
         }
       }

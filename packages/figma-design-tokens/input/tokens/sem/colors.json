@@ -915,10 +915,6 @@
                 "$type": "color",
                 "$value": "{sys.bgcolor.container.neutral}"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.container.neutral}"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.container.neutral}"
@@ -941,10 +937,6 @@
                 "$type": "color",
                 "$value": "{sys.bgcolor.container.danger}"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.bgcolor.container.danger}"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.bgcolor.container.danger}"
@@ -958,10 +950,6 @@
                 "$value": "{sys.bordercolor.container.neutral}"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.container.neutral}"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.container.neutral}"
               },
@@ -987,10 +975,6 @@
                 "$type": "color",
                 "$value": "{sys.bordercolor.container.danger}"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.bordercolor.container.danger}"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.bordercolor.container.danger}"
@@ -1006,10 +990,6 @@
                 "$value": "{sys.content.container.neutral.subtle}"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.content.container.neutral.subtle}"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.content.container.neutral.subtle}"
               },
@@ -1032,10 +1012,6 @@
                 "$value": "{sys.content.container.danger.subtle}"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.content.container.danger.subtle}"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.content.container.danger.subtle}"
               },
@@ -1057,10 +1033,6 @@
                 "$type": "color",
                 "$value": "{sys.content.container.neutral.subtle}"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.content.container.neutral.subtle}"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.content.container.neutral.subtle}"
@@ -1083,10 +1055,6 @@
                 "$type": "color",
                 "$value": "{sys.content.container.danger.subtle}"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.content.container.danger.subtle}"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.content.container.danger.subtle}"
@@ -1103,11 +1071,6 @@
                 "$description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.content.container.neutral.subtle}",
-                "$description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.content.container.neutral.subtle}",
                 "$description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
@@ -1139,11 +1102,6 @@
                 "$value": "{sys.content.container.danger.subtle}",
                 "$description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               },
-              "pressed": {
-                "$type": "color",
-                "$value": "{sys.content.container.danger.subtle}",
-                "$description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-              },
               "focus": {
                 "$type": "color",
                 "$value": "{sys.content.container.danger.subtle}",
@@ -1160,10 +1118,6 @@
                 "$value": "{sys.content.container.neutral.regular}"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.content.container.neutral.regular}"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.content.container.neutral.regular}"
               },
@@ -1186,10 +1140,6 @@
                 "$value": "{sys.content.container.danger.regular}"
               },
               "hover": {
-                "$type": "color",
-                "$value": "{sys.content.container.danger.regular}"
-              },
-              "pressed": {
                 "$type": "color",
                 "$value": "{sys.content.container.danger.regular}"
               },
