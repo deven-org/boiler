@@ -19,14 +19,6 @@ export { BlrRadioGroup } from './components/radio-group/index.js';
 
 export { BlrSelect } from './components/select/index.js';
 
-export { BlrRangeSlider } from './components/slider-single-value/range-slider/index.js';
-
-export { BlrRangeLegendSlider } from './components/slider-single-value/range-legend-slider/index.js';
-
-export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-max-slider/index.js';
-
-export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider/index.js';
-
 export { BlrInputFieldText } from './components/input-field-text/index.js';
 
 export { BlrTextarea } from './components/textarea/index.js';

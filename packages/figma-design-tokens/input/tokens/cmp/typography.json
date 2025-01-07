@@ -147,14 +147,6 @@
         }
       }
     },
-    "slider": {
-      "legend": {
-        "typography": {
-          "$type": "typography",
-          "$value": "{sys.typography.caption.cap_100}"
-        }
-      }
-    },
     "tabbar": {
       "tab": {
         "label": {
