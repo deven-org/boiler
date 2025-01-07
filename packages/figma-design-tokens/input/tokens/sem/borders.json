@@ -327,14 +327,6 @@
                   "style": "solid"
                 }
               },
-              "pressed": {
-                "$type": "border",
-                "$value": {
-                  "color": "{sem.forms.inputfield.container.bordercolor.default.pressed}",
-                  "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
-                  "style": "solid"
-                }
-              },
               "focus": {
                 "$type": "border",
                 "$value": {
@@ -374,14 +366,6 @@
                 "$value": {
                   "color": "{sem.forms.inputfield.container.bordercolor.error.hover}",
                   "width": "{sem.forms.inputfield.container.borderwidth.hover}",
-                  "style": "solid"
-                }
-              },
-              "pressed": {
-                "$type": "border",
-                "$value": {
-                  "color": "{sem.forms.inputfield.container.bordercolor.error.pressed}",
-                  "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
                   "style": "solid"
                 }
               },
