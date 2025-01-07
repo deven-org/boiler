@@ -11,9 +11,6 @@ import { DisplayOptions, FormSizes, Resizes } from '../../globals/constants.js';
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
-  theme: 'Light_value',
-  sizeVariant: 'md',
-  resize: 'both',
   textAreaDisplay: 'block',
   cols: 40,
   rows: 4,
@@ -24,13 +21,9 @@ const defaultParams: BlrTextareaType = {
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
-  hasHint: false,
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
   hasCounter: true,
-  warningLimitType: 'warningLimitInt',
-  warningLimitInt: 105,
-  warningLimitPer: 75,
   disabled: false,
   readonly: false,
   required: false,
@@ -439,7 +432,7 @@ export const SizeVariant = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'sm',
           label: 'Text Area SM',
           hintMessage: '',
@@ -448,7 +441,7 @@ export const SizeVariant = () => {
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Text Area MD',
           hintMessage: '',
@@ -457,7 +450,7 @@ export const SizeVariant = () => {
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'lg',
           label: 'Text Area LG',
           hintMessage: '',
@@ -484,7 +477,7 @@ export const Resize = () => {
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
-            theme: 'Light_value',
+            theme: Themes[0],
             sizeVariant: 'md',
             label: 'Auto resize',
             placeholder: '',
@@ -496,7 +489,7 @@ export const Resize = () => {
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
-            theme: 'Light_value',
+            theme: Themes[0],
             sizeVariant: 'md',
             label: 'Horizontal resize',
             hintMessage: '',
@@ -508,7 +501,7 @@ export const Resize = () => {
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
-            theme: 'Light_value',
+            theme: Themes[0],
             sizeVariant: 'md',
             label: 'Vertical resize',
             placeholder: '',
@@ -520,7 +513,7 @@ export const Resize = () => {
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
-            theme: 'Light_value',
+            theme: Themes[0],
             sizeVariant: 'md',
             label: 'No resize',
             placeholder: '',
@@ -549,7 +542,7 @@ export const Placeholder = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'With placeholder',
           labelAppendix: '',
@@ -559,7 +552,7 @@ export const Placeholder = () => {
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           hintMessage: '',
           label: 'Without placeholder',
@@ -589,7 +582,7 @@ export const Disabled = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Disabled',
           placeholder: '',
@@ -619,7 +612,7 @@ export const Readonly = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Readonly',
           hintMessage: '',
@@ -647,7 +640,7 @@ export const Required = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Label-text',
           placeholder: '',
@@ -677,7 +670,7 @@ export const HasError = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           hasError: true,
@@ -707,7 +700,7 @@ export const FormLabel = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           hintMessage: '',
@@ -717,7 +710,7 @@ export const FormLabel = () => {
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: 'Without label',
           label: ' ',
@@ -745,7 +738,7 @@ export const FormCaptionGroup = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
@@ -757,7 +750,7 @@ export const FormCaptionGroup = () => {
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           placeholder: '',
           label: 'Hint and error message',
@@ -786,7 +779,7 @@ export const Counter = () => {
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          theme: 'Light_value',
+          theme: Themes[0],
           sizeVariant: 'md',
           label: 'Counter',
           hasCounter: true,

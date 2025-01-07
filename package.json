@@ -1,6 +1,6 @@
 {
   "name": "@boiler/boiler",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "Monorepo for the B01LER Design System",
   "main": "",
   "types": "",
@@ -98,6 +98,7 @@
   "dependencies": {
     "@geometricpanda/storybook-addon-badges": "^2.0.2",
     "http-server": "^14.1.1",
+    "json-to-ts": "^2.1.0",
     "nested-css-to-flat": "^1.0.5",
     "rimraf": "^5.0.5"
   },

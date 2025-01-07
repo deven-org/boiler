@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrInputFieldNumberType = {
-  theme: 'Light_value',
+  theme: Themes[0],
   sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',

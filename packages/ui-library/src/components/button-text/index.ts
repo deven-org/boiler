@@ -4,7 +4,7 @@ import { state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import {
   IconPositionVariant,
@@ -30,6 +30,8 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrButtonTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -37,25 +39,48 @@ export type BlrButtonTextEventHandlers = {
   blrClick?: (event: BlrClickEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrButtonTextType) => ({
+  iconPosition: unsanitized.iconPosition ?? 'leading',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  buttonDisplay: unsanitized.buttonDisplay ?? 'inline-block',
+}));
+
 /**
  * @fires blrFocus Button received focus
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
 export class BlrButtonText extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrButtonTextType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrButtonTextType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [styleCustom, staticActionStyles];
 
   @property() accessor label = 'Button Label';
-  @property() accessor icon: SizelessIconType | undefined = undefined;
-  @property() accessor iconPosition: IconPositionVariant | undefined = 'leading';
+  @property() accessor icon: SizelessIconType | undefined;
+  @property() accessor iconPosition: IconPositionVariant | undefined;
   @property({ type: Boolean }) accessor loading!: boolean;
   @property({ type: Boolean }) accessor disabled!: boolean;
   @property() accessor buttonTextId: string | undefined;
   @property() accessor variant: ActionVariantType = 'primary';
-  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
-  @property() accessor buttonDisplay: DisplayType | undefined = 'inline-block';
+  @property() accessor sizeVariant: ActionSizesType | undefined;
+  @property() accessor buttonDisplay: DisplayType | undefined;
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @state() protected accessor focused = false;
 
@@ -80,27 +105,28 @@ export class BlrButtonText extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant && this.buttonDisplay) {
+    const sanitized = this.sanitizedController.values;
+    if (sanitized.sizeVariant && this.buttonDisplay) {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-button-text': true,
         [this.variant]: this.variant,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         'disabled': this.disabled,
         'loading': this.loading,
-        [this.buttonDisplay]: this.buttonDisplay,
+        [sanitized.buttonDisplay]: sanitized.buttonDisplay,
         [this.theme]: this.theme,
       });
 
       const iconClasses = classMap({
         'icon': true,
-        'leading-icon-class': this.iconPosition === 'leading',
-        'trailing-icon-class': this.iconPosition === 'trailing',
+        'leading-icon-class': sanitized.iconPosition === 'leading',
+        'trailing-icon-class': sanitized.iconPosition === 'trailing',
       });
 
       const flexContainerClasses = classMap({
         'flex-container': true,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         [this.theme]: this.theme,
       });
 
@@ -118,7 +144,7 @@ export class BlrButtonText extends LitElementCustom {
         'buttons',
         'loader',
         'sizevariant',
-        this.sizeVariant,
+        sanitized.sizeVariant,
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
@@ -126,11 +152,11 @@ export class BlrButtonText extends LitElementCustom {
         'buttontext',
         'icon',
         'sizevariant',
-        this.sizeVariant,
-      ]) as SizesType;
+        sanitized.sizeVariant,
+      ]).toLowerCase() as SizesType;
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
-        ${this.icon && this.iconPosition === 'leading'
+        ${this.icon && sanitized.iconPosition === 'leading'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),
@@ -144,7 +170,7 @@ export class BlrButtonText extends LitElementCustom {
             )
           : nothing}
         <span class="label">${this.label} </span>
-        ${this.icon && this.iconPosition === 'trailing'
+        ${this.icon && sanitized.iconPosition === 'trailing'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),

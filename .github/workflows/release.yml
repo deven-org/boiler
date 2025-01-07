@@ -1,0 +1,30 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Release Please Action
+        uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+          package-name: '@boiler/boiler'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: main
+          branch: main
+          versioning: always-bump-minor

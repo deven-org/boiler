@@ -1,7 +1,7 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
+import type * as semanticTokenTypes from "../../foundation/_tokens-generated/module_declarations/__semantic-tokens.Licht_value.generated.js";
 import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
 const directionIndicatorIconClassName = "icon-direction-indicator";
@@ -146,7 +146,13 @@ export const staticStyles = css`
   })}
 `;
 
-function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: semanticTokens["sem"] }) {
+function getDirectionIndicatorIconStyles({
+  theme,
+  semanticTokens,
+}: {
+  theme: ThemeType;
+  semanticTokens: typeof semanticTokenTypes.default.sem;
+}) {
   const { inputfield } = semanticTokens.forms;
 
   return css`

@@ -5,7 +5,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css.js';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
 import {
@@ -41,7 +41,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
   @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
   @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 

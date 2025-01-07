@@ -8,7 +8,7 @@ import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globa
 
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes.js';
 import {
   findPercentage,
   generateRangeBar,
@@ -41,7 +41,7 @@ export class BlrRangeSlider extends LitElementCustom {
   @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
   @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
-  @property() accessor theme: ThemeType = 'Light_value';
+  @property() accessor theme: ThemeType = Themes[0];
 
   @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 

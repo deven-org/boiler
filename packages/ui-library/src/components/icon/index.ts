@@ -7,7 +7,7 @@ import { DirectiveResult } from 'lit/directive.js';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction.js';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
@@ -25,7 +25,7 @@ export class BlrIcon extends LitElementCustom {
   @property() accessor sizeVariant: SizesType | undefined = 'md';
   @property({ type: Boolean }) accessor fillParent: boolean | undefined = true;
 
-  @property() accessor theme: ThemeType | undefined = 'Light_value';
+  @property() accessor theme: ThemeType | undefined = Themes[0];
   @property({ type: Object }) accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
 
   protected handleClick = (event: MouseEvent | KeyboardEvent) => {
