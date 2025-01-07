@@ -5,7 +5,8 @@
   "scripts": {
     "style-dictionary": "node ./config/style-dictionary.config.mjs",
     "generate-index-files": "node ./config/generate-index-files.mjs",
-    "tokens:generate": "node ./config/style-dictionary.config.mjs && yarn generate-index-files "
+    "start-index-generator": "node ./config/index-generator.mjs",
+    "tokens:generate": "node ./config/style-dictionary.config.mjs && yarn generate-index-files && yarn start-index-generator"
   },
   "author": "",
   "license": "MIT",
