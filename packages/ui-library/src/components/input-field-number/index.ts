@@ -261,7 +261,6 @@ export class BlrInputFieldNumber extends LitElementCustom {
         [this.sizeVariant]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
-        'readonly': this.readonly || false,
         [this.theme]: this.theme,
       });
 

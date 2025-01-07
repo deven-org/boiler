@@ -107,6 +107,7 @@ export class BlrTextarea extends LitElementCustom {
   @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor count = 0;
+  @state() protected accessor isFocused = false;
   @query('textarea') protected accessor textareaElement: HTMLTextAreaElement | null = null;
 
   connectedCallback() {
@@ -170,12 +171,14 @@ export class BlrTextarea extends LitElementCustom {
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
+      this.isFocused = true;
       this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
   protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled) {
+      this.isFocused = false;
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
