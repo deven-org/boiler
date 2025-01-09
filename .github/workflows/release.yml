@@ -27,4 +27,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: main
           branch: main
-          bump-minor-pre-major: true
