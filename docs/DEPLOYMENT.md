@@ -32,10 +32,9 @@ We use the [Git-Flow](https://www.atlassian.com/git/tutorials/comparing-workflow
 
 ```mermaid
         gitGraph
-       commit id: "a"
+        commit id: "a"
        commit id: "b"
        branch develop
-       checkout develop
        checkout develop
        branch feature1
        checkout feature1
@@ -47,15 +46,7 @@ We use the [Git-Flow](https://www.atlassian.com/git/tutorials/comparing-workflow
        commit id: "d"
        checkout develop
        merge feature2
-       checkout main
-       merge develop
-       branch "release"
-       checkout release
        commit id: "1.0.0" tag: "release"
-       checkout main
-       merge release
-       checkout develop
-       merge main
 ```
 
 ## Release Please
@@ -63,10 +54,11 @@ We use the [Git-Flow](https://www.atlassian.com/git/tutorials/comparing-workflow
 Release Please automates CHANGELOG generation, the creation of GitHub releases, and version bumps for your projects.
 Release Please does so by parsing the git history, looking for Conventional Commit messages, and creating release PRs.
 
-The tool runs on every update on the `main` branch and creates a release PR which needs to be manually be merged to
+The tool runs on every push to the `develop` branch and creates a release PR which needs to be manually be merged to
 create the release.
 
-The updated `main` branch then needs to be merged back, please use rebase, into the `develop` branch.
+Once the release PR is merged (back into `develop`), release-please automatically creates a GitHub release based on the
+merged changes.
 
 ## Conventional Commit Messages
 
@@ -77,16 +69,10 @@ exceed a maximum character count of 140. The scope is allowed to be one of the f
 
 ## How to deploy
 
-One needs to create a new PR from `develop` to `main`. Once the PR is approved and merged the GitHub workflow `release`
-will be started.
-
-The `release` workflow will first run the tests and after they were successful a new release branch is created together
-with a PR from the release branch into `main`.
-
-The newly created release PR needs to be manually merged into main to finish the package creation and release
-publishing.
-
-After the release PR is merged the `develop` branch also needs to be updated by rebasing it onto the `main` branch.
+Deployment is automated via the release-please workflow, which operates on the develop branch. Push changes to the
+develop branch. The release-please workflow creates a release PR on develop with version bumps and changelog updates.
+Review and merge the release PR back into develop. Once merged, the workflow publishes the package to the npm registry
+and creates a GitHub release.
 
 ## Versioning
 
