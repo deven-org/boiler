@@ -13,6 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Check if commit message contains 'release'
+        id: check_commit_message
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MESSAGE"
+
+          if [[ "$COMMIT_MESSAGE" != *"chore(release)"* ]]; then
+            echo "Commit message doesn't contain 'chore(release)'. Skipping release."
+            echo "skip_release=true" >> $GITHUB_ENV  
+          else
+            echo "Commit message contain 'chore(release)'. Proceeding with release."
+            echo "skip_release=false" >> $GITHUB_ENV  
+          fi
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -25,3 +39,4 @@ jobs:
           release-type: node
           package-name: '@boiler/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
+        if: env.skip_release == 'false'
