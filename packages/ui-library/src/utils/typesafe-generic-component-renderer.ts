@@ -1,5 +1,5 @@
-import { TemplateResult, html } from 'lit';
-import { camelCaseToKebabCase } from './lit-element-custom';
+import { TemplateResult, html, nothing } from 'lit';
+import { camelCaseToKebabCase } from './lit/decorators.js';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
@@ -40,25 +40,24 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
     });
 
     // 1.2. Collect html attribute name fragments and values from htmlAttributes
-    attrEntries.forEach(([key, value], index) => {
+    attrEntries.forEach(([key, value]) => {
       if (typeof value !== 'boolean' || value === true) {
-        if (index > 0) {
-          templateFragments.push(` ${key}=`);
-        }
-
-        values.push(value);
+        templateFragments.push(` ${key}=`);
+      } else {
+        templateFragments.push(` ?${key}=`);
       }
-    });
 
-    // 1.3. Close the open tag after all props and attributes are processed.
-    templateFragments.push('>');
+      values.push(value);
+    });
   }
 
+  // 1.3. Close the open tag after all props and attributes are processed.
+  templateFragments.push('>');
   // 2. Insert child elements if any
   if (children) {
     values.push(children);
   } else {
-    values.push('');
+    values.push(nothing);
   }
 
   // 3. Render the HTML close tag

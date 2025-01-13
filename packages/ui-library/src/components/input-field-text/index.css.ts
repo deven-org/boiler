@@ -1,8 +1,13 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 
-export const styleCustom = typeSafeNestedCss`
+import * as semanticTokenTypes from "../../foundation/_tokens-generated/module_declarations/__semantic-tokens.Licht_value.generated.js";
+
+// import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
+import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
+
+export const styleCustom = css`
   .blr-input-field-text {
     display: flex;
     flex-direction: column;
@@ -13,29 +18,18 @@ export const styleCustom = typeSafeNestedCss`
     pointer-events: none;
   }
 
-  .blr-input-icon:hover {
-    cursor: pointer;
-  }
-
-  .blr-input-icon:disabled {
-    cursor: none;
-  }
-
   .noPointerEvents {
     pointer-events: none;
   }
-`;
 
-export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTextDark } = renderThemedCssStrings(
-  (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
-    const { InputIcon } = _componentTokens.cmp;
+  ${SemanticThemeIterator((theme, sem, css) => {
+    const { inputfield, inputslot, labelslot } = sem.forms;
 
-    return typeSafeNestedCss`
-      .blr-input-field-text {
+    return css`
+      ${getInputIconStyles({ theme, semanticTokens: sem }).cssText}
 
+      .blr-input-field-text.${theme} {
         &.sm {
-
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.sm};
@@ -43,7 +37,6 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
 
         &.md {
-
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.md};
@@ -51,7 +44,6 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
 
         &.lg {
-          
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.lg};
@@ -59,7 +51,7 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
 
-      .blr-input-inner-container {
+      .blr-input-inner-container.${theme} {
         flex-grow: 1;
         flex-shrink: 1;
 
@@ -85,12 +77,6 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
             }
           }
 
-          &:active {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.pressed};
-            }
-          }
-
           &[readonly] {
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.readonly};
@@ -106,6 +92,7 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
           &.focus {
             border: none;
             outline: none;
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.focus};
             }
@@ -114,6 +101,10 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
           &.error-input {
             border: none;
             outline: none;
+
+            &::placeholder {
+              color: ${inputfield.placeholder.textcolor.error.rest};
+            }
 
             &.focus {
               border-width: ${inputfield.container.border.error.rest.width};
@@ -128,22 +119,16 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
             &:hover {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
-              }
-            }
-
-            &:active {
-              border: none;
-              outline: none;
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.pressed};
               }
             }
 
             &.focus {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.focus};
               }
@@ -173,19 +158,16 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
 
-      .blr-input-wrapper {
+      .blr-input-wrapper.${theme} {
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
+        background-color: ${inputfield.container.bgcolor.default.rest};
+        outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
           ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
         box-sizing: border-box;
-
-        .blr-input-icon {
-          position: relative;
-          color: ${inputfield.placeholder.textcolor.default.rest};
-        }
 
         &.sm {
           padding: ${inputfield.container.padding.sm};
@@ -203,35 +185,20 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
 
         &:hover {
-          border-width: ${inputfield.container.border.default.hover.width};
-          border-style: ${inputfield.container.border.default.hover.style};
-          border-color: ${inputfield.container.border.default.hover.color};
+          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style}
+            ${inputfield.container.border.default.hover.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
-
-          &.blr-input-icon {
-            color: ${InputIcon.Icon.IconColor.Hover};
-          }
-
-          &.error-input:not(.disabled) + .blr-input-icon {
-            color: ${inputfield.container.border.error.rest.color};
-            cursor: default;
-          }
         }
 
         &.focus {
-          border-width: ${inputfield.container.border.default.rest.width};
-          border-style: ${inputfield.container.border.default.rest.style};
-          border-color: transparent;
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
         &.disabled {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.disabled.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
@@ -243,67 +210,40 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
             outline: none;
             background: transparent;
             cursor: not-allowed;
-          }
-
-          .blr-input-icon {
-            color: ${inputfield.placeholder.textcolor.default.rest};
+            color: ${inputfield.placeholder.textcolor.default.disabled};
           }
         }
 
-        &[readonly] {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.readonly.style};
-          border-color: transparent;
+        &.readonly {
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
-        }
 
-        &:active {
-          border-width: ${inputfield.container.border.default.pressed.width};
-          border-style: ${inputfield.container.border.default.pressed.style};
-          border-color: transparent;
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
-          color: ${inputfield.userinput.textcolor.default.pressed};
-          background-color: ${inputfield.container.bgcolor.default.pressed};
+          &.focus {
+            outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
+            outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+              ${inputfield.container.border.default.focus.color};
+            background-color: ${inputfield.container.bgcolor.default.focus};
+          }
         }
 
         &.error-input {
-          border-width: ${inputfield.container.border.error.rest.width};
-          border-style: ${inputfield.container.border.error.rest.style};
-          border-color: ${inputfield.container.border.error.rest.color};
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+            ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
-          &.focus {
-            border-width: ${inputfield.container.border.error.rest.width};
-            border-style: ${inputfield.container.border.error.rest.style};
-            border-color: transparent;
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-              ${inputfield.container.border.error.focus.color};
-            color: ${inputfield.userinput.textcolor.error.focus};
-            background-color: ${inputfield.container.bgcolor.error.focus};
-          }
-
           &:hover {
-            border-width: ${inputfield.container.border.error.hover.width};
-            border-style: ${inputfield.container.border.error.hover.style};
+            outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+              ${inputfield.container.border.error.rest.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
           }
 
-          &:active {
-            border-width: ${inputfield.container.border.error.pressed.width};
-            border-style: ${inputfield.container.border.error.pressed.style};
-            border-color: ${inputfield.container.border.error.pressed.color};
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-              ${inputfield.container.border.error.pressed.color};
-            color: ${inputfield.userinput.textcolor.error.pressed};
-            background-color: ${inputfield.container.bgcolor.error.pressed};
-          }
-
-          .blr-input-icon {
-            color: ${inputfield.container.border.error.rest.color};
+          &.focus {
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
+            color: ${inputfield.userinput.textcolor.error.focus};
+            background-color: ${inputfield.container.bgcolor.error.focus};
           }
 
           .blr-form-input {
@@ -313,5 +253,72 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
     `;
-  }
-);
+  })}
+`;
+
+function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: typeof semanticTokenTypes.default.sem }) {
+  const iconClassName = "icon-input";
+  const { inputfield } = semanticTokens.forms;
+
+  return css`
+    :host {
+      .${iconClassName}.${theme} {
+        cursor: pointer;
+        position: relative;
+        color: ${inputfield.icon.iconcolor.default.rest};
+
+        &.no-pointer-events {
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &.sm {
+          height: ${inputfield.icon.iconsize.sm};
+          width: ${inputfield.icon.iconsize.sm};
+        }
+
+        &.md {
+          height: ${inputfield.icon.iconsize.md};
+          width: ${inputfield.icon.iconsize.md};
+        }
+
+        &.lg {
+          height: ${inputfield.icon.iconsize.lg};
+          width: ${inputfield.icon.iconsize.lg};
+        }
+      }
+
+      .blr-input-wrapper.${theme} {
+        &:hover .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.hover};
+        }
+
+        &:focus-within .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.focus};
+        }
+
+        &:has(input[readonly]):not(.error-input) .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.readonly};
+        }
+
+        &.disabled .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.disabled};
+        }
+
+        &.error-input {
+          .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.rest};
+          }
+
+          &:hover .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.hover};
+          }
+
+          &:focus-within .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.focus};
+          }
+        }
+      }
+    }
+  `;
+}

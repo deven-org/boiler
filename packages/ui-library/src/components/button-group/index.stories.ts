@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import '../../index';
-import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
-import { BlrButtonIconRenderFunction } from '../button-icon/renderFunction';
-import { BlrButtonTextRenderFunction } from '../button-text/renderFunction';
-import { BlrButtonGroupType } from '.';
-import { BlrButtonGroupRenderFunction } from './renderFunction';
+import '../../index.js';
+import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants.js';
+import { BlrButtonIconRenderFunction } from '../button-icon/renderFunction.js';
+import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
+import { BlrButtonGroupType } from './index.js';
+import { BlrButtonGroupRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sharedStyles = html`
   <style>
@@ -15,14 +16,18 @@ const sharedStyles = html`
     }
 
     h4 {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1rem;
       text-align: center;
     }
     .label {
-      font-family: Source Sans Pro, sans-serif;
+      font-family:
+        Source Sans Pro,
+        sans-serif;
       font-weight: 400;
       line-height: 1rem;
       font-size: 1.5rem;
@@ -75,12 +80,12 @@ export default {
 export const ButtonGroup = (
   params: BlrButtonGroupType,
   primaryLabel: string = 'Button Text',
-  secondaryLabel: string = 'Button Text'
+  secondaryLabel: string = 'Button Text',
 ) => {
   const contentButtons = html`
     ${BlrButtonTextRenderFunction({
       label: typeof primaryLabel === 'string' ? primaryLabel : 'Button Text',
-      theme: 'Light',
+      theme: Themes[0],
       loading: false,
       variant: 'primary',
       disabled: false,
@@ -88,14 +93,14 @@ export const ButtonGroup = (
     })}
     ${BlrButtonTextRenderFunction({
       label: secondaryLabel,
-      theme: 'Light',
+      theme: Themes[0],
       loading: false,
       variant: 'secondary',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
     ${BlrButtonIconRenderFunction({
-      theme: 'Light',
+      theme: Themes[0],
       loading: false,
       variant: 'silent',
       disabled: false,
@@ -111,6 +116,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
+  theme: Themes[0],
   sizeVariant: 'md',
   alignment: 'left',
 };

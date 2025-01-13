@@ -1,141 +1,172 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles as componentSpecificStaticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { radioLight, radioDark } from '../../foundation/component-tokens/radio.css';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
-import { InputSizesType, RadioOption } from '../../globals/types';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
-import { TAG_NAME } from './renderFunction';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticStyles as staticRadioStyles } from '../radio/index.css.js';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { InputSizesType, RadioGroupDirection } from '../../globals/types.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { TAG_NAME } from './renderFunction.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrSelectedValueChangeEvent,
+  createBlrSelectedValueChangeEvent,
+} from '../../globals/events.js';
+import { BlrRadio } from '../radio/index.js';
+import { batch, Signal } from '@lit-labs/preact-signals';
+
+export type BlrRadioGroupEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
+};
+
+/**
+ * @fires blrFocus Radio received focus
+ * @fires blrBlur Radio lost focus
+ * @fires blrSelectedValueChange Radio selected value changed
+ */
 
 export class BlrRadioGroup extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() checked?: boolean;
-  @property() name?: string;
-  @property() size: InputSizesType = 'md';
-  @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() hasError?: boolean;
-  @property() errorIcon?: SizelessIconType;
-  @property() hasGroupLabel?: boolean;
-  @property() options!: RadioOption[];
-  @property() hasHint = true;
-  @property() groupHintIcon?: SizelessIconType;
-  @property() groupErrorMessage?: string;
-  @property() groupHintMessage?: string;
-  @property() groupErrorIcon?: SizelessIconType;
-  @property() groupLabel?: string;
-  @property() direction?: 'vertical' | 'horizontal';
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property() accessor name: string | undefined;
+  @property() accessor sizeVariant: InputSizesType = 'md';
+  @property({ type: Boolean }) accessor hasLegend: boolean | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
+  @property() accessor errorIcon: SizelessIconType | undefined;
+  @property({ type: Boolean }) accessor hasHint = true;
+  @property() accessor groupHintMessageIcon: SizelessIconType | undefined;
+  @property() accessor groupErrorMessage: string | undefined;
+  @property() accessor groupHintMessage: string | undefined;
+  @property() accessor groupErrorMessageIcon: SizelessIconType | undefined;
+  @property() accessor legend: string | undefined;
+  @property() accessor direction: RadioGroupDirection = 'horizontal';
+  @property() accessor theme: ThemeType = Themes[0];
 
-  @property() theme: ThemeType = 'Light';
+  protected _radioElements: BlrRadio[] = [];
+  private _selectedRadio?: BlrRadio;
+  private _radioCheckedSignalSubscriptionDisposers: ReturnType<Signal['subscribe']>[] = [];
+
+  protected handleRadioCheckedSignal = (target: BlrRadio, value?: boolean) => {
+    const selectedRadio: BlrRadio | undefined = value
+      ? target
+      : target === this._selectedRadio && !value
+        ? undefined
+        : this._selectedRadio;
+
+    batch(() => {
+      this._radioElements?.forEach((radio) => {
+        if (radio !== selectedRadio) {
+          radio.checked = false;
+        }
+      });
+    });
+
+    if (this._selectedRadio !== selectedRadio) {
+      this.dispatchEvent(createBlrSelectedValueChangeEvent({ selectedValue: (<BlrRadio>selectedRadio)?.value ?? '' }));
+      this._selectedRadio = selectedRadio;
+    }
+  };
+
+  protected firstUpdated() {
+    this.handleSlotChange();
+  }
+
+  protected handleSlotChange = () => {
+    // Cleanup signal listeners from previously slotted elements
+    this._radioCheckedSignalSubscriptionDisposers.forEach((cancelSubscription) => cancelSubscription());
+
+    const slot = this.renderRoot?.querySelector('slot');
+    this._radioElements = slot?.assignedElements({ flatten: false }) as BlrRadio[];
+
+    // Add signal listeners to newly slotted elements
+    this._radioElements.forEach((item) => {
+      if (item instanceof BlrRadio === false) {
+        throw new Error('child component of blr-radio-group must be blr-radio');
+      }
+
+      item.hasError = this.hasError;
+      item.disabled = this.disabled;
+      item.theme = this.theme;
+      item.sizeVariant = this.sizeVariant;
+
+      this._radioCheckedSignalSubscriptionDisposers.push(
+        item.signals.checked.subscribe((value) => this.handleRadioCheckedSignal(item, value)),
+      );
+    });
+  };
 
   protected render() {
-    if (!this.size) {
+    if (!this.sizeVariant) {
       return null;
     }
-    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
     const legendClasses = classMap({
       'blr-legend': true,
-      [`${this.size}`]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
       'error': this.hasError || false,
     });
 
     const legendWrapperClasses = classMap({
       'blr-legend-wrapper': true,
-      [`${this.size}`]: this.size,
+      [this.theme]: this.theme,
+      [this.sizeVariant]: this.sizeVariant,
     });
 
     const classes = classMap({
-      [`${this.size}`]: this.size,
+      [this.theme]: this.theme,
+      [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
-      readonly: this.readonly || false,
-      checked: this.checked || false,
       error: this.hasError || false,
+      [this.direction]: this.direction,
     });
 
-    const calculateOptionId = (label: string) => {
-      return label.replace(/ /g, '_').toLowerCase();
-    };
     const captionContent = html`
-      ${this.hasHint && (this.groupHintMessage || this.groupHintIcon)
+      ${this.hasHint && (this.groupHintMessage || this.groupHintMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
             theme: this.theme,
-            sizeVariant: this.size,
+            sizeVariant: this.sizeVariant,
             message: this.groupHintMessage,
-            icon: this.groupHintIcon,
+            icon: this.groupHintMessageIcon,
           })
         : nothing}
-      ${this.hasError && (this.groupErrorMessage || this.groupErrorIcon)
+      ${this.hasError && (this.groupErrorMessage || this.groupErrorMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
             theme: this.theme,
-            sizeVariant: this.size,
+            sizeVariant: this.sizeVariant,
             message: this.groupErrorMessage,
-            icon: this.groupErrorIcon,
+            icon: this.groupErrorMessageIcon,
           })
         : nothing}
     `;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      ${this.hasGroupLabel
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.groupLabel}</legend></div>`
+    return html`
+      ${this.hasLegend
+        ? html`<div class="${legendWrapperClasses}">
+            <legend class="${legendClasses}">${this.legend}</legend>
+          </div>`
         : nothing}
-
       <div class="blr-radio-group ${classes}">
-        ${this.options &&
-        this.options.map((option: RadioOption) => {
-          const id = calculateOptionId(option.label);
-          return html`
-            <div class="blr-radio ${classes}">
-              <input
-                id=${id || nothing}
-                class="${classes} input-control"
-                type="radio"
-                name=${this.name}
-                ?disabled=${this.disabled}
-                ?readonly=${this.readonly}
-                ?aria-disabled=${this.disabled}
-                ?invalid=${this.hasError}
-                ?aria-invalid=${this.hasError}
-                ?checked=${this.checked}
-                ?required=${this.required}
-                @input=${this.onChange}
-                @blur=${this.onBlur}
-                @focus=${this.onFocus}
-              />
-              <div class="label-wrapper">
-                ${option.label
-                  ? html`${BlrFormLabelInlineRenderFunction({
-                      labelText: option.label,
-                      forValue: id,
-                      labelSize: this.size || 'md',
-                    })}`
-                  : nothing}
-              </div>
-            </div>
-          `;
-        })}
+        <slot @slotchange=${this.handleSlotChange}></slot>
       </div>
 
-      ${this.hasHint || this.hasError
+      ${(this.hasHint && (this.groupHintMessageIcon || this.groupHintMessage)) ||
+      (this.hasError && (this.groupErrorMessageIcon || this.groupErrorMessage))
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)}
           </div>`
-        : nothing} `;
+        : nothing}
+    `;
   }
 }
 
@@ -143,4 +174,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadioGroup);
 }
 
-export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElementCustom>;
+export type BlrRadioGroupType = ElementInterface<BlrRadioGroup & BlrRadioGroupEventHandlers>;

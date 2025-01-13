@@ -1,19 +1,18 @@
-import { html, nothing } from 'lit';
+import { PropertyValueMap, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, state } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { inputFieldTextLight, inputFieldTextDark } from './index.css';
-import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { styleCustom } from './index.css.js';
+import { InputTypes, FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { TAG_NAME } from './renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -23,8 +22,12 @@ import {
   createBlrFocusEvent,
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { BlrIconEventHandlers } from '../icon/index.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,6 +36,12 @@ export type BlrInputFieldTextEventHandlers = {
   blrSelect?: (event: BlrSelectEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrInputFieldTextType) => ({
+  type: unsanitized.type ?? 'text',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+}));
+
 /**
  * @fires blrFocus InputFieldText received focus
  * @fires blrBlur InputFieldText lost focus
@@ -40,37 +49,69 @@ export type BlrInputFieldTextEventHandlers = {
  * @fires blrSelect Text in InputFieldText got selected
  */
 export class BlrInputFieldText extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrInputFieldTextType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrInputFieldTextType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [styleCustom];
-  @property() inputFieldTextId!: string;
-  @property() type: InputTypes = 'text';
-  @property() arialabel!: string;
-  @property() hasLabel!: boolean;
-  @property() label!: string;
-  @property() labelAppendix?: string;
-  @property() value!: string;
-  @property() placeholder?: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property() required?: boolean;
-  @property() maxLength?: number;
-  @property() pattern?: string;
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() hasIcon = true;
-  @property() icon: SizelessIconType = 'blr360';
-  @property() hasHint = true;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() errorMessageIcon?: SizelessIconType;
 
-  @property() name!: string;
-  @property() theme: ThemeType = 'Light';
+  @query('input')
+  protected accessor _inputFieldTextNode!: HTMLInputElement;
 
-  @state() protected currentType: InputTypes = this.type;
-  @state() protected isFocused = false;
+  @property() accessor inputFieldTextId!: string;
+  @property() accessor type: InputTypes | undefined;
+  @property() accessor arialabel!: string;
+  @property({ type: Boolean }) accessor hasLabel!: boolean;
+  @property() accessor label!: string;
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor value!: string;
+  @property() accessor placeholder: string | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor readonly: boolean | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined;
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Number }) accessor maxLength: number | undefined;
+  @property() accessor pattern: string | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor icon: SizelessIconType | undefined = 'blr360';
+  @property({ type: Boolean }) accessor hasHint = true;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+
+  @property() accessor name!: string;
+
+  // check with ash where or if to put the default value
+  @property() accessor theme: ThemeType | undefined;
+
+  @state() protected accessor currentType: InputTypes | undefined;
+  @state() protected accessor isFocused = false;
+
+  protected willUpdate(_changedProperties: PropertyValueMap<never> | Map<PropertyKey, unknown>): void {
+    if (_changedProperties.get('type')) {
+      this.currentType = this.type;
+    }
+  }
 
   protected togglePassword = () => {
+    if (this.type !== 'password') {
+      return;
+    }
+
     this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
@@ -90,7 +131,9 @@ export class BlrInputFieldText extends LitElementCustom {
 
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
+      this.dispatchEvent(
+        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value }),
+      );
     }
   };
 
@@ -100,52 +143,95 @@ export class BlrInputFieldText extends LitElementCustom {
     }
   };
 
+  protected firstUpdated(): void {
+    const inputWrapper = this.shadowRoot?.querySelector('.blr-input-wrapper');
+    if (inputWrapper) {
+      inputWrapper.addEventListener('click', this.handleWrapperClick);
+    }
+  }
+
+  protected handleWrapperClick = (): void => {
+    if (!this.disabled) {
+      this._inputFieldTextNode.focus();
+    }
+  };
+
+  protected handleIconClick: BlrIconEventHandlers['blrClick'] = () => {
+    if (this.disabled) {
+      return;
+    }
+
+    this.togglePassword();
+  };
+
+  protected renderInputIcon() {
+    if (this.type !== 'password' && !this.icon) {
+      return nothing;
+    }
+
+    const iconSizeVariant = getComponentConfigToken([
+      'sem',
+      'forms',
+      'inputfield',
+      'icon',
+      'sizevariant',
+      this.sizeVariant!,
+    ]) as SizesType;
+
+    const iconClasses = classMap({
+      'icon-input': true,
+      [this.sizeVariant!]: this.sizeVariant!,
+      'no-pointer-events': Boolean(this.disabled || this.type !== 'password'),
+      [this.theme!]: this.theme!,
+    });
+
+    const iconName: SizelessIconType | undefined =
+      this.type === 'password' ? (this.currentType === 'password' ? 'blrEyeOff' : 'blrEyeOn') : this.icon;
+
+    return BlrIconRenderFunction(
+      {
+        icon: calculateIconName(iconName, iconSizeVariant),
+        sizeVariant: iconSizeVariant,
+        classMap: iconClasses,
+        fillParent: false,
+        blrClick: this.handleIconClick,
+      },
+      {
+        'aria-hidden': this.type !== 'password',
+      },
+    );
+  }
   protected render() {
-    if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
+    const sanitized = this.sanitizedController.values;
 
-      const wasInitialPasswordField = Boolean(this.type === 'password');
-
+    if (sanitized.sizeVariant) {
       const classes = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'blr-input-field-text': true,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: this.theme,
       });
 
       const inputClasses = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'readonly': this.readonly ? true : false,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
-
-      const iconClasses = classMap({
-        'blr-input-icon': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
-        'noPointerEvents': Boolean(this.disabled || this.readonly),
-      });
-
-      const getPasswordIcon = () => {
-        return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
-      };
-
-      const iconSizeVariant = getComponentConfigToken([
-        'sem',
-        'forms',
-        'inputfield',
-        'icon',
-        'sizevariant',
-        this.sizeVariant,
-      ]).toLowerCase() as SizesType;
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitized.theme,
+              sizeVariant: sanitized.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -153,7 +239,7 @@ export class BlrInputFieldText extends LitElementCustom {
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
-              theme: this.theme,
+              theme: sanitized.theme,
               sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
@@ -162,84 +248,50 @@ export class BlrInputFieldText extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class="blr-input-field-text ${classes}">
+        <div class="${classes}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.sizeVariant,
+                    sizeVariant: sanitized.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldTextId,
-                    theme: this.theme,
+                    theme: sanitized.theme,
                     hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
             : nothing}
           <div class="blr-input-wrapper ${inputContainerClasses}">
-            <div class="blr-input-inner-container">
+            <div class="blr-input-inner-container ${this.theme}">
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.inputFieldTextId}
-                name="${this.name || nothing}"
+                name="${ifDefined(this.name)}"
                 aria-label=${this.arialabel}
-                type="${this.currentType}"
+                type="${sanitized.type === 'text' ? this.currentType : sanitized.type}"
                 .value="${this.value}"
-                placeholder="${this.placeholder}"
+                placeholder="${ifDefined(this.placeholder)}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
                 @input=${this.handleChange}
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
-                maxlength="${this.maxLength}"
-                pattern="${this.pattern}"
-                hasError="${this.hasError}"
+                maxlength="${ifDefined(this.maxLength)}"
+                pattern="${ifDefined(this.pattern)}"
+                ?data-has-error=${this.hasError}
                 @select=${this.handleSelect}
               />
             </div>
-            ${this.hasIcon && !wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction(
-                  {
-                    icon: this.hasError
-                      ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                      : calculateIconName(this.icon, iconSizeVariant),
-                    sizeVariant: iconSizeVariant,
-                    classMap: iconClasses,
-                    fillParent: false,
-                  },
-                  {
-                    'aria-hidden': true,
-                    'name':
-                      (this.hasError
-                        ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                        : calculateIconName(this.icon, iconSizeVariant)) || '',
-                  }
-                )}`
-              : nothing}
-            ${wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction(
-                  {
-                    icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                    sizeVariant: iconSizeVariant,
-                    classMap: iconClasses,
-                    fillParent: false,
-                    blrClick: this.togglePassword,
-                  },
-                  {
-                    'aria-hidden': true,
-                    'name':
-                      (this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon()) || '',
-                  }
-                )}`
-              : nothing}
+            ${this.renderInputIcon()}
           </div>
-          ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+          ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+            ? BlrFormCaptionGroupRenderFunction(
+                { theme: sanitized.theme, sizeVariant: sanitized.sizeVariant },
+                captionContent,
+              )
             : nothing}
         </div>
       `;
@@ -251,4 +303,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldText);
 }
 
-export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElementCustom> & BlrInputFieldTextEventHandlers;
+export type BlrInputFieldTextType = ElementInterface<BlrInputFieldText>;

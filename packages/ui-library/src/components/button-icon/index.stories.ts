@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import type { BlrButtonIconType } from './index';
-import { BlrButtonIconRenderFunction } from './renderFunction';
+import type { BlrButtonIconType } from './index.js';
+import { BlrButtonIconRenderFunction } from './renderFunction.js';
 import { PureIconKeys } from '@boiler/icons';
 // this loads the all components instances and registers their html tags
-import '../../index';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { ActionVariants, ActionSizes } from '../../globals/constants';
+import '../../index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { ActionVariants, ActionSizes } from '../../globals/constants.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -36,9 +36,9 @@ const argTypesToDisable = [
   'errorIcon',
   'arialabel',
   'name',
-  'onChange',
-  'onFocus',
-  'onBlur',
+  'blrClick',
+  'blrBlur',
+  'blrFocus',
 ];
 
 const generateDisabledArgTypes = (argTypes: string[]) => {
@@ -121,23 +121,23 @@ export default {
       },
     },
     // Events
-    onChange: {
-      description: 'Fires when the value changes.',
-      action: 'onChange',
+    blrClick: {
+      description: 'Fires when the component is clicked.',
+      action: 'blrClick',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
+    blrFocus: {
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
+    blrBlur: {
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -175,7 +175,7 @@ export const BlrButtonIcon = (params: BlrButtonIconType) => BlrButtonIconRenderF
 BlrButtonIcon.storyName = 'Button Icon';
 
 const defaultParams: BlrButtonIconType = {
-  theme: 'Light',
+  theme: Themes[0],
   variant: 'primary',
   sizeVariant: 'md',
   icon: 'blr360',
@@ -286,7 +286,7 @@ Disabled.argTypes = {
 /**
  * ## Dependencies
  * ### Icon
- * The Button Icon component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
+ * The Button Icon component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 export const Icon = () => {
   return html`
@@ -305,7 +305,7 @@ Icon.argTypes = {
 };
 
 /**
- * The Button Icon uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](/docs/design-system-web-components-feedback-loader--docs) component.
+ * The Button Icon uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](/docs/components-loader--docs) component.
  */
 export const Loader = () => {
   return html`

@@ -7,12 +7,24 @@ import {
   arrow,
   Placement as PlacementType,
 } from '@floating-ui/dom';
-import { componentTokens } from '../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
-const { Tooltip } = componentTokens.cmp;
+let componentTokens;
+
+try {
+  const { tokens } = await import(
+    `../../foundation/_tokens-generated/mjs_modules/__component-tokens.${Themes[0]}.generated.mjs`
+  );
+  componentTokens = tokens;
+} catch (error) {
+  const msg = typeof error == 'string' ? error : 'module import failed';
+  throw new Error(msg);
+}
+
+const toolTip = componentTokens.cmp.tooltip;
 
 const getArrowSettings = (tooltip: HTMLElement, paddingTopBottom: number, paddingLeftRight: number, side: string) => {
-  const element = tooltip.shadowRoot?.querySelector('.arrow') as HTMLElement;
+  const element = tooltip.querySelector('.arrow') as HTMLElement;
 
   const padding =
     side === 'top' || 'bottom' ? paddingTopBottom : side === 'left' || 'right' ? paddingLeftRight : undefined;
@@ -30,16 +42,16 @@ export const tooltipPosition = (
   reference: Element | VirtualElementType,
   tooltip: HTMLElement,
   placement: PlacementType = 'top',
-  offsetValue = 0
+  offsetValue = 0,
 ) => {
   autoUpdate(reference, tooltip, () => {
     const side = placement.split('-')[0];
 
     const arrowSettings = getArrowSettings(
       tooltip,
-      parseFloat(Tooltip.NoseWrapper.Padding_V),
-      parseFloat(Tooltip.NoseWrapper.Padding_H),
-      side
+      parseFloat(toolTip.nosewrapper.padding_v),
+      parseFloat(toolTip.nosewrapper.padding_h),
+      side,
     );
 
     computePosition(reference, tooltip, {

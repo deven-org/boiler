@@ -1,13 +1,14 @@
-import { BlrRadioType } from './index';
-import { BlrRadioRenderFunction } from './renderFunction';
+import { BlrRadioType } from './index.js';
+import { BlrRadioRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
+import '../../index';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { InputSizes } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>
@@ -27,7 +28,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
       options: InputSizes,
@@ -80,7 +81,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
+    hintMessageIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
@@ -94,13 +95,6 @@ export default {
       name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
-      table: {
-        category: 'States',
-      },
-    },
-    readonly: {
-      name: 'readonly',
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       table: {
         category: 'States',
       },
@@ -127,7 +121,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
+    errorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
@@ -146,7 +140,7 @@ export default {
       },
       control: { type: 'text' },
     },
-    optionId: {
+    radioId: {
       name: 'radioId',
       description: 'Unique identifier for this component.',
       table: {
@@ -160,28 +154,25 @@ export default {
       },
       control: { type: 'text', label: 'Radio' },
     },
-    onChange: {
-      name: 'onChange',
+    blrChange: {
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrChange',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         disable: false,
         category: 'Events',
@@ -207,7 +198,6 @@ export default {
           - [**Checked**](#checked)
         - [**States**](#states)
           - [**Disabled**](#disabled)
-          - [**Readonly**](#readonly)
         - [**Validation**](#validation)
           - [**Required**](#required)
           - [**Has Error**](#has-error)
@@ -228,26 +218,25 @@ const args: BlrRadioType & {
   value: string;
   ariaLabel: string;
 } = {
-  theme: 'Light',
-  size: 'md',
-  value: '',
+  theme: Themes[0],
+  sizeVariant: 'md',
+  value: 'radioValue',
   checked: false,
   label: 'Label',
   hasHint: false,
   hintMessage: 'This is a small hint',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
-  readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
   ariaLabel: '',
-  errorIcon: undefined,
-  optionId: 'optionId',
+  errorMessageIcon: undefined,
+  radioId: 'radioId',
   name: 'Radio Button',
-  onChange: () => action('onChange'),
-  onFocus: () => action('onFocus'),
-  onBlur: () => action('onBlur'),
+  blrSelectedValueChange: () => action('blrSelectedValueChangeEvent'),
+  blrFocus: () => action('focused'),
+  blrBlur: () => action('blrBlr'),
 };
 
 BlrRadio.args = args;
@@ -263,21 +252,21 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'sm',
+        sizeVariant: 'sm',
         label: 'Radio SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Radio MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'lg',
+        sizeVariant: 'lg',
         label: 'Radio LG',
       })}
     </div>
@@ -291,28 +280,27 @@ SizeVariant.story = { name: ' ' };
  * ### Checked
  * The Radio component can be checked or unchecked. The checked state indicates that the Radio component is selected or enabled. The unchecked state indicates that the Radio component is not selected. */
 
-export const Checked = () =>
-  html`
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: true,
-        label: 'Checked',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: false,
-        label: 'Unchecked',
-      })}
-    </div>
-  `;
+export const Checked = () => html`
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: true,
+      label: 'Checked',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: false,
+      label: 'Unchecked',
+    })}
+  </div>
+`;
 
 Checked.story = { name: ' ' };
 /**
  * ## States
- *  Apart from states like rest, hover, pressed and focus, the Radio component can also be disabled or readonly. The error state is documented under [Validation](#validation).
+ *  Apart from states like rest, hover, pressed and focus, the Radio component can also be disabled. The error state is documented under [Validation](#validation).
  * ### Disabled
  * The Radio component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -329,20 +317,6 @@ export const Disabled = () => {
 };
 
 Disabled.story = { name: ' ' };
-
-/**
- * The Radio component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    ${BlrRadio({
-      ...args,
-      readonly: true,
-      label: 'Readonly',
-    })}
-  `;
-};
 
 /**
  * ## Validation
@@ -380,7 +354,7 @@ export const HasError = () => {
 /**
  * ## Dependencies
  * ### Form Caption Group
- * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -390,7 +364,7 @@ export const FormCaptionGroup = () => {
         ...args,
         hasHint: true,
         label: 'Hint message',
-        hintIcon: 'blr360',
+        hintMessageIcon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
@@ -400,7 +374,7 @@ export const FormCaptionGroup = () => {
         hasHint: true,
         label: 'Hint and error message',
         errorMessage: "OMG it's an error",
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })}
     </div>
   `;

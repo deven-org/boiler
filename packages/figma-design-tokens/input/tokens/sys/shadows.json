@@ -1,0 +1,28 @@
+{
+  "sys": {
+    "elevation": {
+      "lvl_1": {
+        "$type": "boxShadow",
+        "$value": {
+          "x": "0",
+          "y": "{core.dimensionpx.4}",
+          "blur": "{core.dimensionpx.4}",
+          "spread": "0",
+          "color": "{sys.shadow.100}",
+          "type": "dropShadow"
+        }
+      },
+      "lvl_0": {
+        "$type": "boxShadow",
+        "$value": {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "spread": "0",
+          "color": "{sys.shadow.100}",
+          "type": "dropShadow"
+        }
+      }
+    }
+  }
+}

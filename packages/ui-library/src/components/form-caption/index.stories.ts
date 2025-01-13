@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes, CaptionVariants } from '../../globals/constants';
-import { BlrFormCaptionType } from './index';
-import { BlrFormCaptionRenderFunction } from './renderFunction';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { FormSizes, CaptionVariants } from '../../globals/constants.js';
+import { BlrFormCaptionType } from './index.js';
+import { BlrFormCaptionRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { html } from 'lit-html';
-import '../../index';
+import '../../index.js';
 
 const sharedStyles = html`
   <style>
@@ -78,11 +78,12 @@ export default {
           - [**Size Variant**](#size-variant)
         - [**Dependencies**](#dependencies)
           - [**Icon**](#icon)
+
         The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
         - [**Form Caption Group**](?path=/docs/components-form-caption-group--docs)
         - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
-        It is not intended to use the Form Caption directly when creating new applications.
+        It is not intended to use the Form Caption directly when creating new applications. 
       </Markdown>
       `,
       },
@@ -95,7 +96,7 @@ export const BlrFormCaption = (params: BlrFormCaptionType) => BlrFormCaptionRend
 BlrFormCaption.storyName = 'Form Caption';
 
 const args: BlrFormCaptionType = {
-  theme: 'Light',
+  theme: Themes[0],
   message: 'Message-text',
   icon: 'blrInfo',
   variant: 'hint',
@@ -116,7 +117,7 @@ export const Variant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Hint',
         icon: 'blrInfo',
@@ -125,7 +126,7 @@ export const Variant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'error',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Error',
         icon: 'blrErrorFilled',
@@ -146,7 +147,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Form Caption SM',
         icon: 'blrInfo',
@@ -155,7 +156,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'md',
         message: 'Form Caption MD',
         icon: 'blrInfo',
@@ -165,7 +166,7 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'lg',
         message: 'Form Caption LG',
         icon: 'blrInfo',
@@ -179,7 +180,7 @@ SizeVariant.story = { name: ' ' };
 /**
  *  ## Dependencies
  *  ### Icon
- *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon-icon--docs) component.
+ *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 
 export const Icon = () => {
@@ -188,7 +189,7 @@ export const Icon = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'With icon',
         icon: 'blrInfo',
@@ -197,7 +198,7 @@ export const Icon = () => {
     <div class="wrapper">
       ${BlrFormCaptionRenderFunction({
         variant: 'hint',
-        theme: 'Light',
+        theme: Themes[0],
         sizeVariant: 'sm',
         message: 'Without icon',
       })}

@@ -1,20 +1,30 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
+    "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
-    "outDir": "./dist",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
     "sourceMap": true,
-    "module": "es2020",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "target": "es2020",
     "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
     "allowJs": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": false,
     "skipLibCheck": true,
     "strict": true,
-    "useDefineForClassFields": false
+    "useDefineForClassFields": true,
+    "plugins": [
+      {
+        "name": "ts-lit-plugin",
+        "strict": true,
+        "rules": {
+          "no-missing-import": "off"
+        },
+        "cssTemplateTags": []
+      }
+    ]
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts", "src/**/*.stories.ts"]
