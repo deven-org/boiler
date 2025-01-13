@@ -1,24 +1,25 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrToggleSwitchRenderFunction } from './renderFunction';
+import { BlrToggleSwitchRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrToggleSwitchType } from '.';
+import { BlrToggleSwitchType } from './index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 const sampleParams: BlrToggleSwitchType = {
+  toogleSwitchId: 'switch',
   label: 'Toggle Switch Option',
-  checkInputId: 'switch',
   disabled: false,
-  readonly: false,
-  checked: false,
+  active: false,
   onLabel: 'On',
   offLabel: 'Off',
   hasHint: true,
   hintMessage: 'Field is used for hint',
-  hintIcon: 'blrInfo',
-  variant: 'leading',
-  theme: 'Light',
+  hintMessageIcon: 'blrInfo',
+  hasStateLabel: false,
+  theme: Themes[0],
+  name: 'Toogle Switch',
 };
 
 describe('blr-label-toggleswitch', () => {
@@ -41,7 +42,7 @@ describe('blr-label-toggleswitch', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrToggleSwitchRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrToggleSwitchRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const input = querySelectorDeep('div.blr-label-toggleswitch', element.getRootNode() as HTMLElement);
     const className = input?.className;
@@ -54,7 +55,7 @@ describe('blr-label-toggleswitch', () => {
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
         hasHint: true,
-      })
+      }),
     );
 
     const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
@@ -67,7 +68,7 @@ describe('blr-label-toggleswitch', () => {
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
         hasHint: false,
-      })
+      }),
     );
 
     const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);

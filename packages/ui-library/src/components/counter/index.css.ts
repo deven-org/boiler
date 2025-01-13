@@ -1,66 +1,68 @@
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens) => {
-  const { Counter } = componentTokens.cmp;
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
+    const { counter } = cmp;
 
-  return typeSafeNestedCss`
-    .blr-counter {
-      word-break: initial;
-      color: ${Counter.Text.TextColor.Neutral};
-      background-color: ${Counter.Container.BackgroundColor.Neutral};
-      outline-color: ${Counter.Container.BorderColor.Neutral};
-      outline-style: solid;
-      white-space: nowrap;
-      display: initial;
+    return css`
+      .blr-counter.${theme} {
+        word-break: initial;
+        color: ${counter.text.textcolor.neutral};
+        background-color: ${counter.container.bgcolor.neutral};
+        outline-color: ${counter.container.bordercolor.neutral};
+        outline-style: solid;
+        white-space: nowrap;
+        display: initial;
 
-      &.sm {
-        padding: ${Counter.Container.Padding.SM};
-        gap: ${Counter.Container.ItemSpacing.SM};
-        border-radius: ${Counter.Container.BorderRadius.SM};
-        outline-width: ${Counter.Container.BorderWidth.SM};
+        &.sm {
+          padding: ${counter.container.padding.sm};
+          gap: ${counter.container.itemspacing.sm};
+          border-radius: ${counter.container.borderradius.sm};
+          outline-width: ${counter.container.borderwidth.sm};
+          font-family: ${counter.text.typography.sm.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.sm.fontWeight};
+          font-size: ${counter.text.typography.sm.fontSize};
+          line-height: ${counter.text.typography.sm.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.sm} * -1);
+        }
 
-        font-family: ${Counter.Text.Typography.SM.fontFamily}, sans-serif;
-        font-weight: ${Counter.Text.Typography.SM.fontWeight};
-        font-size: ${Counter.Text.Typography.SM.fontSize};
-        line-height: ${Counter.Text.Typography.SM.lineHeight};
+        &.md {
+          padding: ${counter.container.padding.md};
+          gap: ${counter.container.itemspacing.md};
+          border-radius: ${counter.container.borderradius.md};
+          outline-width: ${counter.container.borderwidth.md};
+          font-family: ${counter.text.typography.md.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.md.fontWeight};
+          font-size: ${counter.text.typography.md.fontSize};
+          line-height: ${counter.text.typography.md.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.md} * -1);
+        }
+
+        &.lg {
+          padding: ${counter.container.padding.lg};
+          gap: ${counter.container.itemspacing.lg};
+          border-radius: ${counter.container.borderradius.lg};
+          outline-width: ${counter.container.borderwidth.lg};
+          font-family: ${counter.text.typography.lg.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.lg.fontWeight};
+          font-size: ${counter.text.typography.lg.fontSize};
+          line-height: ${counter.text.typography.lg.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.lg} * -1);
+        }
+
+        &.error {
+          color: ${counter.text.textcolor.error};
+          outline-color: ${counter.container.bordercolor.error};
+          background-color: ${counter.container.bgcolor.error};
+        }
+
+        &.warn {
+          color: ${counter.text.textcolor.warning};
+          outline-color: ${counter.container.bordercolor.warning};
+          background-color: ${counter.container.bgcolor.warning};
+        }
       }
-
-      &.md {
-        padding: ${Counter.Container.Padding.MD};
-        gap: ${Counter.Container.ItemSpacing.MD};
-        border-radius: ${Counter.Container.BorderRadius.MD};
-        outline-width: ${Counter.Container.BorderWidth.MD};
-
-        font-family: ${Counter.Text.Typography.MD.fontFamily}, sans-serif;
-        font-weight: ${Counter.Text.Typography.MD.fontWeight};
-        font-size: ${Counter.Text.Typography.MD.fontSize};
-        line-height: ${Counter.Text.Typography.MD.lineHeight};
-      }
-
-      &.lg {
-        padding: ${Counter.Container.Padding.LG};
-        gap: ${Counter.Container.ItemSpacing.LG};
-        border-radius: ${Counter.Container.BorderRadius.LG};
-        outline-width: ${Counter.Container.BorderWidth.LG};
-
-        font-family: ${Counter.Text.Typography.LG.fontFamily}, sans-serif;
-        font-weight: ${Counter.Text.Typography.LG.fontWeight};
-        font-size: ${Counter.Text.Typography.LG.fontSize};
-        line-height: ${Counter.Text.Typography.LG.lineHeight};
-      }
-
-      &.error {
-        color: ${Counter.Text.TextColor.Error};
-        outline-color: ${Counter.Container.BorderColor.Error};
-        background-color: ${Counter.Container.BackgroundColor.Error};
-      }
-
-      &.warn {
-        color: ${Counter.Text.TextColor.Warning};
-        outline-color: ${Counter.Container.BorderColor.Warning};
-        background-color: ${Counter.Container.BackgroundColor.Warning};
-      }
-    }
-  `;
-});
+    `;
+  })}
+`;

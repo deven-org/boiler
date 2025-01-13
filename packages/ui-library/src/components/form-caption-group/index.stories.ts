@@ -1,9 +1,10 @@
-import { BlrFormCaptionGroupType } from './index';
-import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
+import { BlrFormCaptionGroupType } from './index.js';
+import { BlrFormCaptionGroupRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { FormSizes } from '../../globals/constants';
-import '../../index';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { FormSizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import '../../index.js';
 
 export default {
   title: 'Components/Form Caption Group',
@@ -55,14 +56,14 @@ const hintCaption = BlrFormCaptionRenderFunction({
   message: 'Hint-Message-Text',
   variant: 'hint',
   icon: 'blrInfo',
-  theme: 'Light',
+  theme: Themes[0],
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
   message: 'Error-Message-Text',
   variant: 'error',
   icon: 'blrErrorFilled',
-  theme: 'Light',
+  theme: Themes[0],
 });
 
 const mixedCaptions = html` ${hintCaption} ${errorCaption} `;
@@ -74,6 +75,7 @@ BlrFormCaptionGroup.storyName = 'Form Caption Group';
 
 const args: BlrFormCaptionGroupType = {
   sizeVariant: 'sm',
+  theme: Themes[0],
 };
 
 BlrFormCaptionGroup.args = args;
