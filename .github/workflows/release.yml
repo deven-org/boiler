@@ -3,7 +3,7 @@ name: Release Please
 on:
   push:
     branches:
-      - main2
+      - main
 
 permissions:
   contents: write
@@ -28,4 +28,4 @@ jobs:
           release-type: node
           package-name: '@boiler/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: main2
+          target-branch: main
