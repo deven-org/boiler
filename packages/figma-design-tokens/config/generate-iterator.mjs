@@ -74,6 +74,6 @@ const fileContent = fileTemplate
   .replace(/{{firstTheme}}/g, themes.array[0]);
 
 // Write the generated content to a new file
-fs.writeFileSync(`${buildpaths._tg}/index.pseudo.generated.ts`, fileContent, 'utf-8');
+fs.writeFileSync(`${buildpaths._tg}/iterator.generated.ts`, fileContent, 'utf-8');
 
 console.log('File generated successfully!');
