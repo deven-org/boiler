@@ -1,4 +1,4 @@
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { SemanticThemeIterator } from "../_tokens-generated/iterator.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticActionStyles = css`

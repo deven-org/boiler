@@ -1,4 +1,4 @@
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const styleCustom = css`
@@ -101,23 +101,23 @@ export const styleCustom = css`
 
       .flex-container.${theme} {
         &.xs {
-          gap: ${buttontext.container.itemspacing.xs}
+          gap: ${buttontext.container.itemspacing.xs};
         }
 
         &.sm {
-          gap: ${buttontext.container.itemspacing.sm}
+          gap: ${buttontext.container.itemspacing.sm};
         }
 
         &.md {
-          gap: ${buttontext.container.itemspacing.md}
+          gap: ${buttontext.container.itemspacing.md};
         }
 
         &.lg {
-          gap: ${buttontext.container.itemspacing.lg}
+          gap: ${buttontext.container.itemspacing.lg};
         }
 
         &.xl {
-          gap: ${buttontext.container.itemspacing.xl}
+          gap: ${buttontext.container.itemspacing.xl};
         }
       }
     `;

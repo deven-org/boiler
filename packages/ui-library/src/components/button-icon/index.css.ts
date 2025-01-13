@@ -1,5 +1,5 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 
 export const styleCustom = css`
   .focus-layer {

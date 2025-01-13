@@ -1,4 +1,4 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticStyles = css`
