@@ -3,6 +3,10 @@ name: Release Please
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,3 +26,4 @@ jobs:
           release-type: node
           package-name: '@boiler/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: main
