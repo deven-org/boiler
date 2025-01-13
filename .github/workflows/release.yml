@@ -1,9 +1,6 @@
 name: Release Please
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -25,5 +22,4 @@ jobs:
           release-type: node
           package-name: '@boiler/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: main
-          branch: main
+        if: env.skip_release == 'false'
