@@ -54,9 +54,7 @@ We use the [Git-Flow](https://www.atlassian.com/git/tutorials/comparing-workflow
 Release Please automates CHANGELOG generation, the creation of GitHub releases, and version bumps for your projects.
 Release Please does so by parsing the git history, looking for Conventional Commit messages, and creating release PRs.
 
-The tool runs on every push to the `develop` branch and creates a release PR which needs to be manually be merged to
-create the release. The release will only be created if the commit message has 'chore(release)' in it. for eg. git
-commit -m "chore(release): this is a message".
+The tool runs when a manual trigger is done on Release Please workflow. This generates a release PR.
 
 Once the release PR is merged (back into `develop`), release-please automatically creates a GitHub release based on the
 merged changes.
