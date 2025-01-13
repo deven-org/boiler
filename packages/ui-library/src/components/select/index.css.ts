@@ -1,6 +1,6 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 import type * as semanticTokenTypes from "../../foundation/_tokens-generated/module_declarations/__semantic-tokens.Licht_value.generated.js";
 import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 

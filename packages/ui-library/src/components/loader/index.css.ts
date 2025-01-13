@@ -1,4 +1,4 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticStyles = css`
@@ -42,8 +42,8 @@ export const staticStyles = css`
         border-style: solid;
         box-sizing: border-box;
         animation: rotation 1s linear infinite;
-        
-        &.default { 
+
+        &.default {
           border-color: ${loader.background.bordercolor.default};
           border-bottom-color: ${loader.foreground.bordercolor.default};
         }
@@ -66,7 +66,7 @@ export const staticStyles = css`
         }
 
         &.lg {
-          width:  calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
+          width: calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
           height: calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
           border-width: ${loader.background.borderwidth.lg};
         }

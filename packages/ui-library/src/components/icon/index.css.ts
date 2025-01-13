@@ -1,6 +1,6 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 
 /*
   the full class is used by "ignoreSize" attribute, so that consumers can take care about sizing
