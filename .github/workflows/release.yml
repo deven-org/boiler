@@ -22,4 +22,3 @@ jobs:
           release-type: node
           package-name: '@boiler/boiler'
           token: ${{ secrets.GITHUB_TOKEN }}
-        if: env.skip_release == 'false'
