@@ -24,6 +24,8 @@ import {
 } from '../../globals/events.js';
 
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 type Options = {
   label: string;
@@ -38,6 +40,16 @@ export type BlrSelectEventHandlers = {
   blrBlur?: (event: BlrBlurEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrSelect) => ({
+  arialabel: unsanitized.arialabel ?? 'aria-label',
+  labelAppendix: unsanitized.labelAppendix ?? '(Appendix)',
+  name: unsanitized.name ?? 'Submission name',
+  label: unsanitized.label ?? 'Label Text',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+
+  theme: unsanitized.theme ?? Themes[0],
+}));
+
 /**
  * @fires blrSelectedValueChange Selected value changed
  * @fires blrFocus Select received focus
@@ -45,6 +57,25 @@ export type BlrSelectEventHandlers = {
  */
 export class BlrSelect extends LitElementCustom {
   static styles = [staticFormStyles, staticStyles];
+
+  private sanitizedController: SanitizationController<
+    BlrSelect,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    // Initialize sanitization controller
+    this.sanitizedController = new SanitizationController<
+      BlrSelect,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
 
   @query('select')
   protected accessor _selectNode!: HTMLInputElement;
@@ -54,9 +85,9 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor labelAppendix: string | undefined;
   @property() accessor name!: string;
   @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
-  @property() accessor label!: string;
+  @property() accessor label!: string | undefined;
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
-  @property() accessor sizeVariant: FormSizesType = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
@@ -65,7 +96,7 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor icon: SizelessIconType | undefined;
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
   @property({ type: Array }) accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
 
@@ -88,22 +119,26 @@ export class BlrSelect extends LitElementCustom {
       createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._selectNode.value }),
     );
   }
+  protected get sanitized() {
+    return this.sanitizedController.values;
+  }
 
   protected renderIcon() {
+    const sanitized = this.sanitized;
     const classes = classMap({
       'icon-direction-indicator': true,
-      [this.sizeVariant]: this.sizeVariant,
-      [this.theme]: this.theme,
+      [sanitized.sizeVariant]: sanitized.sizeVariant,
+      [sanitized.theme]: sanitized.theme,
     });
 
-    if (this.sizeVariant && this.icon) {
+    if (sanitized.sizeVariant && this.icon) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
         'forms',
         'inputfield',
         'icon',
         'sizevariant',
-        this.sizeVariant,
+        sanitized.sizeVariant,
       ]).toLowerCase() as SizesType;
 
       return BlrIconRenderFunction(
@@ -112,7 +147,7 @@ export class BlrSelect extends LitElementCustom {
           sizeVariant: iconSizeVariant,
           classMap: classes,
           fillParent: false,
-          theme: this.theme,
+          theme: sanitized.theme,
         },
         {
           'aria-hidden': true,
@@ -122,12 +157,13 @@ export class BlrSelect extends LitElementCustom {
   }
 
   protected renderCaptionContent() {
+    const sanitized = this.sanitized;
     return html`
       ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
-            theme: this.theme,
-            sizeVariant: this.sizeVariant,
+            theme: sanitized.theme,
+            sizeVariant: sanitized.sizeVariant,
             message: this.hintMessage,
             icon: this.hintMessageIcon,
           })
@@ -135,8 +171,8 @@ export class BlrSelect extends LitElementCustom {
       ${this.hasError && (this.errorMessage || this.errorMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
-            theme: this.theme,
-            sizeVariant: this.sizeVariant,
+            theme: sanitized.theme,
+            sizeVariant: sanitized.sizeVariant,
             message: this.errorMessage,
             icon: this.errorMessageIcon,
           })
@@ -145,28 +181,29 @@ export class BlrSelect extends LitElementCustom {
   }
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitized;
+    if (sanitized.sizeVariant) {
       const selectClasses = classMap({
         'blr-form-select': true,
         'error': this.hasError || false,
         'error-select': this.hasError || false,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
-        [this.theme]: this.theme,
+        [sanitized.theme]: sanitized.theme,
       });
 
       return html`
-        <div class="blr-select ${this.sizeVariant} ${this.theme}">
+        <div class="blr-select ${sanitized.sizeVariant} ${sanitized.theme}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
-                    label: this.label,
-                    labelAppendix: this.labelAppendix,
-                    sizeVariant: this.sizeVariant,
+                    label: sanitized.label,
+                    labelAppendix: sanitized.labelAppendix,
+                    sizeVariant: sanitized.sizeVariant,
                     forValue: this.selectId,
-                    theme: this.theme,
+                    theme: sanitized.theme,
                     hasError: Boolean(this.hasError),
                   })}
                 </div>
@@ -174,10 +211,10 @@ export class BlrSelect extends LitElementCustom {
             : nothing}
           <div class="select-wrapper">
             <select
-              aria-label=${this.ariaLabel || nothing}
+              aria-label=${sanitized.ariaLabel || nothing}
               class=${selectClasses}
               id=${this.selectId ? this.selectId : ''}
-              name=${this.name ? this.name : ''}
+              name=${sanitized.name ? sanitized.name : ''}
               ?disabled=${this.disabled}
               ?required=${this.required}
               @input=${this.handleChange}
@@ -201,7 +238,7 @@ export class BlrSelect extends LitElementCustom {
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
             ? BlrFormCaptionGroupRenderFunction(
-                { theme: this.theme, sizeVariant: this.sizeVariant },
+                { theme: sanitized.theme, sizeVariant: sanitized.sizeVariant },
                 this.renderCaptionContent(),
               )
             : nothing}

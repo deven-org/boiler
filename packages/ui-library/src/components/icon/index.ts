@@ -8,7 +8,7 @@ import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction.js';
 import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { BlrClickEvent, createBlrClickEvent } from '../../globals/events.js';
+import { createBlrClickEvent } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { makeSanitizer } from '../../utils/lit/sanitize.js';
 import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
@@ -30,14 +30,16 @@ export class BlrIcon extends LitElementCustom {
   @property({ type: Object }) accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
 
   private sanitizedController: SanitizationController<
-    BlrIconType, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    BlrIconType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     any
   >;
 
   constructor() {
     super();
     this.sanitizedController = new SanitizationController<
-      BlrIconType, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      BlrIconType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       any
     >({
       host: this,

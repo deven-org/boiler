@@ -37,7 +37,7 @@ const propertySanitizer = makeSanitizer((unsanitized: BlrButtonIconType) => ({
   icon: unsanitized.icon ?? 'blr360',
   variant: unsanitized.variant ?? 'primary',
   sizeVariant: unsanitized.sizeVariant ?? 'md',
-  arialabel: unsanitized.arialabel ?? 'Button Ipo',
+  arialabel: unsanitized.arialabel ?? 'Button Icon',
   theme: unsanitized.theme ?? Themes[0],
 }));
 

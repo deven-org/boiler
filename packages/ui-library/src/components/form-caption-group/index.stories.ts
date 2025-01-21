@@ -74,7 +74,7 @@ export const BlrFormCaptionGroup = (params: BlrFormCaptionGroupType) =>
 BlrFormCaptionGroup.storyName = 'Form Caption Group';
 
 const args: BlrFormCaptionGroupType = {
-  sizeVariant: 'sm',
+  sizeVariant: 'md',
   theme: Themes[0],
 };
 

@@ -24,7 +24,6 @@ import {
   createBlrTextValueChangeEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
-import { BlrIconEventHandlers } from '../icon/index.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { makeSanitizer } from '../../utils/lit/sanitize.js';
 import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
@@ -156,7 +155,7 @@ export class BlrInputFieldText extends LitElementCustom {
     }
   };
 
-  protected handleIconClick: BlrIconEventHandlers['blrClick'] = () => {
+  protected handleIconClick = (): void => {
     if (this.disabled) {
       return;
     }

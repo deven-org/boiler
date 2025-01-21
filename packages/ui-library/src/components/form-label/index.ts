@@ -8,16 +8,45 @@ import { staticStyles as staticFormStyles } from '../../foundation/semantic-toke
 import { InputSizesType } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
+
+const propertySanitizer = makeSanitizer((unsanitized: BlrFormLabelType) => ({
+  label: unsanitized.label ?? 'Label-text',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+  hasError: unsanitized.hasError ?? false,
+  labelAppendix: unsanitized.labelAppendix ?? 'Appendix',
+}));
 
 export class BlrFormLabel extends LitElementCustom {
   static styles = [];
 
-  @property() accessor label = '';
+  private sanitizedController: SanitizationController<
+    BlrFormLabelType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+
+    this.sanitizedController = new SanitizationController<
+      BlrFormLabelType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
+  @property() accessor label: string | undefined;
   @property() accessor labelAppendix: string | undefined;
-  @property() accessor sizeVariant: InputSizesType | undefined = 'md';
+  @property() accessor sizeVariant: InputSizesType | undefined;
   @property() accessor forValue: string | undefined;
-  @property() accessor theme: ThemeType = Themes[0];
-  @property({ type: Boolean }) accessor hasError: boolean = false;
+  @property() accessor theme: ThemeType | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
 
   private _error: Error | null = null;
 
@@ -45,28 +74,29 @@ export class BlrFormLabel extends LitElementCustom {
   }
 
   protected render() {
-    if (this.sizeVariant && !this._error) {
+    const sanitized = this.sanitizedController.values;
+    if (sanitized.sizeVariant && !this._error) {
       const dynamicStyles = [staticFormStyles];
 
       const labelClasses = classMap({
         'blr-form-label': true,
-        [this.sizeVariant]: this.sizeVariant,
-        'error': this.hasError,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        'error': sanitized.hasError,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const spanClasses = classMap({
         'blr-form-label-appendix': true,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       // Since it doesnt have a shadowRoot, lit cant apply styles to it.
       // We have to render styles inline here, which is not great
       return html` ${unsafeHTML(`<style>${dynamicStyles.map((style) => style.cssText).join('\n')}</style>`)}
         <label class=${labelClasses} for=${ifDefined(this.forValue)}>
-          ${this.label}
-          <span class=${spanClasses}>${this.labelAppendix}</span>
+          ${sanitized.label}
+          <span class=${spanClasses}>${sanitized.labelAppendix}</span>
         </label>`;
     }
   }
