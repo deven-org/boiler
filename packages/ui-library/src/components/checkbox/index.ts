@@ -23,6 +23,8 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -35,14 +37,40 @@ export type BlrCheckboxEventHandlers = {
  * @fires blrBlur Checkbox lost focus
  * @fires blrCheckedChange Checkbox state changed (currentCheckedState)
  */
+
+const propertySanitizer = makeSanitizer((unsanitized: BlrCheckboxType) => ({
+  checkedIcon: unsanitized.checkedIcon ?? 'blrCheckmark',
+  indeterminateIcon: unsanitized.indeterminateIcon ?? 'blrMinus',
+  checkboxId: unsanitized.checkboxId ?? '',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+}));
 export class BlrCheckbox extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrCheckboxType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+
+    this.sanitizedController = new SanitizationController<
+      BlrCheckboxType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [staticStyles];
 
   @query('input')
   protected accessor _checkboxNode!: HTMLInputElement;
 
   @property() accessor label!: string;
-  @property() accessor checkboxId: string | undefined = '';
+  @property() accessor checkboxId: string | undefined;
   @property() accessor arialabel: string | undefined;
 
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
@@ -56,12 +84,12 @@ export class BlrCheckbox extends LitElementCustom {
   @property() accessor hintMessage: string | undefined;
   @property({ type: Boolean }) accessor hasLabel!: boolean;
   @property() accessor name: string | undefined;
-  @property() accessor checkedIcon: SizelessIconType | undefined = 'blrCheckmark';
-  @property() accessor indeterminateIcon: SizelessIconType | undefined = 'blrMinus';
+  @property() accessor checkedIcon: SizelessIconType | undefined;
+  @property() accessor indeterminateIcon: SizelessIconType | undefined;
 
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.checked;
@@ -141,13 +169,14 @@ export class BlrCheckbox extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant && this.checkboxId) {
+    const sanitize = this.sanitizedController.values;
+    if (sanitize.sizeVariant && sanitize.checkboxId) {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-checkbox': true,
         'error': this.hasError || false,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitize.sizeVariant]: sanitize.sizeVariant,
+        [sanitize.theme]: sanitize.theme,
       });
 
       const labelWrapperClasses = classMap({
@@ -181,7 +210,7 @@ export class BlrCheckbox extends LitElementCustom {
       const focusRingClasses = classMap({
         'focus-ring': true,
         'focus': this.focused || false,
-        [this.theme]: this.theme,
+        [sanitize.theme]: sanitize.theme,
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
@@ -190,7 +219,7 @@ export class BlrCheckbox extends LitElementCustom {
         'control',
         'icon',
         'sizevariant',
-        this.sizeVariant,
+        sanitize.sizeVariant,
       ]) as FormSizesType;
 
       const captionContent = html`
@@ -199,8 +228,8 @@ export class BlrCheckbox extends LitElementCustom {
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitize.theme,
+                  sizeVariant: sanitize.sizeVariant,
                   message: this.hintMessage,
                   icon: this.hintMessageIcon,
                 })}
@@ -212,8 +241,8 @@ export class BlrCheckbox extends LitElementCustom {
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitize.theme,
+                  sizeVariant: sanitize.sizeVariant,
                   message: this.errorMessage,
                   icon: this.errorMessageIcon,
                 })}
@@ -257,7 +286,7 @@ export class BlrCheckbox extends LitElementCustom {
             class="input-control"
             tabindex="-1"
             aria-label=${ifDefined(this.ariaLabel ?? undefined)}
-            id=${ifDefined(this.checkboxId)}
+            id=${ifDefined(sanitize.checkboxId)}
             name=${ifDefined(this.name)}
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
@@ -268,11 +297,11 @@ export class BlrCheckbox extends LitElementCustom {
             aria-hidden="true"
           />
 
-          <label class="${visualCheckboxClasses}" for="${this.checkboxId}" aria-hidden="true" tabindex="-1">
+          <label class="${visualCheckboxClasses}" for="${sanitize.checkboxId}" aria-hidden="true" tabindex="-1">
             ${this.currentIndeterminateState
               ? BlrIconRenderFunction(
                   {
-                    icon: calculateIconName(this.indeterminateIcon, checkerIconSizeVariant),
+                    icon: calculateIconName(sanitize.indeterminateIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
                   },
                   {
@@ -281,7 +310,7 @@ export class BlrCheckbox extends LitElementCustom {
                 )
               : BlrIconRenderFunction(
                   {
-                    icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
+                    icon: calculateIconName(sanitize.checkedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
                   },
                   {
@@ -296,13 +325,16 @@ export class BlrCheckbox extends LitElementCustom {
             ${this.hasLabel
               ? html`${BlrFormLabelInlineRenderFunction({
                   labelText: this.label,
-                  forValue: this.checkboxId,
-                  labelSize: this.sizeVariant,
-                  theme: this.theme,
+                  forValue: sanitize.checkboxId,
+                  labelSize: sanitize.sizeVariant,
+                  theme: sanitize.theme,
                 })}`
               : nothing}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction(
+                  { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
+                  captionContent,
+                )
               : nothing}
           </div>
         </div>

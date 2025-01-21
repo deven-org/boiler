@@ -24,6 +24,8 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrToggleSwitchEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -37,7 +39,32 @@ export type BlrToggleSwitchEventHandlers = {
  * @fires blrCheckedChange ToggleSwitch state changed (currentCheckedState)
  */
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrToggleSwitchType) => ({
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+  hasStateLabel: unsanitized.hasStateLabel ?? false,
+  toggleOnIcon: unsanitized.toggleOnIcon ?? 'blrOn',
+  toggleOffIcon: unsanitized.toggleOffIcon ?? 'blrOff',
+}));
+
 export class BlrToggleSwitch extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrToggleSwitchType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrToggleSwitchType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [staticFormStyles, staticStyles];
 
   @query('input')
@@ -51,23 +78,26 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() accessor name!: string;
   @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
-  @property({ type: Boolean }) accessor active: boolean | undefined = undefined;
+  @property({ type: Boolean }) accessor active: boolean | undefined;
 
   @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
 
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property({ type: Boolean }) accessor hasStateLabel: boolean = false;
+  @property() accessor sizeVariant: FormSizesType | undefined;
+  @property({ type: Boolean }) accessor hasStateLabel: boolean | undefined;
 
-  @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
-  @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
+  @property() accessor toggleOnIcon: SizelessIconType | undefined;
+  @property() accessor toggleOffIcon: SizelessIconType | undefined;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
 
-  @state() protected accessor currentCheckedState: boolean | undefined = this.active;
+  @state() protected accessor currentCheckedState: boolean | undefined;
 
   protected updated(changedProperties: Map<string, boolean>) {
+    if (this.currentCheckedState === undefined) {
+      this.currentCheckedState = this.active || false;
+    }
     if (changedProperties.has('active')) {
       this.currentCheckedState = this.active || false;
     }
@@ -131,14 +161,15 @@ export class BlrToggleSwitch extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitize = this.sanitizedController.values;
+    if (sanitize.sizeVariant) {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-label-toggleswitch': true,
         'disabled': this.disabled || false,
-        [this.theme]: this.theme,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.hasStateLabel ? 'has-state-label' : '']: this.hasStateLabel,
+        [sanitize.theme]: sanitize.theme,
+        [sanitize.sizeVariant]: sanitize.sizeVariant,
+        [sanitize.hasStateLabel ? 'has-state-label' : '']: sanitize.hasStateLabel,
       });
 
       const wrapperClass = classMap({
@@ -165,15 +196,15 @@ export class BlrToggleSwitch extends LitElementCustom {
         'control',
         'ay11icon',
         'sizevariant',
-        this.sizeVariant,
+        sanitize.sizeVariant,
       ]) as FormSizesType;
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitize.theme,
+              sizeVariant: sanitize.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -186,12 +217,15 @@ export class BlrToggleSwitch extends LitElementCustom {
             ? html` ${BlrFormLabelInlineRenderFunction({
                 labelText: this.label || '',
                 forValue: this.toogleSwitchId,
-                labelSize: this.sizeVariant || 'md',
-                theme: this.theme,
+                labelSize: sanitize.sizeVariant || 'md',
+                theme: sanitize.theme,
               })}`
             : nothing}
           ${this.hasHint && this.hintMessage
-            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction(
+                { theme: sanitize.theme, sizeVariant: sanitize.sizeVariant },
+                captionContent,
+              )
             : nothing}
         </span>
         <div
@@ -240,8 +274,8 @@ export class BlrToggleSwitch extends LitElementCustom {
             <span class="toggle-switch-unselect toggle-icon">
               ${BlrIconRenderFunction(
                 {
-                  icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
-                  sizeVariant: this.sizeVariant,
+                  icon: calculateIconName(sanitize.toggleOnIcon, toggleIconSizeVariant),
+                  sizeVariant: sanitize.sizeVariant,
                   classMap: toggleIconsClass,
                 },
                 {
@@ -252,8 +286,8 @@ export class BlrToggleSwitch extends LitElementCustom {
             <span class="toggle-switch-select toggle-icon">
               ${BlrIconRenderFunction(
                 {
-                  icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
-                  sizeVariant: this.sizeVariant,
+                  icon: calculateIconName(sanitize.toggleOffIcon, toggleIconSizeVariant),
+                  sizeVariant: sanitize.sizeVariant,
                   classMap: toggleIconsClass,
                 },
                 {
@@ -262,12 +296,12 @@ export class BlrToggleSwitch extends LitElementCustom {
               )}
             </span>
           </label>
-          ${this.hasStateLabel
+          ${sanitize.hasStateLabel
             ? html` ${BlrFormLabelInlineRenderFunction({
                 labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
                 forValue: this.toogleSwitchId,
-                labelSize: this.sizeVariant || 'md',
-                theme: this.theme,
+                labelSize: sanitize.sizeVariant || 'md',
+                theme: sanitize.theme,
               })}`
             : nothing}
         </div>
