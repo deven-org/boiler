@@ -10,37 +10,56 @@ import { TAG_NAME } from './renderFunction.js';
 import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
-export type BlrIconEventHandlers = {
-  blrClick?: (event: BlrClickEvent) => void;
-};
+const propertySanitizer = makeSanitizer((unsanitized: BlrIconType) => ({
+  icon: unsanitized.icon ?? 'blrArrowDownXs',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  fillParent: unsanitized.fillParent ?? false,
+  theme: unsanitized.theme ?? Themes[0],
+}));
 
-/**
- * @fires blrClick Icon was clicked
- */
 export class BlrIcon extends LitElementCustom {
   static styles = [styleCustom];
 
-  @property() accessor icon: IconType | undefined = 'blr360Xs';
-  @property() accessor sizeVariant: SizesType | undefined = 'md';
-  @property({ type: Boolean }) accessor fillParent: boolean | undefined = true;
-
-  @property() accessor theme: ThemeType | undefined = Themes[0];
+  @property() accessor icon: IconType | undefined;
+  @property() accessor sizeVariant: SizesType | undefined;
+  @property({ type: Boolean }) accessor fillParent: boolean | undefined;
+  @property() accessor theme: ThemeType | undefined;
   @property({ type: Object }) accessor classMap: DirectiveResult<typeof ClassMapDirective> | undefined;
+
+  private sanitizedController: SanitizationController<
+    BlrIconType, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrIconType, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
 
   protected handleClick = (event: MouseEvent | KeyboardEvent) => {
     this.dispatchEvent(createBlrClickEvent({ originalEvent: event }));
   };
 
   protected render() {
-    const sizeKey = this.fillParent ? 'full' : this.sizeVariant!.toLowerCase();
+    const sanitized = this.sanitizedController.values;
+
+    const sizeKey = sanitized.fillParent ? 'full' : sanitized.sizeVariant!.toLowerCase();
     const classes = classMap({
       'blr-icon': true,
       [sizeKey]: sizeKey,
-      [this.theme!]: this.theme!,
+      [sanitized.theme!]: sanitized.theme!,
     });
 
-    const iconMarkup = IconMapping[this.icon!];
+    const iconMarkup = IconMapping[sanitized.icon! as keyof typeof IconMapping];
 
     return html`<span
       @click=${this.handleClick}

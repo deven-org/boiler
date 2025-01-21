@@ -24,6 +24,8 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrButtonIconEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -31,23 +33,49 @@ export type BlrButtonIconEventHandlers = {
   blrClick?: (event: BlrClickEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrButtonIconType) => ({
+  icon: unsanitized.icon ?? 'blr360',
+  variant: unsanitized.variant ?? 'primary',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  arialabel: unsanitized.arialabel ?? 'Button Ipo',
+  theme: unsanitized.theme ?? Themes[0],
+}));
+
 /**
  * @fires blrFocus Button received focus
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
 export class BlrButtonIcon extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrButtonIconType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrButtonIconType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [styleCustom, staticActionStyles];
 
-  @property() accessor arialabel!: string;
+  @property() accessor arialabel: string | undefined;
   @property() accessor icon: SizelessIconType | undefined;
   @property({ type: Boolean }) accessor loading: boolean | undefined;
   @property({ type: Boolean }) accessor disabled!: boolean;
   @property() accessor buttonIconId: string | undefined;
-  @property() accessor variant: ActionVariantType = 'primary';
-  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
+  @property() accessor variant: ActionVariantType | undefined;
+  @property() accessor sizeVariant: ActionSizesType | undefined;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor focused = false;
 
@@ -72,29 +100,31 @@ export class BlrButtonIcon extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-button-icon': true,
-        [this.variant]: this.variant,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.variant]: sanitized.variant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         'disabled': this.disabled,
         'loading': this.loading || false,
-        [this.theme]: this.theme,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const iconClasses = classMap({
         icon: true,
       });
 
-      const loaderVariant = determineLoaderVariant(this.variant);
+      const loaderVariant = determineLoaderVariant(sanitized.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
         'sem',
         'buttons',
         'loader',
         'sizevariant',
-        this.sizeVariant,
+        sanitized.sizeVariant,
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
@@ -102,12 +132,12 @@ export class BlrButtonIcon extends LitElementCustom {
         'buttonicon',
         'icon',
         'sizevariant',
-        this.sizeVariant,
+        sanitized.sizeVariant,
       ]) as SizesType;
 
       return html`
         <span
-          aria-label=${this.arialabel || nothing}
+          aria-label=${sanitized.arialabel || nothing}
           class="${classes}"
           aria-disabled=${this.disabled ? 'true' : 'false'}
           @click=${this.handleClick}
@@ -127,12 +157,12 @@ export class BlrButtonIcon extends LitElementCustom {
             ? BlrLoaderRenderFunction({
                 sizeVariant: loaderSizeVariant,
                 variant: loaderVariant,
-                theme: this.theme,
+                theme: sanitized.theme,
               })
             : nothing}
           ${BlrIconRenderFunction(
             {
-              icon: calculateIconName(this.icon, iconSizeVariant),
+              icon: calculateIconName(sanitized.icon, iconSizeVariant),
               sizeVariant: iconSizeVariant,
               classMap: iconClasses,
               fillParent: false,
