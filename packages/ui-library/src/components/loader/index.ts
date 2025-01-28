@@ -7,27 +7,55 @@ import { TAG_NAME } from './renderFunction.js';
 import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
+
+const propertySanitizer = makeSanitizer((unsanitized: BlrLoaderType) => ({
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  variant: unsanitized.variant ?? 'default',
+  theme: unsanitized.theme ?? Themes[0],
+}));
 
 export class BlrLoader extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
+  private sanitizedController: SanitizationController<
+    BlrLoaderType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrLoaderType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
+  @property() accessor sizeVariant: ActionSizesType | undefined;
   @property() accessor variant: FeedbackVariantType | undefined;
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const containerClasses = classMap({
         'loader-container': true,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: true,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const loaderClasses = classMap({
         'blr-loader': true,
-        [this.variant || '']: this.variant || '',
-        [this.sizeVariant]: this.sizeVariant || 'md',
-        [this.theme]: true,
+        [sanitized.variant || '']: sanitized.variant || '',
+        [sanitized.sizeVariant]: sanitized.sizeVariant || 'md',
+        [sanitized.theme]: sanitized.theme,
       });
 
       return html`<div class="${containerClasses}">

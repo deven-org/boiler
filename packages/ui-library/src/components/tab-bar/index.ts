@@ -25,12 +25,43 @@ import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { BlrTabBarItem } from '../tab-bar-item/index.js';
 import { batch, Signal } from '@lit-labs/preact-signals';
 import { createBlrSelectedValueChangeEvent } from '../../globals/events.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 /**
  * @fires blrSelectedValueChange TabBar selected value changed
  */
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrTabBarType) => ({
+  overflowVariantStandard: unsanitized.overflowVariantStandard ?? 'default',
+  overflowVariantFullWidth: unsanitized.overflowVariantFullWidth ?? 'default',
+  iconPosition: unsanitized.iconPosition ?? 'leading',
+  variant: unsanitized.variant ?? 'standard',
+  tabContent: unsanitized.tabContent ?? 'labelOnly',
+  alignment: unsanitized.alignment ?? 'left',
+  size: unsanitized.size ?? 'md',
+  showDivider: unsanitized.showDivider ?? true,
+  theme: unsanitized.theme ?? Themes[0],
+}));
+
 export class BlrTabBar extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrTabBarType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrTabBarType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [staticStyles, staticActionStyles];
 
   @query('.blr-tab-bar')
@@ -38,13 +69,13 @@ export class BlrTabBar extends LitElementCustom {
 
   @property() accessor overflowVariantStandard!: OverflowVariantTypeStandard;
   @property() accessor overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
-  @property() accessor iconPosition: IconPositionVariant = 'leading';
-  @property() accessor variant: TabVariantType = 'standard';
-  @property() accessor tabContent: TabContentVariantType = 'labelOnly';
-  @property() accessor alignment: TabAlignmentVariantType = 'left';
-  @property() accessor size: FormSizesType | undefined = 'md';
-  @property({ type: Boolean }) accessor showDivider = true;
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor iconPosition: IconPositionVariant | undefined;
+  @property() accessor variant: TabVariantType | undefined;
+  @property() accessor tabContent: TabContentVariantType | undefined;
+  @property() accessor alignment: TabAlignmentVariantType | undefined;
+  @property() accessor size: FormSizesType | undefined;
+  @property({ type: Boolean }) accessor showDivider: boolean | undefined;
+  @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor _selectedTab: BlrTabBarItem | undefined;
   protected _tabBarElements: BlrTabBarItem[] = [];
@@ -94,6 +125,7 @@ export class BlrTabBar extends LitElementCustom {
   };
 
   protected handleSlotChange() {
+    const sanitized = this.sanitizedController.values;
     // Cleanup signal listeners from previously slotted elements
     this._tabBarSelectedSignalSubscriptionDisposers.forEach((cancelSubscription) => cancelSubscription());
     const slot = this.renderRoot?.querySelector('slot');
@@ -106,10 +138,10 @@ export class BlrTabBar extends LitElementCustom {
         throw new Error('child component of blr-tab-bar must be blr-tab-bar-item');
       }
 
-      item.theme = this.theme;
-      item.size = this.size;
-      item.tabContent = this.tabContent;
-      item.iconPosition = this.iconPosition;
+      item.theme = sanitized.theme;
+      item.size = sanitized.size;
+      item.tabContent = sanitized.tabContent;
+      item.iconPosition = sanitized.iconPosition;
 
       this._tabBarSelectedSignalSubscriptionDisposers.push(
         item.signals.selected.subscribe((value) => this.handleTabBarSelectedSignal(item, value)),
@@ -126,23 +158,24 @@ export class BlrTabBar extends LitElementCustom {
   }
 
   protected render() {
-    if (this.size) {
+    const sanitized = this.sanitizedController.values;
+    if (sanitized.size) {
       const wrapperClasses = classMap({
         'blr-tab-bar-group': true,
-        [this.variant]: this.variant,
-        [this.size]: this.size,
-        [this.theme]: this.theme,
+        [sanitized.variant]: sanitized.variant,
+        [sanitized.size]: sanitized.size,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const tabBarClasses = classMap({
         'blr-tab-bar': true,
-        [this.alignment]: this.alignment,
+        [sanitized.alignment]: sanitized.alignment,
       });
 
       const navListClasses = classMap({
-        [this.overflowVariantStandard]: this.overflowVariantStandard,
-        [this.overflowVariantFullWidth]: this.overflowVariantFullWidth,
-        [this.alignment]: this.alignment,
+        [sanitized.overflowVariantStandard]: sanitized.overflowVariantStandard,
+        [sanitized.overflowVariantFullWidth]: sanitized.overflowVariantFullWidth,
+        [sanitized.alignment]: sanitized.alignment,
       });
 
       const buttonIconSizeVariant = getComponentConfigToken([
@@ -150,13 +183,13 @@ export class BlrTabBar extends LitElementCustom {
         'buttonicon',
         'icon',
         'sizevariant',
-        this.size,
+        sanitized.size,
       ]) as SizesType;
 
       return html` <div class="${wrapperClasses}">
-          ${this.overflowVariantStandard === 'buttons'
+          ${sanitized.overflowVariantStandard === 'buttons'
             ? html`
-                <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
+                <button class="arrow left ${sanitized.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
                       icon: calculateIconName('blrChevronLeft', buttonIconSizeVariant),
@@ -175,9 +208,9 @@ export class BlrTabBar extends LitElementCustom {
               <slot @slotchange=${this.handleSlotChange}></slot>
             </ul>
           </div>
-          ${this.overflowVariantStandard === 'buttons'
+          ${sanitized.overflowVariantStandard === 'buttons'
             ? html`
-                <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
+                <button class="arrow right ${sanitized.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
                       icon: calculateIconName('blrChevronRight', buttonIconSizeVariant),
@@ -192,11 +225,11 @@ export class BlrTabBar extends LitElementCustom {
               `
             : nothing}
         </div>
-        <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
-          ${this.showDivider
+        <div class="wrapper-horizontal ${sanitized.overflowVariantStandard} ${sanitized.overflowVariantFullWidth}">
+          ${sanitized.showDivider
             ? BlrDividerRenderFunction({
                 direction: 'horizontal',
-                theme: this.theme,
+                theme: sanitized.theme,
               })
             : nothing}
         </div>

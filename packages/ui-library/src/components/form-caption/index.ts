@@ -10,29 +10,59 @@ import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { BlrIconRenderFunction } from '../icon/renderFunction.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
+
+const propertySanitizer = makeSanitizer((unsanitized: BlrFormCaptionType) => ({
+  message: unsanitized.message ?? 'Message-text',
+  icon: unsanitized.icon ?? 'blrInfo',
+  variant: unsanitized.variant ?? 'hint',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+}));
 
 export class BlrFormCaption extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() accessor message: string | undefined = undefined;
-  @property() accessor icon: SizelessIconType | undefined = undefined;
-  @property() accessor variant: CaptionVariantType = 'hint';
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property({ type: Object }) accessor childElement: TemplateResult<1> | undefined = undefined;
-  @property() accessor theme: ThemeType = Themes[0];
+  private sanitizedController: SanitizationController<
+    BlrFormCaptionType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrFormCaptionType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
+  @property() accessor message: string | undefined;
+  @property() accessor icon: SizelessIconType | undefined;
+  @property() accessor variant: CaptionVariantType | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined;
+  @property({ type: Object }) accessor childElement: TemplateResult<1> | undefined;
+  @property() accessor theme: ThemeType | undefined;
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const classes = classMap({
         'blr-form-caption': true,
-        [this.variant]: this.variant,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.variant]: sanitized.variant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const iconClasses = classMap({
         'blr-icon': true,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
       });
 
       const iconSizeVariant = getComponentConfigToken([
@@ -40,17 +70,16 @@ export class BlrFormCaption extends LitElementCustom {
         'formcaption',
         'icon',
         'sizevariant',
-        // this.sizeVariant.toUpperCase(),
-        this.sizeVariant,
+        sanitized.sizeVariant,
       ]) as SizesType;
 
       return html`
         <div class=${classes}>
-          ${Boolean(this.icon)
+          ${Boolean(sanitized.icon)
             ? BlrIconRenderFunction(
                 {
                   icon: calculateIconName(
-                    this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+                    sanitized.variant === 'hint' || sanitized.variant === 'error' ? sanitized.icon : '',
                     iconSizeVariant,
                   ),
                   sizeVariant: iconSizeVariant,
@@ -61,7 +90,7 @@ export class BlrFormCaption extends LitElementCustom {
                 },
               )
             : nothing}
-          <span class="blr-caption-text">${this.message}</span>
+          <span class="blr-caption-text">${sanitized.message}</span>
           ${this.childElement}
         </div>
       `;

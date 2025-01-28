@@ -22,6 +22,8 @@ import {
 import { LitElementCustom } from '../../utils/lit/element.js';
 import { SignalHub } from '../../utils/lit/signals.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 /**
  * @fires blrFocus Radio received focus
@@ -29,8 +31,32 @@ import { ifDefined } from 'lit/directives/if-defined.js';
  * @fires blrSelectedValueChangeEvent Radio selected value changed
  */
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrRadioType) => ({
+  label: unsanitized.label ?? 'Default Label',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+}));
+
 export class BlrRadio extends LitElementCustom implements PublicReactiveProperties {
   public declare signals: SignalHub<PublicReactiveProperties>;
+
+  private sanitizedController: SanitizationController<
+    BlrRadioType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrRadioType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
 
   static styles = [staticFormStyles, staticRadioStyles];
 
@@ -42,7 +68,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property({ type: Boolean }) accessor checked: boolean | undefined;
   @property() accessor name: string | undefined;
-  @property() accessor sizeVariant: InputSizesType | undefined = 'md';
+  @property() accessor sizeVariant: InputSizesType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
@@ -51,7 +77,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor value: string | undefined;
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -83,10 +109,11 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   }
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+    if (sanitized.sizeVariant) {
       const classes = classMap({
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
         disabled: this.disabled || false,
         checked: this.checked || false,
         error: this.hasError || false,
@@ -102,8 +129,8 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitized.theme,
+                  sizeVariant: sanitized.sizeVariant,
                   message: this.hintMessage,
                   icon: this.hintMessageIcon,
                 })}
@@ -115,8 +142,8 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitized.theme,
+                  sizeVariant: sanitized.sizeVariant,
                   message: this.errorMessage,
                   icon: this.errorMessageIcon,
                 })}
@@ -124,7 +151,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
             `
           : nothing}
       `;
-      const id = calculateOptionId(this.label);
+      const id = calculateOptionId(sanitized.label);
       return html`
         <div class="blr-radio ${classes}">
           <input
@@ -145,12 +172,15 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
             ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
               forValue: id,
-              labelSize: this.sizeVariant,
-              theme: this.theme,
+              labelSize: sanitized.sizeVariant,
+              theme: sanitized.theme,
             })}
             ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) ||
             (this.hasError && (this.errorMessageIcon || this.errorMessage))
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction(
+                  { sizeVariant: sanitized.sizeVariant, theme: sanitized.theme },
+                  captionContent,
+                )
               : nothing}
           </div>
         </div>
@@ -166,21 +196,21 @@ if (!customElements.get(TAG_NAME)) {
 export type BlrRadioType = PublicReactiveProperties & PublicMethods & BlrRadioEventHandlers;
 
 export type PublicReactiveProperties = {
-  optionId: string;
-  label: string;
-  disabled?: boolean;
-  name?: string;
-  sizeVariant?: InputSizesType;
-  required?: boolean;
-  hasError?: boolean;
-  errorMessage?: string;
-  errorMessageIcon?: SizelessIconType;
-  hasHint?: boolean;
-  hintMessage?: string;
-  hintMessageIcon?: SizelessIconType;
-  value?: string;
-  theme: ThemeType;
-  checked?: boolean;
+  optionId: string | undefined;
+  label: string | undefined;
+  disabled: boolean | undefined;
+  name: string | undefined;
+  sizeVariant: InputSizesType | undefined;
+  required: boolean | undefined;
+  hasError: boolean | undefined;
+  errorMessage: string | undefined;
+  errorMessageIcon: SizelessIconType | undefined;
+  hasHint: boolean | undefined;
+  hintMessage: string | undefined;
+  hintMessageIcon: SizelessIconType | undefined;
+  value: string | undefined;
+  theme: ThemeType | undefined;
+  checked: boolean | undefined;
 };
 
 export type PublicMethods = unknown;

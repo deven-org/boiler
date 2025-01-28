@@ -6,18 +6,44 @@ import { TAG_NAME } from './renderFunction.js';
 import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { DividerVariationTypes } from '../../globals/types.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
+
+const propertySanitizer = makeSanitizer((unsanitized: BlrDividerType) => ({
+  direction: unsanitized.direction ?? 'horizontal',
+  theme: unsanitized.theme ?? Themes[0],
+}));
 
 export class BlrDivider extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrDividerType, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrDividerType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [staticStyles];
 
-  @property() accessor direction: DividerVariationTypes = 'vertical';
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor direction: DividerVariationTypes | undefined;
+  @property() accessor theme: ThemeType | undefined;
 
   protected render() {
+    const sanitized = this.sanitizedController.values;
+
     const dividerClasses = classMap({
       'blr-divider': true,
-      [this.direction]: true,
-      [this.theme]: this.theme,
+      [sanitized.direction]: true,
+      [sanitized.theme]: sanitized.theme,
     });
 
     return html` <div class="${dividerClasses}"></div> `;

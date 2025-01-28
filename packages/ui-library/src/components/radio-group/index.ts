@@ -19,6 +19,8 @@ import {
 } from '../../globals/events.js';
 import { BlrRadio } from '../radio/index.js';
 import { batch, Signal } from '@lit-labs/preact-signals';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrRadioGroupEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -32,24 +34,48 @@ export type BlrRadioGroupEventHandlers = {
  * @fires blrSelectedValueChange Radio selected value changed
  */
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrRadioGroupType) => ({
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+  hasHint: unsanitized.hasHint ?? true,
+  direction: unsanitized.direction ?? 'horizontal',
+}));
+
 export class BlrRadioGroup extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrRadioGroupType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrRadioGroupType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property() accessor name: string | undefined;
-  @property() accessor sizeVariant: InputSizesType = 'md';
+  @property() accessor sizeVariant: InputSizesType | undefined;
   @property({ type: Boolean }) accessor hasLegend: boolean | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorIcon: SizelessIconType | undefined;
-  @property({ type: Boolean }) accessor hasHint = true;
+  @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor groupHintMessageIcon: SizelessIconType | undefined;
   @property() accessor groupErrorMessage: string | undefined;
   @property() accessor groupHintMessage: string | undefined;
   @property() accessor groupErrorMessageIcon: SizelessIconType | undefined;
   @property() accessor legend: string | undefined;
-  @property() accessor direction: RadioGroupDirection = 'horizontal';
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor direction: RadioGroupDirection | undefined;
+  @property() accessor theme: ThemeType | undefined;
 
   protected _radioElements: BlrRadio[] = [];
   private _selectedRadio?: BlrRadio;
@@ -81,6 +107,7 @@ export class BlrRadioGroup extends LitElementCustom {
   }
 
   protected handleSlotChange = () => {
+    const sanitize = this.sanitizedController.values;
     // Cleanup signal listeners from previously slotted elements
     this._radioCheckedSignalSubscriptionDisposers.forEach((cancelSubscription) => cancelSubscription());
 
@@ -95,8 +122,8 @@ export class BlrRadioGroup extends LitElementCustom {
 
       item.hasError = this.hasError;
       item.disabled = this.disabled;
-      item.theme = this.theme;
-      item.sizeVariant = this.sizeVariant;
+      item.theme = sanitize.theme;
+      item.sizeVariant = sanitize.sizeVariant;
 
       this._radioCheckedSignalSubscriptionDisposers.push(
         item.signals.checked.subscribe((value) => this.handleRadioCheckedSignal(item, value)),
@@ -105,36 +132,37 @@ export class BlrRadioGroup extends LitElementCustom {
   };
 
   protected render() {
-    if (!this.sizeVariant) {
+    const sanitize = this.sanitizedController.values;
+    if (!sanitize.sizeVariant) {
       return null;
     }
 
     const legendClasses = classMap({
       'blr-legend': true,
-      [this.sizeVariant]: this.sizeVariant,
+      [sanitize.sizeVariant]: sanitize.sizeVariant,
       'error': this.hasError || false,
     });
 
     const legendWrapperClasses = classMap({
       'blr-legend-wrapper': true,
-      [this.theme]: this.theme,
-      [this.sizeVariant]: this.sizeVariant,
+      [sanitize.theme]: sanitize.theme,
+      [sanitize.sizeVariant]: sanitize.sizeVariant,
     });
 
     const classes = classMap({
-      [this.theme]: this.theme,
-      [this.sizeVariant]: this.sizeVariant,
+      [sanitize.theme]: sanitize.theme,
+      [sanitize.sizeVariant]: sanitize.sizeVariant,
       disabled: this.disabled || false,
       error: this.hasError || false,
-      [this.direction]: this.direction,
+      [sanitize.direction]: sanitize.direction,
     });
 
     const captionContent = html`
       ${this.hasHint && (this.groupHintMessage || this.groupHintMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
-            theme: this.theme,
-            sizeVariant: this.sizeVariant,
+            theme: sanitize.theme,
+            sizeVariant: sanitize.sizeVariant,
             message: this.groupHintMessage,
             icon: this.groupHintMessageIcon,
           })
@@ -142,8 +170,8 @@ export class BlrRadioGroup extends LitElementCustom {
       ${this.hasError && (this.groupErrorMessage || this.groupErrorMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
-            theme: this.theme,
-            sizeVariant: this.sizeVariant,
+            theme: sanitize.theme,
+            sizeVariant: sanitize.sizeVariant,
             message: this.groupErrorMessage,
             icon: this.groupErrorMessageIcon,
           })
@@ -163,7 +191,10 @@ export class BlrRadioGroup extends LitElementCustom {
       ${(this.hasHint && (this.groupHintMessageIcon || this.groupHintMessage)) ||
       (this.hasError && (this.groupErrorMessageIcon || this.groupErrorMessage))
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction(
+              { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
+              captionContent,
+            )}
           </div>`
         : nothing}
     `;

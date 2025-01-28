@@ -27,6 +27,8 @@ import {
   createBlrSelectEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrNumberInputEventListeners = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -36,6 +38,14 @@ export type BlrNumberInputEventListeners = {
   blrNumberStepperClick?: (event: BlrNumberStepperClickEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrInputFieldNumberType) => ({
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+  stepperVariant: unsanitized.stepperVariant ?? 'vertical',
+  stepIncreaseAriaLabel: unsanitized.stepIncreaseAriaLabel ?? '+',
+  stepDecreaseAriaLabel: unsanitized.stepDecreaseAriaLabel ?? '\u2212', // minus-sign (not minus-hyphen)
+}));
+
 /**
  * @fires blrFocus NumberInput received focus
  * @fires blrBlur NumberInput lost focus
@@ -44,20 +54,42 @@ export type BlrNumberInputEventListeners = {
  * @fires blrNumberStepperClick Step button was clicked
  */
 export class BlrInputFieldNumber extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrInputFieldNumberType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrInputFieldNumberType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
+  protected get sanitized() {
+    return this.sanitizedController.values;
+  }
+
   static styles = [staticBaseStyles, staticSemanticStyles, staticComponentStyles];
 
   @query('input')
   protected accessor _numberFieldNode!: HTMLInputElement;
 
   @property() accessor inputFieldNumberId!: string;
-  @property() accessor stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
+  @property() accessor stepperVariant: 'split' | 'horizontal' | 'vertical' | undefined;
   @property() accessor label!: string;
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property() accessor placeholder: string | undefined;
   @property({ type: Boolean }) accessor readonly: boolean | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
   @property() accessor labelAppendix: string | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
@@ -71,11 +103,11 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property({ type: Number }) accessor leadingZeros: number | undefined;
   @property({ type: Number }) accessor decimals: number | undefined;
   @property() accessor unitPosition: UnitVariantType | undefined;
-  @property() accessor stepIncreaseAriaLabel: string | undefined = '+';
-  @property() accessor stepDecreaseAriaLabel: string | undefined = '\u2212'; // minus-sign (not minus-hyphen)
+  @property() accessor stepIncreaseAriaLabel: string | undefined;
+  @property() accessor stepDecreaseAriaLabel: string | undefined;
   @property() accessor name: string | undefined;
 
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor theme: ThemeType | undefined;
 
   @state() protected accessor currentValue: number | undefined;
   @state() protected accessor isFocused = false;
@@ -150,10 +182,11 @@ export class BlrInputFieldNumber extends LitElementCustom {
   }
 
   protected getStepperButtonTemplate(direction: 'increase' | 'decrease', icon: SizelessIconType): TemplateResult<1> {
-    if (!this.sizeVariant) {
+    const sanitized = this.sanitized;
+    if (!sanitized.sizeVariant) {
       return html``;
     }
-    const ariaLabel = direction === 'increase' ? this.stepIncreaseAriaLabel! : this.stepDecreaseAriaLabel!;
+    const ariaLabel = direction === 'increase' ? sanitized.stepIncreaseAriaLabel! : sanitized.stepDecreaseAriaLabel!;
     const onClick = direction === 'increase' ? this.stepperUp : this.stepperDown;
 
     const iconSizeVariant = getComponentConfigToken([
@@ -161,15 +194,15 @@ export class BlrInputFieldNumber extends LitElementCustom {
       'stepperbutton',
       'icon',
       'sizevariant',
-      this.sizeVariant,
+      sanitized.sizeVariant,
     ]) as FormSizesType;
 
     const buttonClass = classMap({
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
-      [this.sizeVariant]: true,
-      [this.stepperVariant]: true,
-      [this.theme]: this.theme,
+      [sanitized.sizeVariant]: true,
+      [sanitized.stepperVariant]: true,
+      [sanitized.theme]: true,
     });
 
     const iconClasses = classMap({
@@ -201,7 +234,9 @@ export class BlrInputFieldNumber extends LitElementCustom {
   }
 
   protected renderMode() {
-    switch (this.stepperVariant) {
+    const sanitized = this.sanitized;
+
+    switch (sanitized.stepperVariant) {
       case 'split': {
         return html`
           ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
@@ -210,11 +245,11 @@ export class BlrInputFieldNumber extends LitElementCustom {
       }
       case 'horizontal': {
         return html`
-          <div class="stepper-combo horizontal ${this.theme} ${this.sizeVariant}">
+          <div class="stepper-combo horizontal ${sanitized.theme} ${sanitized.sizeVariant}">
             ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
             ${BlrDividerRenderFunction({
               direction: 'vertical',
-              theme: this.theme,
+              theme: sanitized.theme,
             })}
             ${this.getStepperButtonTemplate('increase', 'blrPlus')}
           </div>
@@ -222,11 +257,11 @@ export class BlrInputFieldNumber extends LitElementCustom {
       }
       case 'vertical': {
         return html`
-          <div class="stepper-combo vertical ${this.theme} ${this.sizeVariant}">
+          <div class="stepper-combo vertical ${sanitized.theme} ${sanitized.sizeVariant}">
             ${this.getStepperButtonTemplate('increase', 'blrChevronUp')}
             ${BlrDividerRenderFunction({
               direction: 'horizontal',
-              theme: this.theme,
+              theme: sanitized.theme,
             })}
             ${this.getStepperButtonTemplate('decrease', 'blrChevronDown')}
           </div>
@@ -236,40 +271,41 @@ export class BlrInputFieldNumber extends LitElementCustom {
   }
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitized;
+    if (sanitized.sizeVariant) {
       const inputClasses = classMap({
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
         'prepend': this.unitPosition === 'prefix',
         'suffix': this.unitPosition === 'suffix',
         'readonly': this.readonly || false,
         'error-input': this.hasError || false,
-        [this.theme]: this.theme,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const unitClasses = classMap({
         unit: true,
         prepend: this.unitPosition === 'prefix',
         suffix: this.unitPosition === 'suffix',
-        [this.sizeVariant]: this.sizeVariant,
-        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.stepperVariant || 'split']: sanitized.stepperVariant || 'split',
+        [sanitized.theme]: sanitized.theme,
       });
 
       const wrapperClasses = classMap({
         'input-wrapper': true,
         'disabled': this.disabled || false,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.stepperVariant || 'split']: sanitized.stepperVariant || 'split',
         'error-input': this.hasError || false,
-        [this.theme]: this.theme,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const inputAndUnitContainer = classMap({
         'input-unit-container': true,
         'prepend': this.unitPosition === 'prefix' || this.unitPosition === 'suffix',
-        [this.sizeVariant]: this.sizeVariant,
-        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.stepperVariant || 'split']: sanitized.stepperVariant || 'split',
+        [sanitized.theme]: sanitized.theme,
       });
 
       const getCaptionContent = () => html`
@@ -278,8 +314,8 @@ export class BlrInputFieldNumber extends LitElementCustom {
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitized.theme,
+                  sizeVariant: sanitized.sizeVariant,
                   message: this.hintMessage,
                   icon: this.hintMessageIcon,
                 })}
@@ -291,8 +327,8 @@ export class BlrInputFieldNumber extends LitElementCustom {
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
-                  theme: this.theme,
-                  sizeVariant: this.sizeVariant,
+                  theme: sanitized.theme,
+                  sizeVariant: sanitized.sizeVariant,
                   message: this.errorMessage,
                   icon: this.errorMessageIcon,
                 })}
@@ -302,16 +338,16 @@ export class BlrInputFieldNumber extends LitElementCustom {
       `;
 
       return html`
-        <div class="blr-input-field-number ${this.theme} ${this.sizeVariant}">
+        <div class="blr-input-field-number ${sanitized.theme} ${sanitized.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.sizeVariant,
+                    sizeVariant: sanitized.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldNumberId,
-                    theme: this.theme,
+                    theme: sanitized.theme,
                     hasError: Boolean(this.hasError),
                   })}
                 </div>
@@ -345,7 +381,10 @@ export class BlrInputFieldNumber extends LitElementCustom {
         </div>
 
         ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, getCaptionContent())
+          ? BlrFormCaptionGroupRenderFunction(
+              { sizeVariant: sanitized.sizeVariant, theme: sanitized.theme },
+              getCaptionContent(),
+            )
           : nothing}
       `;
     }

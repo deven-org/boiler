@@ -6,26 +6,56 @@ import { ThemeType, Themes } from '../../foundation/_tokens-generated/index.them
 import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrCounterType) => ({
+  variant: unsanitized.variant ?? 'neutral',
+  value: unsanitized.value ?? 0,
+  maxValue: unsanitized.maxValue ?? 0,
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? Themes[0],
+}));
 export class BlrCounter extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrCounterType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+
+    this.sanitizedController = new SanitizationController<
+      BlrCounterType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [staticStyles];
 
-  @property() accessor variant: CounterVariantType = 'neutral';
-  @property({ type: Number }) accessor value = 0;
-  @property({ type: Number }) accessor maxValue = 0;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
-  @property() accessor theme: ThemeType = Themes[0];
+  @property() accessor variant: CounterVariantType | undefined;
+  @property({ type: Number }) accessor value: number | undefined;
+  @property({ type: Number }) accessor maxValue: number | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined;
+  @property() accessor theme: ThemeType | undefined;
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const classes = classMap({
         'blr-counter': true,
-        [this.variant]: this.variant,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: true,
+        [sanitized.variant]: sanitized.variant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: true,
       });
 
-      return html` <div class=${classes}>${this.value} / ${this.maxValue}</div> `;
+      return html` <div class=${classes}>${sanitized.value} / ${sanitized.maxValue}</div> `;
     }
   }
 }
