@@ -9,21 +9,43 @@ export const staticStyles = css`
       .blr-checkbox.${theme} {
         all: initial;
         display: flex;
+        flex-direction: column;
 
         .input-control {
           all: initial;
         }
+        .control-wrapper {
+          display: flex;
 
-        .visual-checkbox {
-          all: initial;
-          display: inline-block;
-          margin: 0;
-          position: relative;
-          transition: background-color 0.25s ease 0s;
-          outline-style: solid;
+          .visual-checkbox {
+            all: initial;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            transition: background-color 0.25s ease 0s;
+            outline-style: solid;
 
-          & .checker-icon {
-            position: absolute;
+            & .checker-icon {
+              position: absolute;
+            }
+          }
+          .label-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .hint-wrapper,
+            .error-wrapper {
+              flex-basis: 100%;
+
+              .blr-form-caption {
+                gap: 0;
+              }
+            }
+
+            .blr-form-label-inline {
+              font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, sans-serif;
+            }
           }
         }
 
@@ -47,8 +69,6 @@ export const staticStyles = css`
         }
 
         &.sm {
-          gap: ${checkbox.contentrow.itemspacing.sm};
-
           .visual-checkbox {
             min-width: ${checkbox.control.container.size.sm};
             height: ${checkbox.control.container.size.sm};
@@ -60,10 +80,13 @@ export const staticStyles = css`
             border-radius: ${checkbox.control.container.borderradius.sm};
           }
 
+          .control-wrapper {
+            gap: ${checkbox.contentrow.itemspacing.sm};
+          }
+
           & .label-wrapper,
           & .visual-checkbox {
             padding-top: ${checkbox.contentcol.paddingtop.sm};
-            gap: ${checkbox.contentcol.itemspacing.sm};
 
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.sm.fontWeight};
@@ -74,8 +97,6 @@ export const staticStyles = css`
         }
 
         &.md {
-          gap: ${checkbox.contentrow.itemspacing.md};
-
           .visual-checkbox {
             min-width: ${checkbox.control.container.size.md};
             height: ${checkbox.control.container.size.md};
@@ -87,9 +108,12 @@ export const staticStyles = css`
             border-radius: ${checkbox.control.container.borderradius.md};
           }
 
+          .control-wrapper {
+            gap: ${checkbox.contentrow.itemspacing.md};
+          }
+
           .label-wrapper {
             padding-top: ${checkbox.contentcol.paddingtop.md};
-            gap: ${checkbox.contentcol.itemspacing.md};
 
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.md.fontWeight};
@@ -100,8 +124,6 @@ export const staticStyles = css`
         }
 
         &.lg {
-          gap: ${checkbox.contentrow.itemspacing.lg};
-
           .visual-checkbox {
             min-width: ${checkbox.control.container.size.lg};
             height: ${checkbox.control.container.size.lg};
@@ -112,10 +134,12 @@ export const staticStyles = css`
           .focus-ring {
             border-radius: ${checkbox.control.container.borderradius.lg};
           }
+          .control-wrapper {
+            gap: ${checkbox.contentrow.itemspacing.lg};
+          }
 
           .label-wrapper {
             padding-top: ${checkbox.contentcol.paddingtop.lg};
-            gap: ${checkbox.contentcol.itemspacing.lg};
 
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.lg.fontWeight};

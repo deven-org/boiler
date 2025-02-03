@@ -296,46 +296,42 @@ export class BlrCheckbox extends LitElementCustom {
             @change=${this.handleChange}
             aria-hidden="true"
           />
+          <div class="control-wrapper">
+            <label class="${visualCheckboxClasses}" for="${sanitize.checkboxId}" aria-hidden="true" tabindex="-1">
+              ${BlrIconRenderFunction(
+                {
+                  icon: calculateIconName(sanitize.checkedIcon, checkerIconSizeVariant),
+                  classMap: checkerIconClasses,
+                },
+                {
+                  'aria-hidden': true,
+                },
+              )}
 
-          <label class="${visualCheckboxClasses}" for="${sanitize.checkboxId}" aria-hidden="true" tabindex="-1">
-            ${this.currentIndeterminateState
-              ? BlrIconRenderFunction(
-                  {
-                    icon: calculateIconName(sanitize.indeterminateIcon, checkerIconSizeVariant),
-                    classMap: checkerIconClasses,
-                  },
-                  {
-                    'aria-hidden': true,
-                  },
-                )
-              : BlrIconRenderFunction(
-                  {
-                    icon: calculateIconName(sanitize.checkedIcon, checkerIconSizeVariant),
-                    classMap: checkerIconClasses,
-                  },
-                  {
-                    'aria-hidden': true,
-                  },
-                )}
+              <div class="${focusRingClasses}"></div>
+            </label>
 
-            <div class="${focusRingClasses}"></div>
-          </label>
-
-          <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
-            ${this.hasLabel
-              ? html`${BlrFormLabelInlineRenderFunction({
-                  labelText: this.label,
-                  forValue: sanitize.checkboxId,
-                  labelSize: sanitize.sizeVariant,
-                  theme: sanitize.theme,
-                })}`
-              : nothing}
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction(
-                  { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
-                  captionContent,
-                )
-              : nothing}
+            <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
+              ${
+                this.hasLabel
+                  ? html`${BlrFormLabelInlineRenderFunction({
+                      labelText: this.label,
+                      forValue: sanitize.checkboxId,
+                      labelSize: sanitize.sizeVariant,
+                      theme: sanitize.theme,
+                    })}`
+                  : nothing
+              }
+              ${
+                this.hasHint || this.hasError
+                  ? BlrFormCaptionGroupRenderFunction(
+                      { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
+                      captionContent,
+                    )
+                  : nothing
+              }
+            </div>
+            </div>
           </div>
         </div>
       `;
