@@ -109,9 +109,7 @@ export class BlrCheckbox extends LitElementCustom {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
-      this.currentIndeterminateState = false;
-
+    if (!this.disabled && !this.currentIndeterminateState) {
       this.dispatchEvent(
         createBlrCheckedChangeEvent({
           originalEvent: event,
@@ -158,13 +156,16 @@ export class BlrCheckbox extends LitElementCustom {
   protected handlePress = () => {
     if (!this.disabled) {
       this.active = true;
-      this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
     if (!this.disabled) {
       this.active = false;
+    }
+
+    if (this.hovered && !this.currentIndeterminateState) {
+      this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
@@ -223,7 +224,7 @@ export class BlrCheckbox extends LitElementCustom {
       ]) as FormSizesType;
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
+        ${this.hintMessage || this.hintMessageIcon
           ? html`
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
@@ -236,7 +237,7 @@ export class BlrCheckbox extends LitElementCustom {
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
+        ${this.errorMessage || this.errorMessageIcon
           ? html`
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
@@ -335,7 +336,8 @@ export class BlrCheckbox extends LitElementCustom {
                   : nothing
               }
               ${
-                this.hasHint || this.hasError
+                ((this.hintMessage || this.hintMessageIcon) && this.hasHint) ||
+                ((this.errorMessage || this.errorMessageIcon) && this.hasError)
                   ? BlrFormCaptionGroupRenderFunction(
                       { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
                       captionContent,

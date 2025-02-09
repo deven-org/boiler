@@ -27,6 +27,9 @@ export const staticStyles = css`
 
             & .checker-icon {
               position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
           .label-wrapper {
@@ -299,7 +302,8 @@ export const staticStyles = css`
           }
 
           &.error {
-            &.checked {
+            &.checked,
+            &.indeterminate {
               background-color: ${checkbox.control.container.bgcolor.active.error};
               outline-color: ${checkbox.control.container.bordercolor.active.error};
 
@@ -308,7 +312,7 @@ export const staticStyles = css`
               }
             }
 
-            &:not(.checked) {
+            &:not(.checked):not(.indeterminate) {
               background-color: ${checkbox.control.container.bgcolor.inactive.error};
               outline-color: ${checkbox.control.container.bordercolor.inactive.error};
 
@@ -428,6 +432,10 @@ export const staticStyles = css`
         &.md {
           &:not(.error) {
             .visual-checkbox {
+              & .checker-icon {
+                width: ${checkbox.control.icon.iconsize.md.rest};
+                height: ${checkbox.control.icon.iconsize.md.rest};
+              }
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.md.inactive.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.rest} * -1);
@@ -490,6 +498,10 @@ export const staticStyles = css`
 
           &.error {
             .visual-checkbox {
+              & .checker-icon {
+                width: ${checkbox.control.icon.iconsize.md.error};
+                height: ${checkbox.control.icon.iconsize.md.error};
+              }
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.md.inactive.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.error} * -1);
@@ -506,6 +518,10 @@ export const staticStyles = css`
         &.lg {
           &:not(.error) {
             .visual-checkbox {
+              & .checker-icon {
+                width: ${checkbox.control.icon.iconsize.lg.rest};
+                height: ${checkbox.control.icon.iconsize.lg.rest};
+              }
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.lg.inactive.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.rest} * -1);
@@ -568,6 +584,10 @@ export const staticStyles = css`
 
           &.error:not(.disbaled) {
             .visual-checkbox {
+              & .checker-icon {
+                width: ${checkbox.control.icon.iconsize.lg.error};
+                height: ${checkbox.control.icon.iconsize.lg.error};
+              }
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.lg.inactive.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.error} * -1);
