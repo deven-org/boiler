@@ -17,6 +17,7 @@ export const staticStyles = css`
 
         .control-wrapper {
           display: flex;
+
           .visual-checkbox {
             all: initial;
             display: inline-block;
