@@ -212,7 +212,7 @@ export class BlrToggleSwitch extends LitElementCustom {
       `;
 
       return html` <div class=${classes}>
-        <span class="toggle-content-col">
+        <div class="toggle-content-col">
           ${this.hasLabel
             ? html` ${BlrFormLabelInlineRenderFunction({
                 labelText: this.label || '',
@@ -227,7 +227,7 @@ export class BlrToggleSwitch extends LitElementCustom {
                 captionContent,
               )
             : nothing}
-        </span>
+        </div>
         <div
           class="label-container"
           @mouseenter=${this.handleEnter}
