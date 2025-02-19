@@ -109,9 +109,7 @@ export class BlrCheckbox extends LitElementCustom {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
-      this.currentIndeterminateState = false;
-
+    if (!this.disabled && !this.currentIndeterminateState) {
       this.dispatchEvent(
         createBlrCheckedChangeEvent({
           originalEvent: event,
@@ -158,13 +156,16 @@ export class BlrCheckbox extends LitElementCustom {
   protected handlePress = () => {
     if (!this.disabled) {
       this.active = true;
-      this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
     if (!this.disabled) {
       this.active = false;
+    }
+
+    if (this.hovered && !this.currentIndeterminateState) {
+      this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
@@ -223,7 +224,7 @@ export class BlrCheckbox extends LitElementCustom {
       ]) as FormSizesType;
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
+        ${this.hintMessage || this.hintMessageIcon
           ? html`
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
@@ -236,7 +237,7 @@ export class BlrCheckbox extends LitElementCustom {
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
+        ${this.errorMessage || this.errorMessageIcon
           ? html`
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
@@ -296,47 +297,56 @@ export class BlrCheckbox extends LitElementCustom {
             @change=${this.handleChange}
             aria-hidden="true"
           />
+          <div class="control-wrapper">
+            <label class="${visualCheckboxClasses}" for="${sanitize.checkboxId}" aria-hidden="true" tabindex="-1">
+              ${
+                this.currentIndeterminateState
+                  ? BlrIconRenderFunction(
+                      {
+                        icon: calculateIconName(sanitize.indeterminateIcon, checkerIconSizeVariant),
+                        classMap: checkerIconClasses,
+                      },
+                      {
+                        'aria-hidden': true,
+                      },
+                    )
+                  : BlrIconRenderFunction(
+                      {
+                        icon: calculateIconName(sanitize.checkedIcon, checkerIconSizeVariant),
+                        classMap: checkerIconClasses,
+                      },
+                      {
+                        'aria-hidden': true,
+                      },
+                    )
+              }
 
-          <label class="${visualCheckboxClasses}" for="${sanitize.checkboxId}" aria-hidden="true" tabindex="-1">
-            ${this.currentIndeterminateState
-              ? BlrIconRenderFunction(
-                  {
-                    icon: calculateIconName(sanitize.indeterminateIcon, checkerIconSizeVariant),
-                    classMap: checkerIconClasses,
-                  },
-                  {
-                    'aria-hidden': true,
-                  },
-                )
-              : BlrIconRenderFunction(
-                  {
-                    icon: calculateIconName(sanitize.checkedIcon, checkerIconSizeVariant),
-                    classMap: checkerIconClasses,
-                  },
-                  {
-                    'aria-hidden': true,
-                  },
-                )}
+              <div class="${focusRingClasses}"></div>
+            </label>
 
-            <div class="${focusRingClasses}"></div>
-          </label>
-
-          <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
-            ${this.hasLabel
-              ? html`${BlrFormLabelInlineRenderFunction({
-                  labelText: this.label,
-                  forValue: sanitize.checkboxId,
-                  labelSize: sanitize.sizeVariant,
-                  theme: sanitize.theme,
-                  asSpan: false,
-                })}`
-              : nothing}
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction(
-                  { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
-                  captionContent,
-                )
-              : nothing}
+            <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
+              ${
+                this.hasLabel
+                  ? html`${BlrFormLabelInlineRenderFunction({
+                      labelText: this.label,
+                      forValue: sanitize.checkboxId,
+                      labelSize: sanitize.sizeVariant,
+                      theme: sanitize.theme,
+                      asSpan: false,
+                    })}`
+                  : nothing
+              }
+              ${
+                ((this.hintMessage || this.hintMessageIcon) && this.hasHint) ||
+                ((this.errorMessage || this.errorMessageIcon) && this.hasError)
+                  ? BlrFormCaptionGroupRenderFunction(
+                      { sizeVariant: sanitize.sizeVariant, theme: sanitize.theme },
+                      captionContent,
+                    )
+                  : nothing
+              }
+            </div>
+            </div>
           </div>
         </div>
       `;
