@@ -1,6 +1,12 @@
 import { TemplateResult, html, nothing } from 'lit';
 import { camelCaseToKebabCase } from './lit/decorators.js';
 
+export type TaggedComponentRenderFunction<TComponentType extends Record<string | number | symbol, unknown>> = (
+  props: Parameters<typeof genericBlrComponentRenderer<TComponentType>>[1],
+  children?: Parameters<typeof genericBlrComponentRenderer<TComponentType>>[2],
+  htmlAttributes?: Parameters<typeof genericBlrComponentRenderer<TComponentType>>[3]
+) => ReturnType<typeof genericBlrComponentRenderer<TComponentType>>;
+
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
   props: ComponentType,
