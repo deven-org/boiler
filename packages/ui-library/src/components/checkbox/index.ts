@@ -332,6 +332,7 @@ export class BlrCheckbox extends LitElementCustom {
                       forValue: sanitize.checkboxId,
                       labelSize: sanitize.sizeVariant,
                       theme: sanitize.theme,
+                      asSpan: false,
                     })}`
                   : nothing
               }

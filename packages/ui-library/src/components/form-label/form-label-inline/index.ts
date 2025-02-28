@@ -6,4 +6,5 @@ export type BlrFormLabelInlineType = {
   labelSize: InputSizesType;
   forValue: string;
   theme: ThemeType;
+  asSpan: boolean;
 };

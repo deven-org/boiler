@@ -174,6 +174,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               forValue: id,
               labelSize: sanitized.sizeVariant,
               theme: sanitized.theme,
+              asSpan: false,
             })}
             ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) ||
             (this.hasError && (this.errorMessageIcon || this.errorMessage))
