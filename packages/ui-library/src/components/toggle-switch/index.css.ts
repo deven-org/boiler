@@ -38,6 +38,7 @@ export const staticStyles = css`
 
     & > .toggle-content-col {
       display: flex;
+      flex-direction: column;
       width: 180px;
     }
 
@@ -53,6 +54,7 @@ export const staticStyles = css`
     & > .label-container {
       all: initial;
       display: flex;
+      width: 180px;
 
       & > .blr-label-switch-wrapper {
         position: relative;
