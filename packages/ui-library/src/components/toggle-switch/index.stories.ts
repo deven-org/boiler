@@ -167,6 +167,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     badges: ['Draft'],
     design: {
       type: 'figma',
