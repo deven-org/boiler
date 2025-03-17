@@ -16,7 +16,7 @@ import { SanitizationController } from '../../utils/lit/sanitization-controller.
 const propertySanitizer = makeSanitizer((unsanitized: BlrIconType) => ({
   icon: unsanitized.icon ?? 'blrArrowDownXs',
   sizeVariant: unsanitized.sizeVariant ?? 'md',
-  fillParent: unsanitized.fillParent ?? false,
+  fillParent: unsanitized.fillParent ?? true,
   theme: unsanitized.theme ?? Themes[0],
 }));
 
