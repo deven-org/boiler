@@ -5,7 +5,7 @@ export const staticStyles = css`
   .blr-label-toggleswitch {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
 
     &.has-state-label {
       flex-direction: column;
@@ -39,9 +39,8 @@ export const staticStyles = css`
     & > .toggle-content-col {
       display: flex;
       justify-content: center;
-      align-items: center;
-      min-width: 100px;
-      max-width: 100px;
+      flex-direction: column;
+      width: 100%;
     }
 
     .knob {
