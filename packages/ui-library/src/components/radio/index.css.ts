@@ -1,6 +1,6 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/iterator.generated.js";
 
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
@@ -10,6 +10,7 @@ export const staticStyles = css`
       .blr-radio.${theme} {
         all: initial;
         margin: 0 !important;
+        max-width: 100%;
         display: flex;
         flex-grow: 1;
         transition: all 0.25s ease 0s;
@@ -176,10 +177,8 @@ export const staticStyles = css`
               }
             }
 
-            &:focus {
+            &:focus:not(:active) {
               background-color: ${radio.control.container.bgcolor.inactive.focus};
-              outline: black solid 2px;
-              outline-offset: 2px;
 
               &::before {
                 content: "";
@@ -230,7 +229,7 @@ export const staticStyles = css`
                 }
               }
 
-              &:focus {
+              &:focus:not(:active) {
                 background-color: ${radio.control.container.bgcolor.active.focus};
 
                 &::before {
@@ -353,6 +352,21 @@ export const staticStyles = css`
             font-family: ${formcaption.text.typography.lg.fontFamily}, sans-serif;
             font-size: ${formcaption.text.typography.lg.fontSize};
             line-height: ${formcaption.text.typography.lg.lineHeight};
+          }
+        }
+      }
+    `;
+  })}
+
+  ${SemanticThemeIterator((theme, sem, css) => {
+    const { global } = sem;
+
+    return css`
+      .blr-radio.${theme} {
+        .input-control {
+          &:focus:not(:active) {
+            outline: ${global.focusring.border.color} ${global.focusring.border.width} ${global.focusring.border.style};
+            outline-offset: 2px;
           }
         }
       }
