@@ -14,10 +14,10 @@ import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inlin
 import {
   createBlrBlurEvent,
   createBlrFocusEvent,
-  createBlrSelectedValueChangeEvent,
+  createBlrChangeEvent,
   BlrBlurEvent,
   BlrFocusEvent,
-  BlrCheckedChangeEvent,
+  BlrChangeEvent,
 } from '../../globals/events.js';
 import { LitElementCustom } from '../../utils/lit/element.js';
 import { SignalHub } from '../../utils/lit/signals.js';
@@ -28,7 +28,7 @@ import { SanitizationController } from '../../utils/lit/sanitization-controller.
 /**
  * @fires blrFocus Radio received focus
  * @fires blrBlur Radio lost focus
- * @fires blrSelectedValueChangeEvent Radio selected value changed
+ * @fires blrChange Radio selected value changed
  */
 
 const propertySanitizer = makeSanitizer((unsanitized: BlrRadioType) => ({
@@ -64,6 +64,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   protected accessor _radioNode!: HTMLInputElement;
 
   @property() accessor optionId!: string;
+  @property() accessor radioId!: string;
   @property() accessor label!: string;
   @property({ type: Boolean }) accessor disabled: boolean | undefined;
   @property({ type: Boolean }) accessor checked: boolean | undefined;
@@ -71,8 +72,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor sizeVariant: InputSizesType | undefined;
   @property({ type: Boolean }) accessor required: boolean | undefined;
   @property({ type: Boolean }) accessor hasError: boolean | undefined;
-  @property() accessor errorMessage: string | undefined;
-  @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property({ type: Boolean }) accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
@@ -91,22 +90,12 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
     }
   };
 
-  protected handleClick(event: Event) {
-    event.preventDefault();
-
+  protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      const changeEvent = createBlrSelectedValueChangeEvent({
-        originalEvent: event,
-        selectedValue: this._radioNode.value,
-      });
-
+      const changeEvent = createBlrChangeEvent({ originalEvent: event, changedValue: this._radioNode.value });
       this.dispatchEvent(changeEvent);
-
-      if (!changeEvent.defaultPrevented) {
-        this.checked = true;
-      }
     }
-  }
+  };
 
   protected render() {
     const sanitized = this.sanitizedController.values;
@@ -137,19 +126,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
-          ? html`
-              <div class="error-wrapper">
-                ${BlrFormCaptionRenderFunction({
-                  variant: 'error',
-                  theme: sanitized.theme,
-                  sizeVariant: sanitized.sizeVariant,
-                  message: this.errorMessage,
-                  icon: this.errorMessageIcon,
-                })}
-              </div>
-            `
-          : nothing}
       `;
       const id = calculateOptionId(sanitized.label);
       return html`
@@ -158,13 +134,14 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
             id=${id ? id : ''}
             class="${classes} input-control"
             type="radio"
+            value="${ifDefined(this.value)}"
             name="${ifDefined(this.name)}"
             ?disabled=${this.disabled}
             ?data-has-error=${this.hasError || false}
             ?checked=${this.checked}
             .checked=${this.checked === true}
             ?required=${this.required}
-            @click=${this.handleClick}
+            @change=${this.handleChange}
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
           />
@@ -175,8 +152,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               labelSize: sanitized.sizeVariant,
               theme: sanitized.theme,
             })}
-            ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) ||
-            (this.hasError && (this.errorMessageIcon || this.errorMessage))
+            ${this.hasHint && (this.hintMessageIcon || this.hintMessage)
               ? BlrFormCaptionGroupRenderFunction(
                   { sizeVariant: sanitized.sizeVariant, theme: sanitized.theme },
                   captionContent,
@@ -203,9 +179,8 @@ export type PublicReactiveProperties = {
   sizeVariant: InputSizesType | undefined;
   required: boolean | undefined;
   hasError: boolean | undefined;
-  errorMessage: string | undefined;
-  errorMessageIcon: SizelessIconType | undefined;
   hasHint: boolean | undefined;
+  radioId: string | undefined;
   hintMessage: string | undefined;
   hintMessageIcon: SizelessIconType | undefined;
   value: string | undefined;
@@ -218,5 +193,5 @@ export type PublicMethods = unknown;
 export type BlrRadioEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
   blrBlur?: (event: BlrBlurEvent) => void;
-  blrSelectedValueChangeEvent?: (event: BlrCheckedChangeEvent) => void;
+  blrChange?: (event: BlrChangeEvent) => void;
 };

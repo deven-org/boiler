@@ -113,24 +113,6 @@ export default {
         category: 'Validations',
       },
     },
-    errorMessage: {
-      name: 'errorMessage',
-      description: 'Enter string used used as error message.',
-      table: {
-        category: 'Validations',
-      },
-      if: { arg: 'hasError', eq: true },
-    },
-    errorMessageIcon: {
-      name: 'errorMessageIcon',
-      description: 'Select an icon which is displayed in front of the error message.',
-      table: {
-        category: 'Validations',
-      },
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      if: { arg: 'hasError', eq: true },
-    },
     ariaLabel: {
       name: 'ariaLabel',
       description:
@@ -229,14 +211,10 @@ const args: BlrRadioType & {
   disabled: false,
   required: false,
   hasError: false,
-  errorMessage: '',
   ariaLabel: '',
-  errorMessageIcon: undefined,
+  optionId: 'optionId',
   radioId: 'radioId',
   name: 'Radio Button',
-  blrSelectedValueChange: () => action('blrSelectedValueChangeEvent'),
-  blrFocus: () => action('focused'),
-  blrBlur: () => action('blrBlr'),
 };
 
 BlrRadio.args = args;
@@ -254,6 +232,9 @@ export const SizeVariant = () => {
         ...args,
         sizeVariant: 'sm',
         label: 'Radio SM',
+        blrFocus: action('blrFocus'),
+        blrBlur: action('blrBlur'),
+        blrChange: action('blrChange'),
       })}
     </div>
     <div class="wrapper">
@@ -261,6 +242,9 @@ export const SizeVariant = () => {
         ...args,
         sizeVariant: 'md',
         label: 'Radio MD',
+        blrFocus: action('blrFocus'),
+        blrBlur: action('blrBlur'),
+        blrChange: action('blrChange'),
       })}
     </div>
     <div class="wrapper">
@@ -268,6 +252,9 @@ export const SizeVariant = () => {
         ...args,
         sizeVariant: 'lg',
         label: 'Radio LG',
+        blrFocus: action('blrFocus'),
+        blrBlur: action('blrBlur'),
+        blrChange: action('blrChange'),
       })}
     </div>
   `;
@@ -373,8 +360,6 @@ export const FormCaptionGroup = () => {
         hasError: true,
         hasHint: true,
         label: 'Hint and error message',
-        errorMessage: "OMG it's an error",
-        errorMessageIcon: 'blrErrorFilled',
       })}
     </div>
   `;
