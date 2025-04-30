@@ -14,10 +14,10 @@ import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inlin
 import {
   createBlrBlurEvent,
   createBlrFocusEvent,
-  createBlrClickEvent,
+  createBlrChangeEvent,
   BlrBlurEvent,
   BlrFocusEvent,
-  BlrClickEvent,
+  BlrChangeEvent,
 } from '../../globals/events.js';
 import { LitElementCustom } from '../../utils/lit/element.js';
 import { SignalHub } from '../../utils/lit/signals.js';
@@ -28,7 +28,7 @@ import { SanitizationController } from '../../utils/lit/sanitization-controller.
 /**
  * @fires blrFocus Radio received focus
  * @fires blrBlur Radio lost focus
- * @fires blrClick Radio selected value changed
+ * @fires blrChange Radio selected value changed
  */
 
 const propertySanitizer = makeSanitizer((unsanitized: BlrRadioType) => ({
@@ -90,17 +90,10 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
     }
   };
 
-  protected handleClick = (event: MouseEvent | KeyboardEvent) => {
-    event.preventDefault();
-
+  protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      const changeEvent = createBlrClickEvent({ originalEvent: event });
-
+      const changeEvent = createBlrChangeEvent({ originalEvent: event, changedValue: this._radioNode.value });
       this.dispatchEvent(changeEvent);
-
-      if (!changeEvent.defaultPrevented) {
-        this.checked = true;
-      }
     }
   };
 
@@ -133,17 +126,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               </div>
             `
           : nothing}
-        ${this.hasError
-          ? html`
-              <div class="error-wrapper">
-                ${BlrFormCaptionRenderFunction({
-                  variant: 'error',
-                  theme: sanitized.theme,
-                  sizeVariant: sanitized.sizeVariant,
-                })}
-              </div>
-            `
-          : nothing}
       `;
       const id = calculateOptionId(sanitized.label);
       return html`
@@ -159,7 +141,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
             ?checked=${this.checked}
             .checked=${this.checked === true}
             ?required=${this.required}
-            @click=${this.handleClick}
+            @change=${this.handleChange}
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
           />
@@ -211,5 +193,5 @@ export type PublicMethods = unknown;
 export type BlrRadioEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
   blrBlur?: (event: BlrBlurEvent) => void;
-  blrClick?: (event: BlrClickEvent) => void;
+  blrChange?: (event: BlrChangeEvent) => void;
 };

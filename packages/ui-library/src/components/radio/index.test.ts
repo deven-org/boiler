@@ -17,7 +17,11 @@ const sampleParams: BlrRadioType = {
   hasHint: true,
   hasError: false,
   theme: Themes[0],
-  errorMessageIcon: undefined,
+  optionId: 'defaultOptionId',
+  sizeVariant: 'md',
+  hintMessage: 'Default hint message',
+  hintMessageIcon: 'blrCheckmark',
+  value: 'defaultValue',
 };
 
 describe('blr-radio', () => {
@@ -37,7 +41,6 @@ describe('blr-radio', () => {
         hasHint: true,
         hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorMessageIcon: 'blrErrorFilled',
       }),
     );
 
@@ -48,11 +51,7 @@ describe('blr-radio', () => {
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;
 
-    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
-    const errorClassName = formCaptionError?.className;
-
     expect(hintClassName).to.contain('hint');
-    expect(errorClassName).to.contain('error');
   });
 
   it('has a size md by default', async () => {
@@ -107,7 +106,6 @@ describe('blr-radio', () => {
         ...sampleParams,
         hasHint: false,
         hasError: true,
-        errorMessageIcon: undefined,
       }),
     );
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);

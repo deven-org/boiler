@@ -136,9 +136,9 @@ export default {
       },
       control: { type: 'text', label: 'Radio' },
     },
-    blrClick: {
+    blrChange: {
       description: 'Fires when the value changes.',
-      action: 'blrClick',
+      action: 'blrChange',
       table: {
         disable: false,
         category: 'Events',
@@ -234,7 +234,7 @@ export const SizeVariant = () => {
         label: 'Radio SM',
         blrFocus: action('blrFocus'),
         blrBlur: action('blrBlur'),
-        blrClick: action('blrClick'),
+        blrChange: action('blrChange'),
       })}
     </div>
     <div class="wrapper">
@@ -244,7 +244,7 @@ export const SizeVariant = () => {
         label: 'Radio MD',
         blrFocus: action('blrFocus'),
         blrBlur: action('blrBlur'),
-        blrClick: action('blrClick'),
+        blrChange: action('blrChange'),
       })}
     </div>
     <div class="wrapper">
@@ -254,7 +254,7 @@ export const SizeVariant = () => {
         label: 'Radio LG',
         blrFocus: action('blrFocus'),
         blrBlur: action('blrBlur'),
-        blrClick: action('blrClick'),
+        blrChange: action('blrChange'),
       })}
     </div>
   `;
