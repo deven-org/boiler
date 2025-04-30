@@ -172,7 +172,6 @@ export default {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125201&mode=dev',
     },
-    layout: 'centered',
     docs: {
       description: {
         component: `<markdown>

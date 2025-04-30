@@ -4,9 +4,8 @@ import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/
 export const staticStyles = css`
   .blr-label-toggleswitch {
     display: flex;
-    align-items: flex-start;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
 
     &.has-state-label {
       flex-direction: column;
@@ -39,7 +38,9 @@ export const staticStyles = css`
 
     & > .toggle-content-col {
       display: flex;
+      justify-content: center;
       flex-direction: column;
+      width: 100%;
     }
 
     .knob {
@@ -52,7 +53,6 @@ export const staticStyles = css`
     }
 
     & > .label-container {
-      all: initial;
       display: flex;
       align-items: center;
       justify-content: flex-start;

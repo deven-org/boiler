@@ -117,6 +117,21 @@ export class BlrToggleSwitch extends LitElementCustom {
 
   @state() protected accessor focused = false;
 
+  protected handleClick = (event: MouseEvent) => {
+    if (!this.disabled) {
+      this.currentCheckedState = !this.currentCheckedState;
+      this.active = this.currentCheckedState;
+
+      this.dispatchEvent(
+        createBlrCheckedChangeEvent({
+          originalEvent: event,
+          checkedState: this.currentCheckedState,
+        }),
+      );
+      this._checkboxNode.focus();
+    }
+  };
+
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
       this.focused = true;
@@ -212,13 +227,14 @@ export class BlrToggleSwitch extends LitElementCustom {
       `;
 
       return html` <div class=${classes}>
-        <span class="toggle-content-col">
+        <div class="toggle-content-col">
           ${this.hasLabel
             ? html` ${BlrFormLabelInlineRenderFunction({
                 labelText: this.label || '',
                 forValue: this.toogleSwitchId,
                 labelSize: sanitize.sizeVariant || 'md',
                 theme: sanitize.theme,
+                asSpan: false,
               })}`
             : nothing}
           ${this.hasHint && this.hintMessage
@@ -227,9 +243,10 @@ export class BlrToggleSwitch extends LitElementCustom {
                 captionContent,
               )
             : nothing}
-        </span>
+        </div>
         <div
           class="label-container"
+          @click=${this.handleClick}
           @mouseenter=${this.handleEnter}
           @mouseleave=${this.handleLeave}
           @mousedown=${(event: MouseEvent) => {
@@ -252,9 +269,8 @@ export class BlrToggleSwitch extends LitElementCustom {
               //this.handleRelease();
             }
           }}
-          tabindex="0"
         >
-          <label for=${ifDefined(this.toogleSwitchId)} class=${wrapperClass}>
+          <div class=${wrapperClass}>
             <div class="${focusRingClasses}"></div>
             <input
               aria-label=${this.ariaLabel || nothing}
@@ -265,6 +281,7 @@ export class BlrToggleSwitch extends LitElementCustom {
               ?disabled=${this.disabled}
               .checked=${this.currentCheckedState === true}
               @change=${this.handleChange}
+              @click=${(event: Event) => event.stopPropagation()}
               tabindex="-1"
             />
             <span class="toggle-switch-slider">
@@ -295,14 +312,17 @@ export class BlrToggleSwitch extends LitElementCustom {
                 },
               )}
             </span>
-          </label>
+          </div>
           ${sanitize.hasStateLabel
-            ? html` ${BlrFormLabelInlineRenderFunction({
-                labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
-                forValue: this.toogleSwitchId,
-                labelSize: sanitize.sizeVariant || 'md',
-                theme: sanitize.theme,
-              })}`
+            ? html`
+                ${BlrFormLabelInlineRenderFunction({
+                  labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
+                  forValue: this.toogleSwitchId,
+                  labelSize: sanitize.sizeVariant || 'md',
+                  theme: sanitize.theme,
+                  asSpan: true,
+                })}
+              `
             : nothing}
         </div>
       </div>`;
