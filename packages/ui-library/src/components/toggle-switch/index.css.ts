@@ -54,6 +54,8 @@ export const staticStyles = css`
 
     & > .label-container {
       display: flex;
+      align-items: center;
+      justify-content: flex-start;
 
       & > .blr-label-switch-wrapper {
         position: relative;
