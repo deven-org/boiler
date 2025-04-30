@@ -152,7 +152,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
               labelSize: sanitized.sizeVariant,
               theme: sanitized.theme,
             })}
-            ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) || this.hasError
+            ${this.hasHint && (this.hintMessageIcon || this.hintMessage)
               ? BlrFormCaptionGroupRenderFunction(
                   { sizeVariant: sanitized.sizeVariant, theme: sanitized.theme },
                   captionContent,
